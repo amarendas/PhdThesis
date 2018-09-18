@@ -1,0 +1,148 @@
+\begin{thebibliography}{10}
+
+\bibitem{yamamoto1992coordinating}
+Y.~Yamamoto and X.~Yun, ``Coordinating locomotion and manipulation of a mobile
+  manipulator,'' in {\em Decision and Control, 1992., Proceedings of the 31st
+  IEEE Conference on}, pp.~2643--2648, IEEE, 1992.
+
+\bibitem{rajendran2004}
+S.~Rajendran and et.al., ``Mobile robot for reactor vessel inspection,'' in
+  {\em National Conference on Advanced Manufacturing and Robotics},
+  pp.~2527--2532, CMERI, Durgapur,WB,, 2004.
+
+\bibitem{saha1989kinematics}
+S.~K. Saha and J.~Angeles, ``Kinematics and dynamics of a three-wheeled 2-dof
+  agv,'' in {\em Robotics and Automation, 1989. Proceedings., 1989 IEEE
+  International Conference on}, pp.~1572--1577, IEEE, 1989.
+
+\bibitem{pin1994new}
+F.~G. Pin and S.~M. Killough, ``A new family of omnidirectional and holonomic
+  wheeled platforms for mobile robots,'' {\em IEEE transactions on robotics and
+  automation}, vol.~10, no.~4, pp.~480--489, 1994.
+
+\bibitem{salih2006designing}
+J.~E.~M. Salih, M.~Rizon, S.~Yaacob, A.~H. Adom, and M.~R. Mamat, ``Designing
+  omni-directional mobile robot with mecanum wheel,'' {\em American Journal of
+  Applied Sciences}, vol.~3, no.~5, pp.~1831--1835, 2006.
+
+\bibitem{suthakorn2009design}
+J.~Suthakorn, S.~S.~H. Shah, S.~Jantarajit, W.~Onprasert, W.~Saensupo,
+  S.~Saeung, S.~Nakdhamabhorn, V.~Sa-Ing, and S.~Reaungamornrat, ``On the
+  design and development of a rough terrain robot for rescue missions,'' in
+  {\em Robotics and Biomimetics, 2008. ROBIO 2008. IEEE International
+  Conference on}, pp.~1830--1835, IEEE, 2009.
+
+\bibitem{guarnieri2004development}
+M.~Guarnieri, R.~Debenest, T.~Inoh, E.~Fukushima, and S.~Hirose, ``Development
+  of helios vii: an arm-equipped tracked vehicle for search and rescue
+  operations,'' in {\em Intelligent Robots and Systems, 2004.(IROS 2004).
+  Proceedings. 2004 IEEE/RSJ International Conference on}, vol.~1, pp.~39--45,
+  IEEE, 2004.
+
+\bibitem{nagatani2000improvement}
+K.~Nagatani, S.~Tachibana, M.~Sofne, and Y.~Tanaka, ``Improvement of odometry
+  for omnidirectional vehicle using optical flow information,'' in {\em
+  Intelligent Robots and Systems, 2000.(IROS 2000). Proceedings. 2000 IEEE/RSJ
+  International Conference on}, vol.~1, pp.~468--473, IEEE, 2000.
+
+\bibitem{wong2008theory}
+J.~Y. Wong, {\em Theory of ground vehicles}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{TOMBook}
+T.~Bevan, {\em Theory of Machines, Third Edition}.
+\newblock Delhi, India: CBS Publishers \& Distributors, 1984.
+
+\bibitem{catMaxon}
+{\em Motor catalogue 2014}.
+\newblock Switzerland: Maxon Motors, 2017.
+
+\bibitem{machado2006overview}
+J.~T. Machado and M.~F. Silva, ``An overview of legged robots,'' in {\em
+  International symposium on mathematical methods in engineering}, MME Press
+  Ankara, Turkey, 2006.
+
+\bibitem{valavanis2014handbook}
+K.~P. Valavanis and G.~J. Vachtsevanos, {\em Handbook of unmanned aerial
+  vehicles}.
+\newblock Springer Publishing Company, Incorporated, 2014.
+
+\bibitem{mouret2015evolutionary}
+J.-B. Mouret, {\em Evolutionary Adaptation in Natural and Artificial Systems}.
+\newblock PhD thesis, Universit{\'e} Pierre et Marie Curie, 2015.
+
+\bibitem{campion1996structural}
+G.~Campion, G.~Bastin, and B.~Dandrea-Novel, ``Structural properties and
+  classification of kinematic and dynamic models of wheeled mobile robots,''
+  {\em IEEE transactions on robotics and automation}, vol.~12, no.~1,
+  pp.~47--62, 1996.
+
+\bibitem{campion2008wheeled}
+G.~Campion and W.~Chung, ``Wheeled robots,'' in {\em Springer Handbook of
+  Robotics}, pp.~391--410, Springer, 2008.
+
+\bibitem{desantis1995modeling}
+R.~M. DeSantis, ``Modeling and path-tracking control of a mobile wheeled robot
+  with a differential drive,'' {\em Robotica}, vol.~13, no.~04, pp.~401--410,
+  1995.
+
+\bibitem{koh1999smooth}
+K.~C. Koh and H.~S. Cho, ``A smooth path tracking algorithm for wheeled mobile
+  robots with dynamic constraints,'' {\em Journal of intelligent \& robotic
+  systems}, vol.~24, no.~4, pp.~367--385, 1999.
+
+\bibitem{d1995control}
+B.~d'Andr{\'e}a Novel, G.~Campion, and G.~Bastin, ``Control of nonholonomic
+  wheeled mobile robots by state feedback linearization,'' {\em The
+  International journal of robotics research}, vol.~14, no.~6, pp.~543--559,
+  1995.
+
+\bibitem{d1991modelling}
+B.~d'Andrea Novel, G.~Bastin, and G.~Campion, ``Modelling and control of
+  non-holonomic wheeled mobile robots,'' in {\em Robotics and Automation, 1991.
+  Proceedings., 1991 IEEE International Conference on}, pp.~1130--1135, IEEE,
+  1991.
+
+\bibitem{thanjavur1997ease}
+K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
+  robots (wmrs) using kane's approach,'' in {\em Robotics and Automation, 1997.
+  Proceedings., 1997 IEEE International Conference on}, vol.~4, pp.~2926--2931,
+  IEEE, 1997.
+
+\bibitem{saha1991dynamics}
+S.~K. Saha and J.~Angeles, ``Dynamics of nonholonomic mechanical systems using
+  a natural orthogonal complement,'' {\em Journal of Applied Mechanics},
+  vol.~58, no.~1, pp.~238--243, 1991.
+
+\bibitem{angeles2013fundamentals}
+J.~Angeles, {\em Fundamentals of robotic mechanical systems: theory, methods,
+  and algorithms}, vol.~124.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{saha2010robotics}
+S.~Saha, {\em Introduction to robotics}.
+\newblock Tata McGraw-Hill, New Delhi, 2010.
+
+\bibitem{SahaBook}
+S.~K. Saha, {\em Introduction to Robotics}.
+\newblock New Delhi, India: Tata McGraw Hill Education Pvt. Ltd., 2010.
+
+\bibitem{saha1999dynamics}
+S.~K. Saha, ``Dynamics of serial multibody systems using the decoupled natural
+  orthogonal complement matrices,'' {\em Journal of applied mechanics},
+  vol.~66, no.~4, pp.~986--996, 1999.
+
+\bibitem{saha2001recursive}
+S.~K. Saha and W.~O. Schiehlen, ``Recursive kinematics and dynamics for
+  parallel structured closed-loop multibody systems,'' {\em Mechanics of
+  Structures and Machines}, vol.~29, no.~2, pp.~143--175, 2001.
+
+\bibitem{saha1991}
+J.~A. S~K~Saha, ``Dynamics of nonholonomic mechanical system uisng natural
+  orthogonal compliment,'' {\em Transactions of ASMe}, vol.~58, March, 1991.
+
+\bibitem{maxonrs232}
+{\em EPOS Application Note: RS232 to CANopen Getway}.
+\newblock Maxon Motors, 2012.
+
+\end{thebibliography}

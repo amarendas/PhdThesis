@@ -1,0 +1,172 @@
+%%---------------------
+%% THESIS - REPORT -DRAFT
+%% AMAREN PRASANNA DAS
+%% REPORT COMPLETED ON: 
+%% THESIS DATE: 
+%%---------------------
+%\documentclass[a4paper, 12pt]{report}
+\documentclass[a4paper, 12pt, notitlepage]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{setspace}%for double spacing etc
+\usepackage[top=1.0in, bottom=1.0in, left=1.5in, right=1.0in, twoside]{geometry}
+\usepackage{emptypage}%to make empty pages number less and to use \cleardoublepage
+\usepackage{longtable}%for long table in nomenclature
+%\usepackage[none]{hyphenat}%to remove hyphenation
+\usepackage{adjmulticol}%for multiple columns in certificate
+%\usepackage{tikz}%for flow charts
+%\usetikzlibrary{shapes,arrows,positioning}
+%\usepackage{algorithm} 
+%\usepackage{algorithmicx}
+%\usepackage{algpseudocode}
+%\usepackage{cite}%for combining citations when referred together
+%\usepackage{natbib}
+%\usepackage[comma,authoryear]{natbib}
+\usepackage{epstopdf} 
+\usepackage{blindtext}
+%\hyphenpenalty=10000
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{latexsym}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{upgreek}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+%\usepackage{isomath} 
+\usepackage{bm}
+\usepackage{lipsum}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{ amssymb}
+%\usepackage{subcaption}
+ % % ADDITIONAL TO COMMENT IN FINA
+%\usepackage{slashbox} % For two title in a box
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{rotating} % For sideways table
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{xcolor,colortbl} % Colored Row in Table
+
+\providecommand{\greektext}{\fontencoding{LGR}\selectfont\def\encodingdefault{LGR}} 
+\providecommand{\textgreek}[1]{\leavevmode{\greektext #1}} 
+%%%%%%%% For Integration in Sobol Method %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator*{\uint}{\scalerel*{\rotatebox{8}{$\!\scriptstyle\int\!$}}{\int}}
+\usepackage{scalerel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\mathbi#1{\textbf{\em #1}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\algrule}[1][.2pt]{\par\vskip.5\baselineskip\hrule height #1\par\vskip.5\baselineskip}
+\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}} 
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pseudocode}
+%%%%%%%%%%%%%%%%%%FOR Appendix%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{afterpage}
+
+\usepackage{hyphenat}
+
+%%%%%%%
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+%\setcounter{tocdepth}{1}
+\begin{document}
+\include{Misc_front/cover}
+\include{Misc_front/certificate}
+\include{Misc_front/acknowledgement}
+\doublespacing
+\addcontentsline{toc}{section}{Abstract}
+%\include{Misc_front/abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Misc_front/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\tableofcontents
+\addcontentsline{toc}{section}{\listfigurename}
+
+\cleardoublepage
+\listoffigures
+
+\cleardoublepage
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+
+\cleardoublepage
+\addcontentsline{toc}{section}{Important Symbols and Abbreviations}
+\include{Misc_front/nomenclature}
+
+\cleardoublepage
+\doublespacing
+\pagenumbering{arabic}
+
+
+\include{Chapter1/intro}
+
+\cleardoublepage
+\include{Chapter2/lit_sur}
+
+\cleardoublepage
+\include{Chapter3/Design}
+
+\cleardoublepage
+\include{Chapter4/ModelingAGV}
+
+\cleardoublepage
+\include{Chapter5/Control}
+
+\cleardoublepage
+\include{Chapter6/TimeDelayTeleOperation}
+
+\cleardoublepage
+\include{Chapter7/PredictiveDisplay}
+
+\cleardoublepage
+\include{Chapter8/conc}
+\noindent \addcontentsline{toc}{chapter}{\bf Bibliography}
+\cleardoublepage
+%\bibliographystyle{apalike}
+%\bibliographystyle{elsarticle-num}
+\bibliographystyle{ieeetr} %bibliography style-file
+\singlespacing
+
+\bibliography{zhref}
+
+\cleardoublepage
+
+\appendix
+\cleardoublepage
+\doublespacing
+\include{Misc_end/appendix_a}  % DH and Dual Vector
+\cleardoublepage
+\include{Misc_end/appendix_c}
+
+%\include{Misc_end/appendix_d}
+\cleardoublepage
+\addcontentsline{toc}{section}{\bf Publications from the Thesis}
+\doublespacing
+\include{Misc_end/publications}
+
+\cleardoublepage
+\addcontentsline{toc}{section}{\bf Brief Bio-data of the Author}
+\doublespacing
+\include{Extra/Bio_AH}
+
+\end{document}

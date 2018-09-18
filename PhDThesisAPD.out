@@ -1,0 +1,58 @@
+\BOOKMARK [1][-]{Doc-Start}{Certificate}{}% 1
+\BOOKMARK [1][-]{Doc-Start}{Acknowledgements}{}% 2
+\BOOKMARK [1][-]{Doc-Start}{Abstract}{}% 3
+\BOOKMARK [1][-]{chapter*.1}{List of Figures}{}% 4
+\BOOKMARK [1][-]{chapter*.2}{List of Tables}{}% 5
+\BOOKMARK [1][-]{chapter*.3}{Important Symbols and Abbreviations}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Research Contributions}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Thesis Organization}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{Summary}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Research Objectives}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Summary}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Design of Mobile Platform}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Design Overview}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Design of the Traction System}{section.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{Selection of Motor and Gearbox}{subsection.3.1.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.2}{Design of Steering System }{section.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Calculation of Steering Torque}{subsection.3.1.2}% 19
+\BOOKMARK [2][-]{subsection.3.1.3}{Design of Scissor Mechanism}{section.3.1}% 20
+\BOOKMARK [1][-]{section.3.2}{Conclusion}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Mathematica Modelling of Wheeled Mobile Platform }{}% 22
+\BOOKMARK [1][-]{section.4.1}{Natural Orthogonal Compliment \(NOC\) Method}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Dynamic Equation of WMR}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Kinematic analysis}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Special cases}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Standard caster \(d1=0\) }{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Under Actuated Case \(d2=0\)}{section.4.3}% 28
+\BOOKMARK [1][-]{section.4.4}{Simulation of The Mobile Platform }{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Inverse Dynamics}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{Control }{}% 33
+\BOOKMARK [1][-]{section.5.1}{Control Architecture and Hardware}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.1.1}{Local Onboard Controller}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.2}{The Remote Control Station}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Admissible path}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Tele operation architecture}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{Simulation Results }{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.4}{Predictive Model based Feedback}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.4.1}{using only dynamic model of vehicle}{section.6.4}% 45
+\BOOKMARK [2][-]{subsection.6.4.2}{Kalman Filter with odometer data and Accelorometer?}{section.6.4}% 46
+\BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 47
+\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 48
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 49
+\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 50
+\BOOKMARK [1][-]{section.8.2}{Future Scope of the work}{chapter.8}% 51
+\BOOKMARK [0][-]{section.8.2}{Bibliography}{}% 52
+\BOOKMARK [0][-]{appendix.A}{Kinematics}{}% 53
+\BOOKMARK [1][-]{section.A.1}{Coordinate Frames and DH Parameters}{appendix.A}% 54
+\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 55
+\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 56
+\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 57
+\BOOKMARK [1][-]{Item.4}{Brief Bio-data of the Author}{appendix.B}% 58
