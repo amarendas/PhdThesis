@@ -33,26 +33,29 @@
 \BOOKMARK [0][-]{chapter.5}{Control }{}% 33
 \BOOKMARK [1][-]{section.5.1}{Control Architecture and Hardware}{chapter.5}% 34
 \BOOKMARK [2][-]{subsection.5.1.1}{Local Onboard Controller}{section.5.1}% 35
-\BOOKMARK [2][-]{subsection.5.1.2}{The Remote Control Station}{section.5.1}% 36
-\BOOKMARK [1][-]{section.5.2}{Admissible path}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 39
-\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 40
-\BOOKMARK [1][-]{section.6.1}{Tele operation architecture}{chapter.6}% 41
-\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.3}{Simulation Results }{chapter.6}% 43
-\BOOKMARK [1][-]{section.6.4}{Predictive Model based Feedback}{chapter.6}% 44
-\BOOKMARK [2][-]{subsection.6.4.1}{using only dynamic model of vehicle}{section.6.4}% 45
-\BOOKMARK [2][-]{subsection.6.4.2}{Kalman Filter with odometer data and Accelorometer?}{section.6.4}% 46
-\BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 47
-\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 48
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 49
-\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 50
-\BOOKMARK [1][-]{section.8.2}{Future Scope of the work}{chapter.8}% 51
-\BOOKMARK [0][-]{section.8.2}{Bibliography}{}% 52
-\BOOKMARK [0][-]{appendix.A}{Kinematics}{}% 53
-\BOOKMARK [1][-]{section.A.1}{Coordinate Frames and DH Parameters}{appendix.A}% 54
-\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 55
-\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 56
-\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 57
-\BOOKMARK [1][-]{Item.4}{Brief Bio-data of the Author}{appendix.B}% 58
+\BOOKMARK [3][-]{subsubsection.5.1.1.1}{The Motor Controller}{subsection.5.1.1}% 36
+\BOOKMARK [3][-]{subsubsection.5.1.1.2}{The control Algorithm}{subsection.5.1.1}% 37
+\BOOKMARK [3][-]{subsubsection.5.1.1.3}{Odometry }{subsection.5.1.1}% 38
+\BOOKMARK [2][-]{subsection.5.1.2}{The Remote Control Station}{section.5.1}% 39
+\BOOKMARK [1][-]{section.5.2}{Admissible path}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 43
+\BOOKMARK [1][-]{section.6.1}{Tele operation architecture}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.3}{Simulation Results }{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.4}{Predictive Model based Feedback}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.4.1}{using only dynamic model of vehicle}{section.6.4}% 48
+\BOOKMARK [2][-]{subsection.6.4.2}{Kalman Filter with odometer data and Accelorometer?}{section.6.4}% 49
+\BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 50
+\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 51
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 52
+\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.2}{Future Scope of the work}{chapter.8}% 54
+\BOOKMARK [0][-]{section.8.2}{Bibliography}{}% 55
+\BOOKMARK [0][-]{appendix.A}{Kinematics}{}% 56
+\BOOKMARK [1][-]{section.A.1}{Coordinate Frames and DH Parameters}{appendix.A}% 57
+\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 58
+\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 59
+\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 60
+\BOOKMARK [1][-]{Item.4}{Brief Bio-data of the Author}{appendix.B}% 61
