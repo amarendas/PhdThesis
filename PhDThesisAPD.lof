@@ -1,22 +1,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 3-D Model of the mobile manipulator\relax }}{8}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Photograph of the actual System\relax }}{8}{figure.caption.15}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Rear Suspension\relax }}{10}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Mobile Manipulator on slope\relax }}{10}{figure.caption.17}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Davis steering mechanism \relax }}{12}{figure.caption.18}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Wheel Ground Interaction\relax }}{12}{figure.caption.19}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Scissor Mechanism\relax }}{12}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 3-D Model of the mobile manipulator\relax }}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Photograph of the actual System\relax }}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rear Suspension\relax }}{10}{figure.caption.18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Mobile Manipulator on slope\relax }}{10}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Davis steering mechanism \relax }}{12}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Wheel Ground Interaction\relax }}{12}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Scissor Mechanism\relax }}{12}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces WMR-general\relax }}{21}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces WMR-Std. Castor\relax }}{21}{figure.caption.20}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel Configuration of WMR\relax }}{21}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Inverse Dynamics of Mobile Robot moving up on $15^o$ ramp \relax }}{31}{figure.caption.24}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces WMR-general\relax }}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces WMR-Std. Castor\relax }}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel Configuration of WMR\relax }}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Inverse Dynamics of Mobile Robot moving up on $15^o$ ramp \relax }}{31}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{33}{figure.caption.26}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Wiring Diagram of Robot \relax }}{35}{figure.caption.27}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{33}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Wiring Diagram of Robot \relax }}{35}{figure.caption.28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces User Interface for teleoperation \relax }}{36}{figure.caption.29}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{37}{figure.caption.30}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{39}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

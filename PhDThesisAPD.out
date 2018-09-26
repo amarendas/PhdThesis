@@ -41,11 +41,11 @@
 \BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 42
 \BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 43
-\BOOKMARK [1][-]{section.6.1}{Tele operation architecture}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.1}{Tele operation simulation architecture}{chapter.6}% 44
 \BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 45
 \BOOKMARK [1][-]{section.6.3}{Simulation Results }{chapter.6}% 46
 \BOOKMARK [1][-]{section.6.4}{Predictive Model based Feedback}{chapter.6}% 47
-\BOOKMARK [2][-]{subsection.6.4.1}{using only dynamic model of vehicle}{section.6.4}% 48
+\BOOKMARK [2][-]{subsection.6.4.1}{Using Dynamic model of vehicle}{section.6.4}% 48
 \BOOKMARK [2][-]{subsection.6.4.2}{Kalman Filter with odometer data and Accelorometer?}{section.6.4}% 49
 \BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 50
 \BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 51

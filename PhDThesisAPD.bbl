@@ -123,26 +123,12 @@ J.~Angeles, {\em Fundamentals of robotic mechanical systems: theory, methods,
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.
 
-\bibitem{SahaBook}
-S.~K. Saha, {\em Introduction to Robotics}.
-\newblock New Delhi, India: Tata McGraw Hill Education Pvt. Ltd., 2010.
-
-\bibitem{saha1999dynamics}
-S.~K. Saha, ``Dynamics of serial multibody systems using the decoupled natural
-  orthogonal complement matrices,'' {\em Journal of applied mechanics},
-  vol.~66, no.~4, pp.~986--996, 1999.
-
-\bibitem{saha2001recursive}
-S.~K. Saha and W.~O. Schiehlen, ``Recursive kinematics and dynamics for
-  parallel structured closed-loop multibody systems,'' {\em Mechanics of
-  Structures and Machines}, vol.~29, no.~2, pp.~143--175, 2001.
-
-\bibitem{saha1991}
-J.~A. S~K~Saha, ``Dynamics of nonholonomic mechanical system uisng natural
-  orthogonal compliment,'' {\em Transactions of ASMe}, vol.~58, March, 1991.
-
 \bibitem{maxonrs232}
 {\em EPOS Application Note: RS232 to CANopen Getway}.
 \newblock Maxon Motors, 2012.
+
+\bibitem{coulter1992implementation}
+R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
+  tech. rep., Carnegie-Mellon UNIV Pittsburgh PA Robotics INST, 1992.
 
 \end{thebibliography}
