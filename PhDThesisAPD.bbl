@@ -127,6 +127,12 @@ S.~Saha, {\em Introduction to robotics}.
 {\em EPOS Application Note: RS232 to CANopen Getway}.
 \newblock Maxon Motors, 2012.
 
+\bibitem{chen2007human}
+J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
+  interface design for teleoperated robots,'' {\em IEEE Transactions on
+  Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, vol.~37,
+  no.~6, pp.~1231--1245, 2007.
+
 \bibitem{coulter1992implementation}
 R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
   tech. rep., Carnegie-Mellon UNIV Pittsburgh PA Robotics INST, 1992.
