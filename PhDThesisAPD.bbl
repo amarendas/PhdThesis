@@ -137,4 +137,8 @@ J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
 R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
   tech. rep., Carnegie-Mellon UNIV Pittsburgh PA Robotics INST, 1992.
 
+\bibitem{sheridan}
+S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
+  IEEE Transactions on Robotics and Automation}, vol.~9, no.~5, October 1993.
+
 \end{thebibliography}

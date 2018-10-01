@@ -114,7 +114,7 @@ v\\
 \dot{\theta}
 \end{pmatrix}
 \end{equation}
-This is the signal which the operator sends over the  communication network to the robot as command at time $t$. Therefore
+The operator station  sends $v$ and $\dot{\theta}$ as the command over the  communication network to the robot. Therefore
 \begin{equation}
 \begin{pmatrix}
 u_r(t)\\
@@ -129,13 +129,66 @@ u_1(t)
 v\\
 \dot{\theta}
 \end{pmatrix}
-\end{equation}  
-\section{Teleoperation loop}
-\section{Simulation Results }
-\section{Predictive Model based Feedback}
-\subsection{Using Dynamic model of vehicle}
-\subsection{Kalman Filter with odometer data and Accelorometer?}
+\end{equation}
+  
+
+
+\section{Simulation and Results }
+
+The teleoperation loop consists the operator model described in section 6.2 at one end of the communication link and Mobile robot model described in 6.1 on the other link. As shown in figure \ref{fig:teleloop}there will a delay in both direction of communication. In real system the video image is streamed  by the robot. Due to large quantity of data and limited bandwidth the delay $h_1>>h_2$. The amount of delay $h_1$ was measured  and it was found around 0.5sec as described in appendix A. The command sent by the operator is  $v$ and $\dot{\theta}$ which is few bites only.  Therefore in simulation  $h_2=0$ is assumed.
+
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter6/fig/teleloop}
+	\captionof{figure}{Teleoperation block diagram }
+	\label{fig:teleloop} 
+\end{figure}
+
+
+\subsection{The Simulation Algorithm} 
+\begin{itemize}
+\item Convert the path from global coordinate system (CS) to Robot Local CS
+\item With a given look ahead distance (l) search for a point on the path
+\begin{itemize}
+\item If point is found goto step 3
+\item If not found increase look ahead distance 
+\end{itemize}
+\item Determine the turning radius (r) using eqnation 6.5
+\item Calculate the command to the robot from equation 6.7. Note that these commands are based on the old visual data the operator see.
+\item Solve delayed  differential equation in Matlab using \textit{ dde24}.
+\end{itemize}
+
+Simulation was carried using Matlab. Delay differential equation solver dde24 was used to solve equation 6.1 and 6.2 with delayed inputs $u_r$ and $u_l$.  The path  tracked was a circle of radius 5m centred at origin of the global coordinate system. The human action was modelled with look ahead distance of 0.5m and linear velocity of 0.5m/s. The initial position of the robot was (4.5,0.0).
+
+ The  performance of the system with zero delay, i.e. $h_1=h_2=0$ is shown in figure \ref{fig:nodelayplot}. Figure \ref{fig:delay500plot} and \ref{fig:delay800plot} shows the plot robot motion under delay of 0.5 and 0.8 sec.  It is seen that oscillation becomes visible at 0.5sec delay and with 0.8 sec delay the system is on the verge of instability. 
+ 
+ It was also observed that the with large vehicle velocity, $v$ and large look ahead distance, $l$ the instability commences with smaller time delay, $\delta$ in equation 6.2.  
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter6/fig/noDelay}
+	\captionof{figure}{Simulation with no time delay in either direction }
+	\label{fig:nodelayplot} 
+\end{figure} 
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter6/fig/Delay500milsec}
+	\captionof{figure}{Simulation with  time delay $h_1=.5sec$ and $h_2=0$ }
+	\label{fig:delay500plot} 
+\end{figure} 
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter6/fig/Delay800milsec}
+	\captionof{figure}{Simulation with  time delay $h_1=.8sec$ and $h_2=0$ }
+	\label{fig:delay800plot} 
+\end{figure} 
+
+
+
+
+ 
+
+%\section{Predictive Model based Feedback}
+%\subsection{Using Dynamic model of vehicle}
+%\subsection{Kalman Filter with odometer data and Accelorometer?}
 
 
 \section{Summary}
-In this chapter, 
+In this chapter, simulation study of a teleoperated mobile robot was presented. A mathematical model was presented of the  human operator action while driving the robot base on visual feed back. It was shown in by the simulation results that the behaviour of the system deteriorates with increase in delay in communication between the local and remote station. With large time delay the system becomes unstable.
+
+ In the next section we propose a predictive model based feedback control which is used to stabilize robot motion  under time delay teleopration.
