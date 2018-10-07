@@ -12,50 +12,54 @@
 \BOOKMARK [1][-]{section.2.2}{Summary}{chapter.2}% 12
 \BOOKMARK [0][-]{chapter.3}{Design of Mobile Platform}{}% 13
 \BOOKMARK [1][-]{section.3.1}{Design Overview}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.1.1}{Design of the Traction System}{section.3.1}% 15
-\BOOKMARK [3][-]{subsubsection.3.1.1.1}{Selection of Motor and Gearbox}{subsection.3.1.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.2}{Design of Steering System }{section.3.1}% 17
-\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Calculation of Steering Torque}{subsection.3.1.2}% 18
-\BOOKMARK [2][-]{subsection.3.1.3}{Design of Scissor Mechanism}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{Conclusion}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Mathematica Modelling of Wheeled Mobile Platform }{}% 21
-\BOOKMARK [1][-]{section.4.1}{Natural Orthogonal Compliment \(NOC\) Method}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Dynamic Equation of WMR}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.2.1}{Kinematic analysis}{section.4.2}% 24
-\BOOKMARK [1][-]{section.4.3}{Special cases}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.3.1}{Standard caster \(d1=0\) }{section.4.3}% 26
-\BOOKMARK [2][-]{subsection.4.3.2}{Under Actuated Case \(d2=0\)}{section.4.3}% 27
-\BOOKMARK [1][-]{section.4.4}{Simulation of The Mobile Platform }{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.5}{Inverse Dynamics}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Control }{}% 32
-\BOOKMARK [1][-]{section.5.1}{Control Architecture and Hardware}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.1.1}{Local Onboard Controller}{section.5.1}% 34
-\BOOKMARK [3][-]{subsubsection.5.1.1.1}{The Motor Controller}{subsection.5.1.1}% 35
-\BOOKMARK [3][-]{subsubsection.5.1.1.2}{The control Algorithm}{subsection.5.1.1}% 36
-\BOOKMARK [3][-]{subsubsection.5.1.1.3}{Control of Z platform}{subsection.5.1.1}% 37
-\BOOKMARK [3][-]{subsubsection.5.1.1.4}{Odometry }{subsection.5.1.1}% 38
-\BOOKMARK [2][-]{subsection.5.1.2}{The Remote Control Station}{section.5.1}% 39
-\BOOKMARK [1][-]{section.5.2}{Admissible path}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 42
-\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 43
-\BOOKMARK [1][-]{section.6.1}{Modeling of mobile platform}{chapter.6}% 44
-\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.3}{Simulation and Results }{chapter.6}% 46
-\BOOKMARK [2][-]{subsection.6.3.1}{The Simulation Algorithm}{section.6.3}% 47
-\BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 48
-\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 49
-\BOOKMARK [1][-]{section.7.1}{Remote Scene Extrapolation}{chapter.7}% 50
-\BOOKMARK [2][-]{subsection.7.1.1}{here}{section.7.1}% 51
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 52
-\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 53
-\BOOKMARK [1][-]{section.8.2}{Future Scope of the work}{chapter.8}% 54
-\BOOKMARK [0][-]{section.8.2}{Bibliography}{}% 55
-\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 56
-\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 57
-\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 58
-\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 59
-\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 60
-\BOOKMARK [1][-]{Item.6}{Brief Bio-data of the Author}{appendix.B}% 61
+\BOOKMARK [1][-]{section.3.2}{Design of the Traction System}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{Selection of Motor and Gearbox}{section.3.2}% 16
+\BOOKMARK [1][-]{section.3.3}{Design of Steering System }{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.1}{Minimum Turning Radius}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.2}{Calculation of Steering Torque}{section.3.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Design of Scissor Mechanism for Manipulating Arm}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Summary}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Dynamics of Wheeled Mobile Robots }{}% 22
+\BOOKMARK [1][-]{section.4.1}{Modelling using the Natural Orthogonal Compliment \(NOC\)}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Dynamic Equation of WMR}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Kinematic analysis}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{Dynamic equations}{section.4.2}% 26
+\BOOKMARK [3][-]{subsubsection.4.2.2.1}{Generalized Inertia Matrix, I}{subsection.4.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.4.2.2.2}{Matrix of Convective Inertia term C}{subsection.4.2.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Special cases}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Standard caster \(d1=0\) }{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Under Actuated Case \(d2=0\)}{section.4.3}% 31
+\BOOKMARK [1][-]{section.4.4}{Simulation }{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.5}{Inverse Dynamics}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Control }{}% 36
+\BOOKMARK [1][-]{section.5.1}{Control Architecture and Hardware}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.1.1}{Local Onboard Controller}{section.5.1}% 38
+\BOOKMARK [3][-]{subsubsection.5.1.1.1}{The Motor Controller}{subsection.5.1.1}% 39
+\BOOKMARK [3][-]{subsubsection.5.1.1.2}{The control Algorithm}{subsection.5.1.1}% 40
+\BOOKMARK [3][-]{subsubsection.5.1.1.3}{Control of Z platform}{subsection.5.1.1}% 41
+\BOOKMARK [3][-]{subsubsection.5.1.1.4}{Odometry }{subsection.5.1.1}% 42
+\BOOKMARK [2][-]{subsection.5.1.2}{The Remote Control Station}{section.5.1}% 43
+\BOOKMARK [1][-]{section.5.2}{Admissible path}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.3}{Trajectory Tacking}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 46
+\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 47
+\BOOKMARK [1][-]{section.6.1}{Modeling of mobile platform}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.3}{Simulation and Results }{chapter.6}% 50
+\BOOKMARK [2][-]{subsection.6.3.1}{The Simulation Algorithm}{section.6.3}% 51
+\BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 53
+\BOOKMARK [1][-]{section.7.1}{Remote Scene Extrapolation}{chapter.7}% 54
+\BOOKMARK [2][-]{subsection.7.1.1}{here}{section.7.1}% 55
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 56
+\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.2}{Future Scope of the work}{chapter.8}% 58
+\BOOKMARK [0][-]{section.8.2}{Bibliography}{}% 59
+\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 60
+\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 61
+\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 62
+\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 63
+\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 64
+\BOOKMARK [1][-]{Item.6}{Brief Bio-data of the Author}{appendix.B}% 65
