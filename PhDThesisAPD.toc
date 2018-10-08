@@ -3,10 +3,10 @@
 \contentsline {section}{Abstract}{iv}{Doc-Start}
 \contentsline {section}{List of Figures}{vii}{chapter*.1}
 \contentsline {section}{List of Tables}{xi}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xiii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{3}{section.1.2}
+\contentsline {section}{Important Symbols and Abbreviations}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Research Objectives}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Summary}{7}{section.2.2}
@@ -30,36 +30,35 @@
 \contentsline {subsection}{\numberline {4.3.1}Standard caster ($d_1=0$) }{33}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Under Actuated Case ($d_2=0$)}{33}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Simulation }{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Inverse Dynamics}{34}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{36}{section.4.6}
-\contentsline {section}{\numberline {4.7}Summary}{36}{section.4.7}
-\contentsline {chapter}{\numberline {5}Control }{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Control Architecture and Hardware}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Local Onboard Controller}{38}{subsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.1}The Motor Controller}{38}{subsubsection.5.1.1.1}
-\contentsline {subsubsection}{\numberline {5.1.1.2}The control Algorithm}{38}{subsubsection.5.1.1.2}
-\contentsline {subsubsection}{\numberline {5.1.1.3}Control of Z platform}{39}{subsubsection.5.1.1.3}
-\contentsline {subsubsection}{\numberline {5.1.1.4}Odometry }{39}{subsubsection.5.1.1.4}
-\contentsline {subsection}{\numberline {5.1.2}The Remote Control Station}{39}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Admissible path}{40}{section.5.2}
-\contentsline {section}{\numberline {5.3}Trajectory Tacking}{40}{section.5.3}
-\contentsline {section}{\numberline {5.4}Summary}{40}{section.5.4}
-\contentsline {chapter}{\numberline {6}Simulation Time Delay Tele-operation}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Modeling of mobile platform}{42}{section.6.1}
-\contentsline {section}{\numberline {6.2}Modeling the human operator}{42}{section.6.2}
-\contentsline {section}{\numberline {6.3}Simulation and Results }{45}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{45}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Summary}{48}{section.6.4}
-\contentsline {chapter}{\numberline {7}Predictive Display}{49}{chapter.7}
-\contentsline {section}{\numberline {7.1}Remote Scene Extrapolation}{49}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}here}{49}{subsection.7.1.1}
-\contentsline {chapter}{\numberline {8}Conclusions}{51}{chapter.8}
-\contentsline {section}{\numberline {8.1}Thesis Summary}{51}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future Scope of the work}{51}{section.8.2}
-\contentsline {chapter}{\bf Bibliography}{52}{section.8.2}
-\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{57}{appendix.A}
-\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{57}{section.A.1}
-\contentsline {chapter}{\numberline {B}Dynamics}{59}{appendix.B}
-\contentsline {section}{\numberline {B.1}Inertia Dyad}{59}{section.B.1}
-\contentsline {section}{\bf Publications from the Thesis}{61}{section.B.1}
-\contentsline {section}{\bf Brief Bio-data of the Author}{63}{Item.6}
+\contentsline {section}{\numberline {4.5}Inverse Dynamics}{35}{section.4.5}
+\contentsline {section}{\numberline {4.6}Summary}{37}{section.4.6}
+\contentsline {chapter}{\numberline {5}Control }{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Control Architecture and Hardware}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Local Onboard Controller}{40}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}The Motor Controller}{40}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}The control Algorithm}{40}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Control of Z platform}{41}{subsubsection.5.1.1.3}
+\contentsline {subsubsection}{\numberline {5.1.1.4}Odometry }{41}{subsubsection.5.1.1.4}
+\contentsline {subsection}{\numberline {5.1.2}The Remote Control Station}{41}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Admissible path}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Trajectory Tacking}{42}{section.5.3}
+\contentsline {section}{\numberline {5.4}Summary}{42}{section.5.4}
+\contentsline {chapter}{\numberline {6}Simulation Time Delay Tele-operation}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Modeling of mobile platform}{44}{section.6.1}
+\contentsline {section}{\numberline {6.2}Modeling the human operator}{44}{section.6.2}
+\contentsline {section}{\numberline {6.3}Simulation and Results }{47}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{47}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Summary}{50}{section.6.4}
+\contentsline {chapter}{\numberline {7}Predictive Display}{51}{chapter.7}
+\contentsline {section}{\numberline {7.1}Remote Scene Extrapolation}{51}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}here}{51}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {8}Conclusions}{53}{chapter.8}
+\contentsline {section}{\numberline {8.1}Thesis Summary}{53}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future Scope of the work}{53}{section.8.2}
+\contentsline {chapter}{\bf Bibliography}{54}{section.8.2}
+\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{59}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{59}{section.A.1}
+\contentsline {chapter}{\numberline {B}Dynamics}{61}{appendix.B}
+\contentsline {section}{\numberline {B.1}Inertia Dyad}{61}{section.B.1}
+\contentsline {section}{\bf Publications from the Thesis}{63}{section.B.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{65}{Item.6}

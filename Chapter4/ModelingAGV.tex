@@ -177,13 +177,14 @@ Similarly, for the other actuated wheel \#2, one get
 t_2=\begin{pmatrix}
 \omega_1\\\dot{o_1}
 \end{pmatrix}=
-\begin{pmatrix}
--i+(r/l)k & -(r/l)k\\  0 &rj
-\end{pmatrix}
-\begin{pmatrix}
-\dot{\theta_1}\\\dot{\theta_2}
-\end{pmatrix}
-\end{equation}
+		\begin{pmatrix}
+		-i+(r/l)k & -(r/l)k\\  0 &rj
+		\end{pmatrix}
+		\begin{pmatrix}
+		\dot{\theta_1}\\\dot{\theta_2}
+		\end{pmatrix}\\
+		\end{equation}
+
 To calculate the twist, $t_3$ of the platform body \#3, equation \ref{omegaPlat} and \ref{velPlat} are combined to get
 \begin{equation}
 \label{twist3}
@@ -200,6 +201,15 @@ r(\lambda i+(1/2))j & r(-\lambda i+(1/2))j
 \end{equation}
 where
 \[ \delta\equiv d/l, \quad \rho \equiv r/d, \quad \lambda \equiv a/l \]
+
+From the above three equations we get 
+$T_1=\begin{pmatrix}-i+(r/l)k & -(r/l)k\\ rj & 0\end{pmatrix}$,   
+$T_2=\begin{pmatrix}	-i+(r/l)k & -(r/l)k\\  0 &rj \end{pmatrix}$, $T_3=\begin{pmatrix}
+	\rho\delta & -\rho\delta\\
+	r(\lambda i+(1/2))j & r(-\lambda i+(1/2))j
+	\end{pmatrix}$
+
+
 In order to calculate the twist of the caster bracket and the caster wheel, we need to express the  unactuated joint rates, $\dot{\psi_1}$ and $\dot{\phi_1}$, in terms of the actuated joint rate vector $\dot{\theta_a}$. note here that $\dot{\psi_1}$ denotes the rate of rotation of bracket body \#5 about $O_5$ with respect to the platform, and 
 $\dot{\phi_1}$ the rate of rotation of caster wheel body \#4 about its axis $e_4$ with respect to bracket. The velocity of $O_5$ can be expressed in two independent forms,namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_5$, i.e.,
 \begin{equation}
@@ -267,7 +277,7 @@ t_4=\begin{pmatrix}
 \Theta_4\\C_4
 \end{pmatrix}\dot{\theta_a}
 \end{equation}
-where
+Using the definition of $F(i,j)$ in  equation \ref{unac2act1}, $\Theta_4$ and $C_4$ can be written as 
 \[ \Theta_4=[F_{11}e_4+\bar{F_{21}}k \quad F_{12}e_4+\bar{F_{22}}k],\quad 
 C_4=r[-F_{11}f_4 \quad -F_{12}f_4]\]
 \[\bar{F_{21}}=F_{21}+\rho \delta, \quad \bar{F_{22}}=F_{22}-\rho\delta\]
@@ -296,7 +306,7 @@ t_6=\begin{pmatrix}
 \Theta_7\\C7
 \end{pmatrix}\dot{\theta_a}
 \end{equation}
-where
+Using  $G(i,j)$ defined in  equation \ref{unac2act2}, $\Theta_6$, $C_6, \Theta_7$ and $C_7$ can be written as 
 \[ \Theta_6 \equiv [G_{11}e_6+\bar{G_{21}}k \quad G_{12}e_6+\bar{G_{22}}k],\quad 
 C_6 \equiv r[-G_{11}f_6 \quad -G_{12}f_6]\]
 \[ \Theta_7 \equiv [\bar{G_{21}}k \quad \bar{G_{22}}k],\quad 
@@ -368,7 +378,7 @@ T^TM\dot{T}=
 \end{split}
 \end{equation}
 \\
-The second term of equation \ref{corr1} evaluates to zero, as shown below. Consider castor wheel (body \#4). Using equation \ref{twist4} and  $W$ defined in the equation \ref{3} we get,
+The second term of equation \ref{Convective} i.e, $ \sum_{i=4,6}T_i^TW_iM_iT_i$ evaluates to zero, as shown below. Consider castor wheel (body \#4). Using equation \ref{twist4} and  $W$ defined in the equation \ref{3} we get,
 \begin{equation}
 \label{corr2}
 T^T_4W_4M_4T_4=[\Theta_4, C_4]\begin{pmatrix}
@@ -382,16 +392,12 @@ I_4&0\\0 &m_4 \mathbf{1}
 \end{pmatrix}=\Theta_4\Omega_4I_4\Theta_4
 \end{equation}
 
-To evaluate the above equation, we express  all the terms in the coordinate system $\{{e_4,f_4,k}\}$. Moreover
-\[\Theta_4 \equiv \begin{pmatrix}
-F_{11}&0&F_{12}\\
-0&0&0\\
-\bar{F_{21}}&0&\bar{F_{22}}
-\end{pmatrix}, \quad
+To evaluate the above equation, we express  all the terms in the coordinate system $\{{e_4,f_4,k}\}$. Moreover, $\omega_4=\Theta_4 \dot{\theta_a}$, using definition of $\Theta_4$ from equation \ref{twist4} we get $\omega_4= (F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2})e_4+(F_{21}\dot{\theta_1}+F_{22}\dot{\theta_2})k$ and the cros product matrix of $\omega_4$ as 
+\[
  \Omega_4 \equiv \begin{pmatrix}
  0& -(\bar{F_{21}}\dot{\theta_1}+\bar{F_{22}}\dot{\theta_2}) &0\\
  (\bar{F_{21}}\dot{\theta_1}+\bar{F_{22}}\dot{\theta_2}) & 0 & -(F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2}) \\
- 0& F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2}) &0 
+ 0& (F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2}) &0 
  \end{pmatrix}
 \]
 When the above expressions are substituted in equation  \ref{corr2}, we get
@@ -434,18 +440,27 @@ Another solution is to put an extra actuator to control the bracket motion by co
 
 \section{Simulation }
  
-The mobile manipulator was modelled as differential drive robot, the front wheels and steering mechanism was not included in the dynamic model as there mass are too small compared to the mobile platform. The weight of a wheel is 300g, the steering mechanism 240g, where as the weight of platform is 70Kg.
+The mobile manipulator proposed in chapter 3  was modelled as a differential drive robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
 
-In the simulation the vehicle (point 03), is required to traces a circle of radius 5m and with β(t) as given below.
+In  simulation the vehicle, (point $O_3$), is required to trace a circle of radius 5m. As shown in the figure \ref{fig:CirTrace}. $ \beta$ is the angle between the line joining  point $O_3$ and the origin $O$ with respect to $X-axis$. The function $\beta(t)$ is defined such that the ful circle is completed in 60Sec. 
 \begin{equation}
 \label{path}
-\beta(t)=\frac{20\pi}{60^3}t^3+\frac{30\pi}{60^4}t^4+\frac{2\pi}{60^5}t^5
+\beta(t)=\frac{20\pi}{60^3}t^3-\frac{30\pi}{60^4}t^4+\frac{12\pi}{60^5}t^5
 \end{equation}
+Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=300pt,keepaspectratio]{Chapter4/fig/pathCircle}
+		\caption{Path Traced by Robot}
+	\label{fig:CirTrace}
+\end{figure}
+
+
 
 \section{Inverse Dynamics}
-Using the Inverse Kinematic,  the wheel velocity and acceleration are determined using pseudo Inverse   from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system
-   
-The wheel angle, velocity and acceleration are used in the dynamic equation  to calculate the torque required by each motor. The results are plotted in figure 2.  The size of generalized inertia matrix,    and convective term   are not reported here as there are size is very large.
+Using the model inverse kinematic,  the wheel velocity and acceleration are determined using pseudo Inverse  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
+The wheel angle, velocity and acceleration were used in the dynamics equation  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}.  The size of generalized inertia matrix,    and convective term   are not reported here as there are size is very large.
 
 
 The equation of  dynamic model  is given in equation \ref{dnoc}, where $\theta_l, \theta_r $ are the rear left and right wheel role angles, $t_i^T=[\omega_i, v]$ the twist, $m_i$ the mass, $I_i$ the inertia of individual bodies.
@@ -466,7 +481,7 @@ $w^G$ and $ w^J$ represents the gravitational force and the external torque/Forc
 The torque required at wheels for the vehicle to  move up a spiral ramp  of slope $10^o$ and radius 5m is given figure \ref{fig:spiral}. The numerical values used for the forward dynamic simulation is given in table \ref{tb:massproperty}.
  \begin{figure}
 	\includegraphics[height=300pt,keepaspectratio]{Chapter4/fig/FD}
-	\captionof{figure}{Inverse Dynamics of Mobile Robot moving up on $15^o$ ramp }
+	\captionof{figure}{Inverse dynamics of the mobile robot }
 	\label{fig:spiral} 
 \end{figure} 
 %
@@ -489,12 +504,10 @@ The torque required at wheels for the vehicle to  move up a spiral ramp  of slop
 	\end{tabular}
 \end{table}
  
-\section{Conclusion}
-We have presented the dynamic equation of the most general form of caster wheel configuration. Even though we have considered here only two caster wheel the formulation can be extended to any number of caster wheels, in such case we have to find equation \ref{unac2act1} for each caster wheel system, and then proceed mechanical as to calculate the corresponding twists. We have also shown that the  dynamic of standard caster wheels is a special case of our general case with $d_1=0$. We have also proved why a caster needs a non-zero caster offset distance, and the  need of extra actuators in case $d_2=0$.
+\section{Summary}
+In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.
     
 
 
 
-\section{Summary}
-In this chapter, 
 
