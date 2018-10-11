@@ -193,7 +193,7 @@ t_3=\begin{pmatrix}
 \end{pmatrix}=
 \begin{pmatrix}
 \rho\delta & -\rho\delta\\
-r(\lambda i+(1/2))j & r(-\lambda i+(1/2))j
+r(\lambda i+(1/2)j) & r(-\lambda i+(1/2)j)
 \end{pmatrix}
 \begin{pmatrix}
 \dot{\theta_1}\\\dot{\theta_2}
@@ -322,6 +322,7 @@ I=T^TMT=T_1^TM_1T_1+T_2^TM_2T_2+...T_7^TM_7T_7
 \end{equation}
 We define the contribution of rear wheels alone to the inertia matrix by $I_m$ as  \[ I_m=\sum_{i=1,2}T_i^TM_iT_i\] then
 \begin{equation}
+\label{eqn:I_wheel}
 I_m=\begin{pmatrix}
 I_w+(\rho\delta)^2H++m_wr^2 & -2(\rho\delta)^2H
 \\
@@ -335,6 +336,7 @@ I_w&0&0\\0&H&\\0&0&H
 \end{pmatrix}$. Matrix $\tilde{I_w}$ is the $3\times 3$ moment of inertia matrix of the wheel in co-ordinate frame $\{i,j,k\}$, mass of the motorized wheels is  $m_w$ and $mb{1}$ is the $3\times 3$ identity matrix.
 If the mass of the platform is $m_p$ and its moment of inertia about vector ${k}$ is $I_p$, then as derived in \cite{angeles2013fundamentals} 
 \begin{equation}
+\label{eqn:I_platform}
 I_3=T^T_3M_3T_3 =I_p(\rho\delta)^2\begin{pmatrix}
 1&-1\\-1&1 \end{pmatrix}\\
 +m_pr^2\begin{pmatrix}
@@ -447,7 +449,7 @@ In  simulation the vehicle, (point $O_3$), is required to trace a circle of radi
 \label{path}
 \beta(t)=\frac{20\pi}{60^3}t^3-\frac{30\pi}{60^4}t^4+\frac{12\pi}{60^5}t^5
 \end{equation}
-Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
+Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60). The initial pose of the vehicle isparellen to the $Y-axis$ and point $O_3$ at the intersection of $X-axis$ and the circle i.e. $\beta=0$.
 
 \begin{figure}[H]
 	\centering
@@ -460,25 +462,39 @@ Moreover the velocity and acceleration of the robot is zero at the beginning (t=
 
 \section{Inverse Dynamics}
 Using the model inverse kinematic,  the wheel velocity and acceleration are determined using pseudo Inverse  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
-The wheel angle, velocity and acceleration were used in the dynamics equation  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}.  The size of generalized inertia matrix,    and convective term   are not reported here as there are size is very large.
+The wheel angle, velocity and acceleration were used in the dynamics equation  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}. 
 
-
-The equation of  dynamic model  is given in equation \ref{dnoc}, where $\theta_l, \theta_r $ are the rear left and right wheel role angles, $t_i^T=[\omega_i, v]$ the twist, $m_i$ the mass, $I_i$ the inertia of individual bodies.
+The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $ are the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given in equations \ref{twist1},\ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
 \begin{equation}
 \label{dnoc}
 \begin{aligned}
 T^TMT\ddot{\theta_a}&=-T^T(M\dot{T}+WMT)\dot{\theta_a}+T^T(w^J+w^G)\\
-where\quad \theta_a&=[\theta_l, \theta_r]^T , \quad [t_1,t_2,t_3]=(T\dot{\theta_a})^T, \quad M=diag(M_1, M_2, M_3)\\
-W&=diag(W_1,W_2,W_3),\quad W_i=\begin{pmatrix}
-\omega_i\times 1 & 0\\ 0 & 0
-\end{pmatrix},\quad M_i=\begin{pmatrix}
-\omega_i\times I_i & 0\\ 0 & m_i
-\end{pmatrix}
+\text{where} \quad &
+T=(T_1^T T_2^T T_3^T)^T, \quad M=diag(M_1, M_2, M_3)\\
+T^TMT &=I_1+I_2+I_m+I_3= I_m+I_3\\
+W&=diag(W_1,W_2,W_3),\quad w^G=g\sin\alpha, \quad \alpha=10^o
 \end{aligned}
 \end{equation}
-$w^G$ and $ w^J$ represents the gravitational force and the external torque/Force applied by motor respectively. 
+$w^G$, $ w^J$ and $\alpha$ represent the gravitational force acting along the inclined  the external torque/Force applied by a motor and the inclination of the plane to horizontal respectively. The generalized inertia matrix $I_m$ and $I_3$ are given in \ref{eqn:I_wheel} and \ref{eqn:I_platform}.
+As stated earlier the convective inertia term is zeros a the inertia matrices are constant. The motor torque  are then given a 
+\begin{equation}
+T1^Tw_1^j=\tau_1, \quad T_2^Tw_2^j=\tau_2
+\end{equation}
+\begin{equation}
+ T_3^Tw^g=\begin{pmatrix}
+\rho\delta k & -\rho\delta k\\
+r(\lambda i+(1/2)j) & r(-\lambda i+(1/2)j)
+\end{pmatrix}
+\begin{pmatrix}
+0\\
+-jg\sin\alpha
+\end{pmatrix}=\begin{pmatrix}
+0\\ -jg\sin\alpha
+\end{pmatrix}
+\end{equation} 
 
-The torque required at wheels for the vehicle to  move up a spiral ramp  of slope $10^o$ and radius 5m is given figure \ref{fig:spiral}. The numerical values used for the forward dynamic simulation is given in table \ref{tb:massproperty}.
+The torques required at the wheels of the vehicle to  move up a spiral ramp  of slope $10^o$ and radius 5m is given figure \ref{fig:spiral}. 
+
  \begin{figure}
 	\includegraphics[height=300pt,keepaspectratio]{Chapter4/fig/FD}
 	\captionof{figure}{Inverse dynamics of the mobile robot }
@@ -486,12 +502,12 @@ The torque required at wheels for the vehicle to  move up a spiral ramp  of slop
 \end{figure} 
 %
 \begin{table}[!htbp]
-	\caption{Dynamic parameters used in forward dynamic simulation.}
+	\caption{Dynamic \& kinematic parameters }
 	\label{tb:massproperty}
 	\centering
 	\begin{tabular}{l l l}
 		\hline
-		\emph{Part Name}  & \emph{Mass Property} & \emph{Value} \\
+		\emph{Part Name}  & \emph{ Property} & \emph{Value} \\
 		\hline
 		Rear Wheels  & mass &300g \\ 
 		 & Moment of Inertia & diag(242, 242, 465)kg $mm^2$\\
@@ -500,8 +516,11 @@ The torque required at wheels for the vehicle to  move up a spiral ramp  of slop
 		 1.18& 0.01&-0.05\\ 0.01 & 1.28 & 0.08\\
 		 -0.05 & 0.08 & 0.53
 		 \end{pmatrix} Kg-m^2$ \\
+		   l & length & 400mm\\
+		  r & wheel radius & 100mm\\
+		 a & see figure &  \\ 
 		\hline
-	\end{tabular}
+		\end{tabular}
 \end{table}
  
 \section{Summary}

@@ -1,32 +1,32 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 3-D Model of the mobile manipulator\relax }}{10}{figure.caption.14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Photograph of the actual System\relax }}{10}{figure.caption.14}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Rear Suspension\relax }}{13}{figure.caption.16}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Mobile Manipulator on slope\relax }}{13}{figure.caption.16}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ackerman Steering Condition \relax }}{15}{figure.caption.17}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Davis Steering Gear\relax }}{16}{figure.caption.18}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Steer Torque\relax }}{16}{figure.caption.18}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Scissor Mechanism\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 3-D Model of the mobile manipulator\relax }}{10}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Photograph of the actual System\relax }}{10}{figure.caption.15}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rear Suspension\relax }}{13}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Mobile Manipulator on slope\relax }}{13}{figure.caption.17}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ackerman Steering Condition \relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Davis Steering Gear\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Steer Torque\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Scissor Mechanism\relax }}{18}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces WMR-Std. Castor\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces WMR-general\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel configuration of a WMR\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{36}{figure.caption.22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces WMR-Std. Castor\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces WMR-general\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel configuration of a WMR\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{37}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{39}{figure.caption.24}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Wiring Diagram of Robot \relax }}{41}{figure.caption.25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces User Interface for teleoperation \relax }}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{39}{figure.caption.25}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Wiring Diagram of Robot \relax }}{41}{figure.caption.26}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces User Interface for teleoperation \relax }}{42}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{43}{figure.caption.27}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{45}{figure.caption.28}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{46}{figure.caption.29}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Teleoperation block diagram \relax }}{48}{figure.caption.30}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation with no time delay in either direction \relax }}{49}{figure.caption.31}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{49}{figure.caption.32}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{45}{figure.caption.29}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{46}{figure.caption.30}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Teleoperation block diagram \relax }}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation with no time delay in either direction \relax }}{49}{figure.caption.32}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{49}{figure.caption.33}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{50}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
