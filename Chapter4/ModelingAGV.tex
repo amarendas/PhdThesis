@@ -449,18 +449,18 @@ In  simulation the vehicle, (point $O_3$), is required to trace a circle of radi
 \label{path}
 \beta(t)=\frac{20\pi}{60^3}t^3-\frac{30\pi}{60^4}t^4+\frac{12\pi}{60^5}t^5
 \end{equation}
-Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60). The initial pose of the vehicle isparellen to the $Y-axis$ and point $O_3$ at the intersection of $X-axis$ and the circle i.e. $\beta=0$.
+Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60). The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  shown  by dotted line in figure \ref{fig:CirTrace}.
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[height=300pt,keepaspectratio]{Chapter4/fig/pathCircle}
+		\includegraphics[height=250pt,keepaspectratio]{Chapter4/fig/pathCircle}
 		\caption{Path Traced by Robot}
 	\label{fig:CirTrace}
 \end{figure}
 
 
 
-\section{Inverse Dynamics}
+\subsection{Inverse Dynamics}
 Using the model inverse kinematic,  the wheel velocity and acceleration are determined using pseudo Inverse  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
 The wheel angle, velocity and acceleration were used in the dynamics equation  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}. 
 
@@ -482,14 +482,14 @@ T1^Tw_1^j=\tau_1, \quad T_2^Tw_2^j=\tau_2
 \end{equation}
 \begin{equation}
  T_3^Tw^g=\begin{pmatrix}
-\rho\delta k & -\rho\delta k\\
-r(\lambda i+(1/2)j) & r(-\lambda i+(1/2)j)
+\rho\delta k & r(\lambda i+(1/2)j) \\
+ -\rho\delta k & r(-\lambda i+(1/2)j)
 \end{pmatrix}
 \begin{pmatrix}
 0\\
 -jg\sin\alpha
 \end{pmatrix}=\begin{pmatrix}
-0\\ -jg\sin\alpha
+-\frac{1}{2}rg\sin\alpha\\ -\frac{1}{2}rg\sin\alpha
 \end{pmatrix}
 \end{equation} 
 

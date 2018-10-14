@@ -127,6 +127,20 @@ S.~Saha, {\em Introduction to robotics}.
 {\em EPOS Application Note: RS232 to CANopen Getway}.
 \newblock Maxon Motors, 2012.
 
+\bibitem{farkhatdinov2007hybrid}
+I.~Farkhatdinov and J.-H. Ryu, ``Hybrid position-position and position-speed
+  command strategy for the bilateral teleoperation of a mobile robot,'' in {\em
+  Control, Automation and Systems, 2007. ICCAS'07. International Conference
+  on}, pp.~2442--2447, IEEE, 2007.
+
+\bibitem{maxonAutoTune}
+M.~Z. Zeroual, ``maxon auto tuning,'' {\em iNaCoMM2013,IIT Roorkee, India},
+  2013.
+
+\bibitem{maxonAppNotesPosition}
+{\em EPOS4 Application Note: Positioning Controllers}.
+\newblock Maxon Motors, 2012.
+
 \bibitem{chen2007human}
 J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
   interface design for teleoperated robots,'' {\em IEEE Transactions on
