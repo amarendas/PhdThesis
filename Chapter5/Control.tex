@@ -16,7 +16,7 @@ The mobile manipulator is planned to be teleoperated over a wireless network. Th
 The  on-board computer which is Raspberry Pi running raspian (linux) os receives the command from the remote station and controls the robot hardware through customized c++ application.
 The raspberry pi  is daisy chained to the four Maxon EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controllers is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers are configured in velocity servo loop. The steering and the z-axis motors drivers are configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  is connected over Ethernet via a wireless hub. the wiring digram of the robot is given figure \ref {fig:wiring}.Since the onboard camera is connected to the wireless net work directly, therefore it does not interfere with the command loop between the raspberri Pi and the PC. 
 
-The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid} is used as the work space for the mobile robot is infinite compared to input device. In case of manipulators position-position control approach is used with scaling. In our case we user the mixed approach. The steering angle is controlled in position =-position mode where as the mobile robots speed is controlled by foot paddle's position, i.e. position-velocity mode. This is given by the following equation 
+The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid} is used as the work space for the mobile robot is infinite compared to input device. In case of manipulators position-position control approach is used with scaling. In our case we user the mixed approach. The steering angle is controlled in position -position mode where as the mobile robots speed is controlled by foot paddle's position, i.e. position-velocity mode. This is given by the following equation 
 \begin{equation}
 	\begin{pmatrix}
 	V\\\theta_S
@@ -146,7 +146,14 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 		\hline
 	\end{tabular}
 \end{table}
-\subsubsection{The control Algorithm}
+\subsection{The control Algorithm}
+The mobile platform receives command from the operator station over wireless. The command sent from the control station is made of  10bytes as shown in figure \ref{fig:sentBytes}. The data is exchanged at 20Hz.  The steer angle $\theta_s$ and the velocity $V$ is then 
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
+	\captionof{figure}{Data sent from PC to Onboard controller }
+	\label{fig:sentBytes} 
+\end{figure}
+ 
 \begin{itemize}
 \item steering kinematic equation
 \item Sequence of program flow
