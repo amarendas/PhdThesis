@@ -9,12 +9,12 @@ In this chapter the control architecture of the teleoperated  mobile robot is pr
 	\captionof{figure}{Control Architecture Block Diagram }
 	\label{fig:ControlBlockDiag} 
 \end{figure} 
-The mobile manipulator is planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local controller on the mobile manipulator. They  communicate over a wifi network. The remote station send data packet every 50 millisecond to the mobile manipulator. The commanded velocity, the steer angle, the z position of the platform and the state of the detector and headlamps constitutes the data packet sent by the remote station. The on board control of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheels, the z position of the top platform,  battery voltage  and bumper status.
+The mobile manipulator is planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local controller on the mobile manipulator. They  communicate over dedicated wireless network. The remote station send data packet every 50 millisecond (20Hz) to the mobile manipulator. The commanded velocity, the steer angle, the z position of the platform and the state of the detector and headlamps constitutes the data packet sent by the remote station as shown in \ref{fig:sentBytes}. The on board control of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheels, the z position of the top platform,  battery voltage  and current of each motor.
 
 
 \subsection{Local Onboard Controller}
 The  on-board computer which is Raspberry Pi running raspian (linux) os receives the command from the remote station and controls the robot hardware through customized c++ application.
-The raspberry pi  is daisy chained to the four Maxon EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controllers is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers are configured in velocity servo loop. The steering and the z-axis motors drivers are configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  is connected over Ethernet via a wireless hub. the wiring digram of the robot is given figure \ref {fig:wiring}.Since the onboard camera is connected to the wireless net work directly, therefore it does not interfere with the command loop between the raspberri Pi and the PC. 
+The raspberry pi  is daisy chained to the four Maxon EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controllers is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers are configured in velocity servo loop. The steering and the z-axis motors drivers are configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  is connected over Ethernet via a wireless hub. the wiring digram of the robot is given figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless net work directly, therefore it does not interfere with the command loop between the raspberri Pi and the PC. 
 
 The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid} is used as the work space for the mobile robot is infinite compared to input device. In case of manipulators position-position control approach is used with scaling. In our case we user the mixed approach. The steering angle is controlled in position -position mode where as the mobile robots speed is controlled by foot paddle's position, i.e. position-velocity mode. This is given by the following equation 
 \begin{equation}
@@ -39,7 +39,7 @@ where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the tw
 		Robot  & range & Joy-Stick& range & parameter \\
 		parameters& & Parameter & & Value\\
 		\hline
-		$\theta_s$ & -60 to +60 & $\tilde{\Theta_s}$ & $-90^o$ to $90^o$ & $K_s=30$\\
+		$\theta_s$ & -60 to +60 & $\tilde{\Theta_s}$ & $-90^o$ to $90^o$ & $K_s=2/3$\\
 		$V$ & 0 to +60 mm/sec & $\tilde{X_p}$ & 0 to 30mm & $K_v=2$\\
 		\hline
 	\end{tabular}	
@@ -147,7 +147,58 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 	\end{tabular}
 \end{table}
 \subsection{The control Algorithm}
-The mobile platform receives command from the operator station over wireless. The command sent from the control station is made of  10bytes as shown in figure \ref{fig:sentBytes}. The data is exchanged at 20Hz.  The steer angle $\theta_s$ and the velocity $V$ is then 
+Thsi section discusses the in detail the algorithem running of the on-board controller.  Command received by the controller is parsed to extract the velocity  and the steer angle  information and suitably scaled to get command velocity  $V$, in mm/sec and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $v$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next based the set point for each motor is calculated  and sent to individual drives. The algorithm is listed below and the block digram for the same in figure \ref{fig:ControlBlock}
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal}
+	\captionof{figure}{provide suitable title }
+	\label{fig:ControlBlock} 
+\end{figure}
+
+\begin{enumerate}
+	\item Calculate the rear wheel velocities setpoints $\omega_{RS}$ and $\omega_{LS}$ based on the $V$ and $\theta_s$
+	\item Read the current rear wheel velocities $\omega_{LC}$ and $\omega_{RC}$
+	\item Calculate the setpoint for steering motor $\theta_{ss} $
+	\item sent setpoints $\omega_{RS}$,$\omega_{LS}$ and $\theta_{ss} $ to each motor 
+\end{enumerate}
+
+It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This important as the response time of the  motors are different. The above methodology helps  minimize deviation  from the Ackerman  steering condition even during transit condition, particularly in case of large change in commanded $v$ and $\theta_s$. 
+Each block in the figure \ref{fig:ControlBlock} is discussed next. 
+
+ It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$ as shown in figure \ref{fig:KenVrc}, i.e.
+ \begin{equation}
+	 \theta_s =\phi_i
+ \end{equation}
+ The set point of the steering motor at the output of  gear box $\theta_{SM}$ is given by equations \ref{eqn:sterineq1} and \ref{eqn:sterineq2}  based on the geometry of Davis steering gear \cite{TOMBook}.
+\begin{equation*}
+ \tan\phi_i=\frac{xh}{h^2+b^2-bx}
+\end{equation*}
+or
+\begin{eqnarray}
+f:\phi_i\rightarrow x, \quad x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
+\label{eqn:sterineq1}
+\end{eqnarray}
+where $x$ is the displacemet of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of pcd ($D_p$) 30mm as shown in the figure \ref{steering_gear_train}. Therefore the set point for the steering motor is given below as
+\begin{eqnarray}
+\theta_{SM}= x \frac{360}{\pi D_p}
+\label{eqn:sterineq2}
+\end{eqnarray}
+ 
+Next we present  the equation relating current steer angle $\phi_{ic}$ which  and rear wheel  set point velocities. From the geometry of figure \ref{fig:kinVec} we get
+\begin{align}
+\nonumber \tan\phi_i &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
+p &= \frac{w}{\tan\theta_o}-m + \frac{a}{2}
+\end{align}
+%similarly for the inner wheel we get  
+%\begin{equation}
+%p = \frac{w}{\tan\theta_i}-m - \frac{a}{2}
+%\end{equation}
+now from the rear wheel velocity digram we get
+\begin{align}
+\nonumber \frac{\omega_i r}{p}&=\frac{\omega_o r}{p+2m}=\frac{v}{p+m}\\
+\omega_i &=\frac{vp}{p+m}\\
+&=\frac{v( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\end{align}
+  
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
 	\captionof{figure}{Data sent from PC to Onboard controller }

@@ -13,7 +13,7 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces WMR-Std. Castor\relax }}{25}{figure.caption.20}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces WMR-general\relax }}{25}{figure.caption.20}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel configuration of a WMR\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{35}{figure.caption.21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{34}{figure.caption.21}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{36}{figure.caption.22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{39}{figure.caption.24}
@@ -22,16 +22,17 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Current control bolck digram \relax }}{42}{figure.caption.28}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Velocity control bolck digram \relax }}{44}{figure.caption.31}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Position control bolck digram \relax }}{44}{figure.caption.32}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Data sent from PC to Onboard controller \relax }}{45}{figure.caption.34}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces User Interface for teleoperation \relax }}{47}{figure.caption.35}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces provide suitable title \relax }}{46}{figure.caption.34}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Data sent from PC to Onboard controller \relax }}{48}{figure.caption.35}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces User Interface for teleoperation \relax }}{49}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{49}{figure.caption.36}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{51}{figure.caption.37}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{52}{figure.caption.38}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Teleoperation block diagram \relax }}{54}{figure.caption.39}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation with no time delay in either direction \relax }}{55}{figure.caption.40}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{55}{figure.caption.41}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{56}{figure.caption.42}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{51}{figure.caption.37}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{54}{figure.caption.39}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Teleoperation block diagram \relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation with no time delay in either direction \relax }}{57}{figure.caption.41}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{57}{figure.caption.42}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{58}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

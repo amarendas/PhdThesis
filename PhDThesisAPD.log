@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.2)  15 OCT 2018 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.2)  16 OCT 2018 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1506,7 +1506,7 @@ Chapter 3.
 [9
 
 
-] <Chapter3/fig/robo3Dmodel.png, id=530, 747.54282pt x 481.8pt>
+] <Chapter3/fig/robo3Dmodel.png, id=532, 747.54282pt x 481.8pt>
 File: Chapter3/fig/robo3Dmodel.png Graphic file (type png)
 
 <use Chapter3/fig/robo3Dmodel.png>
@@ -1517,28 +1517,28 @@ Overfull \hbox (12.31209pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-<Chapter3/fig/roboActual.jpg, id=531, 1968.35374pt x 1526.70375pt>
+<Chapter3/fig/roboActual.jpg, id=533, 1968.35374pt x 1526.70375pt>
 File: Chapter3/fig/roboActual.jpg Graphic file (type jpg)
 
 <use Chapter3/fig/roboActual.jpg>
 Package pdftex.def Info: Chapter3/fig/roboActual.jpg used on input line 27.
 (pdftex.def)             Requested size: 166.72218pt x 129.31383pt.
  [10 <./Chapter3/fig/robo3Dmodel.png> <./Chapter3/fig/roboActual.jpg>] [11]
-<Chapter3/fig/WheelOffset.png, id=548, 862.72313pt x 478.78876pt>
+<Chapter3/fig/WheelOffset.png, id=550, 862.72313pt x 478.78876pt>
 File: Chapter3/fig/WheelOffset.png Graphic file (type png)
 
 <use Chapter3/fig/WheelOffset.png>
 Package pdftex.def Info: Chapter3/fig/WheelOffset.png used on input line 97.
 (pdftex.def)             Requested size: 187.56178pt x 104.09187pt.
 
-<Chapter3/fig/loadDist.png, id=549, 766.36313pt x 571.38469pt>
+<Chapter3/fig/loadDist.png, id=551, 766.36313pt x 571.38469pt>
 File: Chapter3/fig/loadDist.png Graphic file (type png)
 
 <use Chapter3/fig/loadDist.png>
 Package pdftex.def Info: Chapter3/fig/loadDist.png used on input line 103.
 (pdftex.def)             Requested size: 171.72264pt x 128.0374pt.
  [12] [13 <./Chapter3/fig/WheelOffset.png> <./Chapter3/fig/loadDist.png>]
-<Chapter3/fig/steerringCondition.png, id=568, 808.52063pt x 528.47438pt>
+<Chapter3/fig/steerringCondition.png, id=570, 808.52063pt x 528.47438pt>
 File: Chapter3/fig/steerringCondition.png Graphic file (type png)
 
 <use Chapter3/fig/steerringCondition.png>
@@ -1546,21 +1546,21 @@ Package pdftex.def Info: Chapter3/fig/steerringCondition.png used on input line
  143.
 (pdftex.def)             Requested size: 416.83289pt x 272.45361pt.
  [14] [15 <./Chapter3/fig/steerringCondition.png>] <Chapter3/fig/davis.png, id=
-588, 394.47375pt x 469.00218pt>
+590, 394.47375pt x 469.00218pt>
 File: Chapter3/fig/davis.png Graphic file (type png)
 
 <use Chapter3/fig/davis.png>
 Package pdftex.def Info: Chapter3/fig/davis.png used on input line 176.
 (pdftex.def)             Requested size: 119.65521pt x 142.26183pt.
 
-<Chapter3/fig/steerTorqCal.png, id=589, 441.90094pt x 419.31656pt>
+<Chapter3/fig/steerTorqCal.png, id=591, 441.90094pt x 419.31656pt>
 File: Chapter3/fig/steerTorqCal.png Graphic file (type png)
 
 <use Chapter3/fig/steerTorqCal.png>
 Package pdftex.def Info: Chapter3/fig/steerTorqCal.png used on input line 182.
 (pdftex.def)             Requested size: 149.92067pt x 142.25862pt.
  [16 <./Chapter3/fig/davis.png> <./Chapter3/fig/steerTorqCal.png>]
-<Chapter3/fig/scissor.png, id=601, 523.9575pt x 392.21532pt>
+<Chapter3/fig/scissor.png, id=603, 523.9575pt x 392.21532pt>
 File: Chapter3/fig/scissor.png Graphic file (type png)
 
 <use Chapter3/fig/scissor.png>
@@ -1589,7 +1589,7 @@ Overfull \hbox (4.88528pt too wide) in paragraph at lines 73--74
 (e.g. pure rolling)
  []
 
-[23] [24] <Chapter4/fig/fig1.jpg, id=694, 433.62pt x 340.27126pt>
+[23] [24] <Chapter4/fig/fig1.jpg, id=696, 433.62pt x 340.27126pt>
 File: Chapter4/fig/fig1.jpg Graphic file (type jpg)
 
 <use Chapter4/fig/fig1.jpg>
@@ -1600,7 +1600,7 @@ Overfull \hbox (8.39355pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
-<Chapter4/fig/fig2.jpg, id=695, 494.59781pt x 318.43968pt>
+<Chapter4/fig/fig2.jpg, id=697, 494.59781pt x 318.43968pt>
 File: Chapter4/fig/fig2.jpg Graphic file (type jpg)
 
 <use Chapter4/fig/fig2.jpg>
@@ -1683,7 +1683,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 438.
 
-[33] <Chapter4/fig/pathCircle.jpg, id=816, 799.48688pt x 463.7325pt>
+[33] <Chapter4/fig/pathCircle.jpg, id=818, 799.48688pt x 463.7325pt>
 File: Chapter4/fig/pathCircle.jpg Graphic file (type jpg)
 
 <use Chapter4/fig/pathCircle.jpg>
@@ -1694,14 +1694,14 @@ Overfull \hbox (14.17604pt too wide) in paragraph at lines 456--457
  [][] 
  []
 
-[34] [35 <./Chapter4/fig/pathCircle.jpg>]
-<Chapter4/fig/FD.png, id=836, 411.136pt x 308.352pt>
+[34 <./Chapter4/fig/pathCircle.jpg>]
+<Chapter4/fig/FD.png, id=833, 411.136pt x 308.352pt>
 File: Chapter4/fig/FD.png Graphic file (type png)
  <use Chapter4/fig/FD.png>
 Package pdftex.def Info: Chapter4/fig/FD.png used on input line 499.
 (pdftex.def)             Requested size: 400.00594pt x 300.0pt.
 
-[36 <./Chapter4/fig/FD.png (PNG copy)>]) [37] [38
+[35] [36 <./Chapter4/fig/FD.png (PNG copy)>]) [37] [38
 
 
 ]
@@ -1709,7 +1709,7 @@ Package pdftex.def Info: Chapter4/fig/FD.png used on input line 499.
 
  (./Chapter5/Control.tex
 Chapter 5.
-<Chapter3/fig/controlblock.png, id=852, 1154.06157pt x 476.53032pt>
+<Chapter3/fig/controlblock.png, id=854, 1154.06157pt x 476.53032pt>
 File: Chapter3/fig/controlblock.png Graphic file (type png)
 
 <use Chapter3/fig/controlblock.png>
@@ -1719,7 +1719,7 @@ Package pdftex.def Info: Chapter3/fig/controlblock.png used on input line 8.
 
 
  <./Chapter3/fig/controlblock.png>]
-[40] <Chapter5/fig/RobotSideWiring.jpg, id=869, 848.4197pt x 414.79968pt>
+[40] <Chapter5/fig/RobotSideWiring.jpg, id=872, 848.4197pt x 414.79968pt>
 File: Chapter5/fig/RobotSideWiring.jpg Graphic file (type jpg)
 
 <use Chapter5/fig/RobotSideWiring.jpg>
@@ -1727,7 +1727,7 @@ Package pdftex.def Info: Chapter5/fig/RobotSideWiring.jpg used on input line 49
 .
 (pdftex.def)             Requested size: 416.83289pt x 203.79161pt.
  [41 <./Chapter5/fig/RobotSideWiring.jpg>] <Chapter5/fig/overallcontorl.png, id
-=882, 475.02469pt x 243.91125pt>
+=885, 475.02469pt x 243.91125pt>
 File: Chapter5/fig/overallcontorl.png Graphic file (type png)
 
 <use Chapter5/fig/overallcontorl.png>
@@ -1735,89 +1735,106 @@ Package pdftex.def Info: Chapter5/fig/overallcontorl.png used on input line 62.
 
 (pdftex.def)             Requested size: 416.83289pt x 214.03963pt.
 
-<Chapter5/fig/currentLoop.png, id=883, 636.87938pt x 130.23656pt>
+<Chapter5/fig/currentLoop.png, id=886, 636.87938pt x 130.23656pt>
 File: Chapter5/fig/currentLoop.png Graphic file (type png)
 
 <use Chapter5/fig/currentLoop.png>
 Package pdftex.def Info: Chapter5/fig/currentLoop.png used on input line 67.
 (pdftex.def)             Requested size: 416.83289pt x 85.23898pt.
  [42 <./Chapter5/fig/overallcontorl.png> <./Chapter5/fig/currentLoop.png>]
-<Chapter5/fig/velLoop.jpg, id=895, 576.65437pt x 213.79875pt>
+<Chapter5/fig/velLoop.jpg, id=898, 576.65437pt x 213.79875pt>
 File: Chapter5/fig/velLoop.jpg Graphic file (type jpg)
 
 <use Chapter5/fig/velLoop.jpg>
 Package pdftex.def Info: Chapter5/fig/velLoop.jpg used on input line 114.
 (pdftex.def)             Requested size: 416.83289pt x 154.54828pt.
 
-<Chapter5/fig/posLoop.png, id=896, 717.43031pt x 341.77687pt>
+<Chapter5/fig/posLoop.png, id=899, 717.43031pt x 341.77687pt>
 File: Chapter5/fig/posLoop.png Graphic file (type png)
 
 <use Chapter5/fig/posLoop.png>
 Package pdftex.def Info: Chapter5/fig/posLoop.png used on input line 119.
 (pdftex.def)             Requested size: 416.83289pt x 198.58012pt.
  [43] [44 <./Chapter5/fig/velLoop.jpg> <./Chapter5/fig/posLoop.png>]
-<Chapter5/fig/bitconfig.png, id=910, 791.20593pt x 473.51906pt>
+<Chapter5/fig/BlkDigLocal.png, id=913, 753.5653pt x 450.9347pt>
+File: Chapter5/fig/BlkDigLocal.png Graphic file (type png)
+
+<use Chapter5/fig/BlkDigLocal.png>
+Package pdftex.def Info: Chapter5/fig/BlkDigLocal.png used on input line 152.
+(pdftex.def)             Requested size: 416.83289pt x 249.43227pt.
+ [45]
+
+LaTeX Warning: Reference `fig:KenVrc' on page 46 undefined on input line 167.
+
+
+LaTeX Warning: Reference `steering_gear_train' on page 46 undefined on input li
+ne 180.
+
+[46 <./Chapter5/fig/BlkDigLocal.png>]
+
+LaTeX Warning: Reference `fig:kinVec' on page 47 undefined on input line 186.
+
+<Chapter5/fig/bitconfig.png, id=934, 791.20593pt x 473.51906pt>
 File: Chapter5/fig/bitconfig.png Graphic file (type png)
 
 <use Chapter5/fig/bitconfig.png>
-Package pdftex.def Info: Chapter5/fig/bitconfig.png used on input line 152.
+Package pdftex.def Info: Chapter5/fig/bitconfig.png used on input line 203.
 (pdftex.def)             Requested size: 416.83289pt x 249.46825pt.
- [45 <./Chapter5/fig/bitconfig.png>]
-<Chapter5/fig/gui.png, id=916, 673.01437pt x 444.91219pt>
+ [47]
+<Chapter5/fig/gui.png, id=942, 673.01437pt x 444.91219pt>
 File: Chapter5/fig/gui.png Graphic file (type png)
 
 <use Chapter5/fig/gui.png>
-Package pdftex.def Info: Chapter5/fig/gui.png used on input line 173.
+Package pdftex.def Info: Chapter5/fig/gui.png used on input line 224.
 (pdftex.def)             Requested size: 416.83289pt x 275.55757pt.
-) [46] [47 <./Chapter5/fig/gui.png>] [48
+) [48 <./Chapter5/fig/bitconfig.png>] [49 <./Chapter5/fig/gui.png>] [50
 
 
 ]
 \openout2 = `Chapter6/TimeDelayTeleOperation.aux'.
 
-
-(./Chapter6/TimeDelayTeleOperation.tex
+ (./Chapter6/TimeDelayTeleOperation.tex
 Chapter 6.
-<Chapter6/fig/teleoperation.png, id=931, 342.5297pt x 113.67468pt>
+<Chapter6/fig/teleoperation.png, id=958, 342.5297pt x 113.67468pt>
 File: Chapter6/fig/teleoperation.png Graphic file (type png)
 
 <use Chapter6/fig/teleoperation.png>
 Package pdftex.def Info: Chapter6/fig/teleoperation.png used on input line 6.
 (pdftex.def)             Requested size: 416.83289pt x 138.34465pt.
- [49
+ [51
 
 
  <./Chapter6/fig/teleoperation.png>]
-<Chapter6/fig/mentalMap.jpg, id=940, 1028.34187pt x 578.16pt>
+<Chapter6/fig/mentalMap.jpg, id=968, 1028.34187pt x 578.16pt>
 File: Chapter6/fig/mentalMap.jpg Graphic file (type jpg)
 
 <use Chapter6/fig/mentalMap.jpg>
 Package pdftex.def Info: Chapter6/fig/mentalMap.jpg used on input line 58.
 (pdftex.def)             Requested size: 416.83289pt x 234.35641pt.
- [50] [51 <./Chapter6/fig/mentalMap.jpg>]
-<Chapter6/fig/purepesuitgeometry.png, id=956, 243.91125pt x 163.3603pt>
+ [52] [53 <./Chapter6/fig/mentalMap.jpg>]
+<Chapter6/fig/purepesuitgeometry.png, id=982, 243.91125pt x 163.3603pt>
 File: Chapter6/fig/purepesuitgeometry.png Graphic file (type png)
 
 <use Chapter6/fig/purepesuitgeometry.png>
 Package pdftex.def Info: Chapter6/fig/purepesuitgeometry.png used on input line
  80.
 (pdftex.def)             Requested size: 416.83289pt x 279.1795pt.
- [52 <./Chapter6/fig/purepesuitgeometry.png>] <Chapter6/fig/teleloop.png, id=96
-6, 366.61969pt x 263.48438pt>
+ [54 <./Chapter6/fig/purepesuitgeometry.png>] <Chapter6/fig/teleloop.png, id=99
+2, 366.61969pt x 263.48438pt>
 File: Chapter6/fig/teleloop.png Graphic file (type png)
 
 <use Chapter6/fig/teleloop.png>
 Package pdftex.def Info: Chapter6/fig/teleloop.png used on input line 141.
 (pdftex.def)             Requested size: 416.83289pt x 299.59131pt.
- [53]
-<Chapter6/fig/noDelay.png, id=976, 422.32782pt x 316.18124pt>
+ [55]
+<Chapter6/fig/noDelay.png, id=1002, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/noDelay.png Graphic file (type png)
 
 <use Chapter6/fig/noDelay.png>
 Package pdftex.def Info: Chapter6/fig/noDelay.png used on input line 166.
 (pdftex.def)             Requested size: 416.83289pt x 312.07478pt.
 
-<Chapter6/fig/Delay500milsec.png, id=977, 422.32782pt x 316.18124pt>
+<Chapter6/fig/Delay500milsec.png, id=1003, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/Delay500milsec.png Graphic file (type png)
 
 <use Chapter6/fig/Delay500milsec.png>
@@ -1825,27 +1842,27 @@ Package pdftex.def Info: Chapter6/fig/Delay500milsec.png used on input line 171
 .
 (pdftex.def)             Requested size: 416.83289pt x 312.07478pt.
 
-<Chapter6/fig/Delay800milsec.png, id=978, 422.32782pt x 316.18124pt>
+<Chapter6/fig/Delay800milsec.png, id=1004, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/Delay800milsec.png Graphic file (type png)
 
 <use Chapter6/fig/Delay800milsec.png>
 Package pdftex.def Info: Chapter6/fig/Delay800milsec.png used on input line 176
 .
 (pdftex.def)             Requested size: 416.83289pt x 312.07478pt.
- [54 <./Chapter6/fig/teleloop.png>]
-[55 <./Chapter6/fig/noDelay.png (PNG copy)> <./Chapter6/fig/Delay500milsec.png 
-(PNG copy)>]) [56 <./Chapter6/fig/Delay800milsec.png (PNG copy)>]
+ [56 <./Chapter6/fig/teleloop.png>]
+[57 <./Chapter6/fig/noDelay.png (PNG copy)> <./Chapter6/fig/Delay500milsec.png 
+(PNG copy)>]) [58 <./Chapter6/fig/Delay800milsec.png (PNG copy)>]
 \openout2 = `Chapter7/PredictiveDisplay.aux'.
 
 
 (./Chapter7/PredictiveDisplay.tex
 Chapter 7.
-) [57
+) [59
 
 
 
 
-] [58
+] [60
 
 
 ]
@@ -1853,26 +1870,26 @@ Chapter 7.
 
  (./Chapter8/conc.tex
 Chapter 8.
-) [59
+) [61
 
 
-] [60
+] [62
 
-] (./PhDThesisAPD.bbl [61
+] (./PhDThesisAPD.bbl [63
 
 
-] [62]) [63] [64
+] [64]) [65] [66
 
 ]
 \openout2 = `Misc_end/appendix_a.aux'.
 
  (./Misc_end/appendix_a.tex
 Appendix A.
-) [65
+) [67
 
 
 
-] [66
+] [68
 
 
 ]
@@ -1880,26 +1897,26 @@ Appendix A.
 
  (./Misc_end/appendix_c.tex
 Appendix B.
-) [67
-
-
-] [68
-
-
-]
-\openout2 = `Misc_end/publications.aux'.
-
- (./Misc_end/publications.tex) [69
+) [69
 
 
 ] [70
 
 
 ]
+\openout2 = `Misc_end/publications.aux'.
+
+ (./Misc_end/publications.tex) [71
+
+
+] [72
+
+
+]
 \openout2 = `Extra/Bio_AH.aux'.
 
  (./Extra/Bio_AH.tex)
-[71
+[73
 
 
 ]
@@ -1915,14 +1932,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `PhDThesisAPD.out' has not changed.
-(rerunfilecheck)             Checksum: 4AADCA5D5859356F1C6BD3814A37CD19;4236.
+(rerunfilecheck)             Checksum: FDB9F81184EA8B9331B49F0975520A1A;4237.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
  ) 
 Here is how much of TeX's memory you used:
- 22150 strings out of 494953
- 394108 string characters out of 6180978
- 575089 words of memory out of 5000000
- 24451 multiletter control sequences out of 15000+600000
+ 22174 strings out of 494953
+ 394490 string characters out of 6180978
+ 576254 words of memory out of 5000000
+ 24461 multiletter control sequences out of 15000+600000
  110444 words of font info for 113 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,24n,79p,1518b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1943,10 +1964,10 @@ r6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts
 usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb>
-Output written on PhDThesisAPD.pdf (87 pages, 2908516 bytes).
+Output written on PhDThesisAPD.pdf (89 pages, 2948642 bytes).
 PDF statistics:
- 1199 PDF objects out of 1200 (max. 8388607)
- 1049 compressed objects within 11 object streams
- 283 named destinations out of 1000 (max. 500000)
- 649 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1228 PDF objects out of 1440 (max. 8388607)
+ 1075 compressed objects within 11 object streams
+ 296 named destinations out of 1000 (max. 500000)
+ 654 words of extra memory for PDF output out of 10000 (max. 10000000)
 
