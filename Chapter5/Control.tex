@@ -10,7 +10,11 @@ In this chapter the control architecture of the teleoperated  mobile robot is pr
 	\label{fig:ControlBlockDiag} 
 \end{figure} 
 The mobile manipulator is planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local controller on the mobile manipulator. They  communicate over dedicated wireless network. The remote station send data packet every 50 millisecond (20Hz) to the mobile manipulator. The commanded velocity, the steer angle, the z position of the platform and the state of the detector and headlamps constitutes the data packet sent by the remote station as shown in \ref{fig:sentBytes}. The on board control of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheels, the z position of the top platform,  battery voltage  and current of each motor.
-
+\begin{figure}
+	\includegraphics[width=.5\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
+	\captionof{figure}{Data sent from PC to Onboard controller }
+	\label{fig:sentBytes} 
+\end{figure}
 
 \subsection{Local Onboard Controller}
 The  on-board computer which is Raspberry Pi running raspian (linux) os receives the command from the remote station and controls the robot hardware through customized c++ application.
@@ -146,7 +150,7 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 		\hline
 	\end{tabular}
 \end{table}
-\subsection{The control Algorithm}
+\subsection{The control algorithm for platform}
 Thsi section discusses the in detail the algorithem running of the on-board controller.  Command received by the controller is parsed to extract the velocity  and the steer angle  information and suitably scaled to get command velocity  $V$, in mm/sec and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $v$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next based the set point for each motor is calculated  and sent to individual drives. The algorithm is listed below and the block digram for the same in figure \ref{fig:ControlBlock}
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal}
@@ -155,16 +159,19 @@ Thsi section discusses the in detail the algorithem running of the on-board cont
 \end{figure}
 
 \begin{enumerate}
-	\item Calculate the rear wheel velocities setpoints $\omega_{RS}$ and $\omega_{LS}$ based on the $V$ and $\theta_s$
-	\item Read the current rear wheel velocities $\omega_{LC}$ and $\omega_{RC}$
-	\item Calculate the setpoint for steering motor $\theta_{ss} $
-	\item sent setpoints $\omega_{RS}$,$\omega_{LS}$ and $\theta_{ss} $ to each motor 
+	\item Calculate the setpoint for steering motor $\theta_{SM} $ based on $\theta_s$
+	\item Read the current steering  angle $\phi_{ic}$.
+	\item Calculate the rear wheel velocities setpoints $\omega_{i}$ and $\omega_{o}$ based on the $V$ and $\phi_{ic}$
+
+	
+	\item command  set points $\omega_{i}$, $\omega_{o}$ and $\theta_{SM} $ to each motor 
 \end{enumerate}
+The above loop is repeated every 50 mSec.
 
 It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This important as the response time of the  motors are different. The above methodology helps  minimize deviation  from the Ackerman  steering condition even during transit condition, particularly in case of large change in commanded $v$ and $\theta_s$. 
 Each block in the figure \ref{fig:ControlBlock} is discussed next. 
 
- It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$ as shown in figure \ref{fig:KenVrc}, i.e.
+ It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in figure \ref{fig:KenVrc}, i.e.
  \begin{equation}
 	 \theta_s =\phi_i
  \end{equation}
@@ -183,38 +190,120 @@ where $x$ is the displacemet of the rack and $h$ and $b$ are link lengths. The r
 \label{eqn:sterineq2}
 \end{eqnarray}
  
-Next we present  the equation relating current steer angle $\phi_{ic}$ which  and rear wheel  set point velocities. From the geometry of figure \ref{fig:kinVec} we get
+Next we present  the equation relating current steer angle $\phi_{ic}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$. From the geometry of figure \ref{fig:kinVec} we get
 \begin{align}
-\nonumber \tan\phi_i &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
-p &= \frac{w}{\tan\theta_o}-m + \frac{a}{2}
+\nonumber \tan\phi_{ic} &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
+g:\phi_{ic} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{ic}}-m + \frac{a}{2}
+\label{eqn:pFromTheta}
 \end{align}
 %similarly for the inner wheel we get  
 %\begin{equation}
 %p = \frac{w}{\tan\theta_i}-m - \frac{a}{2}
 %\end{equation}
-now from the rear wheel velocity digram we get
+Now using \ref{velO1} and \ref{omegaPlat} in equations 
+\begin{align*}
+\dot{O_r}&=\dot{O_i}+\omega_3 \times (O_r-O_i)\\
+\dot{O_r}&=\dot{O_o}+\omega_3 \times (O_r-O_o)
+\end{align*}
+ the rear wheel velocities are calculated as 
 \begin{align}
-\nonumber \frac{\omega_i r}{p}&=\frac{\omega_o r}{p+2m}=\frac{v}{p+m}\\
-\omega_i &=\frac{vp}{p+m}\\
-&=\frac{v( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\nonumber \omega_i&=\frac{Vp}{r(p+m)}\\
+\nonumber \omega_o &=\frac{V(p+2m)}{r(p+m)}
 \end{align}
-  
-\begin{figure}
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
-	\captionof{figure}{Data sent from PC to Onboard controller }
-	\label{fig:sentBytes} 
-\end{figure}
+using the above equation and \ref{eqn:pFromTheta}. We get the setpoints for the rear wheels 
+\begin{equation}
+\omega_i =\frac{V}{r}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\end{equation}
+\begin{equation}
+\omega_o =\frac{V}{r}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})+2m}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\end{equation}
+ 
+
  
 \begin{itemize}
-\item steering kinematic equation
-\item Sequence of program flow
-\item data structure of command  and  frequency
 \item calibration of steer data and wheel velocity
 \end{itemize}
+
+\subsubsection{Wheel odometry }
+The dead reconning odometery can be performed based on the differential drive model ot the bicycle model. In the present case we use the differential drive model, i.e the rear wheel velocities are used to determine the position and orientation of the mobile robot. The position here means the position of reference point $O_3$. The steps are follower
+\begin{enumerate}
+	\item calculate $V$ and $\omega_3$ from current wheel velocities $\omega_1$  and  $\omega_2$  using equations \ref{omegaPlat} and \ref{velPlat} with $a=0$.
+	\item integrate $V$ and $\omega_3$ over time step.
+\end{enumerate}
+If $x(t)$, $y(t)$ is the location of $O_r$  and $\beta(t)$ the orientation of robot with some global coordinate system the kinamitic model of the differential wheel robots as given in \cite{campion1996structural} is 
+\begin{equation}
+\begin{pmatrix}
+\dot{x}\\\dot{y}\\\dot{\beta}
+\end{pmatrix}=
+\begin{pmatrix}
+\cos\beta & 0\\
+\sin\beta & 0\\
+0&1
+\end{pmatrix}
+\begin{pmatrix}
+V\\\omega_3
+\end{pmatrix}
+\end{equation}
+which is numerically integrated for time $\delta t$ using the equations
+\begin{align}
+ x(i+1)&=x(i)+\delta t*\cos(\beta(i))*V(i);\\
+y(i+1)&=y(i)+\delta t*\sin(\beta(i))*V(i);\\
+\beta(i+1)&=\beta(i)+\delta t*\omega_3(i);
+\end{align}
+where $i$ is at time step $t_i$. Next we present the actual odometric results for the vehicle moving in a circle and a straight line.
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.0in]{Chapter5/fig/line} 
+		\caption{Tracing a line}\label{fig:line}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.2in]{Chapter5/fig/linTorq} 
+		\caption{Motor torque}\label{fig:linTorq}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.1in]{Chapter5/fig/linVel} 
+		\caption{Linear Velocity}\label{fig:linVel}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.1in]{Chapter5/fig/linOmega} 
+		\caption{Angular Velocity}\label{fig:linOmega}
+	\end{minipage}
+	\caption{Linear motion of  WMR}
+\end{figure}
+
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.5in]{Chapter5/fig/circle} 
+		\caption{Tracing a Circle}\label{fig:circle}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3.2in]{Chapter5/fig/cirTorq} 
+		\caption{Motor torque}\label{fig:cirTorq}
+	\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[width=3.1in]{Chapter5/fig/cirVel} 
+	\caption{Linear Velocity}\label{fig:cirVel}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\includegraphics[width=3.1in]{Chapter5/fig/cirOmega} 
+	\caption{Angular Velocity}\label{fig:cirOmega}
+\end{minipage}
+	\caption{Circular motion of  WMR}
+\end{figure}
 \subsubsection{Control of Z platform}
-Decentralized control technique treats the manipulator and the platform as two different system. The inter-coupling forces are treated as external forces on the system. The dynamics equation of the mobile manipulator can thus be split as follows [3]
-\subsubsection{Odometry }
-The dead reconning odometery can be performed based on the differential wheel model ot the bicycle model.
+Decentralized control technique treats the manipulator and the platform as two different system. The inter-coupling forces are treated as external forces on the system. The dynamics equation of the mobile manipulator can thus be split as follows [3].
 \subsection{The Remote Control Station}   
 The local station consists of a desktop computer running Windows XP. A Steering wheel and two foot switches are connected to the desktop. The steering wheel is used for turning  mobile robot. One of the two foot switch acts as an accelerator to set the mean velocity the other  is used to brake the vehicle.
 
