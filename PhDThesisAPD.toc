@@ -3,14 +3,14 @@
 \contentsline {section}{Abstract}{iv}{Doc-Start}
 \contentsline {section}{List of Figures}{vii}{chapter*.1}
 \contentsline {section}{List of Tables}{xi}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xiii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Research Contributions}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Thesis Organization}{3}{section.1.2}
+\contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
+\contentsline {section}{Important Symbols and Abbreviations}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Research Objectives}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Summary}{7}{section.2.2}
-\contentsline {chapter}{\numberline {3}Design of Mobile Platform}{9}{chapter.3}
+\contentsline {chapter}{\numberline {3}Design of Mobile a Robot}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Design Overview}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Design of the Traction System}{11}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Selection of Motor and Gearbox}{13}{subsection.3.2.1}

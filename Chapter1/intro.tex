@@ -1,8 +1,44 @@
 \chapter{{Introduction}}
 \label{ch_1}
-The use of robots such as robotic arm  has been used in factories for a long time, basically for repetitive kind  of job. Though it started with the intention to reduce human labour, production cost and increased productivity. With development of technology ,  their scope has expanded beyond  manufacturing domain. Robots are now being used for health care, surveillance, exploration etc. The reduction in development cost of  robotic system has resulted in introduction of robotic system in entertainment industries and personal care. Robots have matured form heavy duty serial linked mechanical arms to a more presentable form such as ASIMO by Haonda and Aibo by Sony.  
+\begin{figure}
+	\centering
+	\begin{minipage}{1.1\textwidth}
+		\centering
+		\includegraphics[height=5cm,keepaspectratio]{Chapter1/fig/factory}
+		\captionof{figure}{Robotics in Factory}
+		\label{fig:RF}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=5cm,keepaspectratio]{Chapter1/fig/healthc}
+		\captionof{figure}{Health Care}
+		\label{fig:HC}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth,height=5cm,keepaspectratio]{Chapter1/fig/explore}
+		\captionof{figure}{Exploration and surveillance}
+		\label{fig:ES}
+	\end{minipage}
+\end{figure}
+The use of robots such as robotic arm figure \ref{fig:RF} has been used in factories for a long time, basically for repetitive kind  of job. Though it started with the intention to reduce human labour, production cost, and increased productivity, with technological development,  their scope has expanded beyond  manufacturing domain. Robots are now being used for health care, surveillance, exploration, etc as illustrated in figure \ref{fig:HC} and\ref{fig:ES}. The reduction in development cost  has resulted in introduction of robotic systems in entertainment industries and personal care as well. Robots have matured from heavy duty serial linked mechanical arms to a more presentable form such as ASIMO \ref{fig:HAsimo}by Honda and Aibo by Sony \ref{fig:SA}.  
+\begin{figure}
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[height=5cm,keepaspectratio]{Chapter1/fig/Honda-Asimo}
+		\captionof{figure}{Honda Asimo}
+		\label{fig:HAsimo}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth,height=5cm,keepaspectratio]{Chapter1/fig/aibo}
+		\captionof{figure}{Sony Abio}
+		\label{fig:SA}
+	\end{minipage}
+\end{figure}
 
- In areas where human access is not preferred or restricted  due to risk of life or inhospitable environmental conditions such as which exists in chemical, space or nuclear industries, robotic systems have gained huge popularity in providing services as surveillance, rescue, exploration \& remote maintenance.  Research in teleoperated and autonomous mobile robotics has been fuelled largely by these  requirement. Teleoperated mobile robots are suitable for these applications  as the work space required to be covered is very large and it is essential to maintain  physical separation between the robot and its control station,   moreover the remote environment is in general unknown. 
+ In areas where human access is not preferred or restricted  due to risk of life or inhospitable environmental conditions such as which exists in chemical, space or nuclear industries, robotic systems have gained huge popularity in providing services as surveillance, rescue, exploration and remote maintenance.  Research in teleoperated and autonomous mobile robotics has been fuelled largely by these  requirement. Teleoperated mobile robots are suitable for these applications  as the work space required to be covered is very large, and it is essential to maintain  physical separation between the robot and its control station. Moreover, the remote environment is in general unknown. 
  
  This research too was motivated by a similar requirement for in-situ measurement of the radioactive radiation, mostly neutron field, inside the vault and cave areas of   K-130,  K-500  and Medical Cyclotron operational at VECC, Kolkata, West Bengal. Cyclotrons are used to accelerate  charged particle beam to high energy. These are required for experiments in nuclear physics and nuclear medicine. The particles are accelerated to high energy using a high frequency alternating voltage which is applied between two hollow "D"-shaped sheet metal electrodes called "Dees" inside a vacuum chamber. The area surrounding the Dee is called the vault  and cave is the areas where beam line (beam of  accelerated particles) is available for experimentation. Radiation mapping of these areas are  mandatory requirements for getting safety clearance from regulators during  commissioning of new units and at regular intervals during operational life of the cyclotron facility.   Though there are radiation detectors placed at different locations in these area they can only measure radiation levels at discrete location but can not provide the 3-D radiation  map. The advantage of having a  radiation map is that it  provide detailed  input to health physicist  of the dose a person may receive and accordingly plan emergency  operations. These maps also provide the plant operators with the location of radiation leakage and accordingly tune there system to improve its efficiency.
 
@@ -12,32 +48,32 @@ The challenge faced for in-situ inspection during operation of cyclotron is that
 The original contributions of the present research are listed below:
 \begin{enumerate}[(i)]
 
-\item Design of customized teleoperated mobile robot for remote surveillance and mapping application.
+\item Design of a customized teleoperated mobile robot for remote surveillance and mapping application.
 \item Development of kinematic and dynamic model of the robot at hand.
 \item Control architecture required for intuitive teleoperation of this mobile robot.
-\item Predictive visual feedback control to alleviate problem arising due to time delayed.
+\item Predictive visual feedback control to alleviate problem arising due to time delay.
 
 
 \end{enumerate}
 \section{Thesis Organization}
 The thesis contains eight chapters and one appendix. They are organized as follows:
 \paragraph*{Chapter 1: Introduction\\}
-The present chapter, discusses the scope of mobile robotics in general and the motivation which lead to this research followed by the organization of the thesis.
+This  chapter, discusses the scope of mobile robotics in general and the motivation which led to this research work.
 \paragraph*{Chapter 2: Literature Review\\}
-This chapter presents the literature review in the following areas \textit{kinamatics and dynamics} of mobile robot, \textit{control of mobile robot}, \textit{control for time delay systems}, \textit{performance of operator under teleopreration}  and \textit{predictive display systems}.
+This chapter presents the literature review in the following areas: \textit{kinamatics and dynamics} of mobile robots, \textit{control of mobile robot}, \textit{control for time delay systems}, \textit{performance of operator under teleopreration},  and \textit{predictive display systems}.
 
-\paragraph*{Chapter 3: Design of Mobile Platform\\}
-This chapter highlights the design considerations of tele-operated mobile platform based on environmental conditions mission requirements. This paper presents the design and control scheme of a mobile manipulator used for radiation survey of Cyclotron vault and cave regions. It discusses the mechanical design for the traction system, the steering gear and the scissor mechanism. Selection of  steering system based on terrain condition and power requirement is also discussed.   
-\paragraph*{Chapter 4: Mathematica Modelling of Wheeled Mobile Platform \\}
-In this chapter, we present the orthogonal compliment method for deriving the dynamic equation of four wheeled differentially driven platform. The platform has two actuated wheels and two passive wheels. Different types of passive wheels has been studied and there corresponding dynamic equation are presented. The main contribution of this paper is derivation of dynamic equation a differentially driven  mobile platform with the most general form of passive wheel.
+\paragraph*{Chapter 3: Design of a Mobile Robot\\}
+This chapter highlights the design considerations of tele-operated mobile robot based on mission requirements and  environmental conditions.  It will discusses the mechanical design for the traction system, the steering gear and the scissor mechanism. Selection of  steering system based on terrain condition and power requirement is also discussed.   
+\paragraph*{Chapter 4: Mathematica Modelling of Wheeled Mobile Robots \\}
+In this chapter, the orthogonal compliment method will be presented to  derive the dynamic equations of a four wheeled differentially driven platform. The platform has two actuated wheels and two passive wheels. Different types of passive wheels were studied and  corresponding dynamic equations were derived. 
 \paragraph*{Chapter 5:Control of mobile manipulator \\}
-The control architecture and the hardware used for tele-operation is presented along with the detailed description of implementation of the controller software at both the remote (mobile robot)  and the local station. The experimental results of robots position based on wheel odometry and is torque requirement for few predefined paths is presented. A comparison study  with the simulated results based on dynamic analysis presented in chapter 4 is also presented.  
-\paragraph*{Chapter 6: Simulation Time Delay Tele-operation \\}
+The control architecture and the hardware used for tele-operation is presented along with the detailed description of implementation of the controller software at both the remote (mobile robot)  and the local station. The experimental results of robots position based on wheel odometry and is torque requirement for few predefined paths are presented. A comparison study  with the simulated results based on dynamic analysis is also presented presented.   
+\paragraph*{Chapter 6: Simulation of Tele-operation \\}
 
-In this chapter simulation of a teleoperated mobile platform is presented both under time delay due to communication link and without time delay. It is shown via simulation that with increase in time delay the stability of the teleoperation loop become unstable. A mathematical model of human driver is also presented to simulate the human factor in the teleoperation loop.
+In this chapter, simulation of a teleoperated mobile robot is presented both without time delay and  under time delay due to communication link. It is shown via simulation that with increase in time delay  teleoperation loop become unstable. 
  
 \paragraph*{Chapter 7: Predictive Display \\}
-In this chapter we propose a Predictive Display strategy to counter the time delay in video feedback by extrapolating in time  the camera view based on the predicted position of the robot at remote location. 
+In this chapter,  we propose a Predictive Display strategy to counter the time delay in video feedback by extrapolating in time  the camera view based on the predicted position of the robot at remote location. 
 
 \paragraph*{Chapter 8: Conclusions\\}
 This chapter summarizes major results of this research work. Limitations along with the future scope from the present experiences are also addressed.
