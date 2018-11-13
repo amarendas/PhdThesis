@@ -18,7 +18,20 @@ A level-1 auxiliary file: Misc_end/appendix_c.aux
 A level-1 auxiliary file: Misc_end/publications.aux
 A level-1 auxiliary file: Extra/Bio_AH.aux
 Database file #1: zhref.bib
+Warning--entry type for "cho2013study" isn't style-file defined
+--line 141 of file zhref.bib
+"{" immediately follows a field part---line 142 of file zhref.bib
+ :  title=\
+ :         {A study on automated mobile painting robot with permanent magnet wheels for outer plate of ship\},
+I'm skipping whatever remains of this entry
+Repeated entry---line 256 of file zhref.bib
+ : @article{chen2007human
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--all relevant fields are empty in cho2013study
+Warning--can't use both volume and number fields in massie1994phantom
+Warning--empty institution in grange2001overview
 Warning--empty author and editor in catMaxon
 Warning--empty author and editor in maxonrs232
 Warning--empty author and editor in maxonAppNotesPosition
-(There were 3 warnings)
+(There were 2 error messages)

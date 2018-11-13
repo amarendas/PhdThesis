@@ -2,37 +2,42 @@
 \chapter{Literature Review}
 \label{c2_LitRev}
 
-This chapter presents the survey of the literature highlighting design  of different mobile robots and there  control either used for field operation  or for academic research test platforms. 
-
-% Comment the below command to supress the random text
-%\lipsum[3-20]
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-
-\section{Research Objectives}
-Based on the surveyed literature the objective of the present research are listed below:
-
-\begin{itemize}
-%%\item[$\bullet$] Development of efficient method of extracting Denavit Hartenberg parameters from identified joint features, i.e., joint axis and center of rotation in the small workspace.
-%%
-%%\item[$\bullet$] Identification of kinematic chain of an installed manipulator and to incorporate it in the dynamic identification model. To include friction model in the dynamic identification for the two manipulators, one with very high GRR (KUKAKR5) and another robot KUKAiiwa equipped with F/T sensor at each joint.
-%%
-%%\item[$\bullet$] Dynamic identification using Decoupled Natural Orthogonal Complement (DeNOC) matrices based methodology for the recursive identification of the SIP.
-%%
-%%\item[$\bullet$] Application of equimomental formulation for the dynamic identification of the manipulators.
-%%
-%%\item[$\bullet$] To utilize recursive estimation technique based on Kalman filter approach for the dynamic identification of the manipulator.
-
-\item Identify 
-\item To 
-\item To 
-\item Deve
-\item Es
-\item To  
-
-\end{itemize}
 
 
-\section{Summary}
-This chapter provided the 	
+\section{ Special Purpose Mobile Robots}
+In this section we will discuss some of the special purpose customized robots built. Design and fabrication of a low cost, solar powered mobile robot for  scientific missions on the Antarctic plateau is presented in \cite{ray2005design}. It use of honeycombe-glassfiber composite for high strength and low weight. Ohno, et al. \cite{ohno2011robotic} discuses   developed a robotic control vehicle for measuring the radiation in the Fukushima Daiichi Nuclear Power Plant. Briones \cite{briones1994wall} has vacuum cup based wall climbing robot for inspection in  nuclear power plants. Galt \cite{galt1997tele} has developed eight legged teleoperated mobile robot for use in  nuclear industry. Development of magnetic wheel based mobile robot for painting of ship is discussed in \cite{cho2013study}. Compliant link based mobile robot was designed and tested by Borenstein\cite{borenstein1995control}, which due to its unique design provided better dead-reckoning accuracy compared to designs. This vehicle has two independent drive units or "trucks" that are free to rotate about a vertical shaft connected to the vehicle body. Each truck comprises two drive motors on a common axes and forms a differential drive system.Mechanical compliance is implemented
+by means of a linear bearing that allows relative motion between the front and rear truck
 
-%%Lastly, with wide range of robot manufacturers today, and very few service providers, namely Nikon Metrology and Dynalog (both in USA) provides, identification and calibration. The efficient identification method with aptly acquired experimental data will be useful for the researchers and manufacturers to implement the identified model for control and simulation purpose. 
+ Literature giving details of  mobile robots based on   differential wheel, traction belt and omnidirectional wheel are given in the introductory part of chapter \ref{ch_3:Design}.
+
+   
+\section{Mathematical Modeling of Mobile Robot}
+A very comprehensive list of wheeled mobile robots using different wheel configuration is given by Muir and Neuman \cite{muir1987kinematic}. In this work kinematic equation of conventional, omnidirectional and ball wheels is presented and based on combining the kinematic information or   individual wheels in a mobile robot  the kinematics of the WMR is presented. Detection of wheel slip based on calculation of error in the least square solution is also discuses. Similar issues are addressed Alexander \cite{alexander1989kinematics}, the major difference is that it uses physical friction model in there analysis in case rolling constrains are not satisfied. Another seminal work by Champion \cite{campion1996structural}, gives the structural classification of wheeled mobile robot based on the \textit{degree of mobility}, $\delta_m$, and \textit{degree of steeribility}, $\delta_s$, define there in based on the number of conventional fixed wheels and  conventional centered orientable wheels. According to them any WMR fall in one of the 5 categories given by $(\delta_m,\delta_s)\rightarrow(3,0),(2,1),(1,1),(1,2)$. The configuration and posture kinematic models of each type is derived. Based on configuration dynamic model the minimal number of actuators required for full maneuverability of each type is presented. Kinematic analysis of omi-directional over-actuated mobile robot  is presented in \cite{yi2002kinematics}. Two different method of forward kinematics is presented along with the singularity analysis. Actuator switching scheme based on load distribution to avoid singularity is discussed. 
+
+Dynamic modeling of mobile manipulator can be catogorized into two part force based i.e the Newtaon-Eular (NE) formulation and  energy based as Eular-Lagrange (EL) . Hoostmans \cite{hootsmans1992motion} used NE method to arrive at  the dynamic model of mobile manipulator that has two link mounted on a mobile platform. Where as Chung \cite{chung1998interaction} used EL method for equation of motion of mobile manipulator.  Luh and walker \cite{luh1980line} algorithm has been adapted for recursive inverse dynamics of wheeled systems based on geometric mechanics  is presented by Boyer and Ali \cite{boyer2011recursive}.   
+
+Orthogonal compliment method is yet another way to derive the equations of motion. It utilizes the advantage of NE and EL. In uses the fact that the motion can only take place in the null space of the constrain inducing matrix. The orthogonal compliment of the constraint inducing matrix is used to eliminate the non-working constraint  forces  and moments from the equation of motion.  Angles and Lee \cite{angeles1988formulation} used natural orthogonal compliment method to derive the equation of motion for holonomic mechanical system. In this the orthogonal compliment was derived from the velocity constraints naturally hence the name. This was  used by Angeles \cite{angeles2013fundamentals} and Saha \cite{saha1989kinematics},\cite{saha1991dynamics} to derive equation of motion of wmr. 
+
+\section{Path tracing algorithms}
+Path tracing algorithm for control of mobile robots is used to generate the mathematical model human operator for simulation of tele-operation loop in chapter 6. Geometry based path tracking algorithms are the most intuitive one for such application. They can be categorized broadly into  \textit{pure pursuit} \cite{coulter1992implementation}, \textit{follow the carrot} \cite{barton2001controller}, \textit{vector pursuit} \cite{wit2004autonomous}, and \textit{follow the past} \cite{hellstrom2006follow}. In pure-persuit \cite{coulter1992implementation} the steer angle of the robot is set so that the robot moves in circle to reach a point reference   on the desired path. The referance point is based on the "Look Ahead Distance". Which is practically the maximum distance you can see from the vehicle.  The control is based on the position error of the vehicle,  orientation error is not taken into account explicitly. 
+
+In case of "Follow the Carrot" method \cite{barton2001controller}  the steering angle is set proportional to the orientation error. Where the orientation error is defined as the difference between the current orientation of the vehicle and the orientation required from the present position of the vehicle to reach the referance point on the path.  The proportionality constant is decide based on trial and error.
+
+ The two previous geometric path tracking techniques only generate steering
+commands based upon the reference point on the trajectory to be traced. Hence, the requirement of vehicle posture control for accurate trajectory following remains unsatisfied. Even though, the path orientation and curvature are known at the reference point, an improved path tracking strategy such that the vehicle arrives at the reference point  with the correct orientation and curvature is suggested  by Wit in \cite{wit2004autonomous}. Wit uses Screw theory to find the error between the Screw current and the required screw at the reference position.
+
+Hellstrom \cite{hellstrom2006follow} has proposed an algorithm based on the past recorded steer angle associated with the reference point on the path to be trace. In this algorithm the steer angle of the vehicle is set based on the orientation error, position error and the past recorded steer angle. A recent survey by Paden \cite{paden2016survey} provides details of other control strategies based on Lyapunov, Model Predictive Controler etc   used for path tracking in autonomous unmanned vehicles.  
+
+
+   
+\section{Tele-operation}
+Tele-operation deals with  connecting   human operator and robot in order to reproduce human action at distance. Tele-operation is in general bidirectional or bilateral as the human needs to have a feedback in order to understand the results of his action and to perceive the remote environment. It started with its use in nuclear and space industries \cite{martin1985teleoperated,vertut1986teleoperations}, but now it is used in underwater exploration, surgery, live-power line maintenance, mining etc. all characterized by reducing the risk to human operators. The two major research areas are the "human interface" and control.
+
+Human interface is a means through the operator interacts with the remote robot by perceiving the remote environment and sending commands accordingly. Thus, the human interface has two important purpose; one to excite the human senses to show the action of the executed task and to process the human command properly to execute it a the remote end.  Force and haptic feedback of remote environment drastically improves operators performance. A serial link haptic device PHANTOM \cite{massie1994phantom} was developed at MIT during 1994. Where PANTOM can provide 3DOF force feedback and was developed for haptic purpose. DELTA Haptice Device described in \cite{grange2001overview} provide 6DOF force feedback with moderate force. 
+
+
+\section{Predictive Display}
+Delays are inherent in teleoperation over wireless network. Practically much of the delay stems from
+relay stations and limited capacity networks.As little as a half second delay in the visual feedback significantly reduces human performance \cite{chen2007human}.  To over come time delay in tele-operation based on visual feedback, predictive display systems has been one of the most natural and widely used techniques. It has been used for space teleoperation as early as in 1993 as reported in \cite{sheridan1993space} and\cite{kim1993demonstration}.
+
+

@@ -1,5 +1,158 @@
 \begin{thebibliography}{10}
 
+\bibitem{ray2005design}
+L.~Ray, A.~Price, A.~Streeter, D.~Denton, and J.~H. Lever, ``The design of a
+  mobile robot for instrument network deployment in antarctica,'' in {\em
+  Robotics and Automation, 2005. ICRA 2005. Proceedings of the 2005 IEEE
+  International Conference on}, pp.~2111--2116, IEEE, 2005.
+
+\bibitem{ohno2011robotic}
+K.~Ohno, S.~Kawatsuma, T.~Okada, E.~Takeuchi, K.~Higashi, and S.~Tadokoro,
+  ``Robotic control vehicle for measuring radiation in fukushima daiichi
+  nuclear power plant,'' in {\em Safety, Security, and Rescue Robotics (SSRR),
+  2011 IEEE International Symposium on}, pp.~38--43, IEEE, 2011.
+
+\bibitem{briones1994wall}
+L.~Briones, P.~Bustamante, and M.~A. Serna, ``Wall-climbing robot for
+  inspection in nuclear power plants,'' in {\em Robotics and Automation, 1994.
+  Proceedings., 1994 IEEE International Conference on}, pp.~1409--1414, IEEE,
+  1994.
+
+\bibitem{galt1997tele}
+S.~Galt, B.~Luk, D.~Cooke, and A.~Collie, ``A tele-operated semi-intelligent
+  climbing robot for nuclear applications,'' in {\em Mechatronics and Machine
+  Vision in Practice, 1997. Proceedings., Fourth Annual Conference on},
+  pp.~118--123, IEEE, 1997.
+
+\bibitem{cho2013study}
+
+
+\bibitem{borenstein1995control}
+J.~Borenstein, ``Control and kinematic design of multi-degree-of freedom mobile
+  robots with compliant linkage,'' {\em IEEE transactions on robotics and
+  automation}, vol.~11, no.~1, pp.~21--35, 1995.
+
+\bibitem{muir1987kinematic}
+P.~F. Muir and C.~P. Neuman, ``Kinematic modeling of wheeled mobile robots,''
+  {\em Journal of robotic systems}, vol.~4, no.~2, pp.~281--340, 1987.
+
+\bibitem{alexander1989kinematics}
+J.~C. Alexander and J.~H. Maddocks, ``On the kinematics of wheeled mobile
+  robots,'' {\em The International Journal of Robotics Research}, vol.~8,
+  no.~5, pp.~15--27, 1989.
+
+\bibitem{campion1996structural}
+G.~Campion, G.~Bastin, and B.~Dandrea-Novel, ``Structural properties and
+  classification of kinematic and dynamic models of wheeled mobile robots,''
+  {\em IEEE transactions on robotics and automation}, vol.~12, no.~1,
+  pp.~47--62, 1996.
+
+\bibitem{yi2002kinematics}
+B.-J. Yi and W.~K. Kim, ``The kinematics for redundantly actuated
+  omnidirectional mobile robots,'' {\em Journal of Robotic Systems}, vol.~19,
+  no.~6, pp.~255--267, 2002.
+
+\bibitem{hootsmans1992motion}
+N.~A.~M. Hootsmans {\em et~al.}, {\em The motion control manipulators on mobile
+  vehicles}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 1992.
+
+\bibitem{chung1998interaction}
+J.~H. Chung, S.~A. Velinsky, and R.~A. Hess, ``Interaction control of a
+  redundant mobile manipulator,'' {\em The International Journal of Robotics
+  Research}, vol.~17, no.~12, pp.~1302--1309, 1998.
+
+\bibitem{luh1980line}
+J.~Y. Luh, M.~W. Walker, and R.~P. Paul, ``On-line computational scheme for
+  mechanical manipulators,'' {\em Journal of Dynamic Systems, Measurement, and
+  Control}, vol.~102, no.~2, pp.~69--76, 1980.
+
+\bibitem{boyer2011recursive}
+F.~Boyer and S.~Ali, ``Recursive inverse dynamics of mobile multibody systems
+  with joints and wheels,'' {\em IEEE Transactions on robotics}, vol.~27,
+  no.~2, pp.~215--228, 2011.
+
+\bibitem{angeles1988formulation}
+J.~Angeles and S.~K. Lee, ``The formulation of dynamical equations of holonomic
+  mechanical systems using a natural orthogonal complement,'' {\em Journal of
+  applied mechanics}, vol.~55, p.~243, 1988.
+
+\bibitem{angeles2013fundamentals}
+J.~Angeles, {\em Fundamentals of robotic mechanical systems: theory, methods,
+  and algorithms}, vol.~124.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{saha1989kinematics}
+S.~K. Saha and J.~Angeles, ``Kinematics and dynamics of a three-wheeled 2-dof
+  agv,'' in {\em Robotics and Automation, 1989. Proceedings., 1989 IEEE
+  International Conference on}, pp.~1572--1577, IEEE, 1989.
+
+\bibitem{saha1991dynamics}
+S.~K. Saha and J.~Angeles, ``Dynamics of nonholonomic mechanical systems using
+  a natural orthogonal complement,'' {\em Journal of Applied Mechanics},
+  vol.~58, no.~1, pp.~238--243, 1991.
+
+\bibitem{coulter1992implementation}
+R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
+  tech. rep., Carnegie-Mellon UNIV Pittsburgh PA Robotics INST, 1992.
+
+\bibitem{barton2001controller}
+M.~J. Barton, ``Controller development and implementation for path planning and
+  following in an autonomous urban vehicle,'' {\em Undergraduate thesis,
+  University of Sydney}, 2001.
+
+\bibitem{wit2004autonomous}
+J.~Wit, C.~D. Crane~III, and D.~Armstrong, ``Autonomous ground vehicle path
+  tracking,'' {\em Journal of Robotic Systems}, vol.~21, no.~8, pp.~439--449,
+  2004.
+
+\bibitem{hellstrom2006follow}
+T.~Hellstrom and O.~Ringdahl, ``Follow the past: a path-tracking algorithm for
+  autonomous vehicles,'' {\em International journal of vehicle autonomous
+  systems}, vol.~4, no.~2, pp.~216--224, 2006.
+
+\bibitem{paden2016survey}
+B.~Paden, M.~{\v{C}}{\'a}p, S.~Z. Yong, D.~Yershov, and E.~Frazzoli, ``A survey
+  of motion planning and control techniques for self-driving urban vehicles,''
+  {\em IEEE Transactions on intelligent vehicles}, vol.~1, no.~1, pp.~33--55,
+  2016.
+
+\bibitem{martin1985teleoperated}
+H.~L. Martin and D.~P. Kuban, {\em Teleoperated robotics in hostile
+  environments}.
+\newblock Society of Manufacturing Engineers, 1985.
+
+\bibitem{vertut1986teleoperations}
+J.~Vertut and P.~Coiffet, ``Teleoperations and robotics: Evolution and
+  development,“robot technology,” vol. 3a,'' 1986.
+
+\bibitem{massie1994phantom}
+T.~H. Massie, J.~K. Salisbury, {\em et~al.}, ``The phantom haptic interface: A
+  device for probing virtual objects,'' in {\em Proceedings of the ASME winter
+  annual meeting, symposium on haptic interfaces for virtual environment and
+  teleoperator systems}, vol.~55, pp.~295--300, Citeseer, 1994.
+
+\bibitem{grange2001overview}
+S.~Grange, F.~Conti, P.~Helmer, P.~Rouiller, and C.~Baur, ``Overview of the
+  delta haptic device,'' tech. rep., 2001.
+
+\bibitem{chen2007human}
+J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
+  interface design for teleoperated robots,'' {\em IEEE Transactions on
+  Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, vol.~37,
+  no.~6, pp.~1231--1245, 2007.
+
+\bibitem{sheridan1993space}
+T.~B. Sheridan, ``Space teleoperation through time delay: Review and
+  prognosis,'' {\em IEEE Transactions on robotics and Automation}, vol.~9,
+  no.~5, pp.~592--606, 1993.
+
+\bibitem{kim1993demonstration}
+W.~S. Kim and A.~K. Bejczy, ``Demonstration of a high-fidelity
+  predictive/preview display technique for telerobotic servicing in space,''
+  {\em IEEE Transactions on Robotics and Automation}, vol.~9, no.~5,
+  pp.~698--702, 1993.
+
 \bibitem{yamamoto1992coordinating}
 Y.~Yamamoto and X.~Yun, ``Coordinating locomotion and manipulation of a mobile
   manipulator,'' in {\em Decision and Control, 1992., Proceedings of the 31st
@@ -9,11 +162,6 @@ Y.~Yamamoto and X.~Yun, ``Coordinating locomotion and manipulation of a mobile
 S.~Rajendran and et.al., ``Mobile robot for reactor vessel inspection,'' in
   {\em National Conference on Advanced Manufacturing and Robotics},
   pp.~2527--2532, CMERI, Durgapur,WB,, 2004.
-
-\bibitem{saha1989kinematics}
-S.~K. Saha and J.~Angeles, ``Kinematics and dynamics of a three-wheeled 2-dof
-  agv,'' in {\em Robotics and Automation, 1989. Proceedings., 1989 IEEE
-  International Conference on}, pp.~1572--1577, IEEE, 1989.
 
 \bibitem{pin1994new}
 F.~G. Pin and S.~M. Killough, ``A new family of omnidirectional and holonomic
@@ -71,12 +219,6 @@ K.~P. Valavanis and G.~J. Vachtsevanos, {\em Handbook of unmanned aerial
 J.-B. Mouret, {\em Evolutionary Adaptation in Natural and Artificial Systems}.
 \newblock PhD thesis, Universit{\'e} Pierre et Marie Curie, 2015.
 
-\bibitem{campion1996structural}
-G.~Campion, G.~Bastin, and B.~Dandrea-Novel, ``Structural properties and
-  classification of kinematic and dynamic models of wheeled mobile robots,''
-  {\em IEEE transactions on robotics and automation}, vol.~12, no.~1,
-  pp.~47--62, 1996.
-
 \bibitem{campion2008wheeled}
 G.~Campion and W.~Chung, ``Wheeled robots,'' in {\em Springer Handbook of
   Robotics}, pp.~391--410, Springer, 2008.
@@ -109,16 +251,6 @@ K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
   Proceedings., 1997 IEEE International Conference on}, vol.~4, pp.~2926--2931,
   IEEE, 1997.
 
-\bibitem{saha1991dynamics}
-S.~K. Saha and J.~Angeles, ``Dynamics of nonholonomic mechanical systems using
-  a natural orthogonal complement,'' {\em Journal of Applied Mechanics},
-  vol.~58, no.~1, pp.~238--243, 1991.
-
-\bibitem{angeles2013fundamentals}
-J.~Angeles, {\em Fundamentals of robotic mechanical systems: theory, methods,
-  and algorithms}, vol.~124.
-\newblock Springer Science \& Business Media, 2013.
-
 \bibitem{saha2010robotics}
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.
@@ -140,16 +272,6 @@ M.~Z. Zeroual, ``maxon auto tuning,'' {\em iNaCoMM2013,IIT Roorkee, India},
 \bibitem{maxonAppNotesPosition}
 {\em EPOS4 Application Note: Positioning Controllers}.
 \newblock Maxon Motors, 2012.
-
-\bibitem{chen2007human}
-J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
-  interface design for teleoperated robots,'' {\em IEEE Transactions on
-  Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, vol.~37,
-  no.~6, pp.~1231--1245, 2007.
-
-\bibitem{coulter1992implementation}
-R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
-  tech. rep., Carnegie-Mellon UNIV Pittsburgh PA Robotics INST, 1992.
 
 \bibitem{sheridan}
 S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
