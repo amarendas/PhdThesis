@@ -25,7 +25,10 @@ S.~Galt, B.~Luk, D.~Cooke, and A.~Collie, ``A tele-operated semi-intelligent
   pp.~118--123, IEEE, 1997.
 
 \bibitem{cho2013study}
-
+C.-S. Cho, J.-D. Kim, S.-G. Lee, S.~K. Lee, S.-C. Han, and B.-S. Kim, ``A study
+  on automated mobile painting robot with permanent magnet wheels for outer
+  plate of ship,'' in {\em Robotics (ISR), 2013 44th International Symposium
+  on}, pp.~1--4, IEEE, 2013.
 
 \bibitem{borenstein1995control}
 J.~Borenstein, ``Control and kinematic design of multi-degree-of freedom mobile
@@ -135,6 +138,37 @@ T.~H. Massie, J.~K. Salisbury, {\em et~al.}, ``The phantom haptic interface: A
 \bibitem{grange2001overview}
 S.~Grange, F.~Conti, P.~Helmer, P.~Rouiller, and C.~Baur, ``Overview of the
   delta haptic device,'' tech. rep., 2001.
+
+\bibitem{clover1997dynamic}
+C.~Clover, G.~R. Luecke, J.~J. Troy, and W.~A. McNeely, ``Dynamic simulation of
+  virtual mechanisms with haptic feedback using industrial robotics
+  equipment,'' in {\em Robotics and Automation, 1997. Proceedings., 1997 IEEE
+  International Conference on}, vol.~1, pp.~724--730, IEEE, 1997.
+
+\bibitem{ueberle2004vishard10}
+M.~Ueberle, N.~Mock, and M.~Buss, ``Vishard10, a novel hyper-redundant haptic
+  interface,'' in {\em Haptic Interfaces for Virtual Environment and
+  Teleoperator Systems, 2004. HAPTICS'04. Proceedings. 12th International
+  Symposium on}, pp.~58--65, IEEE, 2004.
+
+\bibitem{yoon2001design}
+J.~Yoon and J.~Ryu, ``Design, fabrication, and evaluation of a new haptic
+  device using a parallel mechanism,'' {\em IEEE/ASME Transactions on
+  mechatronics}, vol.~6, no.~3, pp.~221--233, 2001.
+
+\bibitem{aracil1997telerobotic}
+R.~Aracil, M.~Ferre, M.~Hernando, and J.~Sebastian, ``Telerobotic system for
+  live-power line maintenance: Robtet,'' {\em IEEE Transactions on Industrial
+  Electronics}, vol.~44, no.~5-44, pp.~630--637, 1997.
+
+\bibitem{matthies1992stereo}
+L.~Matthies, ``Stereo vision for planetary rovers: Stochastic modeling to near
+  real-time implementation,'' {\em International Journal of Computer Vision},
+  vol.~8, no.~1, pp.~71--91, 1992.
+
+\bibitem{hirzinger1994robots}
+G.~Hirzinger, ``Robots in space-a survey,'' {\em Advanced Robotics}, vol.~9,
+  no.~6, pp.~625--651, 1994.
 
 \bibitem{chen2007human}
 J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user

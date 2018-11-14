@@ -1,12 +1,12 @@
-\contentsline {section}{Certificate}{i}{Doc-Start}
-\contentsline {section}{Acknowledgements}{iii}{Doc-Start}
-\contentsline {section}{Abstract}{iv}{Doc-Start}
-\contentsline {section}{List of Figures}{vii}{chapter*.1}
-\contentsline {section}{List of Tables}{xi}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xiii}{chapter*.3}
+\contentsline {section}{Certificate}{ii}{Doc-Start}
+\contentsline {section}{Acknowledgements}{iv}{Doc-Start}
+\contentsline {section}{Abstract}{v}{Doc-Start}
+\contentsline {section}{List of Figures}{ix}{chapter*.1}
+\contentsline {section}{List of Tables}{xiii}{chapter*.2}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
+\contentsline {section}{Important Symbols and Abbreviations}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1} Special Purpose Mobile Robots}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Mathematical Modeling of Mobile Robot}{8}{section.2.2}
@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {3.4}Design of Scissor Mechanism for Manipulating Arm}{21}{section.3.4}
 \contentsline {section}{\numberline {3.5}Summary}{23}{section.3.5}
 \contentsline {chapter}{\numberline {4}Dynamics of Wheeled Mobile Robots }{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Modelling using the Natural Orthogonal Compliment (NOC)}{26}{section.4.1}
+\contentsline {section}{\numberline {4.1}Modeling using the Natural Orthogonal Compliment (NOC)}{26}{section.4.1}
 \contentsline {section}{\numberline {4.2}Dynamic Equation of WMR}{29}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Kinematic analysis}{30}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Dynamic equations}{34}{subsection.4.2.2}
