@@ -170,22 +170,121 @@ L.~Matthies, ``Stereo vision for planetary rovers: Stochastic modeling to near
 G.~Hirzinger, ``Robots in space-a survey,'' {\em Advanced Robotics}, vol.~9,
   no.~6, pp.~625--651, 1994.
 
+\bibitem{goertz1961anl}
+R.~Goertz, R.~Blomgren, J.~Grimson, G.~Forster, W.~Thompson, and W.~Kline,
+  ``The anl model 3 master-slave electric manipulator--its design and use in a
+  cave,'' {\em Trans. Am. Nuclear Soc.}, vol.~4, no.~2, 1961.
+
+\bibitem{flatau1977sm}
+C.~Flatau, ``Sm-229: a new compact servo master-slave manipulator,'' in {\em
+  Proceedings of the 25th conference on remote systems technology}, 1977.
+
+\bibitem{lawrence1993stability}
+D.~A. Lawrence, ``Stability and transparency in bilateral teleoperation,'' {\em
+  IEEE transactions on robotics and automation}, vol.~9, no.~5, pp.~624--637,
+  1993.
+
+\bibitem{hokayem2006bilateral}
+P.~F. Hokayem and M.~W. Spong, ``Bilateral teleoperation: An historical
+  survey,'' {\em Automatica}, vol.~42, no.~12, pp.~2035--2057, 2006.
+
+\bibitem{anderson1989bilateral}
+R.~J. Anderson and M.~W. Spong, ``Bilateral control of teleoperators with time
+  delay,'' {\em IEEE Transactions on Automatic control}, vol.~34, no.~5,
+  pp.~494--501, 1989.
+
+\bibitem{rebelo2015time}
+J.~Rebelo and A.~Schiele, ``Time domain passivity controller for 4-channel
+  time-delay bilateral teleoperation,'' {\em IEEE transactions on haptics},
+  vol.~8, no.~1, pp.~79--89, 2015.
+
+\bibitem{niemeyer1991stable}
+G.~Niemeyer and J.-J. Slotine, ``Stable adaptive teleoperation,'' {\em IEEE
+  Journal of oceanic engineering}, vol.~16, no.~1, pp.~152--162, 1991.
+
+\bibitem{stramigioli2010novel}
+S.~Stramigioli, R.~Mahony, and P.~Corke, ``A novel approach to haptic
+  tele-operation of aerial robot vehicles,'' in {\em Robotics and Automation
+  (ICRA), 2010 IEEE International Conference on}, pp.~5302--5308, IEEE, 2010.
+
+\bibitem{stramigioli2005sampled}
+S.~Stramigioli, C.~Secchi, A.~J. van~der Schaft, and C.~Fantuzzi, ``Sampled
+  data systems passivity and discrete port-hamiltonian systems,'' {\em IEEE
+  Transactions on Robotics}, vol.~21, no.~4, pp.~574--587, 2005.
+
+\bibitem{krstic2009delay}
+M.~Krstic, {\em Delay compensation for nonlinear, adaptive, and PDE systems}.
+\newblock Springer, 2009.
+
 \bibitem{chen2007human}
 J.~Y. Chen, E.~C. Haas, and M.~J. Barnes, ``Human performance issues and user
   interface design for teleoperated robots,'' {\em IEEE Transactions on
   Systems, Man, and Cybernetics, Part C (Applications and Reviews)}, vol.~37,
   no.~6, pp.~1231--1245, 2007.
 
+\bibitem{sheridan1986human}
+T.~Sheridan, ``Human supervisory control of robot systems,'' in {\em Robotics
+  and Automation. Proceedings. 1986 IEEE International Conference on}, vol.~3,
+  pp.~808--812, IEEE, 1986.
+
+\bibitem{pook1994teleassistance}
+P.~K. Pook and D.~H. Ballard, ``Teleassistance: Contextual guidance for
+  autonomous manipulation,'' in {\em AAAI}, pp.~1291--1296, 1994.
+
+\bibitem{jagersand1995visual}
+M.~Jagersand and R.~Nelson, ``Visual space task specification, planning and
+  control,'' in {\em Computer Vision, 1995. Proceedings., International
+  Symposium on}, pp.~521--526, IEEE, 1995.
+
 \bibitem{sheridan1993space}
 T.~B. Sheridan, ``Space teleoperation through time delay: Review and
   prognosis,'' {\em IEEE Transactions on robotics and Automation}, vol.~9,
   no.~5, pp.~592--606, 1993.
+
+\bibitem{bejczy1990predictive}
+A.~K. Bejczy and W.~S. Kim, ``Predictive displays and shared compliance control
+  for time-delayed telemanipulation,'' in {\em Intelligent Robots and Systems'
+  90.'Towards a New Frontier of Applications', Proceedings. IROS'90. IEEE
+  International Workshop on}, pp.~407--412, IEEE, 1990.
 
 \bibitem{kim1993demonstration}
 W.~S. Kim and A.~K. Bejczy, ``Demonstration of a high-fidelity
   predictive/preview display technique for telerobotic servicing in space,''
   {\em IEEE Transactions on Robotics and Automation}, vol.~9, no.~5,
   pp.~698--702, 1993.
+
+\bibitem{jagersand1999image}
+M.~Jagersand, ``Image based predictive display for tele-manipulation,'' in {\em
+  Robotics and Automation, 1999. Proceedings. 1999 IEEE International
+  Conference on}, vol.~1, pp.~550--556, IEEE, 1999.
+
+\bibitem{yerex2003predictive}
+K.~Yerex, D.~Cobzas, and M.~Jagersand, ``Predictive display models for
+  tele-manipulation from uncalibrated camera-capture of scene geometry and
+  appearance,'' in {\em Robotics and Automation, 2003. Proceedings. ICRA'03.
+  IEEE International Conference on}, vol.~2, pp.~2812--2817, IEEE, 2003.
+
+\bibitem{deng2003predictive}
+Z.~Deng and M.~Jagersand, ``Predictive display system for tele-manipulation
+  using image-based modeling and rendering,'' in {\em Intelligent Robots and
+  Systems, 2003.(IROS 2003). Proceedings. 2003 IEEE/RSJ International
+  Conference on}, vol.~3, pp.~2797--2802, IEEE, 2003.
+
+\bibitem{kelly2011real}
+A.~Kelly, N.~Chan, H.~Herman, D.~Huber, R.~Meyers, P.~Rander, R.~Warner,
+  J.~Ziglar, and E.~Capstick, ``Real-time photorealistic virtualized reality
+  interface for remote mobile robot control,'' {\em The International Journal
+  of Robotics Research}, vol.~30, no.~3, pp.~384--404, 2011.
+
+\bibitem{burkert2004photorealistic}
+T.~Burkert, J.~Leupold, and G.~Passig, ``A photorealistic predictive display,''
+  {\em Presence: Teleoperators \& Virtual Environments}, vol.~13, no.~1,
+  pp.~22--43, 2004.
+
+\bibitem{hu2015line}
+H.~Hu, C.~P. Quintero, H.~Sun, and M.~Jagersand, ``On-line reconstruction based
+  predictive display in unknown environment,'' in {\em Robotics and Automation
+  (ICRA), 2015 IEEE International Conference on}, pp.~4446--4451, IEEE, 2015.
 
 \bibitem{yamamoto1992coordinating}
 Y.~Yamamoto and X.~Yun, ``Coordinating locomotion and manipulation of a mobile
