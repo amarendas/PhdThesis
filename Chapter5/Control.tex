@@ -1,26 +1,41 @@
-\chapter{Control of mobile manipulator }
+\chapter{Control of Mobile Manipulator }
 \label{c5_DI2}
-In this chapter the control architecture of the teleoperated  mobile robot is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile robot and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and user interface also described in detail.
+In this chapter, the control architecture of the teleoperated  mobile robot is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile robot and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
 \section{Control Architecture and Hardware}
 
 
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter3/fig/controlblock}
-	\captionof{figure}{Control Architecture Block Diagram }
+	\captionof{figure}{Control architecture }
 	\label{fig:ControlBlockDiag} 
 \end{figure} 
-The mobile manipulator is planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local controller on the mobile manipulator. They  communicate over dedicated wireless network. The remote station send data packet every 50 millisecond (20Hz) to the mobile manipulator. The commanded velocity, the steer angle, the z position of the platform and the state of the detector and headlamps constitutes the data packet sent by the remote station as shown in \ref{fig:sentBytes}. The on board control of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheels, the z position of the top platform,  battery voltage  and current of each motor.
+The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local onboard controller of the mobile robot. They  communicate over a dedicated wireless network. The remote station sends data packet every in 50 millisecond (20Hz) to the mobile robot. The commanded velocity, steer angle,  z position of the platform, and  state of the detector and headlamps constitute the data packet sent by the remote station as shown in Figure \ref{fig:sentBytes}. The onboard controller of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheel, the z position of the top platform,  battery voltage  and current of each motor. They are indicated in Figure \ref{fig:recvBytes}.
 \begin{figure}
-	\includegraphics[width=.5\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
-	\captionof{figure}{Data sent from PC to Onboard controller }
-	\label{fig:sentBytes} 
+	
+	\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/bitconfig}
+		\captionof{figure}{Data from PC to the robot }
+		\label{fig:sentBytes} 
+	\end{minipage}
+\hfill
+   \begin{minipage}[t]{0.5\textwidth}
+   		\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/bitconfig2}
+   		\captionof{figure}{Data from the robot to PC}
+   		\label{fig:recvBytes} 
+   \end{minipage}
+	
 \end{figure}
 
 \subsection{Local Onboard Controller}
-The  on-board computer which is Raspberry Pi running raspian (linux) os receives the command from the remote station and controls the robot hardware through customized c++ application.
-The raspberry pi  is daisy chained to the four Maxon EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controllers is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers are configured in velocity servo loop. The steering and the z-axis motors drivers are configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  is connected over Ethernet via a wireless hub. the wiring digram of the robot is given figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless net work directly, therefore it does not interfere with the command loop between the raspberri Pi and the PC. 
+The  onboard computer which is Raspberry Pi running raspian (linux) os receives  command from the remote station and controls the robot hardware through customized c++ application.
+The Raspberry Pi  is daisy chained to the four Maxon Make, EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controller is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers were configured in velocity servo loop. The drivers for steering and the z-axis motors were configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  were connected over Ethernet via a wireless hub. The wiring digram of the robot is given in Figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless network directly, it does not interfere with the command loop between the Raspberri Pi and the PC. 
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/RobotSideWiring}
+	\captionof{figure}{Wiring  diagram of the WMR }
+	\label{fig:wiring} 
+\end{figure} 
 
-The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid} is used as the work space for the mobile robot is infinite compared to input device. In case of manipulators position-position control approach is used with scaling. In our case we user the mixed approach. The steering angle is controlled in position -position mode where as the mobile robots speed is controlled by foot paddle's position, i.e. position-velocity mode. This is given by the following equation 
+The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid}.  The workspace for the mobile robot was assumed  infinite compared to the input device. In case of manipulators position-position control approach is generally used with scaling. In this case,  the mixed approach was used. The steering angle was controlled in position-position mode whereas the mobile robot's speed was controlled by foot paddle's position, i.e. in  position-velocity mode. This can be given by the following equation: 
 \begin{equation}
 	\begin{pmatrix}
 	V\\\theta_S
@@ -33,10 +48,11 @@ The mobile robot is teleoperated using position-speed command as in \cite{farkha
 	\tilde{\Theta_s}
 	\end{pmatrix}
 \end{equation}
-where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the twist in steering wheel, $K_v$ and $K_s$ are the proportionality constants, $V$ is the velocity of point $O_3$ and $\theta_s$ is the displacement of the steer motor. These proportionality constants are derived as below bases on extreme limits. 
+where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the twist of steering wheel, $K_v$ and $K_s$ are the proportionality constants, $V$ is the velocity of point $O_3$  Figure \ref{fig:KenVec} and $\theta_s$ is the displacement of the steer motor. These proportionality constants are derived as below based on extreme limits and  listed in Table \ref{tbl:propCnst}. 
 
 \begin{table}[!htbp]
-	\caption{Proportionality constant table}
+	\caption{Proportionality constant table} 
+	\label{tbl:propCnst}
 	\centering
 	\begin{tabular}{l l l l l}
 		\hline
@@ -49,91 +65,81 @@ where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the tw
 	\end{tabular}	
 \end{table}
 
-\begin{figure}
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/RobotSideWiring}
-	\captionof{figure}{Wiring  Diagram of Robot }
-	\label{fig:wiring} 
-\end{figure} 
-\subsection{Details of Motor Controller}
-Three EPOS2 controller from Maxon Motors is used to control the mobile robots rear wheel velocity and the steering gear position. Each controller can control one motor. The over architecture of the controller  as given in \cite{maxonAutoTune}, \cite{maxonAppNotesPosition} and is shown here in  figure \ref{fig:EPOS4}. The controller can be configured in either current, position or velocity control mode. The inner most current loop controls the torque of the motor.
- The current feedback loop shown in figure \ref{fig:curloop} is a PI loop running at 25KHz and the transfer function of the PI block is given in equation \ref{eqn:curLoop}. 
+
+\subsection{Details of the Motor Controller}
+Three EPOS2 controllers from Maxon Motors were used to control the mobile robot's rear wheel velocity and the steering gears position. Each controller can control one motor. The overall architecture of the controller  as given in \cite{maxonAutoTune}, \cite{maxonAppNotesPosition}  is shown  in  Figure \ref{fig:EPOS4}.
+  \begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/overallcontorl}
+	\captionof{figure}{Block digram of EPOS4 controller  }
+	\label{fig:EPOS4} 
+\end{figure}
+ The controller can be configured in either current, position or velocity control mode. The inner most current loop controls the torque of the motor.
+ The current feedback loop shown in Figure \ref{fig:curloop} is a Proportional Integrator (PI) controller, running at 25KHz and the transfer function of the PI block is given as \ref{eqn:curLoop}. 
  \begin{equation}
  	C(s)=K_p + \frac{K_I}{s}
  	\label{eqn:curLoop}
  \end{equation}
- where $K_p$ and $ K_I$ are the proportional and Integral gains.
-   \begin{figure}
- 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/overallcontorl}
- 	\captionof{figure}{EPOS4 Controller Block Digram }
- 	\label{fig:EPOS4} 
- \end{figure}
+ where $K_p$ and $ K_I$ are the proportional and integral gains.
+ 
+ 
  \begin{figure}
  	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/currentLoop}
- 	\captionof{figure}{Current control bolck digram }
+ 	\captionof{figure}{Current control block }
  	\label{fig:curloop} 
  \end{figure}
  
  
-  The rear motor controllers are configured to  in velocity mode.  The block digram  of the velocity loop is given in figure \ref{fig:velloop}. The velocity controller is a PI controller with  velocity and acceleration feed-forward. The transfer function $V(s)$of velocity loop PI block is given by
+  The rear motor controllers are configured in the velocity control mode.  The block digram  of the velocity loop is given in Figure \ref{fig:velloop}. The velocity controller is a PI controller with  velocity and acceleration feed-forward. 
+  \begin{figure}
+  	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/velLoop}
+  	\captionof{figure}{Velocity control bolck  }
+  	\label{fig:velloop} 
+  \end{figure}
+  The transfer function $V(s)$ of the velocity loop PI block is given by
   \begin{eqnarray}
   V(s)=K_{p\omega}+\frac{K_{I\omega}}{s}
-  \end{eqnarray}  where $K_{p\omega}$ and  $K_{I\omega}$ are velocity proportional and integral gain respectively.
-   The sampling rate of the  velocity loop is 2.5 KHz. The feedforward accleration and feedforward velocity is used to compensate for the known inertial load and  viscous frictional load  \cite{maxonAppNotesPosition}.  The lowpass filter used in \ref{fig:EPOS4} is used  because velocity is estimated from differentiating  the position, the filter eliminates noise due to differentiation. The transfer function $H(s)$ of  lowpass filter is given below
+  \end{eqnarray}  where $K_{p\omega}$ and  $K_{I\omega}$ are  proportional and integral gains for velocity, respectively.   The sampling rate of the  velocity loop is 2.5 KHz. The feedforward acceleration and  velocity was used to compensate for the known inertial load and  viscous frictional load  \cite{maxonAppNotesPosition} respectively.   Velocity is estimated from differentiation of  the position data, the low-pass filter  in Figure \ref{fig:EPOS4}  eliminates noise due to differentiation. The transfer function $H(s)$ for the  low-pass filter is given by
   \begin{equation}
   H(s)=\frac{1}{1+\frac{K_{p\omega}}{48K_{I\omega}}}
   \end{equation} 
-  The gain values used for each rear motor in  the velocity control mode is listed in table \ref{tb:Left} and \ref{tb:Right}. No acceleration or velocity feedforward  was used. These parameters were determined by auto tuning.  
-  \begin{table}[!htbp]
-  	\caption{ Rear Right Motor Controller  parameters }
-  	\label{tb:Right}
-  	\centering
-  	\begin{tabular}{l l l}
-  		\hline
-  		\emph{Gain Parameter}  & \emph{ Value} & \emph{Unit} \\
-  		\hline
-  		$K_p$  & 300 &  $\frac{mV}{A}$ \\ 
-  		$K_I $ & 100 & $\frac{mV}{A.mS}$ \\
-  		$K_{P\omega}$& 1000 & $ \frac{mA.sec}{rad}$\\
-  		$K_{I\omega}$&100&$\frac{mA}{rad}$\\
-  		\hline
-  	\end{tabular}
-  \end{table}
-  \begin{table}[!htbp]
-  	\caption{ Rear Right Motor Controller  parameters }
-  	\label{tb:Left}
-  	\centering
-  	\begin{tabular}{l l l}
-  		\hline
-  		\emph{Gain Parameter}  & \emph{ Value} & \emph{Unit} \\
-  		\hline
-  		$K_p$  & 230 &  $\frac{mV}{A}$ \\ 
-  		$K_I $ & 53 & $\frac{mV}{A.mS}$ \\
-  		$K_{P\omega}$& 5182 & $ \frac{mA.sec}{rad}$\\
-  		$K_{I\omega}$&425&$\frac{mA}{rad}$\\
-  		\hline
-  	\end{tabular}
-  \end{table}
+  
+  The gain values used for each rear motor in  the velocity control mode is listed in Table \ref{tb:motorPara}. No acceleration or velocity feedforward  was used. These parameters were determined by auto tuning.  
+  
 
-\begin{figure}
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/velLoop}
-	\captionof{figure}{Velocity control bolck digram }
-	\label{fig:velloop} 
-\end{figure}
-\begin{figure}
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/posLoop}
-	\captionof{figure}{Position control bolck digram }
-	\label{fig:posloop} 
-\end{figure}
+  	  \begin{table}[!htbp]
+  		\caption{Parameters for left and right rear wheel motor controllers  }
+  		\label{tb:motorPara}
+  		\centering
+  		\begin{tabular}{c c c c}
+  			\hline
+  			\emph{Gain}  & \emph{ Right motor}  & \emph{ Left motor}& \emph{Unit} \\
+  			\emph{ Parameter}  & \emph{ Value} & \emph{ Value} & \emph{\space} \\
+  			\hline
+  			$K_p$  & 300 & 230 &  $\frac{mV}{A}$ \\ 
+  			$K_I $ & 100 & 53 & $\frac{mV}{A.mS}$ \\
+  			$K_{P\omega}$& 1000 & 5182 & $ \frac{mA.sec}{rad}$\\
+  			$K_{I\omega}$&100 & 425& $\frac{mA}{rad}$\\
+  			\hline
+  		\end{tabular}
+  	\end{table}
 
 
-The steering motor is in position control mode. The block digram is shown in figure \ref{fig:posloop}. It is a PID controller with transfer function given as 
+
+
+
+
+The steering motor was in position control mode. The block digram is shown in Figure \ref{fig:posloop}. It is a PID controller with transfer function given as 
 \begin{equation}
 P(s)=K_{PP}+K_{IP}s+\frac{K_{DP}s}{1+\frac{K_{DP}}{10 K_{PP}}s}
 \end{equation}
-where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and derivative gains. The velocity $F_{\omega P}$ and acceleration $F_{\alpha P}$ are also used in position control loop to take care of viscious friction and known inertial load. The gains for controller was decided using auto tuning software provided by Maxon Motors. The value are reported in table \ref{tb:steer}.
-
+where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and derivative gains respectively. The velocity feed-forward $F_{\omega P}$ and acceleration feed-forward $F_{\alpha P}$ were used in position control loop to take care of viscious friction and known inertial load. The gains for controller were decided using auto tuning software provided by Maxon Motors. The values are reported in Table \ref{tb:steer}.
+\begin{figure}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/posLoop}
+	\captionof{figure}{Position control bolck  }
+	\label{fig:posloop} 
+\end{figure}
 \begin{table}[!htbp]
-	\caption{ Rear Steer Motor Controller  parameters }
+	\caption{ Parameters of steering motor controller }
 	\label{tb:steer}
 	\centering
 	\begin{tabular}{l l l}
@@ -150,28 +156,28 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 		\hline
 	\end{tabular}
 \end{table}
-\subsection{The control algorithm for platform}
-Thsi section discusses the in detail the algorithem running of the on-board controller.  Command received by the controller is parsed to extract the velocity  and the steer angle  information and suitably scaled to get command velocity  $V$, in mm/sec and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $v$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next based the set point for each motor is calculated  and sent to individual drives. The algorithm is listed below and the block digram for the same in figure \ref{fig:ControlBlock}
-\begin{figure}
+\section{The control algorithm for the WMR}
+This section discusses in detail the algorithm running on the onboard controller.  Command received by the controller was parsed to extract the velocity  and the steer angle  information. They were suitably scaled to get command velocity  $V$ in mm/sec, and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $V$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next the set point for each motor was calculated  and sent to individual drive. The algorithm is listed below and the block digram for the same in Figure \ref{fig:ControlBlock}
+\begin{figure}[h]
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal}
-	\captionof{figure}{provide suitable title }
+	\captionof{figure}{Block digram of WMR controler}
 	\label{fig:ControlBlock} 
 \end{figure}
 
 \begin{enumerate}
-	\item Calculate the setpoint for steering motor $\theta_{SM} $ based on $\theta_s$
+	\item Calculate the setpoint for steering motor $\theta_{SM} $ based on $\theta_s$.
 	\item Read the current steering  angle $\phi_{ic}$.
-	\item Calculate the rear wheel velocities setpoints $\omega_{i}$ and $\omega_{o}$ based on the $V$ and $\phi_{ic}$
+	\item Calculate the velocity setpoints $\omega_{i}$ and $\omega_{o}$ of  rear wheels based on the $V$ and $\phi_{ic}$.
 
 	
-	\item command  set points $\omega_{i}$, $\omega_{o}$ and $\theta_{SM} $ to each motor 
+	\item Command  setpoints $\omega_{i}$, $\omega_{o}$ and $\theta_{SM} $ to each motor. 
 \end{enumerate}
 The above loop is repeated every 50 mSec.
 
-It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This important as the response time of the  motors are different. The above methodology helps  minimize deviation  from the Ackerman  steering condition even during transit condition, particularly in case of large change in commanded $v$ and $\theta_s$. 
-Each block in the figure \ref{fig:ControlBlock} is discussed next. 
+It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This is important as the response time of the  motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $v$ and $\theta_s$. 
+Each block in Figure \ref{fig:ControlBlock} is discussed next. 
 
- It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in figure \ref{fig:KenVrc}, i.e.
+ It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in figure \ref{fig:KenVec}, i.e.
  \begin{equation}
 	 \theta_s =\phi_i
  \end{equation}
@@ -181,36 +187,49 @@ Each block in the figure \ref{fig:ControlBlock} is discussed next.
 \end{equation*}
 or
 \begin{eqnarray}
-f:\phi_i\rightarrow x, \quad x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
+f(\phi_i): x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
 \label{eqn:sterineq1}
 \end{eqnarray}
-where $x$ is the displacemet of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of pcd ($D_p$) 30mm as shown in the figure \ref{steering_gear_train}. Therefore the set point for the steering motor is given below as
+\begin{figure}
+	\begin{minipage}[t]{0.6\textwidth}
+		\centering
+		\includegraphics[width=3.0in]{Chapter5/fig/kinvec} 
+		\caption{Ackerman Steering Condition}\label{fig:KenVec}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.4\textwidth}
+		\centering
+		\includegraphics[height=3.2in]{Chapter5/fig/davisgear} 
+		\caption{Davis Steering Gear}\label{fig:steering_gear_train}
+	\end{minipage}
+\end{figure}
+where $x$ is the displacement of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of pcd $D_p$ (30mm) as shown in  Figure \ref{fig:steering_gear_train}. Therefore, the steering motor angle,  $ \theta_{Sm}$, is given below as
 \begin{eqnarray}
-\theta_{SM}= x \frac{360}{\pi D_p}
+H(x): \theta_{Sm}= x \frac{360}{\pi D_p}
 \label{eqn:sterineq2}
 \end{eqnarray}
  
-Next we present  the equation relating current steer angle $\phi_{ic}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$. From the geometry of figure \ref{fig:kinVec} we get
+Next,  the equation relating current steer angle $\phi_{i}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$ is presented. From the geometry of Figure \ref{fig:KenVec}, one gets
 \begin{align}
-\nonumber \tan\phi_{ic} &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
-g:\phi_{ic} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{ic}}-m + \frac{a}{2}
+\nonumber \tan\phi_{i} &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
+g:\phi_{i} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{c}}-m + \frac{a}{2}
 \label{eqn:pFromTheta}
 \end{align}
 %similarly for the inner wheel we get  
 %\begin{equation}
 %p = \frac{w}{\tan\theta_i}-m - \frac{a}{2}
 %\end{equation}
-Now using \ref{velO1} and \ref{omegaPlat} in equations 
+Now using Equations \ref{velO1} and \ref{omegaPlat}  in equations relating the right and left wheel velocities to the WMR platform angular velocity $\omega_3$ and velocity, $V$, of the reference point $O_r$, presented below
 \begin{align*}
 \dot{O_r}&=\dot{O_i}+\omega_3 \times (O_r-O_i)\\
 \dot{O_r}&=\dot{O_o}+\omega_3 \times (O_r-O_o)
 \end{align*}
- the rear wheel velocities are calculated as 
+ We get the  velocity of each rear wheel as  
 \begin{align}
 \nonumber \omega_i&=\frac{Vp}{r(p+m)}\\
 \nonumber \omega_o &=\frac{V(p+2m)}{r(p+m)}
 \end{align}
-using the above equation and \ref{eqn:pFromTheta}. We get the setpoints for the rear wheels 
+Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for the rear wheels are as follows 
 \begin{equation}
 \omega_i =\frac{V}{r}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
 \end{equation}
@@ -220,18 +239,19 @@ using the above equation and \ref{eqn:pFromTheta}. We get the setpoints for the 
  
 
  
-\begin{itemize}
-\item calibration of steer data and wheel velocity
-\end{itemize}
+%\begin{itemize}
+%\item calibration of steer data and wheel velocity
+%\end{itemize}
 
-\subsubsection{Wheel odometry }
-The dead reconning odometery can be performed based on the differential drive model ot the bicycle model. In the present case we use the differential drive model, i.e the rear wheel velocities are used to determine the position and orientation of the mobile robot. The position here means the position of reference point $O_3$. The steps are follower
+\subsection{Wheel Odometery }
+The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model was used/ Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
 \begin{enumerate}
 	\item calculate $V$ and $\omega_3$ from current wheel velocities $\omega_1$  and  $\omega_2$  using equations \ref{omegaPlat} and \ref{velPlat} with $a=0$.
 	\item integrate $V$ and $\omega_3$ over time step.
 \end{enumerate}
-If $x(t)$, $y(t)$ is the location of $O_r$  and $\beta(t)$ the orientation of robot with some global coordinate system the kinamitic model of the differential wheel robots as given in \cite{campion1996structural} is 
+If $x(t)$, $y(t)$ are the coordinate of $O_r$  and  $\beta(t)$ be the orientation of the robot with some global coordinate system, the kinematic model of the differential wheel robots is given by \cite{campion1996structural}  
 \begin{equation}
+\label{eqn:DiffKinModel}
 \begin{pmatrix}
 \dot{x}\\\dot{y}\\\dot{\beta}
 \end{pmatrix}=
@@ -244,17 +264,17 @@ If $x(t)$, $y(t)$ is the location of $O_r$  and $\beta(t)$ the orientation of ro
 V\\\omega_3
 \end{pmatrix}
 \end{equation}
-which is numerically integrated for time $\delta t$ using the equations
+Equation \ref{eqn:DiffKinModel} is numerically integrated for time $\delta t$ using the following expressions:
 \begin{align}
- x(i+1)&=x(i)+\delta t*\cos(\beta(i))*V(i);\\
-y(i+1)&=y(i)+\delta t*\sin(\beta(i))*V(i);\\
-\beta(i+1)&=\beta(i)+\delta t*\omega_3(i);
+ x(i+1)&=x(i)+\delta t~ V(i)\cos\beta(i);\\
+y(i+1)&=y(i)+\delta t~V(i)\sin\beta(i);\\
+\beta(i+1)&=\beta(i)+\delta t~\omega_3(i);
 \end{align}
-where $i$ is at time step $t_i$. Next we present the actual odometric results for the vehicle moving in a circle and a straight line.
-\begin{figure}
+where $i$ is at time step $t_i$. Next,  the actual odometric results for the vehicle moving in a circle and a straight line are presented.
+\begin{figure*}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[width=3.0in]{Chapter5/fig/Line} 
+		\includegraphics[width=3.0in]{Chapter5/fig/line} 
 		\caption{Tracing a line}\label{fig:line}
 	\end{minipage}
 	\hfill
@@ -266,22 +286,23 @@ where $i$ is at time step $t_i$. Next we present the actual odometric results fo
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3.1in]{Chapter5/fig/linVel} 
-		\caption{Linear Velocity}\label{fig:linVel}
+		\caption{Linear velocity}\label{fig:linVel}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3.1in]{Chapter5/fig/linOmega} 
-		\caption{Angular Velocity}\label{fig:linOmega}
+		\caption{Angular velocity}\label{fig:linOmega}
 	\end{minipage}
-	\caption{Linear motion of  WMR}
-\end{figure}
+	%\caption{Linear motion of  WMR}
+\end{figure*}
 
+As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the robots path calculated using odometry.  There is a linear shift too, which can observed due to longer path calculated by odometry. The lateral shift of 200 mm and a linear shift of 300 mm for 15000 mm long path was calculated. This clearly indicates slip in the wheels. The torque curves also shows that one wheel is more loaded that the other this is expected as the battery weight was on one side of the robot.
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3.5in]{Chapter5/fig/circle} 
-		\caption{Tracing a Circle}\label{fig:circle}
+		\caption{Tracing a circle}\label{fig:circle}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
@@ -289,35 +310,43 @@ where $i$ is at time step $t_i$. Next we present the actual odometric results fo
 		\includegraphics[width=3.2in]{Chapter5/fig/cirTorq} 
 		\caption{Motor torque}\label{fig:cirTorq}
 	\end{minipage}
+\vfill 
 \begin{minipage}[t]{0.5\textwidth}
 	\centering
 	\includegraphics[width=3.1in]{Chapter5/fig/cirVel} 
-	\caption{Linear Velocity}\label{fig:cirVel}
+	\caption{Linear velocity}\label{fig:cirVel}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.5\textwidth}
 	\centering
 	\includegraphics[width=3.1in]{Chapter5/fig/cirOmega} 
-	\caption{Angular Velocity}\label{fig:cirOmega}
+	\caption{Angular velocity}\label{fig:cirOmega}
 \end{minipage}
-	\caption{Circular motion of  WMR}
+	%\caption{Circular motion of  WMR}
 \end{figure}
-\subsubsection{Control of Z platform}
-Decentralized control technique treats the manipulator and the platform as two different system. The inter-coupling forces are treated as external forces on the system. The dynamics equation of the mobile manipulator can thus be split as follows [3].
-\subsection{The Remote Control Station}   
-The local station consists of a desktop computer running Windows XP. A Steering wheel and two foot switches are connected to the desktop. The steering wheel is used for turning  mobile robot. One of the two foot switch acts as an accelerator to set the mean velocity the other  is used to brake the vehicle.
 
-The screen of the desktop displays the video streaming  from the mobile robot on board camera. A graphical user  interface (GUI) also displays the robot's parameters such as current steer angle, velocity of each rear wheel and the position of the z-axis. Buttons on the GUI operates the z-axis, head lamps, etc.
+\subsection{The Remote Control Station}   
+The operator controls the vehicle from a local station away from the robot over a wireless network. The control station consists of a desktop computer running Windows XP. A steering wheel and two foot switches are connected to the desktop. The steering wheel sets the steering of the remote mobile robot and the footpadel is used to set the velocity $V$ of the robot. A push button in the steering wheel is used to reverse the direction of motion of the robot.
+
+The screen of the desktop displays  video streaming  from the mobile robot's on board camera. A graphical user  interface (GUI) shown in Figure \ref{fig:Gui} displays the robot's parameters such as current steer angle, velocity of each rear wheels and the position of the z-axis. Buttons on the GUI operates the z-axis, head lamps, etc.
 
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/gui}
-	\captionof{figure}{User Interface for teleoperation }
+	\captionof{figure}{User interface for teleoperation }
 	\label{fig:Gui} 
 \end{figure}
 
+
+%\subsubsection{Control of Z platform}
+%Decentralized control technique treats the manipulator and the platform as two different system. The inter-coupling forces are treated as external forces on the system. The dynamics equation of the mobile manipulator can thus be split as follows [3].
 %\section{Admissible path}
 %\section{Trajectory Tacking}
 
 
 \section{Summary}
-In this chapter, 
+In this chapter, the control architecture of the mobile robot has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
+
+\section{note}
+Include legends ingraphs\\
+increase font in figure \ref{fig:KenVec}\\
+Remove jitter in odometry add new result.

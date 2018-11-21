@@ -21,25 +21,26 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{40}{figure.caption.24}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{42}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Control Architecture Block Diagram \relax }}{45}{figure.caption.27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data sent from PC to Onboard controller \relax }}{46}{figure.caption.28}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Wiring Diagram of Robot \relax }}{47}{figure.caption.30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces EPOS4 Controller Block Digram \relax }}{48}{figure.caption.31}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Current control bolck digram \relax }}{48}{figure.caption.32}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Velocity control bolck digram \relax }}{50}{figure.caption.35}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Position control bolck digram \relax }}{50}{figure.caption.36}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces provide suitable title \relax }}{52}{figure.caption.38}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Tracing a line\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Motor torque\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Linear Velocity\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Angular Velocity\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Linear motion of WMR\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Tracing a Circle\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Motor torque\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Linear Velocity\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Angular Velocity\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Circular motion of WMR\relax }}{56}{figure.caption.40}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces User Interface for teleoperation \relax }}{57}{figure.caption.41}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Control architecture \relax }}{45}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data from PC to the robot \relax }}{46}{figure.caption.28}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Data from the robot to PC\relax }}{46}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Wiring diagram of the WMR \relax }}{47}{figure.caption.29}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Block digram of EPOS4 controller \relax }}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Current control block \relax }}{49}{figure.caption.32}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Velocity control bolck \relax }}{49}{figure.caption.33}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Position control bolck \relax }}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Block digram of WMR controler\relax }}{51}{figure.caption.37}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Ackerman Steering Condition\relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Davis Steering Gear\relax }}{53}{figure.caption.38}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Tracing a line\relax }}{55}{figure.caption.39}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Motor torque\relax }}{55}{figure.caption.39}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Linear velocity\relax }}{55}{figure.caption.39}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Angular velocity\relax }}{55}{figure.caption.39}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Tracing a circle\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Motor torque\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Linear velocity\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Angular velocity\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces User interface for teleoperation \relax }}{57}{figure.caption.41}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation Architecture \relax }}{59}{figure.caption.42}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{61}{figure.caption.43}
