@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  19 NOV 2018 02:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  21 NOV 2018 20:53
 entering extended mode
 **./PhDThesisAPD.tex
 (PhDThesisAPD.tex
@@ -1316,12 +1316,12 @@ Package pdftex.def Info: Misc_front/iitlogo-eps-converted-to.pdf  used on input
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [1
+ [4
 
 
 
 
-] [2])
+] [5])
 \openout2 = `Misc_front/acknowledgement.aux'.
 
  (Misc_front/acknowledgement.tex
@@ -1357,20 +1357,17 @@ Package pdftex.def Info: Misc_front/iitlogo-eps-converted-to.pdf  used on input
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [3
+ [6
 
 
 
 
 ]
-[4])
+[7])
 \openout2 = `Misc_front/abstract.aux'.
 
- (Misc_front/abstract.tex) [5
+ (Misc_front/abstract.tex) [8
 
-
-
-] [6
 
 
 ] (PhDThesisAPD.toc
@@ -1418,35 +1415,41 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [7
+)
+Overfull \hbox (0.71873pt too wide) detected at line 6
+ []\T1/lmr/m/n/12 xvii
+ []
 
-] [8])
+[9
+
+
+
+] [10])
 \tf@toc=\write6
 \openout6 = `PhDThesisAPD.toc'.
 
- [9]
-[10
+ [11] [12
 
-] (PhDThesisAPD.lof [11
+] (PhDThesisAPD.lof [13
 
 ])
 \tf@lof=\write7
 \openout7 = `PhDThesisAPD.lof'.
 
- [12] (PhDThesisAPD.lot)
+ [14] (PhDThesisAPD.lot)
 \tf@lot=\write8
 \openout8 = `PhDThesisAPD.lot'.
 
- [13
+ [15
 
 
-] [14
+]
+[16
 
 ]
 \openout2 = `Misc_front/nomenclature.aux'.
 
-
-(Misc_front/nomenclature.tex
+ (Misc_front/nomenclature.tex
 Overfull \hbox (30.06894pt too wide) in alignment at lines 27--30
  [] [] 
  []
@@ -1496,24 +1499,24 @@ Overfull \hbox (13.84448pt too wide) in alignment at lines 81--114
  [] [] 
  []
 
-[15
+[17
 
-]) [16]
+]) [18]
 \openout2 = `Chapter1/intro.aux'.
 
  (Chapter1/intro.tex
 Chapter 1.
-<Chapter1/fig/factory.jpg, id=530, 814.04124pt x 336.25626pt>
+<Chapter1/fig/factory.jpg, id=525, 814.04124pt x 336.25626pt>
 File: Chapter1/fig/factory.jpg Graphic file (type jpg)
 <use Chapter1/fig/factory.jpg>
 Package pdftex.def Info: Chapter1/fig/factory.jpg  used on input line 7.
 (pdftex.def)             Requested size: 344.40408pt x 142.26378pt.
-<Chapter1/fig/healthc.jpeg, id=531, 196.735pt x 258.9675pt>
+<Chapter1/fig/healthc.jpeg, id=526, 196.735pt x 258.9675pt>
 File: Chapter1/fig/healthc.jpeg Graphic file (type jpg)
 <use Chapter1/fig/healthc.jpeg>
 Package pdftex.def Info: Chapter1/fig/healthc.jpeg  used on input line 13.
 (pdftex.def)             Requested size: 108.08148pt x 142.26378pt.
-<Chapter1/fig/explore.jpg, id=532, 642.4pt x 481.8pt>
+<Chapter1/fig/explore.jpg, id=527, 642.4pt x 481.8pt>
 File: Chapter1/fig/explore.jpg Graphic file (type jpg)
 <use Chapter1/fig/explore.jpg>
 Package pdftex.def Info: Chapter1/fig/explore.jpg  used on input line 19.
@@ -1523,39 +1526,23 @@ Overfull \hbox (41.68582pt too wide) in paragraph at lines 5--23
  []$[]$ 
  []
 
-<Chapter1/fig/Honda-Asimo.jpg, id=538, 36.135pt x 36.135pt>
+<Chapter1/fig/Honda-Asimo.jpg, id=533, 36.135pt x 36.135pt>
 File: Chapter1/fig/Honda-Asimo.jpg Graphic file (type jpg)
 <use Chapter1/fig/Honda-Asimo.jpg>
 Package pdftex.def Info: Chapter1/fig/Honda-Asimo.jpg  used on input line 29.
 (pdftex.def)             Requested size: 142.30261pt x 142.26378pt.
-<Chapter1/fig/aibo.jpeg, id=539, 278.03876pt x 182.6825pt>
+<Chapter1/fig/aibo.jpeg, id=534, 278.03876pt x 182.6825pt>
 File: Chapter1/fig/aibo.jpeg Graphic file (type jpg)
 <use Chapter1/fig/aibo.jpeg>
 Package pdftex.def Info: Chapter1/fig/aibo.jpeg  used on input line 35.
 (pdftex.def)             Requested size: 166.73544pt x 109.55179pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.44 
-      [1
+[1
 
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.44 
-      [2 <./Chapter1/fig/factory.jpg> <./Chapter1/fig/healthc.jpeg> <./Chapter1
-/fig/explore.jpg> <./Chapter1/fig/Honda-Asimo.jpg> <./Chapter1/fig/aibo.jpeg>]p
-dfTeX warning (ext4): destination with the same identifier (name{page.3}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.52 \item D
-            evelopment of kinematic and dynamic model of the robot at hand.
+] [2 <./Chapter1/fig/factory.jpg> <./Chapter1/fig/healthc.jpeg> <./Chapter1/fig
+/explore.jpg> <./Chapter1/fig/Honda-Asimo.jpg> <./Chapter1/fig/aibo.jpeg>]
 [3] [4]) [5] [6
 
 
@@ -1585,7 +1572,7 @@ Chapter 3.
 
 
 ]
-<Chapter3/fig/robo3Dmodel.png, id=753, 747.54282pt x 481.8pt>
+<Chapter3/fig/robo3Dmodel.png, id=752, 747.54282pt x 481.8pt>
 File: Chapter3/fig/robo3Dmodel.png Graphic file (type png)
 <use Chapter3/fig/robo3Dmodel.png>
 Package pdftex.def Info: Chapter3/fig/robo3Dmodel.png  used on input line 21.
@@ -1595,25 +1582,25 @@ Overfull \hbox (12.31209pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-<Chapter3/fig/roboActual.jpg, id=754, 1968.35374pt x 1526.70375pt>
+<Chapter3/fig/roboActual.jpg, id=753, 1968.35374pt x 1526.70375pt>
 File: Chapter3/fig/roboActual.jpg Graphic file (type jpg)
 <use Chapter3/fig/roboActual.jpg>
 Package pdftex.def Info: Chapter3/fig/roboActual.jpg  used on input line 27.
 (pdftex.def)             Requested size: 166.72218pt x 129.31383pt.
 [16 <./Chapter3/fig/robo3Dmodel.png> <./Chapter3/fig/roboActual.jpg>] [17]
-<Chapter3/fig/WheelOffset.png, id=769, 862.72313pt x 478.78876pt>
+<Chapter3/fig/WheelOffset.png, id=768, 862.72313pt x 478.78876pt>
 File: Chapter3/fig/WheelOffset.png Graphic file (type png)
 <use Chapter3/fig/WheelOffset.png>
 Package pdftex.def Info: Chapter3/fig/WheelOffset.png  used on input line 97.
 (pdftex.def)             Requested size: 187.56178pt x 104.09187pt.
-<Chapter3/fig/loadDist.png, id=770, 766.36313pt x 571.38469pt>
+<Chapter3/fig/loadDist.png, id=769, 766.36313pt x 571.38469pt>
 File: Chapter3/fig/loadDist.png Graphic file (type png)
 <use Chapter3/fig/loadDist.png>
 Package pdftex.def Info: Chapter3/fig/loadDist.png  used on input line 103.
 (pdftex.def)             Requested size: 171.72264pt x 128.0374pt.
 
 [18] [19 <./Chapter3/fig/WheelOffset.png> <./Chapter3/fig/loadDist.png>]
-<Chapter3/fig/steerringCondition.png, id=789, 808.52063pt x 528.47438pt>
+<Chapter3/fig/steerringCondition.png, id=788, 808.52063pt x 528.47438pt>
 File: Chapter3/fig/steerringCondition.png Graphic file (type png)
 <use Chapter3/fig/steerringCondition.png>
 Package pdftex.def Info: Chapter3/fig/steerringCondition.png  used on input lin
@@ -1621,19 +1608,19 @@ e 143.
 (pdftex.def)             Requested size: 416.83289pt x 272.45361pt.
 
 [20] [21 <./Chapter3/fig/steerringCondition.png>]
-<Chapter3/fig/davis.png, id=808, 394.47375pt x 469.00218pt>
+<Chapter3/fig/davis.png, id=807, 394.47375pt x 469.00218pt>
 File: Chapter3/fig/davis.png Graphic file (type png)
 <use Chapter3/fig/davis.png>
 Package pdftex.def Info: Chapter3/fig/davis.png  used on input line 176.
 (pdftex.def)             Requested size: 119.65521pt x 142.26183pt.
-<Chapter3/fig/steerTorqCal.png, id=809, 441.90094pt x 419.31656pt>
+<Chapter3/fig/steerTorqCal.png, id=808, 441.90094pt x 419.31656pt>
 File: Chapter3/fig/steerTorqCal.png Graphic file (type png)
 <use Chapter3/fig/steerTorqCal.png>
 Package pdftex.def Info: Chapter3/fig/steerTorqCal.png  used on input line 182.
 
 (pdftex.def)             Requested size: 149.92067pt x 142.25862pt.
  [22 <./Chapter3/fig/davis.png> <./Chapter3/fig/steerTorqCal.png>]
-<Chapter3/fig/scissor.png, id=821, 523.9575pt x 392.21532pt>
+<Chapter3/fig/scissor.png, id=820, 523.9575pt x 392.21532pt>
 File: Chapter3/fig/scissor.png Graphic file (type png)
 <use Chapter3/fig/scissor.png>
 Package pdftex.def Info: Chapter3/fig/scissor.png  used on input line 212.
@@ -1662,7 +1649,7 @@ Overfull \hbox (4.88528pt too wide) in paragraph at lines 73--74
  []
 
 [29] [30]
-<Chapter4/fig/fig1.jpg, id=911, 433.62pt x 340.27126pt>
+<Chapter4/fig/fig1.jpg, id=909, 433.62pt x 340.27126pt>
 File: Chapter4/fig/fig1.jpg Graphic file (type jpg)
 <use Chapter4/fig/fig1.jpg>
 Package pdftex.def Info: Chapter4/fig/fig1.jpg  used on input line 114.
@@ -1672,7 +1659,7 @@ Overfull \hbox (8.39355pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
-<Chapter4/fig/fig2.jpg, id=912, 494.59781pt x 318.43968pt>
+<Chapter4/fig/fig2.jpg, id=910, 494.59781pt x 318.43968pt>
 File: Chapter4/fig/fig2.jpg Graphic file (type jpg)
 <use Chapter4/fig/fig2.jpg>
 Package pdftex.def Info: Chapter4/fig/fig2.jpg  used on input line 120.
@@ -1755,7 +1742,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 438.
 
 [39]
-<Chapter4/fig/pathCircle.jpg, id=1029, 799.48688pt x 463.7325pt>
+<Chapter4/fig/pathCircle.jpg, id=1028, 799.48688pt x 463.7325pt>
 File: Chapter4/fig/pathCircle.jpg Graphic file (type jpg)
 <use Chapter4/fig/pathCircle.jpg>
 Package pdftex.def Info: Chapter4/fig/pathCircle.jpg  used on input line 456.
@@ -1766,7 +1753,7 @@ Overfull \hbox (14.17604pt too wide) in paragraph at lines 456--457
  []
 
 [40 <./Chapter4/fig/pathCircle.jpg>]
-<Chapter4/fig/FD.png, id=1044, 411.136pt x 308.352pt>
+<Chapter4/fig/FD.png, id=1043, 411.136pt x 308.352pt>
 File: Chapter4/fig/FD.png Graphic file (type png)
 <use Chapter4/fig/FD.png>
 Package pdftex.def Info: Chapter4/fig/FD.png  used on input line 499.
@@ -1779,12 +1766,12 @@ Package pdftex.def Info: Chapter4/fig/FD.png  used on input line 499.
 
  (Chapter5/Control.tex
 Chapter 5.
-<Chapter3/fig/controlblock.png, id=1065, 1154.06157pt x 476.53032pt>
+<Chapter3/fig/controlblock.png, id=1064, 1154.06157pt x 476.53032pt>
 File: Chapter3/fig/controlblock.png Graphic file (type png)
 <use Chapter3/fig/controlblock.png>
 Package pdftex.def Info: Chapter3/fig/controlblock.png  used on input line 8.
 (pdftex.def)             Requested size: 416.83289pt x 172.11794pt.
-<Chapter5/fig/bitconfig.png, id=1068, 791.20593pt x 473.51906pt>
+<Chapter5/fig/bitconfig.png, id=1067, 791.20593pt x 473.51906pt>
 File: Chapter5/fig/bitconfig.png Graphic file (type png)
 <use Chapter5/fig/bitconfig.png>
 Package pdftex.def Info: Chapter5/fig/bitconfig.png  used on input line 14.
@@ -1793,7 +1780,7 @@ Package pdftex.def Info: Chapter5/fig/bitconfig.png  used on input line 14.
 
 
  <./Chapter3/fig/controlblock.png>] [46 <./Chapter5/fig/bitconfig.png>]
-<Chapter5/fig/RobotSideWiring.jpg, id=1082, 848.4197pt x 414.79968pt>
+<Chapter5/fig/RobotSideWiring.jpg, id=1081, 848.4197pt x 414.79968pt>
 File: Chapter5/fig/RobotSideWiring.jpg Graphic file (type jpg)
 <use Chapter5/fig/RobotSideWiring.jpg>
 Package pdftex.def Info: Chapter5/fig/RobotSideWiring.jpg  used on input line 5
@@ -1801,30 +1788,30 @@ Package pdftex.def Info: Chapter5/fig/RobotSideWiring.jpg  used on input line 5
 (pdftex.def)             Requested size: 416.83289pt x 203.79161pt.
 
 [47 <./Chapter5/fig/RobotSideWiring.jpg>]
-<Chapter5/fig/overallcontorl.png, id=1094, 475.02469pt x 243.91125pt>
+<Chapter5/fig/overallcontorl.png, id=1093, 475.02469pt x 243.91125pt>
 File: Chapter5/fig/overallcontorl.png Graphic file (type png)
 <use Chapter5/fig/overallcontorl.png>
 Package pdftex.def Info: Chapter5/fig/overallcontorl.png  used on input line 66
 .
 (pdftex.def)             Requested size: 416.83289pt x 214.03963pt.
-<Chapter5/fig/currentLoop.png, id=1095, 636.87938pt x 130.23656pt>
+<Chapter5/fig/currentLoop.png, id=1094, 636.87938pt x 130.23656pt>
 File: Chapter5/fig/currentLoop.png Graphic file (type png)
 <use Chapter5/fig/currentLoop.png>
 Package pdftex.def Info: Chapter5/fig/currentLoop.png  used on input line 71.
 (pdftex.def)             Requested size: 416.83289pt x 85.23898pt.
  [48 <./Chapter5/fig/overallcontorl.png> <./Chapter5/fig/currentLoop.png>]
-<Chapter5/fig/velLoop.jpg, id=1109, 576.65437pt x 213.79875pt>
+<Chapter5/fig/velLoop.jpg, id=1107, 576.65437pt x 213.79875pt>
 File: Chapter5/fig/velLoop.jpg Graphic file (type jpg)
 <use Chapter5/fig/velLoop.jpg>
 Package pdftex.def Info: Chapter5/fig/velLoop.jpg  used on input line 118.
 (pdftex.def)             Requested size: 416.83289pt x 154.54828pt.
-<Chapter5/fig/posLoop.png, id=1110, 717.43031pt x 341.77687pt>
+<Chapter5/fig/posLoop.png, id=1108, 717.43031pt x 341.77687pt>
 File: Chapter5/fig/posLoop.png Graphic file (type png)
 <use Chapter5/fig/posLoop.png>
 Package pdftex.def Info: Chapter5/fig/posLoop.png  used on input line 123.
 (pdftex.def)             Requested size: 416.83289pt x 198.58012pt.
  [49] [50 <./Chapter5/fig/velLoop.jpg> <./Chapter5/fig/posLoop.png>]
-<Chapter5/fig/BlkDigLocal.png, id=1124, 753.5653pt x 450.9347pt>
+<Chapter5/fig/BlkDigLocal.png, id=1123, 753.5653pt x 450.9347pt>
 File: Chapter5/fig/BlkDigLocal.png Graphic file (type png)
 <use Chapter5/fig/BlkDigLocal.png>
 Package pdftex.def Info: Chapter5/fig/BlkDigLocal.png  used on input line 156.
@@ -1842,7 +1829,7 @@ ne 187.
 LaTeX Warning: Reference `fig:kinVec' on page 53 undefined on input line 193.
 
 [53]
-<Chapter5/fig/Line.png, id=1156, 422.32782pt x 316.18124pt>
+<Chapter5/fig/Line.png, id=1155, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/Line.png Graphic file (type png)
 <use Chapter5/fig/Line.png>
 Package pdftex.def Info: Chapter5/fig/Line.png  used on input line 257.
@@ -1852,7 +1839,7 @@ Overfull \hbox (8.39355pt too wide) in paragraph at lines 257--258
  [][] 
  []
 
-<Chapter5/fig/linTorq.png, id=1157, 422.32782pt x 316.18124pt>
+<Chapter5/fig/linTorq.png, id=1156, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/linTorq.png Graphic file (type png)
 <use Chapter5/fig/linTorq.png>
 Package pdftex.def Info: Chapter5/fig/linTorq.png  used on input line 263.
@@ -1862,7 +1849,7 @@ Overfull \hbox (22.84734pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
-<Chapter5/fig/linVel.png, id=1158, 422.32782pt x 316.18124pt>
+<Chapter5/fig/linVel.png, id=1157, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/linVel.png Graphic file (type png)
 <use Chapter5/fig/linVel.png>
 Package pdftex.def Info: Chapter5/fig/linVel.png  used on input line 268.
@@ -1872,7 +1859,7 @@ Overfull \hbox (15.62099pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-<Chapter5/fig/linOmega.png, id=1159, 422.32782pt x 316.18124pt>
+<Chapter5/fig/linOmega.png, id=1158, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/linOmega.png Graphic file (type png)
 <use Chapter5/fig/linOmega.png>
 Package pdftex.def Info: Chapter5/fig/linOmega.png  used on input line 274.
@@ -1893,7 +1880,7 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 255--277
  []
 
 [54]
-<Chapter5/fig/circle.png, id=1174, 422.32782pt x 316.18124pt>
+<Chapter5/fig/circle.png, id=1172, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/circle.png Graphic file (type png)
 <use Chapter5/fig/circle.png>
 Package pdftex.def Info: Chapter5/fig/circle.png  used on input line 283.
@@ -1903,7 +1890,7 @@ Overfull \hbox (44.52855pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
-<Chapter5/fig/cirTorq.png, id=1175, 422.32782pt x 316.18124pt>
+<Chapter5/fig/cirTorq.png, id=1173, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/cirTorq.png Graphic file (type png)
 <use Chapter5/fig/cirTorq.png>
 Package pdftex.def Info: Chapter5/fig/cirTorq.png  used on input line 289.
@@ -1913,7 +1900,7 @@ Overfull \hbox (22.84734pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-<Chapter5/fig/cirVel.png, id=1176, 422.32782pt x 316.18124pt>
+<Chapter5/fig/cirVel.png, id=1174, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/cirVel.png Graphic file (type png)
 <use Chapter5/fig/cirVel.png>
 Package pdftex.def Info: Chapter5/fig/cirVel.png  used on input line 294.
@@ -1923,7 +1910,7 @@ Overfull \hbox (15.62099pt too wide) in paragraph at lines 294--295
  [][] 
  []
 
-<Chapter5/fig/cirOmega.png, id=1177, 422.32782pt x 316.18124pt>
+<Chapter5/fig/cirOmega.png, id=1175, 422.32782pt x 316.18124pt>
 File: Chapter5/fig/cirOmega.png Graphic file (type png)
 <use Chapter5/fig/cirOmega.png>
 Package pdftex.def Info: Chapter5/fig/cirOmega.png  used on input line 300.
@@ -1948,7 +1935,7 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 281--303
 )>] [56 <./Chapter5/fig/circle.png (PNG copy)> <./Chapter5/fig/cirTorq.png (PNG
  copy)> <./Chapter5/fig/cirVel.png (PNG copy)> <./Chapter5/fig/cirOmega.png (PN
 G copy)>]
-<Chapter5/fig/gui.png, id=1186, 673.01437pt x 444.91219pt>
+<Chapter5/fig/gui.png, id=1185, 673.01437pt x 444.91219pt>
 File: Chapter5/fig/gui.png Graphic file (type png)
 <use Chapter5/fig/gui.png>
 Package pdftex.def Info: Chapter5/fig/gui.png  used on input line 313.
@@ -1962,7 +1949,7 @@ Package pdftex.def Info: Chapter5/fig/gui.png  used on input line 313.
 
 (Chapter6/TimeDelayTeleOperation.tex
 Chapter 6.
-<Chapter6/fig/teleoperation.png, id=1197, 342.5297pt x 113.67468pt>
+<Chapter6/fig/teleoperation.png, id=1196, 342.5297pt x 113.67468pt>
 File: Chapter6/fig/teleoperation.png Graphic file (type png)
 <use Chapter6/fig/teleoperation.png>
 Package pdftex.def Info: Chapter6/fig/teleoperation.png  used on input line 6.
@@ -1971,37 +1958,37 @@ Package pdftex.def Info: Chapter6/fig/teleoperation.png  used on input line 6.
 
 
  <./Chapter6/fig/teleoperation.png>]
-<Chapter6/fig/mentalMap.jpg, id=1205, 1028.34187pt x 578.16pt>
+<Chapter6/fig/mentalMap.jpg, id=1204, 1028.34187pt x 578.16pt>
 File: Chapter6/fig/mentalMap.jpg Graphic file (type jpg)
 <use Chapter6/fig/mentalMap.jpg>
 Package pdftex.def Info: Chapter6/fig/mentalMap.jpg  used on input line 58.
 (pdftex.def)             Requested size: 416.83289pt x 234.35641pt.
  [60] [61 <./Chapter6/fig/mentalMap.jpg>]
-<Chapter6/fig/purepesuitgeometry.png, id=1219, 243.91125pt x 163.3603pt>
+<Chapter6/fig/purepesuitgeometry.png, id=1218, 243.91125pt x 163.3603pt>
 File: Chapter6/fig/purepesuitgeometry.png Graphic file (type png)
 <use Chapter6/fig/purepesuitgeometry.png>
 Package pdftex.def Info: Chapter6/fig/purepesuitgeometry.png  used on input lin
 e 80.
 (pdftex.def)             Requested size: 416.83289pt x 279.1795pt.
  [62 <./Chapter6/fig/purepesuitgeometry.png>]
-<Chapter6/fig/teleloop.png, id=1229, 366.61969pt x 263.48438pt>
+<Chapter6/fig/teleloop.png, id=1228, 366.61969pt x 263.48438pt>
 File: Chapter6/fig/teleloop.png Graphic file (type png)
 <use Chapter6/fig/teleloop.png>
 Package pdftex.def Info: Chapter6/fig/teleloop.png  used on input line 141.
 (pdftex.def)             Requested size: 416.83289pt x 299.59131pt.
  [63]
-<Chapter6/fig/noDelay.png, id=1239, 422.32782pt x 316.18124pt>
+<Chapter6/fig/noDelay.png, id=1238, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/noDelay.png Graphic file (type png)
 <use Chapter6/fig/noDelay.png>
 Package pdftex.def Info: Chapter6/fig/noDelay.png  used on input line 166.
 (pdftex.def)             Requested size: 416.83289pt x 312.07478pt.
-<Chapter6/fig/Delay500milsec.png, id=1240, 422.32782pt x 316.18124pt>
+<Chapter6/fig/Delay500milsec.png, id=1239, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/Delay500milsec.png Graphic file (type png)
 <use Chapter6/fig/Delay500milsec.png>
 Package pdftex.def Info: Chapter6/fig/Delay500milsec.png  used on input line 17
 1.
 (pdftex.def)             Requested size: 416.83289pt x 312.07478pt.
-<Chapter6/fig/Delay800milsec.png, id=1241, 422.32782pt x 316.18124pt>
+<Chapter6/fig/Delay800milsec.png, id=1240, 422.32782pt x 316.18124pt>
 File: Chapter6/fig/Delay800milsec.png Graphic file (type png)
 <use Chapter6/fig/Delay800milsec.png>
 Package pdftex.def Info: Chapter6/fig/Delay800milsec.png  used on input line 17
@@ -2079,8 +2066,8 @@ Appendix B.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 
 (PhDThesisAPD.aux (Misc_front/cover.aux) (Misc_front/certificate.aux)
 (Misc_front/acknowledgement.aux) (Misc_front/abstract.aux)
@@ -2089,20 +2076,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 (Chapter6/TimeDelayTeleOperation.aux) (Chapter7/PredictiveDisplay.aux)
 (Chapter8/conc.aux) (Misc_end/appendix_a.aux) (Misc_end/appendix_c.aux)
 (Misc_end/publications.aux) (Extra/Bio_AH.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `PhDThesisAPD.out' has not changed.
 (rerunfilecheck)             Checksum: 53A79FE4F7DF6FE102F2EA56788AE385;4753.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 22674 strings out of 493303
- 407687 string characters out of 3138856
- 585792 words of memory out of 3000000
+ 22676 strings out of 493303
+ 407706 string characters out of 3138856
+ 585793 words of memory out of 3000000
  25099 multiletter control sequences out of 15000+200000
  129538 words of font info for 123 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2128,9 +2115,9 @@ ic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb>
-Output written on PhDThesisAPD.pdf (108 pages, 3771087 bytes).
+Output written on PhDThesisAPD.pdf (107 pages, 3770908 bytes).
 PDF statistics:
- 1514 PDF objects out of 1728 (max. 8388607)
- 388 named destinations out of 1000 (max. 500000)
+ 1513 PDF objects out of 1728 (max. 8388607)
+ 390 named destinations out of 1000 (max. 500000)
  767 words of extra memory for PDF output out of 10000 (max. 10000000)
 

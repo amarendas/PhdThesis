@@ -1,9 +1,9 @@
-\contentsline {section}{Certificate}{ii}{Doc-Start}
-\contentsline {section}{Acknowledgements}{iv}{Doc-Start}
-\contentsline {section}{Abstract}{v}{Doc-Start}
-\contentsline {section}{List of Figures}{ix}{chapter*.1}
-\contentsline {section}{List of Tables}{xiii}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xv}{chapter*.3}
+\contentsline {section}{Certificate}{v}{Doc-Start}
+\contentsline {section}{Acknowledgements}{vii}{Doc-Start}
+\contentsline {section}{Abstract}{viii}{Doc-Start}
+\contentsline {section}{List of Figures}{xi}{chapter*.1}
+\contentsline {section}{List of Tables}{xv}{chapter*.2}
+\contentsline {section}{Important Symbols and Abbreviations}{xvii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
