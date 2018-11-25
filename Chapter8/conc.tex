@@ -2,35 +2,45 @@
 \label{ch_8:Con}
 %This chapter includes the thesis summary, major contributions and future scope of the work.
 \section{Thesis Summary}
-This thesis describes the design and development of a customized mobile manipulator developed at Bhabha Atomic Research Centre, Mumbai, India  for mapping radiation in different areas of Cyclotron building where human access is restricted during Cyclotron operation. The custom mobile manipulator is a four wheeled mobile robot with a vertical lifting platform on which the radiation detector is mounted. The mobile platform has two rear wheels individual coupled to   two motors and the front two wheels are mutually connected using motorized Davis steering mechanism.
+This thesis describes the design and development of a customized mobile manipulator developed at Bhabha Atomic Research Centre, Mumbai, India  for mapping radiation in different areas of Cyclotron building where human access is restricted during Cyclotron operation. The customized mobile manipulator is a four wheeled mobile robot with a vertical lifting platform on which the radiation detector is mounted. The mobile platform has two rear wheels individually  coupled to   two motors and the front two wheels which are mutually connected using a motorized Davis steering mechanism.
 
-   The first chapter describes the various types of mobile manipulator reported in literature and different areas in which mobile manipulators have been successfully used. The chapter also describes the motivation and requirement of a customized mobile manipulator.  Second chapter gives the literature review related to design, mathematical modeling and teleoperation setup of mobile robot which forms the complete system and is  the scope of this thesis. 
+%   The first chapter describes the various types of mobile manipulator reported in literature and different areas in which mobile manipulators have been successfully used. The chapter also describes the motivation and requirement of a customized mobile manipulator.  Second chapter gives the literature review related to design, mathematical modeling and teleoperation setup of mobile robot which forms the complete system and is  the scope of this thesis. 
 
-In chapter 3 the mechanical design, selection of motors and optimization  of steering mechanism to achieve minimum turning radius within the required space is discussed. The optimal location of CG for  the mobile manipulators so as to provide maximum traction as well as  stability over $30^o$ ramp is described.   It also discusses different lifting platform for vertical motion required by the sensor for scanning. Detail design  of scissor based lifting platform and its advantage with respect to the system requirements are discussed. 
+The mechanical design was obtained in Chapter 3,  and through optimization  of steering mechanism minimum turning  radius was achieved  within the required space. The optimal location of the CG for  the mobile manipulator was decided so as to provide maximum traction as well as  stability over $30^o$ ramp.  Among  different lifting platforms for the  vertical motion to the sensor for scanning, a simple scissor based lifting platform was choosen due to several advantages it offers. 
 
-The kinematic and dynamic modeling of the customized mobile manipulator is presented in chapter 4.  Natural orthogonal compliment method is used to derive the dynamic model of the wheeled platform. This analysis highlights the  effect of caster  offsets on the manuverability of a mobile platform. The need of having a positive drive for certain castor offsets are also brought in the analysis. This chapter also include the dynamic modeling and simulation of steering mechanism  and lifting platform used in the mobile robot.     
+The kinematic and dynamic modeling of the customized mobile manipulator was presented in chapter 4, where the method based on the  Natural Orthogonal Complement was used to derive the dynamic eqution of motion of the wheeled mobile robot under study. This analysis highlighted the  effect of caster  offsets on the maneuverability of a mobile robot. The need of having a positive drive for certain castor offsets were also brought in the analysis. 
 
 
-Control structure for intuitive teleoperation of the mobile robot is discussed in chapter 5. This chapter discuss the user interface at the operator side, the hardware and software required for teleoperation. The control algorithm running on the robot on-board computer is described. The uniqueness of the algorithm used is that it synchronizes all the three motors; two in velocity control mode and one in position control mode (steering), in spite of difference in response time, so as to always satisfy the wheel rolling condition given by Akerman relation. The mobile robot uses encoder based dead reckoning for odometry is also describe and the actual results are presented.    
+Control structure for intuitive teleoperation of the mobile robot was presented in chapter 5. This chapter proposed a  user interface at the operator's side, along with the hardware and software required for the teleoperation. The control algorithm running on the robot on-board computer was also presented. The contribution there was that it synchronizes all three motors; two in velocity control  and one in position control mode (steering). In spite of difference in response time, Ackerman relation for wheel rolling was always satisfied. 
 
-The mobile robot is controlled by a operated physically separated from the mobile manipulator over a dedicated wireless network based on the video of remote environment sent by the robot on-board camera. The limited bandwidth results in the delay of the video. Chapter 6 deals with simulation of teleoperation of mobile robot under time delay. A mathematical model of the human operator based on pure pursuit algorithm is presented. The simulation studies predicts instability with increase in time delay and linear velocity of the mobile platform. These studies qualitative matches with the operator behaviour under similar condition.
+The developed mobile robot was controlled by an operator who was  physically separated from the mobile manipulator. A dedicated wireless network and the video signal of the remote environment from the robot on-board camera was available. The limited bandwidth resulted in the delay of the video. 
+Chapter 6 dealt with the simulation of a teleoperation of a mobile robot under time delay.
+ A mathematical model of the human operator based on pure pursuit algorithm was presented. 
+ The simulation  predicted instability with increase in time delay and linear velocity of the mobile robot.
+  These studies qualitatively matches with the operator behaviour under similar conditions.
 
-   The time delay in the video feedback reduces the efficiency of the operator was highlighted above. In order to overcome this predictive display has been used time delayed teleoperation. In chapter 7 we present a new methodology for predictive display based on the 3-d model generated using the RGB-Depth data provided by Kinect Sensor mounted on the mobile robot and the predicted position of the robot based on dynamic model of the robot presented in in chapter 4. This novel method does not need to have the 3-D model of the remote environment known before hand as reported in literature earlier.  This flexibility gives us to tele-operate  the mobile robot in unknown environment. 
+   Note that the time delay in the video feedback affects the efficiency of the operator. 
+   In order to overcome this, predictive display was proposed.
+   In chapter 7,  a new methodology was presented for the predictive display based on the 3-d model generated using the RGB-Depth data provided by a Kinect Sensor mounted on the mobile robot and the predicted position of the robot based on dynamic model of the robot presented in chapter 4.
+   This novel method did not require  the 3-D model of the remote environment known before hand as reported in the literature earlier.
+   This flexibility allows us to teleoperate  the mobile robot in an unknown environment. 
+   
+   In summary, a mobile manipulator was sucessfully concived, designed assembled and controlled remotely  for the purpose for which it was intended, i.e, to map the radiation of a given area.
    
    \section{Current status} 
-   A prototype mobile manipulator and teleopration system  was   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot has been lab tested and the video of the same can be accessed on at the following url. http.xxxx.com. The system will  shortly  be deployed at Variable energy cyclotron centre at Kolkata, India. 
+   A prototype of  mobile manipulator and its teleoperation system were   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot was lab tested and the video of the same can be accessed on at the following https://youtu.be/B5OngfLQjo4. The system will  shortly  be deployed at Variable Energy Cyclotron Centre (VECC) at Kolkata, India for the same purpose. 
 
 
-\section{Future Scope of the work}
+\section{Future Scope }
 The testing and evaluation of teleoperation system during actual trial opens up  further scope of improvement. Few of these are listed below  
 \begin{itemize}
 	\item [(i)] Use of inertial sensors such as gyroscope and accelerometer  on the mobile robot  in combination with wheel odometer for more accurate  pose estimation.   
 	
-	\item[(ii)]  Pose estimation using encoder mounted on front passive wheels for slip detection.
+	\item[(ii)]  Pose estimation using encoder mounted on the front passive wheels for slip detection.
 	
 	\item[(iii)] Semi-automated navigation using intermediate goal point.  
 	
-	\item[(iv)] Texture mapping of predicted of visual image instead 3-D point cloud model currently used.
+	\item[(iv)] Texture mapping of predicted  visual image instead 3-D point cloud model currently used.
 	\item [(v)] Some kind of force feedback to the operator for estimation of obstacle location in the remote environment.
 %	The schematic of it is shown in Figure~\ref{fig:EKF_control}.
 

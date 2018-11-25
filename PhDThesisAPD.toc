@@ -58,11 +58,11 @@
 \contentsline {chapter}{\numberline {8}Conclusions}{71}{chapter.8}
 \contentsline {section}{\numberline {8.1}Thesis Summary}{71}{section.8.1}
 \contentsline {section}{\numberline {8.2}Current status}{73}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Scope of the work}{73}{section.8.3}
-\contentsline {chapter}{\bf Bibliography}{75}{section.8.3}
-\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{85}{appendix.A}
-\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{85}{section.A.1}
-\contentsline {chapter}{\numberline {B}Dynamics}{87}{appendix.B}
-\contentsline {section}{\numberline {B.1}Inertia Dyad}{87}{section.B.1}
-\contentsline {section}{\bf Publications from the Thesis}{89}{section.B.1}
-\contentsline {section}{\bf Brief Bio-data of the Author}{91}{Item.17}
+\contentsline {section}{\numberline {8.3}Future Scope }{73}{section.8.3}
+\contentsline {chapter}{\bf Bibliography}{74}{section.8.3}
+\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{83}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{83}{section.A.1}
+\contentsline {chapter}{\numberline {B}Dynamics}{85}{appendix.B}
+\contentsline {section}{\numberline {B.1}Inertia Dyad}{85}{section.B.1}
+\contentsline {section}{\bf Publications from the Thesis}{87}{section.B.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{89}{Item.17}
