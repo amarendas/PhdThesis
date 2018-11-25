@@ -2,19 +2,20 @@
 \contentsline {section}{Acknowledgements}{iv}{Doc-Start}
 \contentsline {section}{Abstract}{v}{Doc-Start}
 \contentsline {section}{List of Figures}{ix}{chapter*.1}
-\contentsline {section}{List of Tables}{xiii}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xv}{chapter*.3}
+\contentsline {section}{List of Tables}{xv}{chapter*.2}
+\contentsline {section}{Important Symbols and Abbreviations}{xvii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1} Special Purpose Mobile Robots}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Mathematical Modeling of a Mobile Robot}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Path Tracking Algorithms}{10}{section.2.3}
+\contentsline {section}{\numberline {2.1} Special Purpose Robots}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Mathematical Modeling}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Path Tracking}{10}{section.2.3}
 \contentsline {section}{\numberline {2.4}Tele-operation}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Human Interface}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Human Interface}{12}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Control}{12}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}Predictive Display}{13}{section.2.5}
+\contentsline {section}{\numberline {2.6}Summary}{14}{section.2.6}
 \contentsline {chapter}{\numberline {3}Design of Mobile a Robot}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Design Overview}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Design of the Traction System}{17}{section.3.2}
