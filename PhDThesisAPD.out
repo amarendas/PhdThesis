@@ -46,13 +46,13 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{The Remote Control Station}{section.5.2}% 46
 \BOOKMARK [1][-]{section.5.3}{Summary}{chapter.5}% 47
 \BOOKMARK [1][-]{section.5.4}{note}{chapter.5}% 48
-\BOOKMARK [0][-]{chapter.6}{Simulation Time Delay Tele-operation}{}% 49
-\BOOKMARK [1][-]{section.6.1}{Modeling of mobile platform}{chapter.6}% 50
-\BOOKMARK [1][-]{section.6.2}{Modeling the human operator}{chapter.6}% 51
+\BOOKMARK [0][-]{chapter.6}{Simulation of Tele-operation}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Modeling of Mobile Platform}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Model of Human Operator}{chapter.6}% 51
 \BOOKMARK [1][-]{section.6.3}{Simulation and Results }{chapter.6}% 52
 \BOOKMARK [2][-]{subsection.6.3.1}{The Simulation Algorithm}{section.6.3}% 53
 \BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 54
-\BOOKMARK [0][-]{chapter.7}{Predictive Display}{}% 55
+\BOOKMARK [0][-]{chapter.7}{Dime Delay Compensation and Predictive Display}{}% 55
 \BOOKMARK [1][-]{section.7.1}{Remote Scene Extrapolation}{chapter.7}% 56
 \BOOKMARK [2][-]{subsection.7.1.1}{here}{section.7.1}% 57
 \BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 58
@@ -65,4 +65,4 @@
 \BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 65
 \BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 66
 \BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 67
-\BOOKMARK [1][-]{Item.12}{Brief Bio-data of the Author}{appendix.B}% 68
+\BOOKMARK [1][-]{Item.17}{Brief Bio-data of the Author}{appendix.B}% 68

@@ -1,5 +1,5 @@
 \chapter{Control of Mobile Manipulator }
-\label{c5_DI2}
+\label{c5_Control}
 In this chapter, the control architecture of the teleoperated  mobile robot is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile robot and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
 \section{Control Architecture and Hardware}
 
@@ -159,7 +159,7 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 \section{The control algorithm for the WMR}
 This section discusses in detail the algorithm running on the onboard controller.  Command received by the controller was parsed to extract the velocity  and the steer angle  information. They were suitably scaled to get command velocity  $V$ in mm/sec, and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $V$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next the set point for each motor was calculated  and sent to individual drive. The algorithm is listed below and the block digram for the same in Figure \ref{fig:ControlBlock}
 \begin{figure}[h]
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal2}
 	\captionof{figure}{Block digram of WMR controler}
 	\label{fig:ControlBlock} 
 \end{figure}
@@ -193,13 +193,13 @@ f(\phi_i): x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
 \begin{figure}
 	\begin{minipage}[t]{0.6\textwidth}
 		\centering
-		\includegraphics[width=3.0in]{Chapter5/fig/kinvec} 
+		\includegraphics[width=5in]{Chapter5/fig/kinvec} 
 		\caption{Ackerman Steering Condition}\label{fig:KenVec}
 	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.4\textwidth}
+	%\hfill
+	\begin{minipage}[t]{0.7\textwidth}
 		\centering
-		\includegraphics[height=3.2in]{Chapter5/fig/davisgear} 
+		\includegraphics[height=3.5in]{Chapter5/fig/davisgear} 
 		\caption{Davis Steering Gear}\label{fig:steering_gear_train}
 	\end{minipage}
 \end{figure}
@@ -301,7 +301,7 @@ As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the ro
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[width=3.5in]{Chapter5/fig/circle} 
+		\includegraphics[width=3.5in]{Chapter5/fig/circleOdo} 
 		\caption{Tracing a circle}\label{fig:circle}
 	\end{minipage}
 	\hfill
@@ -347,6 +347,5 @@ The screen of the desktop displays  video streaming  from the mobile robot's on 
 In this chapter, the control architecture of the mobile robot has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
 
 \section{note}
-Include legends ingraphs\\
-increase font in figure \ref{fig:KenVec}\\
+
 Remove jitter in odometry add new result.

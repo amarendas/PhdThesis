@@ -3,10 +3,10 @@
 \contentsline {section}{Abstract}{v}{Doc-Start}
 \contentsline {section}{List of Figures}{ix}{chapter*.1}
 \contentsline {section}{List of Tables}{xiii}{chapter*.2}
+\contentsline {section}{Important Symbols and Abbreviations}{xv}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
-\contentsline {section}{Important Symbols and Abbreviations}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1} Special Purpose Mobile Robots}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Mathematical Modeling of a Mobile Robot}{8}{section.2.2}
@@ -46,23 +46,23 @@
 \contentsline {subsection}{\numberline {5.2.2}The Remote Control Station}{56}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Summary}{57}{section.5.3}
 \contentsline {section}{\numberline {5.4}note}{58}{section.5.4}
-\contentsline {chapter}{\numberline {6}Simulation Time Delay Tele-operation}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}Modeling of mobile platform}{60}{section.6.1}
-\contentsline {section}{\numberline {6.2}Modeling the human operator}{60}{section.6.2}
+\contentsline {chapter}{\numberline {6}Simulation of Tele-operation}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Modeling of Mobile Platform}{60}{section.6.1}
+\contentsline {section}{\numberline {6.2}Model of Human Operator}{60}{section.6.2}
 \contentsline {section}{\numberline {6.3}Simulation and Results }{63}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{63}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Summary}{66}{section.6.4}
-\contentsline {chapter}{\numberline {7}Predictive Display}{67}{chapter.7}
-\contentsline {section}{\numberline {7.1}Remote Scene Extrapolation}{67}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}here}{67}{subsection.7.1.1}
-\contentsline {chapter}{\numberline {8}Conclusions}{69}{chapter.8}
-\contentsline {section}{\numberline {8.1}Thesis Summary}{69}{section.8.1}
-\contentsline {section}{\numberline {8.2}Current status}{71}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Scope of the work}{71}{section.8.3}
-\contentsline {chapter}{\bf Bibliography}{73}{section.8.3}
-\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{83}{appendix.A}
-\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{83}{section.A.1}
-\contentsline {chapter}{\numberline {B}Dynamics}{85}{appendix.B}
-\contentsline {section}{\numberline {B.1}Inertia Dyad}{85}{section.B.1}
-\contentsline {section}{\bf Publications from the Thesis}{87}{section.B.1}
-\contentsline {section}{\bf Brief Bio-data of the Author}{89}{Item.12}
+\contentsline {section}{\numberline {6.4}Summary}{65}{section.6.4}
+\contentsline {chapter}{\numberline {7}Dime Delay Compensation and Predictive Display}{69}{chapter.7}
+\contentsline {section}{\numberline {7.1}Remote Scene Extrapolation}{69}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}here}{70}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {8}Conclusions}{71}{chapter.8}
+\contentsline {section}{\numberline {8.1}Thesis Summary}{71}{section.8.1}
+\contentsline {section}{\numberline {8.2}Current status}{73}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Scope of the work}{73}{section.8.3}
+\contentsline {chapter}{\bf Bibliography}{75}{section.8.3}
+\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{85}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{85}{section.A.1}
+\contentsline {chapter}{\numberline {B}Dynamics}{87}{appendix.B}
+\contentsline {section}{\numberline {B.1}Inertia Dyad}{87}{section.B.1}
+\contentsline {section}{\bf Publications from the Thesis}{89}{section.B.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{91}{Item.17}
