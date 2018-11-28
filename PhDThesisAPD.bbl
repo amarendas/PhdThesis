@@ -412,6 +412,16 @@ M.~Z. Zeroual, ``maxon auto tuning,'' {\em iNaCoMM2013,IIT Roorkee, India},
 {\em EPOS4 Application Note: Positioning Controllers}.
 \newblock Maxon Motors, 2012.
 
+\bibitem{ollero1995stability}
+A.~Ollero and G.~Heredia, ``Stability analysis of mobile robot path tracking,''
+  in {\em Intelligent Robots and Systems 95.'Human Robot Interaction and
+  Cooperative Robots', Proceedings. 1995 IEEE/RSJ International Conference on},
+  vol.~3, pp.~461--466, IEEE, 1995.
+
+\bibitem{smith1959controller}
+O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
+  pp.~28--33, 1959.
+
 \bibitem{sheridan}
 S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
   IEEE Transactions on Robotics and Automation}, vol.~9, no.~5, October 1993.

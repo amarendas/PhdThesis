@@ -55,6 +55,8 @@
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{66}{figure.caption.50}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{67}{figure.caption.51}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor\relax }}{71}{figure.caption.52}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Smith predictor applied to mobile robot\relax }}{72}{figure.caption.53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
