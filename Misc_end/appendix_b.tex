@@ -1,264 +1,59 @@
 \chapter[]{}
 \label{appendix_b}
-\section{Gaussain Distribution}
-\label{app:PDF}
-Gaussian or Normal distribution is a bell curve shaped distribution, as shown in Fig.~\ref{fig:PDF_normal}. Physical quantities often follow this distribution with indipendently drawn random samples. Figure~\ref{fig:PDF_normal} was drwan with $10,000$ data points with mean as zero and stadard deviations (SD), $\sigma=1$.\\
-
-\begin{figure}[b!]
-\begin{center}
-\includegraphics[scale=0.9]{Misc_end/figures/PDF_normal}
-\caption{Normal (or Gaussian) distribution}
-\label{fig:PDF_normal}
-\end{center}
-\end{figure}
-\noindent Figure~\ref{fig:PDF_normal} shows the normal distribution of a single variable which is also denoted as $\mathcal{N}(0,\sigma^2)$ where $\mathcal{N}$ denotes normal distribution with zero mean and variance\footnote[1]{variance = \text(standard deviation)$^2$}  $\sigma^2$. For multivariate distribution, i.e., say for vector $\mathbf{x}$ with $n$ variables is denoted as  $\mathcal{N}(\mathbf{0},\mathbf{V})$, $\mathbf{0}$ is a zero vector of size $n \times 1$ and $\mathbf{V}$ is a covariance matrix as:
-\begin{eqnarray*}
-Var({\bf x})  & = & \left( \begin{array}{cccc}
-\sigma_{x_{1}}^{2} & \sigma_{x_{1}x_{2}} & \cdots & \sigma_{x_{1}x_{n}} \\
-\sigma_{x_{1}x_{2}} & \sigma_{x_{2}}^{2} & \cdots & \sigma_{x_{2}x_{n}} \\
-\vdots             & \vdots              & \ddots & \vdots \\
-\sigma_{x_{1}x_{n}} & \sigma_{x_{2}x_{n}} & \cdots & \sigma_{x_{n}}^{2}
-\end{array} \right) \\
-  & = & {\bf V} \\
-\end{eqnarray*}
-A variance-covariance (VCV) matrix 
-is square, symmetric and are always be positive definite,  
-i.e. all of the eigenvalues must be positive. For an independent or unbiased variables the VCV matrix will have the off diagonal terms zero resulting in the covariance matrix  $\mathbf{V}$$\equiv diag(\sigma_{x_{1}}^{2}, \cdots, \sigma_{x_{n}}^{2})$.
-\section{Global Sensitivity Index}
-Let us consider a scalar function $ y= f(\mathbf{x})$  where $x$ is vector of input variables $\mathbf{x}=(x_1,\ldots,x_i,x_j, \ldots,x_n)$. Each input
-parameter is considered to range over some finite interval which can be  rescaled to be [0, 1]. This results in the function which is square-integrable in the unit hypercube. The function then  can be decomposed into summands of different dimensions as: 
-\begin{eqnarray}  
-\label{eq:dec_f1}
-  f(\mathbf{x})  & = & f_0 + \sum_i^n \sum_{i_{1}<\ldots<i_{s}}^n f_{i_{1}<\ldots<i_{s}}(x_{i_1},\ldots,x_{i_s})
-\end{eqnarray}
-where $ 1 \leq i_1<\ldots \leq n$. The above expression means in expanded form as:
-
-\begin{eqnarray}  
-\label{eq:dec_f21}
-  f(\mathbf{x})  & = & f_0 + \sum_i^n f_i(x_i) + \sum_{i<j}^n f_{ij}(x_i,x_j) + \ldots + f_{1\ldots n}(x_1,\ldots,x_n)   
-\end{eqnarray}
-The above equation is representation for the analysis of variance (ANOVA) of $f(\mathbf{x})$ with total number of summands equal to $2^n$. The expansion in the Eq.~\ref{eq:dec_f1} is unique with $f_0=\text{constant}$ and the integrals of each summand over any of its own variables must be zero:
+\section*{Stability of Pure Pursuit under time delay}
+\label{app:ollero}
+The kinematic model shown in Equation \ref{eqn:ppRobotModel}  and first order model for steering dynamics for the vehicle was assumed. 
 \begin{equation}
-\label{eq:cond11}
- f_0 = \text{constant}\\
+\label{eqn:ppRobotModel}
+\begin{pmatrix}
+\dot{x'}_w\\ \dot{y'}_w\\ \dot{\theta}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-V \sin\theta\\ V\cos\theta\\V\gamma
+\end{pmatrix}
 \end{equation}
 \begin{equation}
-\label{eq:cond21}
-\displaystyle \uint_{0}^{1}  f_{1\ldots n}(x_1,\ldots,x_n) dx_i=0~~ \forall~i=1\ldots n
+\label{eqn:ppSteering}
+\frac{d\gamma'}{dt}=-\frac{1}{T}(\gamma'-\gamma_R)
 \end{equation}
-
-
-The consequence of the above two conditions is that each summands in Eq.\ref{eq:dec_f2} are orthogonal, i.e.,
-\begin{equation}
-\label{eq:orth}
-\displaystyle \uint f_{1\ldots i}f_{j\ldots n}dx = 0
-\end{equation}
-
-with terms in the summands can be expressed as:
-%******************************************************
-\begin{equation} \label{eq:fo}
-f_0 = \displaystyle \uint f(\mathbf{x})d\mathbf{x} 
-\end{equation}
-\begin{equation} \label{eq:f1}
- f_i(x_i) = -f_0 + \displaystyle  \uint   f(\mathbf{x}) \displaystyle \prod_{k\neq i}dx_k 
-\end{equation}
-\begin{equation} \label{eq:f2}
-f_{ij}(x_i,x_j) = -f_0 - f_i(x_i) + \displaystyle  \uint   f(\mathbf{x}) \displaystyle \prod_{k\neq i,j}dx_k 
-\end{equation}
-%*******************************************************
-and so on. Note that in Eq.~\ref{eq:fo}, $ \displaystyle \uint f(\mathbf{x})d\mathbf{x}$ means multidimensional integrals over all the differential variables present ($ \displaystyle \int_0^1 \ldots \int_0^1 $) in an interval $[0,1]$. Similarly in Eq.~\ref{eq:f1} denotes the integration over all the differential variables except $x_i$, and so on.\\
-Squaring Eq.~\ref{eq:dec_f1} both side and simplifying it using the conditions Eq.~\ref{eq:cond11} and \ref{eq:cond21}, following relation is obtained
-\begin{equation}
-\label{eq:squar_1}
- \displaystyle \uint f^2(\mathbf{x})d\mathbf{x} =  f_{0}^{2} + \sum_i^n \sum_{i_{1}<\ldots<i_{s}}^n \displaystyle \uint f_{i_{1}<\ldots<i_{s}}^{2}(x_{i_1},\ldots,x_{i_s})
-\end{equation}
-Using the definition of variance, i.e., \textit{mean of square minus square of mean}, the total output variance $D$ of the function $f(\mathbf{x})$ is expressed in a discrete form as in Eq.~\ref{eq:var1}.
-\begin{equation}
-\label{eq:var1}
-D = \displaystyle \uint f^2(\mathbf{x})d\mathbf{x} - f_{0}^{2}  %\approx \frac{1}{N}\sum\limits_{k=1}^{N}{f({{x}_{k}})}
-\end{equation}
-and the partial variance of each input variables term is:
-\begin{equation}
-\label{eq:var2}
-D_{i_{1},\ldots,i_{s}} =  \sum_i^n \sum_{i_{1}<\ldots<i_{s}}^n \displaystyle \uint f_{i_{1}<\ldots<i_{s}}^{2}(x_{i_1},\ldots,x_{i_s})
-\end{equation}
- The global sensitivity indices (SI) \citet{sobol2001global} is then defined as,
-\begin{equation}
-\label{eq:GSI}
-S_{i_{1},\ldots,i_{s}} = \frac{D_{i_{1},\ldots,i_{s}}}{D}
-\end{equation}
-where, $S_i$ is the first order SI for factor $x_i$, on the output, i.e., partial contribution of $x_i$ on variance of $f(\mathbf{x})$. Similarly, $S_{ij}$ for $i\neq j$ is the second order SI which gives the effect of interactions  between $x_i$ and $x_j$ and so on.\\
- The total variance and partial variances can be computed using Monte Carlo based technique for integration \citet{sobol2001global},
-which makes Sobol's method relatively easy to implement. Equation \ref{eq:fo}, \ref{eq:var1} (total variance) and \ref{eq:var2} are expressed in discrete form as:
-\begin{equation}
-\label{eq:Dis_sob1}
-\hat{f_0} = {\frac{1}{N}} \sum\limits_{m=1}^{N}{f({{\mathbf{x}}_{m}})}
-\end{equation}
-where, $\mathbf{x}_m $ is a sampled point in the input parameters and $N$ is the sample size of quasi-random data points inside the hypercube. Generally N$=10^4$ gives an estimate of SI with $10 \% $ uncertainty. The Monte Carlo estimate of output variance is:
-\begin{equation}
-\label{eq:Dis_sob2}
-\hat{D} = {\frac{1}{N}} \sum\limits_{m=1}^{N}{f^2({{\mathbf{x}}_{m}})}- \hat{f_0}
-\end{equation}
-From Chapter~\ref{c4_SenCal} Eq.~\ref{eq:TS_S1} the total sensitivity indices were calculated using the two subsets of the variables, namely, $x_i$ and $\mathbf{x}_{ci}$. Where, $\mathbf{x}_{ci}$ is a complimentary vector of input variables except $x_i$. The sensitivity of complimentary vector of variables $\mathbf{x}_{ci}$ can be calculated using just one integral expressed in discrete form with $N$-trials:
-\begin{equation}
-\label{eq:S_ci}
-S_{ci} = \displaystyle \frac{1}{\hat{D}} \bigg(\frac{1}{N}\sum_{i=1}^{N}f(x_i,\mathbf{x}_{ci})f(x'_{i},\mathbf{x}_{ci}-\hat{f}_0^2\bigg)
-\end{equation}
-Hence, the GSI for $x_i$ will be $1-S_{ci}$.
-
-The Monte Carlo is constructed using two sets of independent random numbers generated for each element of input vector $\mathbf{x}$.  Let $\boldsymbol{\zeta}$ and $\boldsymbol{\zeta}_c$ be the two sets of uniformly distributed random numbers of size $ (N \times n)$, with $\boldsymbol{\zeta} = (\boldsymbol{\zeta}_{x_i},\boldsymbol{\zeta}_{\mathbf{x}_{ci}})$ and $\boldsymbol{\zeta}' = (\boldsymbol{\zeta}'_{x_i},\boldsymbol{\zeta}'_{\mathbf{x}_{ci}})$     In total three computation of the model $f{(\boldsymbol{\zeta}_{x_i},\boldsymbol{\zeta}_{\mathbf{x}_{ci}})}$, $f{(\boldsymbol{\zeta}_{x_i},\boldsymbol{\zeta}'_{\mathbf{x}_{ci}})}$ and $f{(\boldsymbol{\zeta}'_{x_i},\boldsymbol{\zeta}_{\mathbf{x}_{ci}})}$ are required with $N$ trials to get the Monte Carlo estimates  as:
+where, $(x',y',\theta)$ is the posture of robot in coordinate system attached to the robot,  $V$  is the longitudinal velocity,  $\gamma$ is the angular velocity, $T$ time constant of steering dynamics and $\gamma_r$ the control input.  Since the control input is generated by Pure Pursuit it is given by
 \begin{eqnarray}
-\label{eq:MC_Disc}
- {f_0} & \approx & {\frac{1}{N}}\sum\limits_{m=1}^{N}{f(\boldsymbol{\zeta}_m)} \\
- {f_0^2}+D & \approx & {\frac{1}{N}}\sum\limits_{m=1}^{N}{f^2(\boldsymbol{\zeta}_m)} \\
- {f_0^2}+D_{x_i} &\approx& {\frac{1}{N}}\sum\limits_{m=1}^{N}f{(\boldsymbol{\zeta}_{x_{i,m}})}f{(\boldsymbol{\zeta}_{x_{i,m}},\boldsymbol{\zeta}'_{\mathbf{x}_{ci,m}})} \\
- {f_0^2}+D_{\mathbf{x}_{ci}} &\approx& {\frac{1}{N}}\sum\limits_{m=1}^{N}f{(\boldsymbol{\zeta}_{x_{i,m}})}f{(\boldsymbol{\zeta}'_{x_{i,m}},\boldsymbol{\zeta}_{\mathbf{x}_{ci,m}})}
-\end{eqnarray}
-
-From the above expressions, it is easier to calculate the first order sensitivity index of parameter $x_i$ as $S_{1,x_i}=D_{x,i}/D$ and Global Sensitivity Index (GSI) as $((1-D_{\mathbf{x}_{ci}})/D)$.
-
-
-\section{Illustration of Sensitivity Analysis}
-\label{app:example_SA}
-Let us consider the function:
+\gamma_r=\frac{1}{r}=\frac{2x}{L^2}
+\end{eqnarray} 
+where $r$ is defined in Equation \ref{ppControl} and $L$ is the \textit{look ahead distance}. The above Equations \ref{eqn:ppRobotModel} and \ref{eqn:ppSteering}  using the fact that $\dot{y'}_w=0$, because of the non-holonomic constrain of the robot, can be written  in the form of state space  form  as 
 \begin{equation}
-\label{eq:fun_1}
-y=f(x_1,x_2) \equiv f(\mathbf{x}) =x_1^2+x_1x_2
+\begin{pmatrix}
+\dot{x}\\\dot{\theta}\\\dot{\gamma}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\sin\theta\\ \gamma \\ -\gamma -\frac{2x}{l^2}
+\end{pmatrix}
 \end{equation}
-Variable $x_1$ and $x_2$ are denoted together using a bold face symbol as vector $\mathbf{x} \equiv [x_1 x_2]^T$. The Monte Carlo technique  can efficiently calculate the multidimensional integration as explained in Section \ref{sec:MonteCarlo}. The analytical expression for the decomposition of the function in Eq. is given in the Appendix. The steps are listed below with the results: 
-\begin{table}[!b]
-  \centering
-  \caption{Sensitivity indices }
-    \begin{tabular}{rrr}
-    \hline
-    Variable & FoSI  & TSI \\
-    \hline
-        $x_1$  & 0.875       & 0.890 \\
-        $x_2$  &   0.109    &  0.124 \\
-    \hline
-    \end{tabular}%
-  \label{tab:sen_func1}%
-  %D:\BACKUP_Dec_2016\KIN_IDEN_Work\1_SENSITIVITY\Test_sensitivity_sobol
-\end{table}%
-\begin{enumerate}
-\item Provide the number of trials $N$ for the simulation to be carried. 
-\item Select the parameters for the SA. For the function in Eq.\eqref{eq:fun_1}, $x_1$ and $x_2$ were selected. 
-\item Assign the range of values that the input parameters can take: $0 \leq x_1 \leq 1$ and $0\leq x_2 \leq 1$.
-\item Assign the distribution for each parameters. Here normal distribution is given to all the input parameters.
-\item Calculate the mean and variance using Eq.\eqref{eq:MC_Disc}. 
-\item Determine the TSI using Algorithm \ref{alg:TSI_MC}. 
-\end{enumerate}
-
-\noindent The number of model call done here in the simulation was $10^5$. The first order sensitivity and the TSI are listed in Table~\ref{tab:sen_func1}. It can be easily figured out that the sensitivity of the parameter $x_1$ is much more than $x_2$. It can also be stated that $90 \%$ of the variance of the output is 
-caused by the first input ($x_1$), and $12\%$ by the variance in the second. There exist very less interaction between the two. This fact can be concluded by looking at the differences in the value between the FSI and TSI in Table~\ref{tab:sen_func1}. It is $0.030$ for $x_1$ and $x_2$ is $0.01$ only.
-% Table generated by Excel2LaTeX from sheet 'Sheet1'
-
-\section{Manipulability}
-\label{app:manip}
-Manipulability of a manipulator is defined as ``capacity of changing  position and orientation of the end-effector of a robot for a given  joint configuration''. For a given joint space configuration  \cite{yoshikawa1985manipulability} proposed the  manipulability measure as:
+where the following scaling of variables were used to render it non-dimensional. 
+\begin{equation*}
+t=\frac{t'}{T}, \quad x=\frac{x'_w}{VT}, \quad \gamma=VT\gamma',\quad l=\frac{L}{VT}
+\end{equation*}
+The above system was linearised about the origin and  delay $\tau$ in  input was introduced  to get Equation \ref{eqn:delayPP}
 \begin{equation}
-\label{eq:manip}
-w = \sqrt{det(\mathbf{J}\mathbf{J}^T)}
+\label{eqn:delayPP}
+\begin{pmatrix}
+\dot{x}\\\dot{\theta}\\\dot{\gamma}
+\end{pmatrix}
+=J
+\begin{pmatrix}
+x(t)\\\theta(t)\\\gamma(t)
+\end{pmatrix}+
+J_\tau 
+\begin{pmatrix}
+x(t-\tau)\\\theta(t-\tau)\\\gamma(t-\tau)
+\end{pmatrix}
 \end{equation}
-$w$ is a scalar quantity which is dependent on the configuration of the manipulator. 
-
-\section{Orientation from three points}
-\label{app:ori_1}
-A single plane passes through three points. By measuring the position of the three points the orthogonal coordinate system can be attached to any point (say $P_1$) as shown in the Fig.~\ref{fig:app_ori}. The rotation matrix can be written from the direction cosine $\mathbf{n_x, n_y}$  and $\mathbf{n_z}$ in the measurement frame as $\mathbf{Q} = [\mathbf{n_x,~ n_y, ~ n_z}]$. The Euler angles ($\alpha_z, \beta_y, \gamma_z$) can be found from the rotation matrix as given in \cite{saha2014introduction}.
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=0.35]{Misc_end/figures/app_ori.jpg}
-\caption{Finding orientation and rotation matrix from measurement of three points}
-\label{fig:app_ori}
-\end{center}
+where $J$ is the Jacobian with respect to state and $J_\tau$ is Jacobian with respect to $\tau$. 
+Based on location of roots of the Characteristic Quasi-Polynomial $q(s)=det[sI-J-J_\tau~ e^{s\tau} ] $, results for different input delay a limiting  look ahead distance for stable path tracking was presented for a  circular path. His results are represented here for  in Figure \ref{fig:resultsPP}.
+  \begin{figure}
+	\includegraphics[width=\linewidth]{Chapter7/fig/resultsPP}
+	\caption{Results obtained by Ollero \cite{ollero1995stability} }
+	\label{fig:resultsPP}
 \end{figure}
-
-\section{Procrustes Analysis }
-\label{app:Procrustes}
-In the experimental setup as shown in Fig.~\ref{fig:Calib_trans_Frame}a the homogenous transformation matrix (HTM) between the base of the robot and the measuring equipment is needed. This is obtained by taking the coordinates of $m$-positions of the robot's EE, in robot base frame (say, $\mathbf{X}_B$) and in the measurement equipment frame (say, $\mathbf{X}_M$) as:
-\begin{equation}
- \begin{matrix}
-   {\mathbf{x}_{B}^{1}=f(\textbf{b, a}, \boldsymbol{\upalpha, {{\uptheta }}}^{1})=[x_{B}^{1},y_{B}^{1},z_{B}^{1}]}  \nonumber \\ 
-   \vdots \\
-   {\mathbf{x}_{B}^{m}=f(\textbf{b, a},\boldsymbol{\upalpha ,{{\uptheta }}}^{m})=[x_{B}^{m},y_{B}^{m},z_{B}^{m}}]  \\
-\end{matrix} ~~~ \text{and} ~~ \begin{matrix}
-   \mathbf{x}_{M}^{1}=[x_{M}^{1},y_{M}^{1},z_{M}^{1}]   \\
-   \vdots    \\
-   \mathbf{x}_{M}^{m}=[x_{M}^{m},y_{M}^{m},z_{M}^{m}]    \\
-\end{matrix} 
-\end{equation}
-The coordinates of the EE are concatenated in a matrix form for the measurement data as $\mathbf{X}_M \equiv [\mathbf{x}_M^1, \cdots, \mathbf{x}_M^m]_{m \times 3}^T$ and that from the FK as $\mathbf{X}_B \equiv [\mathbf{x}_B^1, \cdots, \mathbf{x}_B^m]_{m \times 3}^T$. Both the information are related by the HTM as:
-\begin{equation}
-\label{eq:tran_pinv}
-\mathbf{T}_{M,(4\times 4)}^{B} \underbrace{{\left[ \begin{matrix}
-   \mathbf{X}_{M}^{T}  \\
-   {{\mathbf{1}}_{1\times m}}  \\
-\end{matrix} \right]}}_{\textbf{P}^M_{4\times m}}=\underbrace{{\left[ \begin{matrix}
-   \mathbf{X}_{B}^{T}  \\
-   {{\mathbf{1}}_{1\times m}}  \\
-\end{matrix} \right]}}_{\textbf{P}^B_{4\times m}}
-\end{equation}
-\begin{equation}
-\text{where}~~[\textbf{T}]_{M}^B 
- \equiv 
-\left[ \begin{array}{c|c}
-\mathbf{Q}&\mathbf{p}\\ \hline
-\mathbf{0}& 1 
-\end{array} \right]
-\label{eq:TDH}
-\end{equation}
-The transformation matrix in Eq.(\ref{eq:tran_pinv}) can be found using the Moore Penrose method as:
-\begin{equation}
-\label{eq:pinv_T}
-\mathbf{T}_{M}^{B} = (\textbf{P}^M)^\dag \textbf{P}^B
-\end{equation}
-\begin{figure}[!b]
-\centering
-\includegraphics[width=0.8\linewidth]{../HELP_FILES/CHAPTER_4/Calibration_Plots_Figures/Calib_trans_Frame}
-\caption{End effector (EE) position measurement for calibration}
-\label{fig:Calib_trans_Frame}
-\end{figure}
-The rotation matrix found using Eq.\eqref{eq:pinv_T} does not ensure orthogonality. This constraints of orthogonality, i.e., $\mathbf{Q}^T\mathbf{Q}=1$ is taken into account using the Procrustes method 
-\citep{gower2004procrustes}. The rotation matrix is then found as:
-\begin{eqnarray}
- ~& \mathbf{A}=[{{\bar{\mathbf{X}}}_{B}}]_{3\times m}^{T}{{[{{\bar{\mathbf{X}}}_{M}}]}_{m\times 3}} \\ 
- ~& \left[ \begin{matrix}
-   \mathbf{U} & \mathbf{D} & \mathbf{V}  \\
-\end{matrix} \right]=\text{SVD}(\mathbf{A}) \\ 
- ~& {{[\mathbf{Q}]}_{3\times 3}}=\left[ \mathbf{V} \right]_{3\times 3}{{\left[ \mathbf{U} \right]}^{T}_{3\times 3}} 
-\end{eqnarray}
-
-
-\noindent An example is presented for the differences in the transformation matrix found using least square method and the Procrustes method. Figure~\ref{fig:Trans_procrustes} shows the set of data points given in two different frames. Note that the fourth column in Fig.~\ref{fig:Trans_procrustes} was added to make it homogenous.
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.9\linewidth]{../HELP_FILES/Appendix_figures/Trans_procrustes}
-\caption{Sample of measured points in two different frames}
-\label{fig:Trans_procrustes}
-\end{figure}
-The transformation element were then found and compared below using pseudo inverse (\texttt{pinv}: which uses SVD), backslash operator ($\backslash$ which uses QR-decomposition) and Procrustes (\texttt{[d,Z,transform] = procrustes(X,Y)} which is based on SVD and preserves orthogonality of rotation) in \texttt{Matlab}. Where \texttt{transform} is a class with \texttt{transform.c} gives translational component \texttt{transform.T} gives orthogonal rotation. 
-% Table generated by Excel2LaTeX from sheet 'Sheet1'
-\begin{table}[!b]
-  \centering
-  \caption{Transformation matrix found between two sets of data points}
-    \begin{tabular}{p{0.05\linewidth} p{0.25\linewidth} p{0.4\linewidth} rp{0.15\linewidth}}
-    \toprule
-          & Method & Transformation Matrix & Orthogonal \\
-    \midrule
-    1     &
-     Pseudo-inverse \texttt{pinv}(\textbf{P}$^M$)\textbf{P}$^B$ &  $\mbox{\fontsize{9}{6}\selectfont\(\left[\begin{array}{cccc}  0.0073 & -0.0001 & -0.8641 & -0.0491\\ -0.0151 & 1 & 0.0001 & -0.0015\\ 0.7804 & 0 & 0.5003 & -0.0085\\ -0.0070 & -0.0015 & 0.0383 & 0.0025 \end{array}\right]\)}$     
-     & No \\
-     
-    2     &
-     Backslash Operator (\textbf{P}$^M$) $\backslash$ \textbf{P}$^B$ & $\mbox{\fontsize{9}{6}\selectfont\(\left[\begin{array}{cccc} 0.0076 & 0 & -0.8660 & -0.0492\\ -0.0151 & 1 & 0 & -0.0015\\ 0.7805 & 0 & 0.5000  & 0\\ 0 & 0 & 0 & 0 \end{array}\right]\)}$  
-     & No \\
-    3     & 
-    Procrustes Method \texttt{procrustes}(\textbf{P}$^M$, \textbf{P}$^B$) &   $\mbox{\fontsize{9}{6}\selectfont\(\left[\begin{array}{cccc} 0.5000  & 0 & -0.8660 & 10\\ 0 & 1 & 0 & 0\\ 0.8660 & 0 & 0.5000 & 0\\ 0 & 0 & 0 & 1 \end{array}\right]\)}$     
-    
-    & Yes \\
-    \bottomrule
-    \end{tabular}%
-  \label{tab:comp_rot}%
-\end{table}%
-
-Table~\ref{tab:comp_rot} lists the transformation matrix obtained using different methods. Only the Procrustes method satisfies the orthogonality condition of the rotation matrix and hence the transformation matrix between two frames obtained using this method should be used over other methods.  

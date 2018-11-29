@@ -55,8 +55,13 @@
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{66}{figure.caption.50}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{67}{figure.caption.51}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor\relax }}{71}{figure.caption.52}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Smith predictor applied to mobile robot\relax }}{72}{figure.caption.53}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor\relax }}{70}{figure.caption.52}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Delay measurment\relax }}{71}{figure.caption.53}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Block digram of time delay system\relax }}{71}{figure.caption.53}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Smith predictor applied to mobile robot\relax }}{72}{figure.caption.54}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Simulation with time delay $T_1=.5sec$ and $T_2=0$ \relax }}{73}{figure.caption.55}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Simulation with time delay $T_1=.8sec$ and $T_2=0$ \relax }}{74}{figure.caption.56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Results obtained by Ollero \cite {ollero1995stability} \relax }}{91}{figure.caption.59}

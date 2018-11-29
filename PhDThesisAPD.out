@@ -55,17 +55,18 @@
 \BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 55
 \BOOKMARK [0][-]{chapter.7}{Time Delay Compensation and Predictive Display}{}% 56
 \BOOKMARK [1][-]{section.7.1}{Model Based Time Delay Compensation}{chapter.7}% 57
-\BOOKMARK [1][-]{section.7.2}{Predictive Display}{chapter.7}% 58
-\BOOKMARK [1][-]{section.7.3}{Remote Scene Extrapolation}{chapter.7}% 59
-\BOOKMARK [2][-]{subsection.7.3.1}{here}{section.7.3}% 60
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 61
-\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 62
-\BOOKMARK [1][-]{section.8.2}{Current status}{chapter.8}% 63
-\BOOKMARK [1][-]{section.8.3}{Future Scope }{chapter.8}% 64
-\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 65
-\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 66
-\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 67
-\BOOKMARK [0][-]{appendix.B}{Dynamics}{}% 68
-\BOOKMARK [1][-]{section.B.1}{Inertia Dyad}{appendix.B}% 69
-\BOOKMARK [1][-]{section.B.1}{Publications from the Thesis}{appendix.B}% 70
-\BOOKMARK [1][-]{Item.17}{Brief Bio-data of the Author}{appendix.B}% 71
+\BOOKMARK [2][-]{subsection.7.1.1}{Proposed Controller}{section.7.1}% 58
+\BOOKMARK [2][-]{subsection.7.1.2}{Simulation algorithm and results}{section.7.1}% 59
+\BOOKMARK [1][-]{section.7.2}{Predictive Display}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.3}{Remote Scene Extrapolation}{chapter.7}% 61
+\BOOKMARK [2][-]{subsection.7.3.1}{here}{section.7.3}% 62
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 63
+\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.2}{Current status}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.3}{Future Scope }{chapter.8}% 66
+\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 67
+\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 68
+\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 69
+\BOOKMARK [0][-]{appendix.B}{}{}% 70
+\BOOKMARK [1][-]{figure.caption.59}{Publications from the Thesis}{appendix.B}% 71
+\BOOKMARK [1][-]{Item.24}{Brief Bio-data of the Author}{appendix.B}% 72
