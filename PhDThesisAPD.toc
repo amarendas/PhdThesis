@@ -3,10 +3,10 @@
 \contentsline {section}{Abstract}{v}{Doc-Start}
 \contentsline {section}{List of Figures}{ix}{chapter*.1}
 \contentsline {section}{List of Tables}{xv}{chapter*.2}
-\contentsline {section}{Important Symbols and Abbreviations}{xvii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Thesis Organization}{4}{section.1.2}
+\contentsline {section}{Important Symbols and Abbreviations}{1}{chapter*.3}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1} Special Purpose Robots}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Mathematical Modeling}{8}{section.2.2}
@@ -68,5 +68,5 @@
 \contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{87}{appendix.A}
 \contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{87}{section.A.1}
 \contentsline {chapter}{\numberline {B}}{89}{appendix.B}
-\contentsline {section}{\bf Publications from the Thesis}{93}{figure.caption.59}
+\contentsline {section}{\bf Publications from the Thesis}{93}{figure.caption.58}
 \contentsline {section}{\bf Brief Bio-data of the Author}{95}{Item.24}
