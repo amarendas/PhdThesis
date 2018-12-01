@@ -426,4 +426,35 @@ O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
 S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
   IEEE Transactions on Robotics and Automation}, vol.~9, no.~5, October 1993.
 
+\bibitem{geng2011structured}
+J.~Geng, ``Structured-light 3d surface imaging: a tutorial,'' {\em Advances in
+  Optics and Photonics}, vol.~3, no.~2, pp.~128--160, 2011.
+
+\bibitem{openni}
+``Openni [online].'' \url{http://www.openni.org/}.
+\newblock Accessed: 2018-09-30.
+
+\bibitem{mssdk}
+``Microsoft kinect sdk [online]..''
+  \url{https://www.microsoft.com/en-hk/download/details.aspx?id=44561}.
+\newblock Accessed: 2018-09-30.
+
+\bibitem{freenect}
+``Openkinect [online]..'' \url{https://github.com/OpenKinect/libfreenect/}.
+\newblock Accessed: 2018-09-30.
+
+\bibitem{rtabmap}
+``Rtabmap [online].'' \url{https://github.com/introlab/rtabmap}.
+\newblock Accessed: 2018-09-30.
+
+\bibitem{labbertab}
+M.~Labb{\'e} and F.~Michaud, ``Rtab-map as an open-source lidar and visual
+  simultaneous localization and mapping library for large-scale and long-term
+  online operation,'' {\em Journal of Field Robotics}.
+
+\bibitem{labbe2013appearance}
+M.~Labbe and F.~Michaud, ``Appearance-based loop closure detection for online
+  large-scale and long-term operation,'' {\em IEEE Transactions on Robotics},
+  vol.~29, no.~3, pp.~734--745, 2013.
+
 \end{thebibliography}

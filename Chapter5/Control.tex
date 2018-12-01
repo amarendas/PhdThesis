@@ -266,8 +266,11 @@ V\\\omega_3
 \end{equation}
 Equation \ref{eqn:DiffKinModel} is numerically integrated for time $\delta t$ using the following expressions:
 \begin{align}
+\label{eqn:odo1}
  x(i+1)&=x(i)+\delta t~ V(i)\cos\beta(i);\\
+ \label{eqn:odo2}
 y(i+1)&=y(i)+\delta t~V(i)\sin\beta(i);\\
+\label{eqn:odo3}
 \beta(i+1)&=\beta(i)+\delta t~\omega_3(i);
 \end{align}
 where $i$ is at time step $t_i$. Next,  the actual odometric results for the vehicle moving in a circle and a straight line are presented.
@@ -346,6 +349,3 @@ The screen of the desktop displays  video streaming  from the mobile robot's on 
 \section{Summary}
 In this chapter, the control architecture of the mobile robot has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
 
-\section{note}
-
-Remove jitter in odometry add new result.

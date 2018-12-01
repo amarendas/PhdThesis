@@ -46,27 +46,30 @@
 \BOOKMARK [2][-]{subsection.5.2.1}{Wheel Odometery }{section.5.2}% 46
 \BOOKMARK [2][-]{subsection.5.2.2}{The Remote Control Station}{section.5.2}% 47
 \BOOKMARK [1][-]{section.5.3}{Summary}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.4}{note}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Simulation of Tele-operation}{}% 50
-\BOOKMARK [1][-]{section.6.1}{Modeling of Mobile Platform}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{Model of Human Operator}{chapter.6}% 52
-\BOOKMARK [1][-]{section.6.3}{Simulation and Results }{chapter.6}% 53
-\BOOKMARK [2][-]{subsection.6.3.1}{The Simulation Algorithm}{section.6.3}% 54
-\BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 55
-\BOOKMARK [0][-]{chapter.7}{Time Delay Compensation and Predictive Display}{}% 56
-\BOOKMARK [1][-]{section.7.1}{Model Based Time Delay Compensation}{chapter.7}% 57
-\BOOKMARK [2][-]{subsection.7.1.1}{Proposed Controller}{section.7.1}% 58
-\BOOKMARK [2][-]{subsection.7.1.2}{Simulation algorithm and results}{section.7.1}% 59
-\BOOKMARK [1][-]{section.7.2}{Predictive Display}{chapter.7}% 60
-\BOOKMARK [1][-]{section.7.3}{Remote Scene Extrapolation}{chapter.7}% 61
-\BOOKMARK [2][-]{subsection.7.3.1}{here}{section.7.3}% 62
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 63
-\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 64
-\BOOKMARK [1][-]{section.8.2}{Current status}{chapter.8}% 65
-\BOOKMARK [1][-]{section.8.3}{Future Scope }{chapter.8}% 66
-\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 67
-\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 68
-\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 69
-\BOOKMARK [0][-]{appendix.B}{}{}% 70
-\BOOKMARK [1][-]{figure.caption.58}{Publications from the Thesis}{appendix.B}% 71
-\BOOKMARK [1][-]{Item.24}{Brief Bio-data of the Author}{appendix.B}% 72
+\BOOKMARK [0][-]{chapter.6}{Simulation of Tele-operation}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Modeling of Mobile Platform}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Model of Human Operator}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{Simulation and Results }{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.3.1}{The Simulation Algorithm}{section.6.3}% 53
+\BOOKMARK [1][-]{section.6.4}{Summary}{chapter.6}% 54
+\BOOKMARK [0][-]{chapter.7}{Time Delay Compensation and Predictive Display}{}% 55
+\BOOKMARK [1][-]{section.7.1}{Model Based Time Delay Compensation}{chapter.7}% 56
+\BOOKMARK [2][-]{subsection.7.1.1}{Proposed Controller}{section.7.1}% 57
+\BOOKMARK [2][-]{subsection.7.1.2}{Simulation algorithm and results}{section.7.1}% 58
+\BOOKMARK [1][-]{section.7.2}{Predictive Display}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.2.1}{Depth Sensor Kinect}{section.7.2}% 60
+\BOOKMARK [2][-]{subsection.7.2.2}{Onboard Data processing and transmission}{section.7.2}% 61
+\BOOKMARK [2][-]{subsection.7.2.3}{3-D Reconstruction at operator station}{section.7.2}% 62
+\BOOKMARK [2][-]{subsection.7.2.4}{Remote scene extrapolation}{section.7.2}% 63
+\BOOKMARK [1][-]{section.7.3}{Result and conclusion}{chapter.7}% 64
+\BOOKMARK [1][-]{section.7.4}{Summary}{chapter.7}% 65
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 66
+\BOOKMARK [1][-]{section.8.1}{Thesis Summary}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.2}{Current status}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.3}{Future Scope }{chapter.8}% 69
+\BOOKMARK [0][-]{section.8.3}{Bibliography}{}% 70
+\BOOKMARK [0][-]{appendix.A}{Simulation Time Delay Tele-operation }{}% 71
+\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 72
+\BOOKMARK [0][-]{appendix.B}{}{}% 73
+\BOOKMARK [1][-]{figure.caption.62}{Publications from the Thesis}{appendix.B}% 74
+\BOOKMARK [1][-]{Item.17}{Brief Bio-data of the Author}{appendix.B}% 75
