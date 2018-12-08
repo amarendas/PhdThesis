@@ -522,6 +522,64 @@ The torques required at the wheels of the vehicle to  move up a spiral ramp  of 
 		\hline
 		\end{tabular}
 \end{table}
+
+\section{Dynamics Model of Steering System}
+The dynamic model of the steering system shown in Figure is derived here using Lagrangian method. The equations of dynamic is derived under two assumptions. First that the vehicle body \#3 is at rest and second that the mass of links \#8 and \#9 are negligible with respect to other links. The kinematic energy of all the body except \#8 and \#9 are derived below.
+
+The kinetic energy of link  \#6 is given by
+\begin{equation}
+ K_6=\frac{1}{2}(m_6((x^b_6)^2+(y^b_6)^2)+I_{6zz})\dot{\phi_6}
+\end{equation}
+ Where, $m_6$ is the mass, $(x^b_6,y^b_6)$ is the coordinate of c.m.  expressed  in the body co-ordinate frame $B:\{i_6,j_6,k_6\}$ as shown in Figure and $I_{6zz}$ is the moment of inertia in the body coordinate of link \#6.
+ 
+ 
+ Next we derive the kinetic energy of body \# 4, the wheel. 
+ The coordinate of c.g of wheel, $O_4$ in the world  $F:\{i,j,k\}$  is given by \[ \begin{pmatrix}
+x_{4}\\y_{4} \end{pmatrix}_F
+= \begin{pmatrix}-\frac{l}{2} \\0
+\end{pmatrix}+
+\begin{pmatrix}
+		\cos\phi_6 &  -\sin\phi_6\\ -\sin\phi_6 & \cos\phi_6
+\end{pmatrix} + 
+\begin{pmatrix}
+			-l_3\\0
+\end{pmatrix}\]
+ 	
+  The linear velocity $\dot{O}_4$  and its angular velocity $\omega_6$  expressed in the world frame $F:\{i,j,k\}$ is given by
+ \begin{eqnarray}
+ \dot{O}_4=l_6\dot{\phi_6}[\sin\phi_6, ~ -\cos\phi_6] ^T
+ \end{eqnarray}
+ 
+ \begin{equation}
+ \omega_6=\dot\phi_6k_6+\dot\theta_4i_6 ~=~ [\dot\theta_4\cos\phi_6,~ \dot\theta_4\sin\phi_6,~ \dot\phi_6]^T
+ \end{equation} where, $l_6$ is the length shown in Figure and $\dot\theta_4$ is the spinning rate of the wheel about axis $i_6$.
+ Then the kinetic energy of body \#4 is given by
+\begin{equation}
+ K_4=\frac{1}{2}(m\dot O_4 ^T ~\dot O_4+ \omega_6^T [I_6]_F~\omega_6  )
+ \end{equation}
+ \begin{multline}
+ K_4=\frac{1}{2} l_6^2 \dot\phi_6 m \begin{pmatrix}
+ \sin\phi_6, ~ -\cos\phi_6
+ \end{pmatrix}
+ \begin{pmatrix}
+ \sin\phi_6\\ -\cos\phi_6
+ \end{pmatrix}\\
+ + 
+ \begin{pmatrix}
+ \dot\theta_4 \cos\phi_6, ~ \dot\theta_4 \sin\phi_6, ~\dot\phi_6
+ \end{pmatrix}[I_6]_F
+ \begin{pmatrix}
+ \dot\theta_4 \cos\phi_6\\ \dot\theta_4 \sin\phi_6\\ \dot\phi_6
+ \end{pmatrix}
+ \end{multline} Where $[I_6]_F$ is the inertia matrix of wheel about its c.g. expressed in world frame $F$.
+ In general the moment of inertia matrix of the body is known in the body frame $B$, ie $[I-6]_B$. This can be transformed to the world coordinate frame $F$ by using the formula
+ \[ [I_4]_F=R^F_B[I_4]_B [R^F_B]^T\].
+ The above Equation, after proper transformation can be written as
+ \begin{equation}
+ K_4=\frac{1}{2}(l_3^2\dot\phi_6^2m_4+[I_{4xx}]_B\theta_4^2)
+ \end{equation}
+ 
+ 
  
 \section{Summary}
 In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.

@@ -36,7 +36,8 @@
 \contentsline {subsection}{\numberline {4.3.2}Under Actuated Case ($d_2=0$)}{39}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Simulation }{40}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Inverse Dynamics}{41}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Summary}{43}{section.4.5}
+\contentsline {section}{\numberline {4.5}Dynamics Model of Steering System}{43}{section.4.5}
+\contentsline {section}{\numberline {4.6}Summary}{44}{section.4.6}
 \contentsline {chapter}{\numberline {5}Control of Mobile Manipulator }{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}Control Architecture and Hardware}{45}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Local Onboard Controller}{46}{subsection.5.1.1}
@@ -70,5 +71,5 @@
 \contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{93}{appendix.A}
 \contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{93}{section.A.1}
 \contentsline {chapter}{\numberline {B}}{95}{appendix.B}
-\contentsline {section}{\bf Publications from the Thesis}{99}{figure.caption.61}
+\contentsline {section}{\bf Publications from the Thesis}{99}{figure.caption.63}
 \contentsline {section}{\bf Brief Bio-data of the Author}{101}{Item.16}
