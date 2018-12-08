@@ -53,16 +53,15 @@
 \contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{63}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Summary}{65}{section.6.4}
 \contentsline {chapter}{\numberline {7}Time Delay Compensation and Predictive Display}{69}{chapter.7}
-\contentsline {section}{\numberline {7.1}Model Based Time Delay Compensation}{69}{section.7.1}
+\contentsline {section}{\numberline {7.1}Time Delay Compensation}{69}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Proposed Controller}{71}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Simulation algorithm and results}{72}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.2}Simulation algorithm and results}{73}{subsection.7.1.2}
 \contentsline {section}{\numberline {7.2}Predictive Display}{74}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Depth Sensor Kinect}{75}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.1}Kinect Sensor }{75}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}Onboard Data processing and transmission}{76}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}3-D Reconstruction at operator station}{77}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Remote scene extrapolation}{78}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}Result and conclusion}{79}{section.7.3}
-\contentsline {section}{\numberline {7.4}Summary}{79}{section.7.4}
+\contentsline {subsection}{\numberline {7.2.3}3-D Reconstruction }{76}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Extrapolation remote scene }{77}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}Summary}{79}{section.7.3}
 \contentsline {chapter}{\numberline {8}Conclusions}{81}{chapter.8}
 \contentsline {section}{\numberline {8.1}Thesis Summary}{81}{section.8.1}
 \contentsline {section}{\numberline {8.2}Current status}{83}{section.8.2}

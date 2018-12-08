@@ -55,13 +55,13 @@
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{66}{figure.caption.49}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{67}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor\relax }}{70}{figure.caption.51}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Delay measurment\relax }}{71}{figure.caption.52}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Block digram of time delay system\relax }}{71}{figure.caption.52}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Smith predictor applied to mobile robot\relax }}{72}{figure.caption.53}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Simulation block Digram\relax }}{73}{figure.caption.54}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Time delay $T_1=.5sec$ and $T_2=0$ \relax }}{74}{figure.caption.55}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Time delay $T_1=.8sec$ and $T_2=0$ \relax }}{74}{figure.caption.55}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor \cite {smith1959controller}\relax }}{70}{figure.caption.51}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Block digram of time delayed system\relax }}{71}{figure.caption.52}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Delay measurment\relax }}{71}{figure.caption.52}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Smith predictor applied to the developed mobile robot\relax }}{72}{figure.caption.53}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Simulation block Digram\relax }}{72}{figure.caption.54}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Time delay $T_1=.5\nobreakspace {}sec$ and $T_2=0$ \relax }}{74}{figure.caption.55}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Time delay $T_1=.8\nobreakspace {}sec$ and $T_2=0$ \relax }}{74}{figure.caption.55}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Kinect Sensor from Microsoft\relax }}{75}{figure.caption.56}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Predictive display architecture\relax }}{77}{figure.caption.57}
 \contentsline {figure}{\numberline {7.10}{\ignorespaces PCD at time T \relax }}{79}{figure.caption.58}
