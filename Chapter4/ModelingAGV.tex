@@ -577,10 +577,44 @@ x_{4}\\y_{4} \end{pmatrix}_F
  The above Equation, after proper transformation can be written as
  \begin{equation}
  K_4=\frac{1}{2}(l_3^2\dot\phi_6^2m_4+[I_{4xx}]_B\theta_4^2)
- \end{equation}
+ \end{equation} 
+where $I_{4zz} $ is the moment of inertia of wheel about its z axis in the body coordinate frame.
+
+The kinetic energy of the tie rod, i.e., body \#10, which under goes linear reciprocating motion in a plane is given by
+\begin{equation}
+k_{10}=\half m_{10} \dot{x}
+\end{equation} where, $x$ is the displacement of the tie rod and $m_{10}$ is its mass.
+
+
+The Kinetic energy of body \#5, i.e., second wheel and second link \#7 can be derived in a similar fashion as that of body \#4 and \#6 respectively. The kinetic energy of body \#7 is given as
+\begin{equation}
+K_7=\frac{1}{2}(m_7((x^b_7)^2+(y^b_7)^2)+I_{7zz})\dot{\phi_7}
+\end{equation}
+where $m_7$ and $I_{7xx}$ is the mass and moment of inertia of body \#7 .
+
+The kinetic energy of body \#5  is given as
+ \begin{equation}
+K_4=\frac{1}{2}(l_3^2\dot\phi_7^2m_5+[I_{5xx}]_B\theta_5^2)
+\end{equation} 
+ where $m_5$ and $I_{5xx}$ is the mass and moment of inertia of body \#5.
  
- 
- 
+
+From the geometry of Figure \ref{st} following relations can be derived 
+\begin{equation}
+\label{eqn:thetaTox}
+\tan(\alpha-\phi_6)=\frac{b+x}{h}, \quad \quad \tan(\alpha-\phi_7)=\frac{b-x}{h}
+\end{equation}
+\begin{equation}
+\label{ro}
+x^b_6+y^b_6=x^b_7+y^b_7=r_0
+\end{equation}
+
+ Therefore the total kinetic energy of steering unit is 
+\[K_s=\sum_{i=4..10}K_i\]
+or
+\begin{multline}
+	K_s=\frac{\dot x^2}{2} \left( m_{10}+(mr^2_0+I{zz})+l^2_3m_w \right) \left(f2_1(x)+f2_2(x) \right)\\ + \half I_{wxx}\left(\dot\phi^2_6  +\dot\phi^2_7\right)
+\end{multline}
 \section{Summary}
 In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.
     
