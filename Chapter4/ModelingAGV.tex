@@ -608,13 +608,27 @@ From the geometry of Figure \ref{st} following relations can be derived
 \label{ro}
 x^b_6+y^b_6=x^b_7+y^b_7=r_0
 \end{equation}
-
+\begin{equation}
+\dot{\phi_6}=\dfrac{h\dot x}{h^2+b^2+2bx+x^2}=f_1(x)\dot x,\quad \dot{\phi_7}=\dfrac{h\dot x}{h^2+b^2-2bx+x^2}=f_1(x)\dot x
+\end{equation}
  Therefore the total kinetic energy of steering unit is 
 \[K_s=\sum_{i=4..10}K_i\]
 or
 \begin{multline}
-	K_s=\frac{\dot x^2}{2} \left( m_{10}+(mr^2_0+I{zz})+l^2_3m_w \right) \left(f2_1(x)+f2_2(x) \right)\\ + \half I_{wxx}\left(\dot\phi^2_6  +\dot\phi^2_7\right)
+	K_s=\frac{\dot x^2}{2} \left( m_{10}+(m_l r^2_0+I{zz})+l^2_3m_w \right) \left(f^2_1(x)+f^2_2(x) \right)\\ + \half I_{wxx}\left(\dot\theta^2_4  +\dot\theta^2_5\right)
 \end{multline}
+where, the following assumptions are made \[l_3=l_4, \quad m_4=m_5=m_w, \quad m_6=m_7=m_l, \quad I_{7zz}=I_{6zz}=I_{zz}\]
+The lagrangin in this case is then simply the kinetic energy, i.e,  $L=K_s$. Since force acts only along the $x$ ordinate, via steering motor. we get
+\[F_x= \dfrac{\partial}{\partial t}\dfrac{\partial L}{\partial \dot x} - \dfrac{\partial L}{\partial x}\]
+or 
+\begin{multline}
+F_x=\ddot{x}\left[ m_{10}+\left(mr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
+2\dot x^2 \left(mr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right)+F_1+F_2
+\end{multline}
+and external force $F_1$ and $F_2$ are given by
+\[F_i=\dfrac{T_s}{h},i={1,2} \]
+where $T_s$ is given by Equation\ref{eqn:brake} assuming symmetric loading of both wheels. The derivative of $f_1(x)$ and  $f_2(x)$ is given by 
+\[ \dfrac{df_1}{dt}=-\dfrac{2(x+b)h}{(h^2+b^2+2bx+x^2)^2}\]
 \section{Summary}
 In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.
     
