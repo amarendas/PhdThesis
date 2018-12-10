@@ -1,5 +1,31 @@
-\chapter{Dynamics}
-\section{Inertia Dyad}
-\label{app:dyad}
-The dyadic product takes two vector and returns a second-order tensor. If $\mathbf{a}$ and $\mathbf{b}$ are two vectors expressed as $\mathbf{a} \equiv a_1 \mathbf{i} + a_2\mathbf{j}+a_3\mathbf{k}$ and $\mathbf{b} \equiv b_1 \mathbf{i} + b_2\mathbf{j}+b_3\mathbf{k}$. Then the dyadic product of $\mathbf{a}$ and $\mathbf{b}$ are defined as:
+\chapter{ }
+\section{Optimal design of steering linkages}
+\label{Ch:ApenC}
 
+Objective is to  minimize turning radius within the space available after installation  of the rear wheel assembly, battery compartment and scissor mechanism  on a given over all frame size of the vehicle. The design variables are $x,~ a, ~h, ~w$. These variables are described in chapter 3 and shown in Figures \ref{fig:steerCond} and \ref{fig:davis}
+
+
+Objective function to be minimized is the turning radius is given by
+\begin{equation}
+R=\dfrac{a}{2}+\dfrac{w(h^2+b^2-bx)}{hx}
+\end{equation}
+where
+\[\dfrac{2b}{h}= \dfrac{a}{w}\]
+The constrain equations are 
+\[
+x<\frac{a}{2}-b-20
+\]
+\[ h^2+\left(\dfrac{a}{2}\right)^2<100^2
+\]
+The bonds on the design variables are given by
+\[30<h<200\]
+\[500<w<600\]
+\[50<a<270\]
+\[0<x\]
+The minimization was carried out in Matlab using \textit{fmincon()} function.
+ The resulting minimum radius thus obtained was 
+ \[R_{min}=228~mm\]
+ The corresponding design variables obtained were 
+ \[h=30~mm,~ w=515~mm, ~ a=190~mm, ~x=69.8~mm\] 
+ The achieved minimum turning radius was $R_{min}=415`mm$. This was due to introduction of support for the rack and links which were not taken into consideration in the optimization process.
+ 

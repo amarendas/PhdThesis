@@ -24,52 +24,57 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Castor wheel configuration of a WMR\relax }}{31}{figure.caption.24}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Path Traced by Robot\relax }}{40}{figure.caption.25}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Steering Assembly\relax }}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Link \relax }}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Change in Steer angle\relax }}{48}{figure.caption.30}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Control Effort\relax }}{48}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Control architecture \relax }}{47}{figure.caption.28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data from PC to the robot \relax }}{48}{figure.caption.29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Data from the robot to PC\relax }}{48}{figure.caption.29}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Wiring diagram of the WMR \relax }}{49}{figure.caption.30}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Block digram of EPOS4 controller \relax }}{50}{figure.caption.32}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Current control block \relax }}{51}{figure.caption.33}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Velocity control bolck \relax }}{51}{figure.caption.34}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Position control bolck \relax }}{52}{figure.caption.36}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Block digram of WMR controler\relax }}{53}{figure.caption.38}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Ackerman Steering Condition\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Davis Steering Gear\relax }}{55}{figure.caption.39}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Tracing a line\relax }}{57}{figure.caption.40}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Motor torque\relax }}{57}{figure.caption.40}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Linear velocity\relax }}{57}{figure.caption.40}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Angular velocity\relax }}{57}{figure.caption.40}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Tracing a circle\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Motor torque\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Linear velocity\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Angular velocity\relax }}{58}{figure.caption.41}
-\contentsline {figure}{\numberline {5.20}{\ignorespaces User interface for teleoperation \relax }}{59}{figure.caption.42}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Control architecture \relax }}{51}{figure.caption.31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data from PC to the robot \relax }}{52}{figure.caption.32}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Data from the robot to PC\relax }}{52}{figure.caption.32}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Wiring diagram of the WMR \relax }}{53}{figure.caption.33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Block digram of EPOS4 controller \relax }}{54}{figure.caption.35}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Current control block \relax }}{55}{figure.caption.36}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Velocity control bolck \relax }}{55}{figure.caption.37}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Position control bolck \relax }}{56}{figure.caption.39}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Block digram of WMR controler\relax }}{57}{figure.caption.41}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Ackerman Steering Condition\relax }}{59}{figure.caption.42}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Davis Steering Gear\relax }}{59}{figure.caption.42}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Tracing a line\relax }}{61}{figure.caption.43}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Motor torque\relax }}{61}{figure.caption.43}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Linear velocity\relax }}{61}{figure.caption.43}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Angular velocity\relax }}{61}{figure.caption.43}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Tracing a circle\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Motor torque\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Linear velocity\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Angular velocity\relax }}{62}{figure.caption.44}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces User interface for teleoperation \relax }}{63}{figure.caption.45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation architecture \relax }}{61}{figure.caption.43}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{63}{figure.caption.44}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{64}{figure.caption.45}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Simulation Scheme \relax }}{65}{figure.caption.46}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Block diagram for teleoperation\relax }}{66}{figure.caption.47}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with no time delay in either direction \relax }}{67}{figure.caption.48}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{68}{figure.caption.49}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{69}{figure.caption.50}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Teleoperation architecture \relax }}{65}{figure.caption.46}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Assumed driving strategy \relax }}{67}{figure.caption.47}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Geometry of Pure Pursuit \relax }}{68}{figure.caption.48}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Simulation Scheme \relax }}{69}{figure.caption.49}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Block diagram for teleoperation\relax }}{70}{figure.caption.50}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Simulation with no time delay in either direction \relax }}{71}{figure.caption.51}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulation with time delay $h_1=.5sec$ and $h_2=0$ \relax }}{72}{figure.caption.52}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Simulation with time delay $h_1=.8sec$ and $h_2=0$ \relax }}{73}{figure.caption.53}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor \cite {smith1959controller}\relax }}{72}{figure.caption.51}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Block digram of time delayed system\relax }}{73}{figure.caption.52}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Delay measurment\relax }}{73}{figure.caption.52}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Smith predictor applied to the developed mobile robot\relax }}{74}{figure.caption.53}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Simulation block Digram\relax }}{74}{figure.caption.54}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Time delay $T_1=.5\nobreakspace {}sec$ and $T_2=0$ \relax }}{76}{figure.caption.55}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Time delay $T_1=.8\nobreakspace {}sec$ and $T_2=0$ \relax }}{76}{figure.caption.55}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Kinect Sensor from Microsoft\relax }}{77}{figure.caption.56}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Predictive display architecture\relax }}{79}{figure.caption.57}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces PCD at time T \relax }}{81}{figure.caption.58}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Predicted Scene\relax }}{81}{figure.caption.58}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Smith Predictor \cite {smith1959controller}\relax }}{76}{figure.caption.54}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Block digram of time delayed system\relax }}{77}{figure.caption.55}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Delay measurment\relax }}{77}{figure.caption.55}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Smith predictor applied to the developed mobile robot\relax }}{78}{figure.caption.56}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Simulation block Digram\relax }}{78}{figure.caption.57}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Time delay $T_1=.5\nobreakspace {}sec$ and $T_2=0$ \relax }}{80}{figure.caption.58}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Time delay $T_1=.8\nobreakspace {}sec$ and $T_2=0$ \relax }}{80}{figure.caption.58}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Kinect Sensor from Microsoft\relax }}{81}{figure.caption.59}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Predictive display architecture\relax }}{83}{figure.caption.60}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces PCD at time T \relax }}{85}{figure.caption.61}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Predicted Scene\relax }}{85}{figure.caption.61}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces User interface for teleoperation \relax }}{96}{figure.caption.60}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Experimental Setup: Schematic\relax }}{96}{figure.caption.61}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Screen Shot of Operator PC\relax }}{96}{figure.caption.61}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces User interface for teleoperation \relax }}{100}{figure.caption.63}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Experimental Setup: Schematic\relax }}{100}{figure.caption.64}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Screen Shot of Operator PC\relax }}{100}{figure.caption.64}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Results obtained by Ollero \cite {ollero1995stability} \relax }}{99}{figure.caption.63}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Results obtained by Ollero \cite {ollero1995stability} \relax }}{102}{figure.caption.65}
+\addvspace {10\p@ }

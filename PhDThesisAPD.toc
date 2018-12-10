@@ -1,7 +1,7 @@
 \contentsline {section}{Certificate}{ii}{Doc-Start}
 \contentsline {section}{Acknowledgements}{v}{Doc-Start}
 \contentsline {section}{Abstract}{vii}{Doc-Start}
-\contentsline {section}{List of Figures}{xi}{chapter*.1}
+\contentsline {section}{List of Figures}{xii}{chapter*.1}
 \contentsline {section}{List of Tables}{xvii}{chapter*.2}
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Research Contributions}{3}{section.1.1}
@@ -37,38 +37,43 @@
 \contentsline {section}{\numberline {4.4}Simulation }{40}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Inverse Dynamics}{41}{subsection.4.4.1}
 \contentsline {section}{\numberline {4.5}Dynamics Model of Steering System}{43}{section.4.5}
-\contentsline {section}{\numberline {4.6}Summary}{46}{section.4.6}
-\contentsline {chapter}{\numberline {5}Control of Mobile Manipulator }{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Control Architecture and Hardware}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Local Onboard Controller}{48}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Details of the Motor Controller}{50}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}The control algorithm for the WMR}{52}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Wheel Odometery }{56}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}The Remote Control Station}{58}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Summary}{59}{section.5.3}
-\contentsline {chapter}{\numberline {6}Simulation of Tele-operation}{61}{chapter.6}
-\contentsline {section}{\numberline {6.1}Modeling of Mobile Platform}{62}{section.6.1}
-\contentsline {section}{\numberline {6.2}Model of Human Operator}{62}{section.6.2}
-\contentsline {section}{\numberline {6.3}Simulation and Results }{65}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{65}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Summary}{67}{section.6.4}
-\contentsline {chapter}{\numberline {7}Time Delay Compensation and Predictive Display}{71}{chapter.7}
-\contentsline {section}{\numberline {7.1}Time Delay Compensation}{71}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Proposed Controller}{73}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Simulation algorithm and results}{75}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Predictive Display}{76}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Kinect Sensor }{77}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Onboard Data processing and transmission}{78}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}3-D Reconstruction }{78}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Extrapolation remote scene }{79}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}Summary}{81}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusions}{83}{chapter.8}
-\contentsline {section}{\numberline {8.1}Thesis Summary}{83}{section.8.1}
-\contentsline {section}{\numberline {8.2}Current status}{85}{section.8.2}
-\contentsline {section}{\numberline {8.3}Future Scope }{85}{section.8.3}
-\contentsline {chapter}{\bf Bibliography}{86}{section.8.3}
-\contentsline {chapter}{\numberline {A}Simulation Time Delay Tele-operation }{95}{appendix.A}
-\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{95}{section.A.1}
-\contentsline {chapter}{\numberline {B}}{97}{appendix.B}
-\contentsline {section}{\bf Publications from the Thesis}{101}{figure.caption.63}
-\contentsline {section}{\bf Brief Bio-data of the Author}{103}{Item.16}
+\contentsline {subsection}{\numberline {4.5.1}Design of PD controller}{47}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Simulation and results}{48}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Summary}{49}{section.4.6}
+\contentsline {chapter}{\numberline {5}Control of Mobile Manipulator }{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}Control Architecture and Hardware}{51}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Local Onboard Controller}{52}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Details of the Motor Controller}{54}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}The control algorithm for the WMR}{56}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Wheel Odometery }{60}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}The Remote Control Station}{62}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Summary}{63}{section.5.3}
+\contentsline {chapter}{\numberline {6}Simulation of Tele-operation}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}Modeling of Mobile Platform}{66}{section.6.1}
+\contentsline {section}{\numberline {6.2}Model of Human Operator}{66}{section.6.2}
+\contentsline {section}{\numberline {6.3}Simulation and Results }{69}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The Simulation Algorithm}{69}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Summary}{71}{section.6.4}
+\contentsline {chapter}{\numberline {7}Time Delay Compensation and Predictive Display}{75}{chapter.7}
+\contentsline {section}{\numberline {7.1}Time Delay Compensation}{75}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Proposed Controller}{77}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Simulation algorithm and results}{79}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Predictive Display}{80}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Kinect Sensor }{81}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Onboard Data processing and transmission}{82}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}3-D Reconstruction }{82}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Extrapolation remote scene }{83}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}Summary}{85}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusions}{87}{chapter.8}
+\contentsline {section}{\numberline {8.1}Thesis Summary}{87}{section.8.1}
+\contentsline {section}{\numberline {8.2}Current status}{89}{section.8.2}
+\contentsline {section}{\numberline {8.3}Future Scope }{89}{section.8.3}
+\contentsline {chapter}{\bf Bibliography}{90}{section.8.3}
+\contentsline {chapter}{\numberline {A} }{99}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{99}{section.A.1}
+\contentsline {chapter}{\numberline {B} }{101}{appendix.B}
+\contentsline {section}{\numberline {B.1}Stability of Pure Pursuit under time delay}{101}{section.B.1}
+\contentsline {chapter}{\numberline {C} }{103}{appendix.C}
+\contentsline {section}{\numberline {C.1}Optimal design of steering linkages}{103}{section.C.1}
+\contentsline {section}{\bf Publications from the Thesis}{105}{equation.C.1.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{107}{Item.16}

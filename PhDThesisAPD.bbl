@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{smith1959controller}
+O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
+  pp.~28--33, 1959.
+
 \bibitem{ollero1995stability}
 A.~Ollero and G.~Heredia, ``Stability analysis of mobile robot path tracking,''
   in {\em Intelligent Robots and Systems 95.'Human Robot Interaction and
@@ -400,6 +404,10 @@ K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.
 
+\bibitem{craig2005introduction}
+J.~J. Craig, {\em Introduction to robotics: mechanics and control}, vol.~3.
+\newblock Pearson/Prentice Hall Upper Saddle River, NJ, USA:, 2005.
+
 \bibitem{maxonrs232}
 {\em EPOS Application Note: RS232 to CANopen Getway}.
 \newblock Maxon Motors, 2012.
@@ -417,10 +425,6 @@ M.~Z. Zeroual, ``maxon auto tuning,'' {\em iNaCoMM2013,IIT Roorkee, India},
 \bibitem{maxonAppNotesPosition}
 {\em EPOS4 Application Note: Positioning Controllers}.
 \newblock Maxon Motors, 2012.
-
-\bibitem{smith1959controller}
-O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
-  pp.~28--33, 1959.
 
 \bibitem{sheridan}
 S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em

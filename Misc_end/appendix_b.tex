@@ -1,6 +1,6 @@
-\chapter[]{}
+\chapter[ ]{}
 \label{appendix_b}
-\section*{Stability of Pure Pursuit under time delay}
+\section{Stability of Pure Pursuit under time delay}
 \label{app:ollero}
 The kinematic model shown in Equation \ref{eqn:ppRobotModel}  and first order model for steering dynamics for the vehicle was assumed. 
 \begin{equation}
@@ -52,8 +52,9 @@ x(t-\tau)\\\theta(t-\tau)\\\gamma(t-\tau)
 \end{equation}
 where $J$ is the Jacobian with respect to state and $J_\tau$ is Jacobian with respect to $\tau$. 
 Based on location of roots of the Characteristic Quasi-Polynomial $q(s)=det[sI-J-J_\tau~ e^{s\tau} ] $, results for different input delay a limiting  look ahead distance for stable path tracking was presented for a  circular path. His results are represented here for  in Figure \ref{fig:resultsPP}.
-  \begin{figure}
-	\includegraphics[width=\linewidth]{Chapter7/fig/resultsPP}
+  \begin{figure}[h]
+  	\centering
+	\includegraphics[width=.7\linewidth]{Chapter7/fig/resultsPP}
 	\caption{Results obtained by Ollero \cite{ollero1995stability} }
 	\label{fig:resultsPP}
 \end{figure}

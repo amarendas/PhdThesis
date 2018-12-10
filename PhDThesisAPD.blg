@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: PhDThesisAPD.aux
 A level-1 auxiliary file: Misc_front/cover.aux
 A level-1 auxiliary file: Misc_front/certificate.aux
+A level-1 auxiliary file: Misc_front/dedicatedTo.aux
 A level-1 auxiliary file: Misc_front/acknowledgement.aux
 A level-1 auxiliary file: Misc_front/abstract.aux
 A level-1 auxiliary file: Chapter1/intro.aux
@@ -15,7 +16,7 @@ The style file: ieeetr.bst
 A level-1 auxiliary file: Misc_end/appendix_a.aux
 A level-1 auxiliary file: Misc_end/appendix_b.aux
 A level-1 auxiliary file: Misc_end/publications.aux
-A level-1 auxiliary file: Extra/Bio_AH.aux
+A level-1 auxiliary file: Misc_end/Bibliography.aux
 Database file #1: zhref.bib
 Warning--can't use both volume and number fields in massie1994phantom
 Warning--empty institution in grange2001overview

@@ -524,13 +524,30 @@ The torques required at the wheels of the vehicle to  move up a spiral ramp  of 
 \end{table}
 
 \section{Dynamics Model of Steering System}
-The dynamic model of the steering system shown in Figure is derived here using Lagrangian method. The equations of dynamic is derived under two assumptions. First that the vehicle body \#3 is at rest and second that the mass of links \#8 and \#9 are negligible with respect to other links. The kinematic energy of all the body except \#8 and \#9 are derived below.
+The dynamic model of the steering system shown in Figure \ref{fig:SteerAsm} is derived  using Lagrangian method. The equations ofmotions are derived under two assumptions. First that the vehicle body \#3 is at rest and second that the mass of links \#8 and \#9 are negligible with respect to other links. The kinematic energy of all the body except \#8 and \#9 are derived next.
+
+
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3in]{Chapter4/fig/SteerModel} 
+		\caption{Steering Assembly}\label{fig:SteerAsm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=2in]{Chapter4/fig/link} 
+		\caption{Link }\label{fig:SteerLink}
+	\end{minipage}
+	%\caption{Actuator effort}
+\end{figure} 
+
 
 The kinetic energy of link  \#6 is given by
 \begin{equation}
  K_6=\frac{1}{2}(m_6((x^b_6)^2+(y^b_6)^2)+I_{6zz})\dot{\phi_6}
 \end{equation}
- Where, $m_6$ is the mass, $(x^b_6,y^b_6)$ is the coordinate of c.m.  expressed  in the body co-ordinate frame $B:\{i_6,j_6,k_6\}$ as shown in Figure and $I_{6zz}$ is the moment of inertia in the body coordinate of link \#6.
+ Where, $m_6$ is the mass, $(x^b_6,y^b_6)$ is the coordinate of c.m.  expressed  in the body co-ordinate frame $B:\{i_6,j_6,k_6\}$ as shown in Figure \ref{fig:SteerLink} and $I_{6zz}$ is the moment of inertia in the body coordinate of link \#6.
  
  
  Next we derive the kinetic energy of body \# 4, the wheel. 
@@ -552,7 +569,7 @@ x_{4}\\y_{4} \end{pmatrix}_F
  
  \begin{equation}
  \omega_6=\dot\phi_6k_6+\dot\theta_4i_6 ~=~ [\dot\theta_4\cos\phi_6,~ \dot\theta_4\sin\phi_6,~ \dot\phi_6]^T
- \end{equation} where, $l_6$ is the length shown in Figure and $\dot\theta_4$ is the spinning rate of the wheel about axis $i_6$.
+ \end{equation} where, $l_6$ is the length shown in Figure \ref{fig:SteerLink}  and $\dot\theta_4$ is the spinning rate of the wheel about axis $i_6$.
  Then the kinetic energy of body \#4 is given by
 \begin{equation}
  K_4=\frac{1}{2}(m\dot O_4 ^T ~\dot O_4+ \omega_6^T [I_6]_F~\omega_6  )
@@ -599,7 +616,7 @@ K_4=\frac{1}{2}(l_3^2\dot\phi_7^2m_5+[I_{5xx}]_B\theta_5^2)
  where $m_5$ and $I_{5xx}$ is the mass and moment of inertia of body \#5.
  
 
-From the geometry of Figure \ref{st} following relations can be derived 
+From the geometry of Figure \ref{fig:davis} following relations can be derived 
 \begin{equation}
 \label{eqn:thetaTox}
 \tan(\alpha-\phi_6)=\frac{b+x}{h}, \quad \quad \tan(\alpha-\phi_7)=\frac{b-x}{h}
@@ -609,11 +626,11 @@ From the geometry of Figure \ref{st} following relations can be derived
 x^b_6+y^b_6=x^b_7+y^b_7=r_0
 \end{equation}
 \begin{equation}
-\dot{\phi_6}=\dfrac{h\dot x}{h^2+b^2+2bx+x^2}=f_1(x)\dot x,\quad \dot{\phi_7}=\dfrac{h\dot x}{h^2+b^2-2bx+x^2}=f_1(x)\dot x
+\dot{\phi_6}=\dfrac{h\dot x}{h^2+b^2+2bx+x^2}=f_1(x)\dot x,\quad \dot{\phi_7}=\dfrac{h\dot x}{h^2+b^2-2bx+x^2}=f_2(x)\dot x
 \end{equation}
  Therefore the total kinetic energy of steering unit is 
 \[K_s=\sum_{i=4..10}K_i\]
-or
+using Equations 4.48, 4.49 and 4.50 in the above equation we get
 \begin{multline}
 	K_s=\frac{\dot x^2}{2} \left( m_{10}+(m_l r^2_0+I{zz})+l^2_3m_w \right) \left(f^2_1(x)+f^2_2(x) \right)\\ + \half I_{wxx}\left(\dot\theta^2_4  +\dot\theta^2_5\right)
 \end{multline}
@@ -622,13 +639,87 @@ The lagrangin in this case is then simply the kinetic energy, i.e,  $L=K_s$. Sin
 \[F_x= \dfrac{\partial}{\partial t}\dfrac{\partial L}{\partial \dot x} - \dfrac{\partial L}{\partial x}\]
 or 
 \begin{multline}
-F_x=\ddot{x}\left[ m_{10}+\left(mr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
-2\dot x^2 \left(mr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right)+F_1+F_2
+\label{eqn:SteerDyn}
+F_x=\ddot{x}\left[ m_{10}+\left(m_lr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
++2\dot x^2 \left(m_lr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right)+F_1+F_2
 \end{multline}
 and external force $F_1$ and $F_2$ are given by
 \[F_i=\dfrac{T_s}{h},i={1,2} \]
 where $T_s$ is given by Equation\ref{eqn:brake} assuming symmetric loading of both wheels. The derivative of $f_1(x)$ and  $f_2(x)$ is given by 
-\[ \dfrac{df_1}{dt}=-\dfrac{2(x+b)h}{(h^2+b^2+2bx+x^2)^2}\]
+\[ \dfrac{df_1}{dt}=-\dfrac{2(x+b)h}{(h^2+b^2+2bx+x^2)^2}, \quad \dfrac{df_2}{dt}=-\dfrac{2(x-b)h}{(h^2+b^2-2bx+x^2)^2}\]
+\subsection{Design of PD controller}
+To control the steering of the front wheel a computed torque controller \cite{craig2005introduction} is designed. If $U$ is an auxiliary control input then define
+\begin{multline}
+\label{eqn:SteerCont}
+F_x=U\left[ m_{10}+\left(mr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
++2\dot x^2 \left(mr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right) 
++F_1+F_2
+\end{multline}
+replacing $F_s$ in Equation \ref{eqn:SteerDyn} with \ref{eqn:SteerCont} and defining $M= m_{10}+\left(m r_o^2+I{zz}+l^2_3m_w \right) $, we get
+\begin{equation}
+\label{eqn:SteerCont2}
+\ddot x =U
+\end{equation}
+If $x_d$ is the set point and $e(t)=(x(t)-x_d)$ is defined as error in position, we define auxiliary input as  
+\begin{equation}
+\label{eqn:SteerCont3}
+ U=-K_d \dot x -K_p \left(x(t)-x_d \right) -K_i\int e(t)dt \end{equation}
+then equation \ref{eqn:SteerCont2} can  be written as 
+\[\ddot e(t) +K_d \dot{e}(t) +K_p e(t)+ K_i\int e(t)dt=0 \]
+It may be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=const$. The above equation can be written in state space $\dot{Y}=AY$ form with $ \int e(t)=y_1(t)$ as
+\begin{equation}
+\begin{pmatrix}
+\dot y_1 \\ \dot y_2 \\\dot y_3
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 & 0\\ 0 & 0 & 1\\ -K_i & -K_d & -K_p
+\end{pmatrix}
+\begin{pmatrix}
+ y_1 \\ y_2 \\ y_3
+\end{pmatrix}
+\end{equation}
+With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has negative real part in all eigen values $\lambda$ as given below
+\[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1.6103 - 1.8348i\}\].
+
+\subsection{Simulation and results}
+The simulation of the  dynamic equation \ref{eqn:SteerDyn} and controller given by equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle of 20mm.  The parameter used for the nominal plant were generated form solid model of the parts and are listed in table \ref{tb:steerPara} The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.
+
+\begin{table}[!htbp]
+	\caption{Key parameters steering assembly.}
+	\label{tb:steerPara}
+	\centering
+	\begin{tabular}{l l l }
+		\hline
+		
+		%\emph{Parameter}  & \emph{Example} & \emph{Font size and style} \\
+		%\hline
+		Wheel Mass& $m_w $ &$ 350~g$  \\ 
+		Wheel Inertia & $I_{wxx}$ & $463~ Kg ~mm^2$\\
+		Connecting Rod Mass & $m_{10} $& $200~g$ \\
+		Link mass& $m_l$ & 80g\\
+		Link Inertia & $I_{zz} $& $60834~Kg ~mm^2$\\
+		Link Cg distance & $r_o$ & $18mm$\\
+		\hline
+	\end{tabular}
+\end{table}
+
+ 
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3in]{Chapter4/fig/SteeringPos} 
+		\caption{Change in Steer angle}\label{fig:SteerPos}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3in]{Chapter4/fig/SteerEffort} 
+		\caption{Control Effort}\label{fig:SteerEfort}
+	\end{minipage}
+	%\caption{Actuator effort}
+\end{figure} 
+The simulation results establishes that with $10\%$ error in plant parameters there is practically no deviation in the performance of the controller. It also indicates that the system has a settling delay of $0.8~Sec$. It may also be noted from Equation \ref{eqn:SteerDyn} that the roll velocity of the wheel does not affect the dynamics of the steering system.
 \section{Summary}
 In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.
     
