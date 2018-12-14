@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  11 DEC 2018 03:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  14 DEC 2018 21:41
 entering extended mode
 **./PhDThesisAPD.tex
 (PhDThesisAPD.tex
@@ -1377,6 +1377,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (11.35439pt too wide) in paragraph at lines 16--17
+\T1/lmr/bx/n/12 TELE-OPERATED MO-BILE PLAT-FORM\T1/lmr/m/n/12 , sub-mit-ted by 
+\T1/lmr/bx/n/12 Shri.$ []$Amaren Prasanna
+ []
+
+
 Overfull \hbox (17.27779pt too wide) in paragraph at lines 25--37
 [][]
  []
@@ -2354,7 +2360,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
 Here is how much of TeX's memory you used:
  23001 strings out of 493303
  413363 string characters out of 3138856
- 588790 words of memory out of 3000000
+ 588791 words of memory out of 3000000
  25313 multiletter control sequences out of 15000+200000
  110762 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2380,7 +2386,7 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam10.pfb>
-Output written on PhDThesisAPD.pdf (128 pages, 10605207 bytes).
+Output written on PhDThesisAPD.pdf (128 pages, 10605204 bytes).
 PDF statistics:
  1889 PDF objects out of 2073 (max. 8388607)
  471 named destinations out of 1000 (max. 500000)
