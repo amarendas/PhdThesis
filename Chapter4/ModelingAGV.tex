@@ -1,27 +1,27 @@
 \chapter{Dynamics of Wheeled Mobile Robots }
 \label{c4_Dynamics}
 In the field of mobile robotics, extensive research has been carried out. 
-Mobile robots can broadly be divided into three categorises-wheeled robots, legged robots ~\cite{machado2006overview}, and aerial vehicles ~\cite{valavanis2014handbook}. 
-There are few mobile robots which use both wheels and legs for locomotion for example, in Creadapt  \cite{mouret2015evolutionary} in order to take advantage of both modes of locomotion. 
-Among these the most extensively studied are the  Wheeled Mobile Robots (WMR). 
-They have been classified into five generic classes by Champion etal. \cite{campion1996structural},~\cite{campion2008wheeled}  based on there mobility resulting from the kinematic constrains due to  different wheel types.
- The most common among these are the  3 wheeled differential drive WMR with one castor wheel.
+Mobile robots can broadly be divided into three categorises, namely wheeled robots, legged robots ~\cite{machado2006overview}, and aerial vehicles ~\cite{valavanis2014handbook}. 
+There are few mobile robots which use both wheels and legs for locomotion. For example,  Creadapt  \cite{mouret2015evolutionary} in order to take advantage of both modes of locomotion. 
+Among these, the most extensively studied are the  Wheeled Mobile Robots (WMR). 
+They have been classified into five generic classes by Champion et. al. \cite{campion1996structural},~\cite{campion2008wheeled}  based on their mobility resulting from the kinematic constrains due to  different wheel types.
+ The most common among these are the  3 wheeled differentially driven WMR with one castor wheel.
   Because of its simplicity in modelling, they have been used in most of the  control and motion planing algorithms  \cite{desantis1995modeling}, \cite{koh1999smooth} and \cite{d1995control}. 
 
-In order to develop a model-based control algorithm it is imperative to have good dynamic model of the WMR.
+In order to develop a model-based control algorithm, it is imperative to have a good dynamic model of the WMR.
  These dynamic models are used in  simulation software,  Software in Loop (SIL) testing and Hardware in Loop (HIL) testing  of the controllers.
  Different methods have  been adopted to derive the dynamic model of WMRs.
   A general dynamical model was derived for three-wheel mobile robots with nonholonomic constraints  by B. d'Andrea-Novel \cite{d1991modelling} using  Lagrange formulation.
-    Alternatively Thanjavur and Rajagopalan \cite{thanjavur1997ease} has used Kane's method  and  Saha et al. \cite{saha1991dynamics},\cite{saha1989kinematics} used Natural Orthogonal Compliment (NOC) method for the same.  
+    Alternatively, Thanjavur and Rajagopalan \cite{thanjavur1997ease} have used Kane's method,  and  Saha et al. \cite{saha1991dynamics},\cite{saha1989kinematics} used Natural Orthogonal Compliment (NOC) method for the same.  
  
-All the papers known to us use the standard caster wheel in deriving the dynamic model of the WMR. In this chapter the modelling is carried out considering the Castor wheel in the most general configuration.
- In the stranded castor wheel configuration the axis of rotation is perpendicular to the line joining the pivot and the axis of rotation, as shown in Figure \ref{fig:std} whereas in this study they are oriented in  the most general way, as shown in figure Figure \ref{fig:gen}. 
- The concept of the NOC which here inherently takes into account the non-holonomic constraint of the wheels has been used.
+All the papers reviewed use  caster wheel in deriving the dynamic model of a WMR. In this chapter, the modelling is carried out considering the passive wheels in the most general configuration.
+ The  castor wheel,  in which the axis of rotation is perpendicular to the line joining the pivot and the axis of rotation, as shown in Figure \ref{fig:std}, is  a special case of the configuration considered here. Whereas in this study they are oriented in  the most general way, as shown in figure Figure \ref{fig:gen}. 
+ The concept of the NOC which inherently takes into account the non-holonomic constraint of the wheels has been used.
   Moreover, being a matrix based approach, it is convenient for numerical simulations. 
 \section{Modeling using the Natural Orthogonal Compliment (NOC)}
-Let us consider a system $n$ rigid bodies interconnected with different types of joints. 
-Let $f_i$ be the net force acting at the center of mass (CM) of the $i-th$  body and $n_i$ is the net moment.
- If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body, then equation of motion of the $i-th$ rigid body is given by Newton-Euler equations as 
+Let us consider a system with $n$ rigid bodies interconnected with different types of joints. 
+Let, $f_i$ be the net force acting at the center of mass (CM) of the $i^{th}$  body and $n_i$ is the net moment.
+ If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body, then equations of motion of the $i^{th}$ rigid body are given by Newton-Euler equations as 
 \begin{equation}
 \label{NE}
 f_i=m_i\ddot{c_i} \quad and \quad n_i=I_{ci} \omega_i+\omega_i \times I_{ci} \omega_i
@@ -35,10 +35,10 @@ w_i \equiv \begin{pmatrix}
 n_i\\f_i
 \end{pmatrix}
 \end{equation*}
-Note that the wrench $w_i$ acting on the $i-th$ body can be decomposed into $w^w_i$, called the \textit{working component} and  $w^C_i$, the \textit{non-working component}.
- The working component consists of all the external  forces and torques, which imparts/extracts energy to/from the system, e.g. motor actuating torque.
-  The non-working component of the wrench consists of the forces and torques that are used to constrain the motion of the body at the joints.
-Then, Newton-Euler equation (\ref{NE}) can be rewritten  in a single matrix equation as 
+Note that the wrench $w_i$ acting on the $i^{th}$ body can be decomposed into $w^w_i$, called the \textit{working component} and  $w^c_i$, the \textit{non-working component}.
+ The working component consists of all the external  moments and forces, which imparts/extracts energy to/from the system, e.g., motor actuating torque.
+  The non-working component of the wrench consists of the moments and forces that are used to constrain the motion of the body at the joints.
+Then, Newton-Euler equations (\ref{NE}) can be rewritten  in a single matrix equation as 
 \begin{equation}
 \label{2}
 M_i\dot{t_i}+W_iM_it_i=w^w_i+w^c_i \quad \because w_i \equiv w^w_i+w^c_i
@@ -55,13 +55,11 @@ I_{ci} & 0\\0 & m_i\tilde{1}
 \quad
 \Omega_i\equiv \omega_i\times \tilde{1}
 \end{equation}
-in which  $\omega_i\times 1$, is refered as the crossproduct matrix of vector $\omega_i$ and $\tilde{1}$ denotes the identity matrix.
-For details, refer to \cite{angeles2013fundamentals},\cite{saha2010robotics}.
-
-
-If we define \[M \equiv diag[M_1,M_2,...M_n[, \quad W \equiv diag[W_1,W_2,...W_n], \quad t \equiv [t_1^T,t_2^T, ....t_n^T]^T\] and 
+in which  $\Omega_i$, is refered as the cross-product matrix of vector $\omega_i$ and $\tilde{1}$ denotes the identity matrix.For details, refer to \cite{angeles2013fundamentals},\cite{saha2010robotics}.If we define 
+\[M \equiv diag[M_1,M_2,...M_n], \quad W \equiv diag[W_1,W_2,...W_n], \quad t \equiv [t_1^T,t_2^T, ....t_n^T]^T\] 
+and 
 \[ w^j \equiv [{w_1^j}^T,{w_2^j}^T, ....{w_n^j}^T]^T, \,j=c,w \]
-Then the equation of all the $n$ rigid bodies in the system can be collected and written as a single matrix equation as 
+then the equations of all the $n$ rigid bodies in the system can be collected and written as a single matrix equation 
 \begin{equation}
 \label{DCE}
 M\dot{t}+WMt=w^c+w^w
@@ -70,49 +68,50 @@ M\dot{t}+WMt=w^c+w^w
 
 
 
-The kinematic constraints both holonomic and non-holonomic (e.g. pure rolling) between two bodies $i$ and $j$ of a system can be expressed as linear homogeneous system of algebraic equations \cite{angeles2013fundamentals}, namely 
+The kinematic constraints, both holonomic and non-holonomic (e.g., pure rolling), between two bodies $i$ and $j$ of a system can be expressed as a linear homogeneous system of algebraic equations \cite{angeles2013fundamentals}, namely 
 \begin{equation}
 A_it_i+A_jt_j=0
 \end{equation}
 where $A_i,A_j$ depend on the kinematic parameters.
 
-The constraint equations corresponding to all the joints in the system can be written in terms of the \textit{generalized twist vector} $t$. Furthermore if, $ \dot{\theta} \equiv(\dot{\theta_1},\dot{\theta_2},....)^T$ denote the \textit{independent generalized joint rates}, one can then write $t$ in terms of $\dot{\theta}$ as $t=T\dot{\theta}$. 
+The constraint equations corresponding to all the joints in the system can be written in terms of the \textit{generalized twist vector} $t$. Furthermore, if $ \dot{\theta} \equiv[\dot{\theta_1},\dot{\theta_2},...\dot\theta_n]^T$ denote the \textit{independent generalized joint rates}. One can then write $t$ in terms of $\dot{\theta}$ as $t=T\dot{\theta}$. 
 Using the fact, that $\dot{\theta}$ can take any arbitrary value, we get
 \begin{equation}
 \label{AT}
 At=0 , \quad \Rightarrow  AT\dot{\theta}=0\quad \Rightarrow AT=0
 \end{equation}
-The above equation (\ref{AT}) indicates that $T$ is the orthogonal compliment of $A$.
- Since this relation arises naturally, hence the name \textit{Natural Orthogonal Complement}.
-  It can be shown \cite{angeles2013fundamentals} that the non-working wrench $w^c$ lies in the range space of $A^T$.
-   In view of equation \ref{AT}, it can also be proved that $w^c$ lies in the null space of $T^T$, therefore
+The Equation \ref{AT} indicates that $T$ is the orthogonal complement of $A$.
+ Since this relation arises naturally, hence the name \textit{Natural Orthogonal Complement}.  It can be shown \cite{angeles2013fundamentals} that the non-working wrench $w^c$ lies in the range space of $A^T$.   In view of Equation \ref{AT}, it can be proved that $w^c$ lies in the null space of $T^T$. Therefore,
 \begin{equation}
 T^Tw^c=0
 \end{equation}
-To eliminate the non-working forces and moments, i.e. $w^C$ from the uncoupled equation of motion (\ref{DCE}), we multiply both sides of the equation  by $T^T$,
+To eliminate the non-working  moments and  forces, i.e., $w^c$ from the uncoupled equation of motion (\ref{DCE}), we multiply both sides of the equation  by $T^T$,
 \begin{equation}
  T^TM\dot{t}+T^TWMt=T^Tw^W, \quad
  \Rightarrow T^TMT\ddot{\theta}+T^T(M\dot{T}+WMT)\dot{\theta}=T^Tw^T
  \label{eqn:CEM}
 \end{equation}
 Equation \ref{eqn:CEM} represents the dynamic equation of  interconnected $n$-body system.
- This equation is expressed in terms of the independent generalized joint rates $\dot{\theta}$ and cosponsoring  acceleration $\ddot{\theta}$. Further. using the relations $t=T\dot{\theta}$ and $\dot{t}=\dot{T}\dot{\theta}+T\ddot{\theta}$  in equation \ref{eqn:CEM}  the final equations of motion can be written as
+ This equation is expressed in terms of the independent generalized joint rates $\dot{\theta}$ and cosponsoring  acceleration $\ddot{\theta}$. Further, using the relations $t=T\dot{\theta}$ and $\dot{t}=\dot{T}\dot{\theta}+T\ddot{\theta}$  in Equation \ref{eqn:CEM}  the final equations of motion can be written as
 
 \begin{equation}
 \label{CE}
  \quad I(\theta)\ddot{\theta}=C(\theta,\dot{\theta})\dot{\theta}+\tau
 \end{equation}
 where
-\[I(\theta)\equiv T^TMT\quad :\text{generalized inertia matrix}\]
-\[C(\theta,\dot{\theta})\equiv -T^T(M\dot{T}+WMT)\dot{\theta} \quad :\text{generalized matrix of convective inertia terms}\]
-\[\tau\equiv T^Tw^T \quad :\text{ generalized vector of driving forces }\]
+\begin{align*}
+I(\theta) &\equiv T^TMT\quad \quad:\text{generalized inertia matrix}\\
+C(\theta,\dot{\theta})&\equiv -T^T(M\dot{T}+WMT)\dot{\theta} \quad :\text{generalized  convective inertia matrix}\\
+\tau&\equiv T^Tw^T \quad \quad :\text{ generalized vector of driving forces }
+\end{align*}
+
 
 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 	\centering
 		\includegraphics[width=3in]{Chapter4/fig/fig1.jpg} 
-		\caption{WMR-Std. Castor}\label{fig:std}
+		\caption{WMR-Std. castor}\label{fig:std}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
@@ -120,43 +119,43 @@ where
 		\includegraphics[width=3.5in]{Chapter4/fig/fig2.jpg} 
 		\caption{WMR-general}\label{fig:gen}
 			\end{minipage}
-\caption{Castor wheel configuration of a WMR}
+%\caption{Castor wheel configuration of a WMR}
 \end{figure}
 
 
 \section{Dynamic Equation of WMR}
-The dynamic equation of a differentially driven 3 wheeled mobile robot based on the  Natural Orthogonal Compliment (NOC) has been presented by Saha~\cite{saha1991dynamics}. The vehicle consisted of 2 driven wheel and one standard caster wheels. In general, for large vehicles, it necessary to have at least four wheels from the point of stability of the vehicle. Such a vehicle is shown in figure \ref{fig:std}. It may be noted that the caster wheels used in this case are the standard caster wheel configuration, where the angle between line $O_4O_5$ and vector $e_4$ is  $90\deg$. Which is a special case of the more general configuration of the caster wheels shown in figure \ref{fig:gen}, where angle between line $O_4O_5$ and vector $e_4$ is not $90\deg$
+The dynamic equation of a differentially driven 3 wheeled mobile robot based on the  Natural Orthogonal Compliment (NOC) has been presented by Saha~\cite{saha1991dynamics}. The vehicle consisted of 2 driven wheels and one standard caster wheel. In general, for large vehicles, it is necessary to have at least four wheels from the point of stability of the vehicle. Such a vehicle  is shown in Figure \ref{fig:std}. It may be noted that the caster wheels used in this case are the standard caster, where the angle between line $O_4O_5$ and vector $e_4$ is  $90^o$. Which is a special case of the more general configuration of the passive wheels shown in figure \ref{fig:gen}, where angle between line $O_4O_5$ and vector $e_4$ is not $90^o$
 
- The vehicle considered for analysis in this chapter is shown in figure \ref{fig:gen}. It consists of two independently driven wheels at the back and two generalized caster wheels at the front. The actuated wheels are labelled as body \#1 and \#2. The platform is body \#3. The first caster wheel and its bracket is labelled as \#4 and \#5 respectively, with the castor pivoted at $O_5$. Similarly the second castor is pivoted at $O_7$, and its bracket and wheel is labelled as \#6 an \#7 respectively, all the wheels are assumed to be rolling without slipping.  
+ The vehicle considered for analysis in this chapter is shown in Figure \ref{fig:gen}. It consists of two independently driven wheels at the back and two passive wheels at the front. The actuated wheels are labelled as body \#1 and \#2 as indicated in Figure \ref{fig:gen}. The platform is body \#3. The first caster wheel and its bracket is labelled as \#4 and \#5 respectively, with the castor pivoted at $O_5$. Similarly, the second castor is pivoted at $O_7$, and its bracket and wheel are labelled as \#6 an \#7, respectively, all the wheels are assumed to be rolling without slipping.  
 \subsection{Kinematic analysis}
-In order to proceed with the kinematic analysis of the vehicle in figure \ref{fig:gen}, we define a orthogonal triad of vectors ${i,j,k}$ at point $O_3$, the control point of the platform, as shown in the figure. If $\dot{\theta_1}$ and $\dot{\theta_2}$ \footnote{ positive when pointing along $i$} denote the rates of rotation of wheel \#1 and \#2 then the linear velocity of points $O_1$ \& $O_2$ under pure rolling condition is given by 
+In order to proceed with the kinematic analysis of the vehicle in Figure \ref{fig:gen}, we define an orthogonal triad of vectors ${i,j,k}$ at point $O_3$, the control point of the platform, as shown in Figure \ref{fig:gen}. If $\dot{\theta_1}$ and $\dot{\theta_2}$ {( positive when pointing along $i$)} denote the rates of rotation of wheels \#1 and \#2 then the linear velocity of points $O_1$ and $O_2$ under pure rolling condition is given by 
 \begin{equation}
 \label{velO1}
-\bm{\dot{o_i}}=r\dot{\theta_i}j, \quad \text{r=radius of wheel}
+{\dot{o_i}}=r\dot{\theta_i}j, \quad \text{r=radius of wheel}
 \end{equation}
 The angular velocity of the platform $\omega_3$ can be written as 
 \begin{equation}
 \label{omegaPlat}
-\bm{\omega_3}=(r/l)(\dot{\theta_1}-\dot{\theta_2})\bm{k}
+{\omega_3}=(r/l)(\dot{\theta_1}-\dot{\theta_2}){k}
 \end{equation}
 Further, the velocity of point $O_3$ can be written as
-$\bm{\dot{o_3}=\dot{o_i}+\omega_3 \times (c-o_i)}, \quad i=1,2$. Where $o_3 $ and $o_i$  is the position vector of points $O_3$ and $O_i$ respectively, with respect to some  point fixed to the ground. By eliminate $\omega_3$  we get the following:
+${\dot{o_3}=\dot{o_i}+\omega_3 \times (c-o_i)}, \quad i=1,2$, where $o_3 $ and $o_i$  is the position vector of points $O_3$ and $O_i$ respectively, with respect to some  point fixed to the ground. Eliminating $\omega_3$  one gets the following:
 \begin{equation}
 \label{velPlat}
- \quad \quad \bm{\dot{o_3}}=[(ar/l)(\dot{\theta_1}-\dot{\theta_2})+(r/2)(\dot{\theta_1}+\dot{\theta_2})]\bm{i}
+ \quad \quad {\dot{o_3}}=[(ar/l)(\dot{\theta_1}-\dot{\theta_2})+(r/2)(\dot{\theta_1}+\dot{\theta_2})]{i}
 \end{equation}
 
-Now, the angular velocity of the drive wheel \#1 can be expressed as $\bm{\omega_1}=-\dot{\theta_1}i+\omega_3k$. Using equation \ref{omegaPlat}, the same can be rewritten as 
+Now, the angular velocity of the drive wheel \#1 can be expressed as ${\omega_1}=-\dot{\theta_1}i+\omega_3k$. Using Equation \ref{omegaPlat}, the same can be rewritten as 
 \begin{equation}
 \label{omegaWheel1}
-\bm{\omega_1}=\begin{pmatrix}
+{\omega_1}=\begin{pmatrix}
 -i+(r/l)k & -(r/l)k
 \end{pmatrix}
 \begin{pmatrix}
 \dot{\theta_1}\\\dot{\theta_2}
 \end{pmatrix}
 \end{equation}
-Based on  equations \ref{velO1} and \ref{omegaWheel1}, we can write the twist for wheel \#1 in terms of $\dot{\theta_a}\equiv (\dot{\theta_1},\dot{\theta_2})^T$, as 
+Based on  Equations \ref{velO1} and \ref{omegaWheel1}, the twist for wheel \#1 in terms of $\dot{\theta_a}\equiv (\dot{\theta_1},\dot{\theta_2})^T$, can be written as 
 \begin{equation}
 \label{twist1}
 t_1=\begin{pmatrix}
@@ -170,7 +169,7 @@ t_1=\begin{pmatrix}
 \end{pmatrix}
 \end{equation}
 
-Similarly, for the other actuated wheel \#2, one get
+Similarly, for the other actuated wheel \#2, one gets
 
 \begin{equation}
 \label{twist2}
@@ -185,7 +184,7 @@ t_2=\begin{pmatrix}
 		\end{pmatrix}\\
 		\end{equation}
 
-To calculate the twist, $t_3$ of the platform body \#3, equation \ref{omegaPlat} and \ref{velPlat} are combined to get
+To calculate the twist, $t_3$ of the platform body \#3, Equations \ref{omegaPlat} and \ref{velPlat} are combined to get
 \begin{equation}
 \label{twist3}
 t_3=\begin{pmatrix}
@@ -201,27 +200,26 @@ r(\lambda i+(1/2)j) & r(-\lambda i+(1/2)j)
 \end{equation}
 where
 \[ \delta\equiv d/l, \quad \rho \equiv r/d, \quad \lambda \equiv a/l \]
-
-From the above three equations we get 
-$T_1=\begin{pmatrix}-i+(r/l)k & -(r/l)k\\ rj & 0\end{pmatrix}$,   
-$T_2=\begin{pmatrix}	-i+(r/l)k & -(r/l)k\\  0 &rj \end{pmatrix}$, $T_3=\begin{pmatrix}
+From the above three equations, one gets 
+\[T_1=\begin{pmatrix}-i+(r/l)k & -(r/l)k\\ rj & 0\end{pmatrix}, \quad  
+T_2=\begin{pmatrix}	-i+(r/l)k & -(r/l)k\\  0 &rj \end{pmatrix}\],
+\[T_3=\begin{pmatrix}
 	\rho\delta & -\rho\delta\\
 	r(\lambda i+(1/2))j & r(-\lambda i+(1/2))j
-	\end{pmatrix}$
+	\end{pmatrix}\]
 
 
-In order to calculate the twist of the caster bracket and the caster wheel, we need to express the  unactuated joint rates, $\dot{\psi_1}$ and $\dot{\phi_1}$, in terms of the actuated joint rate vector $\dot{\theta_a}$. note here that $\dot{\psi_1}$ denotes the rate of rotation of bracket body \#5 about $O_5$ with respect to the platform, and 
-$\dot{\phi_1}$ the rate of rotation of caster wheel body \#4 about its axis $e_4$ with respect to bracket. The velocity of $O_5$ can be expressed in two independent forms,namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_5$, i.e.,
+In order to calculate the twists of the caster bracket and the caster wheel, it is necessary to express the  unactuated joint rates, $\dot{\psi_1}$ and $\dot{\phi_1}$, in terms of the actuated joint rate vector $\dot{\theta_a}$. Note here that $\dot{\psi_1}$ denotes the rate of rotation of the bracket body (\#5) about $O_5$ with respect to the platform, and $\dot{\phi_1}$ is the rate of rotation of caster wheel body (\#4) about its axis $e_4$ with respect to the bracket. The velocity of $O_5$ can be expressed in two independent forms, namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_5$, i.e.,
 \begin{equation}
 \dot{o_5}=\dot{o_4}+\omega_5\times(d_1e_4-d2f_4), \quad
 \dot{o_5}=\dot{o_4}+\omega_5\times(d_1e_4-d2f_4)
 \end{equation}
-On equating the above two equations together, and using the rotation matrix between coordiante system $\{i,j,k\}$ and $\{e_4,f_4,k\}$, to express the equation in $e_4$ and $f_4$, we get
+On equating the above two equations together, and using the rotation matrix between coordinate system $\{i,j,k\}$ and $\{e_4,f_4,k\}$,  the equation in terms $e_4$ and $f_4$, is obtained as
 \begin{equation}
 (-\dot{\phi_1}r+\dot{\psi_1}d_1)f_3+d_3\dot{\psi_1}e_3=\dot{o_3}
 +\omega_3(m\cos\psi_1-b\sin\psi_1-d_1)e_4
 \end{equation} 
-Taking the dot product of the above equation first with $e_4$ and then with $f_4$, and using equation \ref{velPlat} for $\dot{o_3}$, we get
+Taking the dot product of the above equation first with $e_4$ and then with $f_4$, and using Equation \ref{velPlat} for $\dot{o_3}$, one gets
 \begin{eqnarray}
 \label{unac2act1}
 \begin{pmatrix}
@@ -241,7 +239,7 @@ d_2&0\\-d_1 &r
 where, 
 \[ \delta_1=(r/l)(mC_{\psi_1}-bS_{\psi_1}-d2, \quad  \delta_2=(r/l)(mS_{\psi_1}+bC_{\psi_1}+d_1) \]
 
-Similarly, for the other caster wheel we get,
+Similarly, for the other caster wheel one gets,
 \begin{align}
 \label{unac2act2}
 \begin{pmatrix}
@@ -264,30 +262,30 @@ where,
 
 
 
- The angular and the liner velocity of the CM of the caster wheel,\#4 is  written in-terms of the co-ordinate frame fixed to the bracket \#5, i.e. $\{e_4,f_4,k\}$, as
+ The angular and the liner velocity of the CM of the caster wheel  \#4, is  written in terms of the co-ordinate frame fixed to the bracket \#5, i.e. $\{e_4,f_4,k\}$, as
 \begin{equation}
 \label{omegacastor1}
 \omega_4=\dot{\phi_1}e_4+(\omega_3+\dot{\psi_1})k, \quad
 \dot{o_4}=\dot{\phi_1}e_4
 \end{equation}
-Using equations \ref{unac2act1} and \ref{omegaPlat}, the twist $t_4$ can be written as
+Using Equations \ref{unac2act1} and \ref{omegaPlat}, the twist $t_4$ can be written as
 \begin{equation}
 \label{twist4}
 t_4=\begin{pmatrix}
 \Theta_4\\C_4
 \end{pmatrix}\dot{\theta_a}
 \end{equation}
-Using the definition of $F(i,j)$ in  equation \ref{unac2act1}, $\Theta_4$ and $C_4$ can be written as 
+Using the definition of $F(i,j)$ in  Equation \ref{unac2act1}, $\Theta_4$ and $C_4$ can be written as 
 \[ \Theta_4=[F_{11}e_4+\bar{F_{21}}k \quad F_{12}e_4+\bar{F_{22}}k],\quad 
 C_4=r[-F_{11}f_4 \quad -F_{12}f_4]\]
 \[\bar{F_{21}}=F_{21}+\rho \delta, \quad \bar{F_{22}}=F_{22}-\rho\delta\]
 
-The angular and the liner velocity of the CM of the caster bracket\#5  expressed in the co-ordinate frame fixed to the bracket is given by
+The angular and the liner velocity of the CM of the caster bracket \#5  expressed in the co-ordinate frame fixed to the bracket is given as
 \begin{equation}
 \omega_4=\dot{\phi_1}e_3+\dot{\psi_1}k, \quad
 \dot{o_4}=\dot{o_4}+\omega_5\times [-df_3]
 \end{equation}
-Using equations   \ref{omegaPlat} \& \ref{unac2act2}, the twist $t_5$ can be written as
+Using Equations   \ref{omegaPlat} and \ref{unac2act2}, the twist $t_5$ can next  be expressed as
 \begin{equation}
 \label{twist5}
 t_5=\begin{pmatrix}
@@ -297,7 +295,7 @@ t_5=\begin{pmatrix}
 where
 \[ \Theta_5 \equiv [\bar{F_{21}}k \quad \bar{F_{22}}k],\quad 
 C_5\equiv d[(1/2)\bar{F_{21}}e_4-\rho F_{11}f_4 \quad (1/2)\bar{F_{22}}e_4-\rho F_{12}f_4]\]
-In a similar manner, the twist $t_6$ and $t_7$  of the other caster wheel and its bracket can be written as 
+In a similar manner, the twists $t_6$ and $t_7$  of the other caster wheel and its bracket, respectively can be written as 
 \begin{equation}
 \label{twist6}
 t_6=\begin{pmatrix}
@@ -306,7 +304,7 @@ t_6=\begin{pmatrix}
 \Theta_7\\C7
 \end{pmatrix}\dot{\theta_a}
 \end{equation}
-Using  $G(i,j)$ defined in  equation \ref{unac2act2}, $\Theta_6$, $C_6, \Theta_7$ and $C_7$ can be written as 
+Using  $G(i,j)$ defined in  Equation \ref{unac2act2}, $\Theta_6$, $C_6, \Theta_7$ and $C_7$ are given by
 \[ \Theta_6 \equiv [G_{11}e_6+\bar{G_{21}}k \quad G_{12}e_6+\bar{G_{22}}k],\quad 
 C_6 \equiv r[-G_{11}f_6 \quad -G_{12}f_6]\]
 \[ \Theta_7 \equiv [\bar{G_{21}}k \quad \bar{G_{22}}k],\quad 
@@ -314,13 +312,13 @@ C_7 \equiv d[(1/2)\bar{G_{21}}e_6-\rho G_{11}f_6 \quad (1/2)\bar{G_{22}}e_6-\rho
 \[\bar{G_{21}} \equiv G_{21}+\rho \delta, \quad \bar{G_{22}}\equiv G_{22}-\rho\delta\] 
 
 \subsection{Dynamic equations}
-Based on the twist calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$, we now derive the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE}.
-\subsubsection{Generalized Inertia Matrix, $I$}
- The above equations gives the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$. As defined earlier  $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\theta$ we get  \[T=[T_1^T, T_2^T,... T_7]^T\] Since the matrix $M$ is block diagonal, the inertia matrix of the full system is given by
+Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE} can be derived 
+\subsubsection{Generalized inertia matrix, $I$}
+ The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
 \begin{equation}
 I=T^TMT=T_1^TM_1T_1+T_2^TM_2T_2+...T_7^TM_7T_7
 \end{equation}
-We define the contribution of rear wheels alone to the inertia matrix by $I_m$ as  \[ I_m=\sum_{i=1,2}T_i^TM_iT_i\] then
+Next, the contribution of the rear wheels  to the inertia matrix, i.e., $I_m$ is given by  \[ I_m=\sum_{i=1,2}T_i^TM_iT_i\] or
 \begin{equation}
 \label{eqn:I_wheel}
 I_m=\begin{pmatrix}
@@ -329,12 +327,13 @@ I_w+(\rho\delta)^2H++m_wr^2 & -2(\rho\delta)^2H
 -2(\rho\delta)^2H &I+(\rho\delta)^2H++m_wr^2
 \end{pmatrix} 
 \end{equation}
-where $ M_i \equiv\begin{pmatrix}
+where \[ M_i \equiv\begin{pmatrix}
 \tilde{I_w} &0\\0 & m_w\mathbf{1}
-\end{pmatrix} $ and $\tilde{I_w}\equiv\begin{pmatrix}
+\end{pmatrix} , \quad\tilde{I_w}\equiv\begin{pmatrix}
 I_w&0&0\\0&H&\\0&0&H
-\end{pmatrix}$. Matrix $\tilde{I_w}$ is the $3\times 3$ moment of inertia matrix of the wheel in co-ordinate frame $\{i,j,k\}$, mass of the motorized wheels is  $m_w$ and $mb{1}$ is the $3\times 3$ identity matrix.
-If the mass of the platform is $m_p$ and its moment of inertia about vector ${k}$ is $I_p$, then as derived in \cite{angeles2013fundamentals} 
+\end{pmatrix}\]. 
+
+Matrix $\tilde{I_w}$ is the $3\times 3$ moment of inertia matrix of the wheel in co-ordinate frame $\{i,j,k\}$, $m_w$ is mass of the motorized wheels    and $\bm{1}$ is the $3\times 3$ identity matrix. If the mass of the platform is $m_p$ and its moment of inertia about vector ${k}$ is $I_p$, then  \cite{angeles2013fundamentals} 
 \begin{equation}
 \label{eqn:I_platform}
 I_3=T^T_3M_3T_3 =I_p(\rho\delta)^2\begin{pmatrix}
@@ -355,16 +354,16 @@ I_c=\sum_{i=4,6}T^T_iM_iT_i=(m_cr^2/4)&
 6G_{11}G_{12}+\bar{G_{21}}\bar{G_{22}} & 6G_{12}^2\bar{G_22}
 \end{pmatrix}
 \end{align}
-If the mass of the brackets, i.e., body \#5 and \#7, are small compared to the mass of the caster wheels, then the contribution of $T^T_5M_5T_5$ and $T^T_7M_7T_7$ can be neglected.
+If the mass of the brackets, i.e., body \#5 and \#7, are small compared to the mass of the caster wheels, then the contributions of $T^T_5M_5T_5$ and $T^T_7M_7T_7$ can be neglected.
 
 
-\subsubsection{Matrix of Convective Inertia term $C$}
-The matrix of convective inertia terms of equation \ref{CE} can be broken down into two parts, $T^TM\dot{T}$ and $T^TWMT$.  As given in equations \ref{twist1}, \ref{twist2} and \ref{twist3} $T_1,T_2,T_3$ of the rear wheels and the platform is constant. Therefore $T^TM\dot{T}=0$. The generalized inertia matrix too is constant for the rear wheels and the platform, so the vector $I_i\omega_i$ is parallel to vector $\omega_i, i=1..3$ $\rightarrow\omega\times I\omega=0$ $\rightarrow T^TWMT =0$. This shows that contribution of the rear wheels and the platform  to the convective inertia term is zero. Moreover we have considered the mass of the brackets to be zero, so they also do not contribute to the convective inertia term. Hence
+\subsubsection{Matrix of convective inertia term $C$}
+The matrix of convective inertia terms of Equation \ref{CE} can be broken down into two parts, $T^TM\dot{T}$ and $T^TWMT$.  As can be seen from Equations \ref{twist1}, \ref{twist2} and \ref{twist3},  $T_1,T_2,T_3$ associated with rear wheels and the platform is constant. Therefore \[T^TM\dot{T}=0\]. The generalized inertia matrix  is constant for the rear wheels and the platform, therefore the vector $I_i\omega_i$ is parallel to  $\omega_i, i=1..3$ \[\Rightarrow\omega\times I\omega=0\] \[\Rightarrow T^TWMT =0\]. This shows that contribution of the rear wheels and the platform  to the convective inertia term is zero. Moreover, the mass of the brackets are assumed to be zero, so they also do not contribute to the convective inertia term. Hence
 \begin{equation}
 \label{Convective}
 C=T^TM\dot{T}+T^TWMT=\sum_{i=4,6}T^T_iM_i\dot{T_i}+\sum_{i=4,6}T_i^TW_iM_iT_i
 \end{equation}
-The expression for the first term is found by using equations \ref{unac2act1}, \ref{unac2act2}, \ref{twist4} and \ref{twist6}. The terms $\dot{F_{ij}}$ and $\dot{G_{ij}}$ denote the derivatives of the elements of the matrix $F$ and $G$ defined in \ref{unac2act1}, \ref{unac2act2} . To find $\dot{T_4}$ and  $ \dot{T_6}$ we have used the fact $\dot{e_4}=\omega_4 \times e_4 $ and $\dot{e_4}=\omega_6 \times e_6 $. 
+The expression for the first term is found by using Equations \ref{unac2act1}, \ref{unac2act2}, \ref{twist4} and \ref{twist6}. The terms $\dot{F_{ij}}$ and $\dot{G_{ij}}$ denote the derivatives of the elements of the matrix $F$ and $G$ defined in Equations \ref{unac2act1} and \ref{unac2act2} . To find $\dot{T_4}$ and  $ \dot{T_6}$ we have used the fact $\dot{e_4}=\omega_4 \times e_4 $ and $\dot{e_4}=\omega_6 \times e_6 $. 
 \begin{equation}
 \label{corr1}
 \begin{split}
@@ -380,7 +379,9 @@ T^TM\dot{T}=
 \end{split}
 \end{equation}
 \\
-The second term of equation \ref{Convective} i.e, $ \sum_{i=4,6}T_i^TW_iM_iT_i$ evaluates to zero, as shown below. Consider castor wheel (body \#4). Using equation \ref{twist4} and  $W$ defined in the equation \ref{3} we get,
+The second term of Equation \ref{Convective} i.e, $ \sum_{i=4,6}T_i^TW_iM_iT_i$ evaluates to zero, as shown below. 
+
+Next, consider passive wheel (\#4), using Equation \ref{twist4} and  $W$ defined in the Equation \ref{3} one gets,
 \begin{equation}
 \label{corr2}
 T^T_4W_4M_4T_4=[\Theta_4, C_4]\begin{pmatrix}
@@ -394,7 +395,7 @@ I_4&0\\0 &m_4 \mathbf{1}
 \end{pmatrix}=\Theta_4\Omega_4I_4\Theta_4
 \end{equation}
 
-To evaluate the above equation, we express  all the terms in the coordinate system $\{{e_4,f_4,k}\}$. Moreover, $\omega_4=\Theta_4 \dot{\theta_a}$, using definition of $\Theta_4$ from equation \ref{twist4} we get $\omega_4= (F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2})e_4+(F_{21}\dot{\theta_1}+F_{22}\dot{\theta_2})k$ and the cros product matrix of $\omega_4$ as 
+To evaluate the above equation, we express  all the terms in the coordinate system $\{{e_4,f_4,k}\}$. Moreover, $\omega_4=\Theta_4 \dot{\theta_a}$, using definition of $\Theta_4$ from Equation \ref{twist4} we get \[\omega_4= (F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2})e_4+(F_{21}\dot{\theta_1}+F_{22}\dot{\theta_2})k\] and the cross product matrix of $\omega_4$ as 
 \[
  \Omega_4 \equiv \begin{pmatrix}
  0& -(\bar{F_{21}}\dot{\theta_1}+\bar{F_{22}}\dot{\theta_2}) &0\\
@@ -402,11 +403,11 @@ To evaluate the above equation, we express  all the terms in the coordinate syst
  0& (F_{11}\dot{\theta_1}+F_{12}\dot{\theta_2}) &0 
  \end{pmatrix}
 \]
-When the above expressions are substituted in equation  \ref{corr2}, we get
+When the above expressions are substituted in Equation  \ref{corr2}, we get
 \begin{equation}
 T^T_4W_4M_4T_4=0, \quad \Rightarrow T^TWMT=0
 \end{equation} 
-So the matrix of convective inertia term $C$ of equation \ref{CE} is evaluated as 
+Therefore, the matrix of convective inertia term $C$ of Equation \ref{CE}  evaluates to 
 
 \begin{equation}
 \label{C_final}
@@ -423,7 +424,7 @@ C=
 \end{split}
 \end{equation}
 
-All the components of  equation  \ref{CE}  have now been evaluated, except the $\tau$. These are simply the torques exerted by the actuated wheels. This completes the dynamic model of the WMR with generalized caster wheel configuration.
+All the components of  Equation  \ref{CE}  are now been evaluated, except the $\tau$. These are simply the torques exerted by the actuated wheels. This completes the dynamic model of the WMR with generalized passive wheel configuration.
 
 
 
@@ -434,37 +435,39 @@ All the components of  equation  \ref{CE}  have now been evaluated, except the $
 
 \section{Special cases}
 \subsection{Standard caster ($d_1=0$) }
-The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second equation of \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the unactuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}.
-\subsection{Under Actuated Case ($d_2=0$)}
-It can be seen from equation \ref{unac2act1} that when the \textit{caster offset} $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
+The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  Equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second row of Equations \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the un-actuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}.
+\subsection{Underactuated case ($d_2=0$)}
+It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
-Another solution is to put an extra actuator to control the bracket motion by controlling $\psi_i$. As in the case of Ackerman steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car.
+Am alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car.
 
 \section{Simulation }
  
-The mobile manipulator proposed in chapter 3  was modelled as a differential drive robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
+The mobile manipulator proposed in Chapter 3  was modelled as a differentially driven robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
 
-In  simulation the vehicle, (point $O_3$), is required to trace a circle of radius 5m. As shown in the figure \ref{fig:CirTrace}. $ \beta$ is the angle between the line joining  point $O_3$ and the origin $O$ with respect to $X-axis$. The function $\beta(t)$ is defined such that the ful circle is completed in 60Sec. 
+In  simulation the vehicle reference  point $O_3$ is required to trace a circle of radius 5m. As shown in the Figure \ref{fig:CirTrace}. Let, $ \beta$ be the angle between the line joining  point $O_3$ and $O$ with respect to $X-axis$. The function $\beta(t)$ was defined such that the full circle is completed in 60Sec and the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
 \begin{equation}
 \label{path}
 \beta(t)=\frac{20\pi}{60^3}t^3-\frac{30\pi}{60^4}t^4+\frac{12\pi}{60^5}t^5
+%\label{eqn:betafun}
 \end{equation}
-Moreover the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60). The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  shown  by dotted line in figure \ref{fig:CirTrace}.
+The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  as shown  by dotted line in Figure \ref{fig:CirTrace}.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[height=250pt,keepaspectratio]{Chapter4/fig/pathCircle}
-		\caption{Path Traced by Robot}
+		\caption{Path traced by robot}
 	\label{fig:CirTrace}
 \end{figure}
 
 
 
-\subsection{Inverse Dynamics}
-Using the model inverse kinematic,  the wheel velocity and acceleration are determined using pseudo Inverse  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
-The wheel angle, velocity and acceleration were used in the dynamics equation  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}. 
+\subsection{Inverse dynamics}
+In order to find the torque required to trace the mobile platform on the circular curve given in Figure \ref{fig:CirTrace}, inverse dynamics was carried out.
+Using the model's inverse kinematic,  the wheel velocity and acceleration were determined using pseudo inverse.  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
+The wheel angle, velocity and acceleration were used in the dynamics equation \ref{dnoc}  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}. 
 
-The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $ are the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given in equations \ref{twist1},\ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
+The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $, the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given by equations \ref{twist1},\ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
 \begin{equation}
 \label{dnoc}
 \begin{aligned}
@@ -475,8 +478,8 @@ T^TMT &=I_1+I_2+I_m+I_3= I_m+I_3\\
 W&=diag(W_1,W_2,W_3),\quad w^G=g\sin\alpha, \quad \alpha=10^o
 \end{aligned}
 \end{equation}
-$w^G$, $ w^J$ and $\alpha$ represent the gravitational force acting along the inclined  the external torque/Force applied by a motor and the inclination of the plane to horizontal respectively. The generalized inertia matrix $I_m$ and $I_3$ are given in \ref{eqn:I_wheel} and \ref{eqn:I_platform}.
-As stated earlier the convective inertia term is zeros a the inertia matrices are constant. The motor torque  are then given a 
+where $w^G$, $ w^J$ and $\alpha$ represent the gravitational force acting along the inclined plane,  the external torque applied by a motor and the inclination of the plane to horizontal respectively. The generalized inertia matrix $I_m$ and $I_3$ are given in \ref{eqn:I_wheel} and \ref{eqn:I_platform}.
+As stated earlier the convective inertia term is zeros as the inertia matrices are constant. The expression for motor torque  is then given as 
 \begin{equation}
 T1^Tw_1^j=\tau_1, \quad T_2^Tw_2^j=\tau_2
 \end{equation}
@@ -493,7 +496,7 @@ T1^Tw_1^j=\tau_1, \quad T_2^Tw_2^j=\tau_2
 \end{pmatrix}
 \end{equation} 
 
-The torques required at the wheels of the vehicle to  move up a spiral ramp  of slope $10^o$ and radius 5m is given figure \ref{fig:spiral}. 
+Figure \ref{fig:spiral} presents the torques required at the wheels of the vehicle while move up a spiral ramp  of slope $10^o$ and radius 5m. 
 
  \begin{figure}
 	\includegraphics[height=300pt,keepaspectratio]{Chapter4/fig/FD}
@@ -517,14 +520,14 @@ The torques required at the wheels of the vehicle to  move up a spiral ramp  of 
 		 -0.05 & 0.08 & 0.53
 		 \end{pmatrix} Kg-m^2$ \\
 		   l & length & 400mm\\
-		  r & wheel radius & 100mm\\
-		 a & see figure &  \\ 
+		  r & wheel radius & 50mm\\
+		 a & see Figure \ref{fig:CirTrace} & 220 mm \\ 
 		\hline
 		\end{tabular}
 \end{table}
 
-\section{Dynamics Model of Steering System}
-The dynamic model of the steering system shown in Figure \ref{fig:SteerAsm} is derived  using Lagrangian method. The equations ofmotions are derived under two assumptions. First that the vehicle body \#3 is at rest and second that the mass of links \#8 and \#9 are negligible with respect to other links. The kinematic energy of all the body except \#8 and \#9 are derived next.
+\section{Dynamical Model of Steering System}
+The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
 
 
 \begin{figure}
@@ -547,7 +550,7 @@ The kinetic energy of link  \#6 is given by
 \begin{equation}
  K_6=\frac{1}{2}(m_6((x^b_6)^2+(y^b_6)^2)+I_{6zz})\dot{\phi_6}
 \end{equation}
- Where, $m_6$ is the mass, $(x^b_6,y^b_6)$ is the coordinate of c.m.  expressed  in the body co-ordinate frame $B:\{i_6,j_6,k_6\}$ as shown in Figure \ref{fig:SteerLink} and $I_{6zz}$ is the moment of inertia in the body coordinate of link \#6.
+ where, $m_6$ is the mass, $(x^b_6,y^b_6)$  the coordinate of c.m.  expressed  in the body co-ordinate frame $B:\{i_6,j_6,k_6\}$ as shown in Figure \ref{fig:SteerLink} and $I_{6zz}$ is the moment of inertia in the body coordinate of link \#6.
  
  
  Next we derive the kinetic energy of body \# 4, the wheel. 
@@ -569,7 +572,7 @@ x_{4}\\y_{4} \end{pmatrix}_F
  
  \begin{equation}
  \omega_6=\dot\phi_6k_6+\dot\theta_4i_6 ~=~ [\dot\theta_4\cos\phi_6,~ \dot\theta_4\sin\phi_6,~ \dot\phi_6]^T
- \end{equation} where, $l_6$ is the length shown in Figure \ref{fig:SteerLink}  and $\dot\theta_4$ is the spinning rate of the wheel about axis $i_6$.
+ \end{equation} where, $l_6$ is the length as shown in Figure \ref{fig:SteerLink}  and $\dot\theta_4$ is the spinning rate of the wheel about axis $i_6$.
  Then the kinetic energy of body \#4 is given by
 \begin{equation}
  K_4=\frac{1}{2}(m\dot O_4 ^T ~\dot O_4+ \omega_6^T [I_6]_F~\omega_6  )
@@ -589,17 +592,17 @@ x_{4}\\y_{4} \end{pmatrix}_F
  \dot\theta_4 \cos\phi_6\\ \dot\theta_4 \sin\phi_6\\ \dot\phi_6
  \end{pmatrix}
  \end{multline} Where $[I_6]_F$ is the inertia matrix of wheel about its c.g. expressed in world frame $F$.
- In general the moment of inertia matrix of the body is known in the body frame $B$, ie $[I-6]_B$. This can be transformed to the world coordinate frame $F$ by using the formula
- \[ [I_4]_F=R^F_B[I_4]_B [R^F_B]^T\].
- The above Equation, after proper transformation can be written as
+ In general the moment of inertia matrix of the body is known in the body frame $B$, ie $[I_6]_B$. This can be transformed to the world coordinate frame $F$ by using the formula
+ \[ [I_4]_F=R^F_B[I_4]_B [R^F_B]^T\] where, $R^F_B$ represents rotation transformation matrix between the fixed Frame, $F$, and the body frame, $B$. 
+ The above Equation, after above transformation can be written as
  \begin{equation}
  K_4=\frac{1}{2}(l_3^2\dot\phi_6^2m_4+[I_{4xx}]_B\theta_4^2)
  \end{equation} 
-where $I_{4zz} $ is the moment of inertia of wheel about its z axis in the body coordinate frame.
+where, $I_{4zz} $ is the moment of inertia of the wheel about its z axis in the body coordinate frame.
 
 The kinetic energy of the tie rod, i.e., body \#10, which under goes linear reciprocating motion in a plane is given by
 \begin{equation}
-k_{10}=\half m_{10} \dot{x}
+K_{10}=\half m_{10} \dot{x}
 \end{equation} where, $x$ is the displacement of the tie rod and $m_{10}$ is its mass.
 
 
@@ -607,13 +610,13 @@ The Kinetic energy of body \#5, i.e., second wheel and second link \#7 can be de
 \begin{equation}
 K_7=\frac{1}{2}(m_7((x^b_7)^2+(y^b_7)^2)+I_{7zz})\dot{\phi_7}
 \end{equation}
-where $m_7$ and $I_{7xx}$ is the mass and moment of inertia of body \#7 .
+where, $m_7$ is the mass and  $I_{7xx}$ moment of inertia of body \#7 .
 
 The kinetic energy of body \#5  is given as
  \begin{equation}
 K_4=\frac{1}{2}(l_3^2\dot\phi_7^2m_5+[I_{5xx}]_B\theta_5^2)
 \end{equation} 
- where $m_5$ and $I_{5xx}$ is the mass and moment of inertia of body \#5.
+ where $m_5$  is the mass and $I_{5xx}$ moment of inertia of body \#5.
  
 
 From the geometry of Figure \ref{fig:davis} following relations can be derived 
@@ -630,12 +633,12 @@ x^b_6+y^b_6=x^b_7+y^b_7=r_0
 \end{equation}
  Therefore the total kinetic energy of steering unit is 
 \[K_s=\sum_{i=4..10}K_i\]
-using Equations 4.48, 4.49 and 4.50 in the above equation we get
+using the expression for $K_i$  and using Equations 4.48, 4.49 and 4.50, the above equation for $K_s$  is written as 
 \begin{multline}
 	K_s=\frac{\dot x^2}{2} \left( m_{10}+(m_l r^2_0+I{zz})+l^2_3m_w \right) \left(f^2_1(x)+f^2_2(x) \right)\\ + \half I_{wxx}\left(\dot\theta^2_4  +\dot\theta^2_5\right)
 \end{multline}
-where, the following assumptions are made \[l_3=l_4, \quad m_4=m_5=m_w, \quad m_6=m_7=m_l, \quad I_{7zz}=I_{6zz}=I_{zz}\]
-The lagrangin in this case is then simply the kinetic energy, i.e,  $L=K_s$. Since force acts only along the $x$ ordinate, via steering motor. we get
+under the following assumptions \[l_3=l_4, \quad m_4=m_5=m_w, \quad m_6=m_7=m_l, \quad I_{7zz}=I_{6zz}=I_{zz}\]
+The Lagrangian in this case is simply the kinetic energy, i.e,  $L=K_s$. Since the external forces acts only along the $x$ ordinate, via steering motor. We get
 \[F_x= \dfrac{\partial}{\partial t}\dfrac{\partial L}{\partial \dot x} - \dfrac{\partial L}{\partial x}\]
 or 
 \begin{multline}
@@ -643,30 +646,33 @@ or
 F_x=\ddot{x}\left[ m_{10}+\left(m_lr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
 +2\dot x^2 \left(m_lr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right)+F_1+F_2
 \end{multline}
-and external force $F_1$ and $F_2$ are given by
+The external force $F_1$ and $F_2$ in the above equation is given by
 \[F_i=\dfrac{T_s}{h},i={1,2} \]
-where $T_s$ is given by Equation\ref{eqn:brake} assuming symmetric loading of both wheels. The derivative of $f_1(x)$ and  $f_2(x)$ is given by 
+where $T_s$ is evaluated using Equation \ref{eqn:brake} assuming symmetric loading of both the wheels. The derivative of $f_1(x)$ and  $f_2(x)$ is given by 
 \[ \dfrac{df_1}{dt}=-\dfrac{2(x+b)h}{(h^2+b^2+2bx+x^2)^2}, \quad \dfrac{df_2}{dt}=-\dfrac{2(x-b)h}{(h^2+b^2-2bx+x^2)^2}\]
-\subsection{Design of PD controller}
-To control the steering of the front wheel a computed torque controller \cite{craig2005introduction} is designed. If $U$ is an auxiliary control input then define
+
+
+
+\subsection{Design of PID controller}
+To control the steer angle of the front wheels a computed torque controller \cite{craig2005introduction} was designed. If $U$ denotes the auxiliary control input then $F_x$ is given by
 \begin{multline}
 \label{eqn:SteerCont}
 F_x=U\left[ m_{10}+\left(mr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^2 \right)\\
 +2\dot x^2 \left(mr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right) 
 +F_1+F_2
 \end{multline}
-replacing $F_s$ in Equation \ref{eqn:SteerDyn} with \ref{eqn:SteerCont} and defining $M= m_{10}+\left(m r_o^2+I{zz}+l^2_3m_w \right) $, we get
+replacing $F_x$ in Equation \ref{eqn:SteerDyn} with the one defined in Equation\ref{eqn:SteerCont}, we get
 \begin{equation}
 \label{eqn:SteerCont2}
 \ddot x =U
 \end{equation}
-If $x_d$ is the set point and $e(t)=(x(t)-x_d)$ is defined as error in position, we define auxiliary input as  
+If $x_d$, is the set point for the displacement of the rack of the steering system and $e(t)=(x(t)-x_d)$ is the position error, we define auxiliary input $U$ as  
 \begin{equation}
 \label{eqn:SteerCont3}
  U=-K_d \dot x -K_p \left(x(t)-x_d \right) -K_i\int e(t)dt \end{equation}
-then equation \ref{eqn:SteerCont2} can  be written as 
+then Equation \ref{eqn:SteerCont2} which represents the overall dynamics of the steering mechanism along with the controller, can  be written as 
 \[\ddot e(t) +K_d \dot{e}(t) +K_p e(t)+ K_i\int e(t)dt=0 \]
-It may be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=const$. The above equation can be written in state space $\dot{Y}=AY$ form with $ \int e(t)=y_1(t)$ as
+It is be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=const$. Given that  $y_1(t)= \int e(t)$ and $Y=[y_1,~y_2,~y_3]^T$, the above equation can be rewritten in state space \[\dot{Y}=AY\] or
 \begin{equation}
 \begin{pmatrix}
 \dot y_1 \\ \dot y_2 \\\dot y_3
@@ -679,11 +685,11 @@ It may be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=con
  y_1 \\ y_2 \\ y_3
 \end{pmatrix}
 \end{equation}
-With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has negative real part in all eigen values $\lambda$ as given below
+With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has all its eigen values, $\lambda$, with negative real part, as given below 
 \[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1.6103 - 1.8348i\}\].
 
 \subsection{Simulation and results}
-The simulation of the  dynamic equation \ref{eqn:SteerDyn} and controller given by equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle of 20mm.  The parameter used for the nominal plant were generated form solid model of the parts and are listed in table \ref{tb:steerPara} The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.
+The simulation of the  dynamic Equation \ref{eqn:SteerDyn} and controller given by Equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle responding to $ 20~mm$  rack displacemet $(x)$.  The parameter used for the nominal plant were obtained form solid model of the parts and are listed in table \ref{tb:steerPara}. The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.
 
 \begin{table}[!htbp]
 	\caption{Key parameters steering assembly.}
@@ -709,19 +715,19 @@ The simulation of the  dynamic equation \ref{eqn:SteerDyn} and controller given 
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3in]{Chapter4/fig/SteeringPos} 
-		\caption{Change in Steer angle}\label{fig:SteerPos}
+		\caption{Change in steer angle}\label{fig:SteerPos}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3in]{Chapter4/fig/SteerEffort} 
-		\caption{Control Effort}\label{fig:SteerEfort}
+		\caption{Control effort}\label{fig:SteerEfort}
 	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure} 
-The simulation results establishes that with $10\%$ error in plant parameters there is practically no deviation in the performance of the controller. It also indicates that the system has a settling delay of $0.8~Sec$. It may also be noted from Equation \ref{eqn:SteerDyn} that the roll velocity of the wheel does not affect the dynamics of the steering system.
+The simulation results establishes that with $10\%$ error in plant parameters there is practically no deviation in the performance of the controller. The results also predicts a settling time of $0.8~sec$ for the system. It may be noted that the roll velocity of the wheel does not affect the dynamics of the steering system as is indicated by the absence of $\dot\theta_4$ and $\dot\theta_5$  from Equation \ref{eqn:SteerDyn} .
 \section{Summary}
-In this chapter the dynamic equation was derived for  the most general form of caster wheel configuration. Even though  only two caster wheel configuration was considered the same formulation can be extended to any number of caster wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$.It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$.
+In this chapter, the dynamic equations were derived for  the most general form of passive wheel configuration. Even though  only two passive wheel configuration was considered the same formulation can be extended to any number of  wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$. It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$. The dynamic equation for the Davis steering mechanism was formulated and using  simulation the settling time for the same was obtained.
     
 
 

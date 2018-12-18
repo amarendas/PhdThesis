@@ -3,33 +3,33 @@
 \label{c2_LitRev}
 
 In this chapter, we  discuss some of the important works published pertaining to the scope of this thesis. Few of the techniques and methods published in these literatures are directly used. The section on \textit{Special Purpose Robots} lists literature which were reviewed to arrive at the overall design of the mobile robot developed in this research.
- The dynamic analysis of the mobile platform was based on the work cited in section\textit{ Mathamatical Modeling}. 
+ The dynamic analysis of the mobile platform was based on the works cited in section\textit{ Mathamatical Modeling}. 
  The literature discussed in \textit{Path Tacking } helped to arrive at the "human model" proposed in this thesis for simulation of teleoperation. 
- The section on \textit{Teleoperation} discusses literature in a much broader sense such as force feedback, haptic interface  design, etc., than what was adapted in this thesis. 
+ The section on \textit{Tele-operation} discusses literature in a much broader sense; such as force feedback, haptic interface  design, etc., than what was adapted in this thesis. 
  This was done for completeness of the subject. 
- Last section on \textit{Predictive Display}, though a part of human interface for teleoperation is discussed separately because it forms one of the major components of the teleoperation system network designed  for the mobile robot  presented in this thesis.   
+ Last section on \textit{Predictive Display}, though a part of human interface for tele-operation is discussed separately because it forms one of the major components of the tele-operation system network designed  for the mobile robot  presented in this thesis.   
 \section{ Special Purpose Robots}
-This section discusses some of the special purpose  robots built for various typical applications. 
-Design and fabrication of a low cost, solar powered mobile robot for  scientific missions on the Antarctic plateau was presented by Ray  \cite{ray2005design}. Honeycomb-glassfiber composite was used to provide high strength and low weight. Ohno, et al. \cite{ohno2011robotic}   developed a robotic control vehicle shown in Figure \ref{fig:fukuRobot} for measuring the radiation in the Fukushima Daiichi Nuclear Power Plant. A survey of different types of climbing robots for no-destructive testing of pressure vessel is given by \cite{luk2006tele}, such as NERO III shown in Figure \ref{fig:nero3}.  Briones \cite{briones1994wall} presents a vacuum cup based wall climbing robot for inspection of  nuclear power plants. Galt \cite{galt1997tele}, has developed eight-legged teleoperated mobile robot for the use in nuclear industry. Development of a magnetic-wheel based mobile robot for painting of ship is discussed by Cho \cite{cho2013study}. Compliant, link based mobile robot was designed and tested by Borenstein\cite{borenstein1995control}, in which the author claims that due to its unique design, better dead-reckoning accuracy was achieved compared to other contemporary designs. This vehicle has two independent drive units or "trucks" that are free to rotate about a vertical shaft connected to the vehicle body. Each truck comprises two drive motors on a common axes and forms a differential drive system. Mechanical compliance was implemented by means of a linear bearing that allows relative motion between the front and rear truck. Other literature giving details of  mobile robots based on   differential wheel, traction belt and omnidirectional wheel are given in the introductory part of chapter \ref{ch_3:Design}.
+This section reviews some of the special purpose  robots built for various typical applications. 
+Design and fabrication of a low cost, solar powered mobile robot for  scientific missions on the Antarctic plateau was presented by Ray  \cite{ray2005design}. Honeycomb-glass-fibre composite was used to provide high strength and low weight. Ohno, et al. \cite{ohno2011robotic}   developed a robotic  vehicle shown in Figure \ref{fig:fukuRobot} for measuring the radiation in the Fukushima Daiichi Nuclear Power Plant. A survey of different types of climbing robots for non-destructive testing of pressure vessel is given by \cite{luk2006tele}, such as NERO III shown in Figure \ref{fig:nero3}.  Briones \cite{briones1994wall} presents a vacuum cup based wall climbing robot for inspection of  nuclear power plants. Galt \cite{galt1997tele} has developed eight-legged teleoperated mobile robot for the use in nuclear industry. Development of a magnetic-wheel based mobile robot for painting of ship is discussed by Cho \cite{cho2013study}. Compliant link based mobile robot was designed and tested by Borenstein\cite{borenstein1995control}, in which the author claims that due to its unique design, better dead-reckoning accuracy was achieved compared to other contemporary designs. This vehicle has two independent drive units or "trucks" that are free to rotate about a vertical shaft connected to the vehicle body. Each truck comprises two drive motors on a common axes and forms a differential drive system. Mechanical compliance was implemented by means of a linear bearing that allows relative motion between the front and rear truck. Other literature giving details of  mobile robots based on   differential wheel, traction belt and omnidirectional wheel are given in the introductory part of Chapter \ref{ch_3:Design}.
  \begin{figure}
 	\centering
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[height=5cm,keepaspectratio]{Chapter2/fig/FukusimaRobot}
-		\captionof{figure}{Robot for Fukushima Daiichi}
+		\captionof{figure}{Robot for Fukushima Daiichi \\  Source:  Ohno, et al  \cite{ohno2011robotic} }
 		\label{fig:fukuRobot}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth,height=5cm,keepaspectratio]{Chapter2/fig/nero3}
-		\captionof{figure}{NERO III}
+		\captionof{figure}{NERO III \\ Source: Luk et al \cite{luk2006tele}}
 		\label{fig:nero3}
 	\end{minipage}
 \end{figure}
 
    
 \section{Mathematical Modeling}
-A very comprehensive list of Wheeled Mobile Robots (WMR) using different wheel configuration is given by Muir and Neuman \cite{muir1987kinematic}. In the paper, kinematic equations of conventional, omnidirectional and ball wheels were presented. The kinematics of the WMR was derived by combining the kinematic information of   individual wheel. Detection of wheel slip based on  error in the least square solution was also discussed. Similar issues were addressed ny Alexander in \cite{alexander1989kinematics}. The major difference is that he uses physical friction model in the analysis of over actuated systems where rolling constrains are not satisfied. A seminal work by Champion \cite{campion1996structural} gives the structural classification of wheeled mobile robots based on the \textit{degree of mobility}, $\delta_m$, and \textit{degree of steeribility}, $\delta_s$. It was based on the number of conventional fixed wheels and  conventional centered orientable wheels. According to them any WMR fall in one of the 5 categories given by $(\delta_m,\delta_s)\rightarrow(3,0),(2,1),(1,1),(1,2)$. 
+A very comprehensive list of Wheeled Mobile Robots (WMR) using different wheel configuration is given by Muir and Neuman \cite{muir1987kinematic}. In the paper, kinematic equations of conventional, omnidirectional and ball wheels were presented. The kinematics of the WMR was derived by combining the kinematic information of   individual wheel. Detection of wheel slip based on  error in the least square solution was also discussed. Similar issues were addressed by Alexander in \cite{alexander1989kinematics}. The major difference is that he uses physical friction model in the analysis of over actuated systems where rolling constrains are not satisfied. A seminal work by Champion \cite{campion1996structural} gives the structural classification of wheeled mobile robots based on the \textit{degree of mobility}, $\delta_m$, and \textit{degree of steeribility}, $\delta_s$. It was based on the number of conventional fixed wheels and  conventional centered orientable wheels. According to them any WMR fall in one of the 5 categories given by $(\delta_m,\delta_s)\rightarrow(3,0),(2,1),(1,1),(1,2)$. 
 The configuration and posture kinematic models of each type was derived. Based on  dynamic model, the minimal number of actuators required for full maneuverability of each type was presented. Kinematic analysis of omi-directional over-actuated mobile robot  was presented in \cite{yi2002kinematics}. Two different methods for forward kinematics was also discussed along with  singularity analysis. Actuator switching scheme based on load distribution to avoid singularity was also presented. 
 
 Dynamic modeling of mobile manipulator can be categorized as: force based ,i.e, the Newtaon-Eular (NE) formulation and  energy based as in Eular-Lagrange (EL) equations. Hoostmans \cite{hootsmans1992motion} used NE method to arrive at  the dynamic model of a mobile manipulator that has two links mounted on a mobile platform. Chung \cite{chung1998interaction} used EL method to arrive at the equations of motion for a mobile manipulator. Geometric mechanics was used to adapt Luh and walker \cite{luh1980line} algorithm  by Boyer and Ali \cite{boyer2011recursive} to apply recursive inverse dynamics formulation to wheeled systems.   
@@ -52,7 +52,7 @@ In case of "Follow the Carrot" method \cite{barton2001controller},  the steering
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth,height=5cm,keepaspectratio]{Chapter2/fig/VectorPursuit}
-		\captionof{figure}{Vector Pursuit}
+		\captionof{figure}{Vector pursuit}
 		\label{fig:VectorPursuit}
 	\end{minipage}
 \end{figure}
@@ -66,7 +66,7 @@ Hellstrom \cite{hellstrom2006follow} has proposed an algorithm which uses the kn
    
 \section{Tele-operation}
 Tele-operation deals with  connecton of a   human operator with the robot in order to reproduce human action at distance. Tele-operation is in general bidirectional or bilateral as the human needs to have a feedback in order to understand the results of his action and to perceive the remote environment. It started with its use in nuclear and space industries \cite{martin1985teleoperated,vertut1986teleoperations}, but now it is used in underwater exploration, surgery, live-power line maintenance, mining, etc. All characterized by reducing the risk to human operators. The two major related research areas are the "human interface" and "control" design.
-\subsection{Human Interface}
+\subsection{Human interface}
 
 Human interface is a means through which the operator interacts with the remote robot by perceiving the remote environment and sending commands accordingly. Thus, the human interface has two important purpose: one to excite the human senses to show the action of the executed task and to process the human command properly to execute it at the remote end.  Force and haptic feedback of remote environment drastically improves operator's performance. Hence a serial link haptic device PHANTOM \cite{massie1994phantom} was developed at MIT during 1994 to provide 3-DOF force feedback  for touch feedback purpose. DELTA Haptice Device described in \cite{grange2001overview} provides 6-DOF force feedback with moderate force. Clover \cite{clover1997dynamic} has reported  the use of off-the-shelf serial industrial robots for haptic realization of tasks requiring a large workspace and high force capability. Customized 10-DOF  haptic device was reported  for similar purpose in \cite{ueberle2004vishard10}. Design  of a 6-DOF parallel mechanism for force feedback is discussed in \cite{yoon2001design}.
 

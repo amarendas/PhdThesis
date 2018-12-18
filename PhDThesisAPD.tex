@@ -25,7 +25,7 @@
 \usepackage{epstopdf} 
 \usepackage{blindtext}
 %\hyphenpenalty=10000
-\usepackage{caption}
+\usepackage[justification=centering]{caption}
 \usepackage{subfigure}
 \usepackage{latexsym}
 \usepackage{float}
@@ -95,20 +95,18 @@
 \include{Misc_front/acknowledgement}
 \doublespacing
 \addcontentsline{toc}{section}{Abstract}
-%\include{Misc_front/abstract}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{Misc_front/abstract}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \cleardoublepage
+\addcontentsline{toc}{section}{Table of Contents}
 \tableofcontents
+\cleardoublepage
+
+\newpage
 \addcontentsline{toc}{section}{\listfigurename}
-
-\cleardoublepage
 \listoffigures
-
 \cleardoublepage
+
+\newpage
 \addcontentsline{toc}{section}{\listtablename}
 \listoftables
 
@@ -143,8 +141,11 @@
 
 \cleardoublepage
 \include{Chapter8/conc}
-\noindent \addcontentsline{toc}{chapter}{\bf Bibliography}
+
 \cleardoublepage
+%\noindent 
+\addcontentsline{toc}{chapter}{\bf Bibliography}
+%\cleardoublepage
 %\bibliographystyle{apalike}
 %\bibliographystyle{elsarticle-num}
 \bibliographystyle{ieeetr} %bibliography style-file

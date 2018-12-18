@@ -1,38 +1,42 @@
 \chapter{Conclusions}
 \label{ch_8:Con}
-%This chapter includes the thesis summary, major contributions and future scope of the work.
+
 \section{Thesis Summary}
-This thesis describes the design and development of a customized mobile manipulator developed at Bhabha Atomic Research Centre, Mumbai, India  for mapping radiation in different areas of Cyclotron building where human access is restricted during Cyclotron operation. The customized mobile manipulator is a four wheeled mobile robot with a vertical lifting platform on which the radiation detector is mounted. The mobile platform has two rear wheels individually  coupled to   two motors and the front two wheels which are mutually connected using a motorized Davis steering mechanism.
-
-%   The first chapter describes the various types of mobile manipulator reported in literature and different areas in which mobile manipulators have been successfully used. The chapter also describes the motivation and requirement of a customized mobile manipulator.  Second chapter gives the literature review related to design, mathematical modeling and teleoperation setup of mobile robot which forms the complete system and is  the scope of this thesis. 
-
-The mechanical design was obtained in Chapter 3,  and through optimization  of steering mechanism minimum turning  radius was achieved  within the required space. The optimal location of the CG for  the mobile manipulator was decided so as to provide maximum traction as well as  stability over $30^o$ ramp.  Among  different lifting platforms for the  vertical motion to the sensor for scanning, a simple scissor based lifting platform was choosen due to several advantages it offers. 
-
-The kinematic and dynamic modeling of the customized mobile manipulator was presented in chapter 4, where the method based on the  Natural Orthogonal Complement was used to derive the dynamic eqution of motion of the wheeled mobile robot under study. This analysis highlighted the  effect of caster  offsets on the maneuverability of a mobile robot. The need of having a positive drive for certain castor offsets were also brought in the analysis. 
+This thesis describes the design, development and experimentation of a customized mobile manipulator developed at Bhabha Atomic Research Centre (BARC), Mumbai, India  for mapping radiation in different areas of Cyclotron building where human access is restricted during Cyclotron operation. The customized mobile manipulator is a four wheeled mobile robot with a vertical lifting platform on which the radiation detector is mounted. The mobile manipulator or  platform has two rear wheels individually  coupled to   two motors and the front two wheels which are mutually connected using a motorized Davis steering mechanism.
 
 
-Control structure for intuitive teleoperation of the mobile robot was presented in chapter 5. This chapter proposed a  user interface at the operator's side, along with the hardware and software required for the teleoperation. The control algorithm running on the robot on-board computer was also presented. The contribution there was that it synchronizes all three motors; two in velocity control  and one in position control mode (steering). In spite of difference in response time, Ackerman relation for wheel rolling was always satisfied. 
+The mechanical design was obtained in Chapter 3,  and through optimization  of steering mechanism, minimum turning  radius of 415 mm was achieved  while maintaining the over all size constraint of the mobile platform. The optimal location of the CG for  the mobile manipulator was decided so as to provide maximum traction as well as  stability over $30^o$ ramp.  Among  different lifting platforms for the  vertical motion to the sensor for scanning, a simple scissor based lifting platform was chosen due to several advantages it offers. 
 
-The developed mobile robot was controlled by an operator who was  physically separated from the mobile manipulator. A dedicated wireless network and the video signal of the remote environment from the robot on-board camera was available. The limited bandwidth resulted in the delay of the video. 
-Chapter 6 dealt with the simulation of a teleoperation of a mobile robot under time delay.
+The kinematic and dynamic modeling of the customized mobile manipulator was presented in Chapter 4, where the method based on the  Natural Orthogonal Complement was used to derive the dynamic equations of motion of the wheeled mobile robot under study. This analysis highlighted the  effect of caster  offsets on the maneuverability of a mobile robot. The need of having a positive drive for certain castor offsets were also brought in the analysis. 
+
+
+Control structure for intuitive teleoperation of the mobile robot was presented in Chapter 5. This chapter proposed a  user interface at the operator's side, along with the hardware and software required for the teleoperation. The control algorithm running on the robot's on-board computer was also presented. The contribution there was that it synchronizes all three motors; two in velocity control  and one in position control mode (steering). In spite of difference in response time, Ackerman relation for wheel rolling was always satisfied. 
+
+The developed mobile robot was controlled by an operator who was  physically separated from the mobile manipulator. A dedicated wireless network and the video signal of the remote environment from the robot's on-board camera was available. The limited bandwidth resulted in the delay of the video. 
+Chapter 6 dealt with the simulation of a tele-operation for the mobile robot under time delay.
  A mathematical model of the human operator based on pure pursuit algorithm was presented. 
  The simulation  predicted instability with increase in time delay and linear velocity of the mobile robot.
-  These studies qualitatively matches with the operator behaviour under similar conditions.
+  These studies qualitatively matched with the operator behaviour under similar conditions.
 
    Note that the time delay in the video feedback affects the efficiency of the operator. 
    In order to overcome this, predictive display was proposed.
-   In chapter 7,  a new methodology was presented for the predictive display based on the 3-d model generated using the RGB-Depth data provided by a Kinect Sensor mounted on the mobile robot and the predicted position of the robot based on dynamic model of the robot presented in chapter 4.
+   In Chapter 7,  a new methodology was presented for the predictive display based on the 3-D model generated using the RGB-Depth data provided by a Kinect Sensor mounted on the mobile robot and the predicted position of the robot based on dynamic model of the robot presented in Chapter 4.
    This novel method did not require  the 3-D model of the remote environment known before hand as reported in the literature earlier.
-   This flexibility allows us to teleoperate  the mobile robot in an unknown environment. 
+   This flexibility allowed to tele-operate  the mobile robot in an unknown environment. 
    
-   In summary, a mobile manipulator was sucessfully concived, designed assembled and controlled remotely  for the purpose for which it was intended, i.e, to map the radiation of a given area.
+   In summary, a mobile manipulator was successfully conceived, designed, assembled and controlled remotely  for the purpose for which it was intended, i.e, to map the radiation of a given area.
    
-   \section{Current status} 
-   A prototype of  mobile manipulator and its teleoperation system were   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot was lab tested and the video of the same can be accessed on at the following https://youtu.be/B5OngfLQjo4. The system will  shortly  be deployed at Variable Energy Cyclotron Centre (VECC) at Kolkata, India for the same purpose. 
-
+   \section{Current Status} 
+   A prototype of  mobile manipulator and its tele-operation system were   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot was lab tested and the video of the same can be accessed on at the following link https://youtu.be/B5OngfLQjo4 or using the QR code shown in Figure \ref{fig:QR}. The system will  shortly  be deployed at Variable Energy Cyclotron Centre (VECC) at Kolkata, India for the same purpose. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=4cm]{Chapter8/figure/qrcode}
+	\captionof{figure}{QR code}
+	\label{fig:QR}
+\end{figure}
 
 \section{Future Scope }
-The testing and evaluation of teleoperation system during actual trial opens up  further scope of improvement. Few of these are listed below  
+The testing and evaluation of teleoperation system during actual trial opened up  further scope of improvement. Few of these are listed below:  
 \begin{itemize}
 	\item [(i)] Use of inertial sensors such as gyroscope and accelerometer  on the mobile robot  in combination with wheel odometer for more accurate  pose estimation.   
 	
@@ -40,15 +44,6 @@ The testing and evaluation of teleoperation system during actual trial opens up 
 	
 	\item[(iii)] Semi-automated navigation using intermediate goal point.  
 	
-	\item[(iv)] Texture mapping of predicted  visual image instead 3-D point cloud model currently used.
+	\item[(iv)] Texture mapping of predicted  visual image instead of 3-D point cloud model currently used.
 	\item [(v)] Some kind of force feedback to the operator for estimation of obstacle location in the remote environment.
-%	The schematic of it is shown in Figure~\ref{fig:EKF_control}.
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.7\linewidth]{Chapter7/figure/EKF_control}
-%\caption{Control scheme with computed torque control}
-%\label{fig:EKF_control}
-%\end{figure}
-
 \end{itemize}	

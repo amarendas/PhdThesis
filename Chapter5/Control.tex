@@ -1,6 +1,6 @@
-\chapter{Control of Mobile Manipulator }
+\chapter{Control of a Mobile Manipulator }
 \label{c5_Control}
-In this chapter, the control architecture of the teleoperated  mobile robot is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile robot and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
+In this chapter, the control architecture of the tele-operated  mobile manipulator or platform  is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile manipulator and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
 \section{Control Architecture and Hardware}
 
 
@@ -9,7 +9,7 @@ In this chapter, the control architecture of the teleoperated  mobile robot is p
 	\captionof{figure}{Control architecture }
 	\label{fig:ControlBlockDiag} 
 \end{figure} 
-The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local onboard controller of the mobile robot. They  communicate over a dedicated wireless network. The remote station sends data packet every in 50 millisecond (20Hz) to the mobile robot. The commanded velocity, steer angle,  z position of the platform, and  state of the detector and headlamps constitute the data packet sent by the remote station as shown in Figure \ref{fig:sentBytes}. The onboard controller of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheel, the z position of the top platform,  battery voltage  and current of each motor. They are indicated in Figure \ref{fig:recvBytes}.
+The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local onboard controller of the mobile robot. They  communicate over a dedicated wireless network. The remote station sends data packet in every  50 milliseconds (20Hz) to the mobile robot. The commanded velocity, steer angle,  z position of the platform, and  state of the detector and headlamps constitute the data packet sent by the remote station, as shown in Figure \ref{fig:sentBytes}. The onboard controller of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheel, the z position of the top platform,  battery voltage  and current of each motor. They are indicated in Figure \ref{fig:recvBytes}.
 \begin{figure}
 	
 	\begin{minipage}[t]{0.5\textwidth}
@@ -26,16 +26,16 @@ The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be 
 	
 \end{figure}
 
-\subsection{Local Onboard Controller}
+\subsection{Local onboard controller}
 The  onboard computer which is Raspberry Pi running raspian (linux) os receives  command from the remote station and controls the robot hardware through customized c++ application.
-The Raspberry Pi  is daisy chained to the four Maxon Make, EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controller is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers were configured in velocity servo loop. The drivers for steering and the z-axis motors were configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  were connected over Ethernet via a wireless hub. The wiring digram of the robot is given in Figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless network directly, it does not interfere with the command loop between the Raspberri Pi and the PC. 
+The Raspberry Pi  is daisy chained to the four Maxon make, EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controller is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers were configured in velocity servo loop. The drivers for steering and the z-axis motors were configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  were connected over Ethernet via a wireless hub. The wiring diagram of the robot is given in Figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless network directly, it does not interfere with the command loop between the Raspberri Pi and the PC. 
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/RobotSideWiring}
 	\captionof{figure}{Wiring  diagram of the WMR }
 	\label{fig:wiring} 
 \end{figure} 
 
-The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid}.  The workspace for the mobile robot was assumed  infinite compared to the input device. In case of manipulators position-position control approach is generally used with scaling. In this case,  the mixed approach was used. The steering angle was controlled in position-position mode whereas the mobile robot's speed was controlled by foot paddle's position, i.e. in  position-velocity mode. This can be given by the following equation: 
+The mobile robot is teleoperated using position-speed command as in \cite{farkhatdinov2007hybrid}.  The workspace for the mobile robot was assumed  infinite compared to the input device. In case of manipulators position-position, control approach is generally used with scaling. In this case,  the mixed approach was used. The steering angle was controlled in position-position mode whereas the mobile robot's speed was controlled by foot pedal's position, i.e. in  position-velocity mode. This can be given by the following equation: 
 \begin{equation}
 	\begin{pmatrix}
 	V\\\theta_S
@@ -48,7 +48,7 @@ The mobile robot is teleoperated using position-speed command as in \cite{farkha
 	\tilde{\Theta_s}
 	\end{pmatrix}
 \end{equation}
-where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the twist of steering wheel, $K_v$ and $K_s$ are the proportionality constants, $V$ is the velocity of point $O_3$  Figure \ref{fig:KenVec} and $\theta_s$ is the displacement of the steer motor. These proportionality constants are derived as below based on extreme limits and  listed in Table \ref{tbl:propCnst}. 
+where $\tilde{X_p}$ is the displacement of pedal, $\tilde{\theta_s}$ is the twist of steering wheel, $K_v$ and $K_s$ are the proportionality constants, $V$ is the velocity of point $O_3$   and $\theta_s$ is the displacement of the steer motor. These proportionality constants are derived  based on extreme limits. They are  listed in Table \ref{tbl:propCnst}. 
 
 \begin{table}[!htbp]
 	\caption{Proportionality constant table} 
@@ -66,7 +66,7 @@ where $\tilde{X_p}$ is the displacement of  paddle, $\tilde{\theta_s}$ is the tw
 \end{table}
 
 
-\subsection{Details of the Motor Controller}
+\subsection{Details of the motor controller}
 Three EPOS2 controllers from Maxon Motors were used to control the mobile robot's rear wheel velocity and the steering gears position. Each controller can control one motor. The overall architecture of the controller  as given in \cite{maxonAutoTune}, \cite{maxonAppNotesPosition}  is shown  in  Figure \ref{fig:EPOS4}.
   \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/overallcontorl}
@@ -156,7 +156,7 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 		\hline
 	\end{tabular}
 \end{table}
-\section{The control algorithm for the WMR}
+\section{Control Algorithm }
 This section discusses in detail the algorithm running on the onboard controller.  Command received by the controller was parsed to extract the velocity  and the steer angle  information. They were suitably scaled to get command velocity  $V$ in mm/sec, and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $V$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next the set point for each motor was calculated  and sent to individual drive. The algorithm is listed below and the block digram for the same in Figure \ref{fig:ControlBlock}
 \begin{figure}[h]
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal2}
@@ -177,7 +177,7 @@ The above loop is repeated every 50 mSec.
 It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This is important as the response time of the  motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $v$ and $\theta_s$. 
 Each block in Figure \ref{fig:ControlBlock} is discussed next. 
 
- It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in figure \ref{fig:KenVec}, i.e.
+ It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in Figure \ref{fig:KenVec}, i.e.
  \begin{equation}
 	 \theta_s =\phi_i
  \end{equation}
@@ -243,7 +243,7 @@ Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for 
 %\item calibration of steer data and wheel velocity
 %\end{itemize}
 
-\subsection{Wheel Odometery }
+\subsection{Wheel odometery }
 The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model was used/ Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
 \begin{enumerate}
 	\item calculate $V$ and $\omega_3$ from current wheel velocities $\omega_1$  and  $\omega_2$  using equations \ref{omegaPlat} and \ref{velPlat} with $a=0$.
@@ -328,7 +328,7 @@ As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the ro
 	%\caption{Circular motion of  WMR}
 \end{figure}
 
-\subsection{The Remote Control Station}   
+\subsection{ Remote control station}   
 The operator controls the vehicle from a local station away from the robot over a wireless network. The control station consists of a desktop computer running Windows XP. A steering wheel and two foot switches are connected to the desktop. The steering wheel sets the steering of the remote mobile robot and the footpadel is used to set the velocity $V$ of the robot. A push button in the steering wheel is used to reverse the direction of motion of the robot.
 
 The screen of the desktop displays  video streaming  from the mobile robot's on board camera. A graphical user  interface (GUI) shown in Figure \ref{fig:Gui} displays the robot's parameters such as current steer angle, velocity of each rear wheels and the position of the z-axis. Buttons on the GUI operates the z-axis, head lamps, etc.
@@ -347,5 +347,5 @@ The screen of the desktop displays  video streaming  from the mobile robot's on 
 
 
 \section{Summary}
-In this chapter, the control architecture of the mobile robot has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
+In this chapter, the control architecture of the mobile manipulator has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
 
