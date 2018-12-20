@@ -27,7 +27,7 @@ The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be 
 \end{figure}
 
 \subsection{Local onboard controller}
-The  onboard computer which is Raspberry Pi running raspian (linux) os receives  command from the remote station and controls the robot hardware through customized c++ application.
+The  onboard computer which is Raspberry Pi running Raspian (linux) OS receives  command from the remote station and controls the robot hardware through customized C++ application.
 The Raspberry Pi  is daisy chained to the four Maxon make, EPOS2 motor controllers/drivers. The communication between the onboard computer and the first Maxon controller is over usb/RS232 interface using Maxon's proprietorial protocol~\cite{maxonrs232}. The first controller serves as CAN master for the rest of the controllers. The rear wheel motor drivers were configured in velocity servo loop. The drivers for steering and the z-axis motors were configured in position control loop.  The camera mounted on the mobile robot  and Raspberry Pi  were connected over Ethernet via a wireless hub. The wiring diagram of the robot is given in Figure \ref {fig:wiring}. Since the onboard camera is connected to the wireless network directly, it does not interfere with the command loop between the Raspberri Pi and the PC. 
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/RobotSideWiring}
@@ -103,7 +103,7 @@ Three EPOS2 controllers from Maxon Motors were used to control the mobile robot'
   H(s)=\frac{1}{1+\frac{K_{p\omega}}{48K_{I\omega}}}
   \end{equation} 
   
-  The gain values used for each rear motor in  the velocity control mode is listed in Table \ref{tb:motorPara}. No acceleration or velocity feedforward  was used. These parameters were determined by auto tuning.  
+  The gain values used for each rear motor in  the velocity control mode is listed in Table \ref{tb:motorPara}. No acceleration or velocity feedforward  was used. The gain parameters were determined by auto tuning software provided by Maxon Motors.  
   
 
   	  \begin{table}[!htbp]
@@ -128,7 +128,7 @@ Three EPOS2 controllers from Maxon Motors were used to control the mobile robot'
 
 
 
-The steering motor was in position control mode. The block digram is shown in Figure \ref{fig:posloop}. It is a PID controller with transfer function given as 
+The steering motor is in position control mode. The block digram is shown in Figure \ref{fig:posloop}. It is a PID controller with transfer function given as 
 \begin{equation}
 P(s)=K_{PP}+K_{IP}s+\frac{K_{DP}s}{1+\frac{K_{DP}}{10 K_{PP}}s}
 \end{equation}
@@ -203,7 +203,7 @@ f(\phi_i): x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
 		\caption{Davis Steering Gear}\label{fig:steering_gear_train}
 	\end{minipage}
 \end{figure}
-where $x$ is the displacement of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of pcd $D_p$ (30mm) as shown in  Figure \ref{fig:steering_gear_train}. Therefore, the steering motor angle,  $ \theta_{Sm}$, is given below as
+where $x$ is the displacement of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of PCD $D_p$ (30mm) as shown in  Figure \ref{fig:steering_gear_train}. Therefore, the steering motor angle,  $ \theta_{Sm}$, is given below as
 \begin{eqnarray}
 H(x): \theta_{Sm}= x \frac{360}{\pi D_p}
 \label{eqn:sterineq2}
@@ -244,7 +244,7 @@ Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for 
 %\end{itemize}
 
 \subsection{Wheel odometery }
-The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model was used/ Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
+The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model. Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
 \begin{enumerate}
 	\item calculate $V$ and $\omega_3$ from current wheel velocities $\omega_1$  and  $\omega_2$  using equations \ref{omegaPlat} and \ref{velPlat} with $a=0$.
 	\item integrate $V$ and $\omega_3$ over time step.
@@ -301,10 +301,12 @@ where $i$ is at time step $t_i$. Next,  the actual odometric results for the veh
 \end{figure*}
 
 As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the robots path calculated using odometry.  There is a linear shift too, which can observed due to longer path calculated by odometry. The lateral shift of 200 mm and a linear shift of 300 mm for 15000 mm long path was calculated. This clearly indicates slip in the wheels. The torque curves also shows that one wheel is more loaded that the other this is expected as the battery weight was on one side of the robot.
+
+In Figure \ref{fig:cirVel} the robot traces circular path of two different radius. It can be seen that there is no lateral (side) slip during the motion. The step change in the angular velocity at time $ t\approx125~sec$, shown in Figure \ref{fig:cirOmega}, indicate transition to a larger radius path. The linear velocity of the robot is maintained constant at $ 300~mm/sec$.
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[width=3.5in]{Chapter5/fig/circleOdo} 
+		\includegraphics[width=3.5in]{Chapter5/fig/CircleOdo} 
 		\caption{Tracing a circle}\label{fig:circle}
 	\end{minipage}
 	\hfill
