@@ -1,5 +1,6 @@
 \chapter{{Introduction}}
 \label{ch_1:intro}
+
 \begin{figure}
 	\centering
 	\begin{minipage}{1.1\textwidth}
@@ -8,6 +9,7 @@
 		\captionof{figure}{Robotics in Factory (Source: Kuka Robot)}
 		\label{fig:RF}
 	\end{minipage}
+\vskip 15mm
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[height=5cm,keepaspectratio]{Chapter1/fig/healthc}
@@ -48,10 +50,10 @@ The challenge faced for in-situ inspection during operation of cyclotron is that
 The original contributions of the present research are listed below:
 \begin{enumerate}[(i)]
 
-\item Design of a customized teleoperated mobile robot for remote surveillance and mapping application.
-\item Development of kinematic and dynamic models of the robot at hand.
-\item Control architecture required for intuitive teleoperation of this mobile robot.
-\item Predictive display  to alleviate problem arising due to time delay in visual feedback.
+\item Design of a customized teleoperated mobile robot for remote surveillance and mapping application. \textbf{\textit{The challenge was to design a mobile robot which can be operated even in case of single actuator failure. The design combines differential drive with an Ackerman mechanism. In the literature, most common redundantly  actuated system are based on omnidirectional wheels as cited in \cite{muir1987kinematic} and  \cite{saha1995design} or powered castor as discussed \cite{oetomo2008singularity} and \cite{park2002optimal}. This design scores over the omnidirectional wheels in terms of less number  of moving parts thus less chances of failure, each wheel is made of many roller. Moreover in industrial environment debris can clog the rollers and alter the friction characteristics of the wheels and result in failure as shown in \cite{carlson2005ugvs}.   The power castor system has issues with singular configuration and wheel locking up of drive system due to improper coordination between steering actuators as discussed in \cite{oetomo2008singularity} and \cite{low2005kinematic}. Moreover, due to changing orientation of all wheels it becomes difficult for the operate negotiate obstacles when operated in teleoperation mode. } }
+\item Development of kinematic and dynamic models of the robot at hand. \textbf{\textit{Due to the uniqueness of dive configuration of this, which uses both differential drive and Ackerman mechanism for steering, none of the analysis presented in the literature could be used. The dynamic model takes into account both lateral and longitudinal slip. Williams\cite{williams2002dynamic}  and Balakrishna  \cite{balakrishna1995modeling} has presented dynamic equation with slip for omnidirectional robots. While the former has considered both lateral and longitudinal slip assuming the wheel mass to be negligible the later has included the dynamics of  wheels in the dynamics analysis but lateral shift has been considered zero. Dynamic model of differential drive robot with wheel slip has been discussed in \cite{tian2009modeling},\cite{sidek2008dynamic}  and \cite{konduri2014effect}. Where as the first two has not considered the effect of caster in the dynamic model, \cite{konduri2014effect} has include effect of caster wheels on the dynamic of slip. In this thesis the wheel slip based dynamic model of the redundantly actuated mobile robot has been presented. The effect of steering wheel  miss aliment on the actuator torque has been quantified. }}    
+\item Control architecture required for intuitive teleoperation of this mobile robot. 
+\item Predictive display  to alleviate problem arising due to time delay in visual feedback. \textbf{\textit{Most of the systems presented in the literature uses high end laser scanning system or use of stereo camera for implementing predictive display. Here we have presented and a low cost solution to predictive display using depth camera.}}
 
 
 \end{enumerate}
@@ -60,7 +62,7 @@ The thesis contains eight chapters and three appendix. They are organized as fol
 \paragraph*{Chapter 1: Introduction\\}
 This  chapter, discusses the scope of mobile robotics in general and the motivation which led to this research work.
 \paragraph*{Chapter 2: Literature Review\\}
-This chapter presents the literature review in the following areas: \textit{kinamatics and dynamics} of mobile robots, \textit{control of mobile robot}, \textit{control for time delay systems}, \textit{performance of operator under tele-operation},  and \textit{predictive display systems}.
+This chapter presents the literature review in the following areas: kinematics and dynamics of mobile robots, control of mobile robot, control for time delay systems, performance of operator under tele-operation,  and predictive display systems.
 
 \paragraph*{Chapter 3: Design of a Mobile Robot\\}
 This chapter highlights the design considerations of a tele-operated mobile robot based on mission requirements and  environmental conditions.  It  discusses the mechanical design for the traction system, the steering gear, and the scissor mechanism. Selection of  steering system based on terrain condition and power requirement is also discussed.   

@@ -132,7 +132,9 @@ The steering motor is in position control mode. The block digram is shown in Fig
 \begin{equation}
 P(s)=K_{PP}+K_{IP}s+\frac{K_{DP}s}{1+\frac{K_{DP}}{10 K_{PP}}s}
 \end{equation}
-where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and derivative gains respectively. The velocity feed-forward $F_{\omega P}$ and acceleration feed-forward $F_{\alpha P}$ were used in position control loop to take care of viscious friction and known inertial load. The gains for controller were decided using auto tuning software provided by Maxon Motors. The values are reported in Table \ref{tb:steer}.
+where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and derivative gains respectively. The velocity feed-forward $F_{\omega P}$ and acceleration feed-forward $F_{\alpha P}$ were used in position control loop to take care of viscous friction and known inertial load. The gains for controller were decided using auto tuning software provided by Maxon Motors. The values are reported in Table \ref{tb:steer}.
+
+\textbf{\textit{ It may be noted that the controller parameters listed in table \ref{tb:steer} is very different from that used in simulation. This difference is due to the fact that the control structures are different. In the actual system motor dynamics is also included, which is not the case  of simulation. In simulation,  position error directly affects the torque to the motor through the control parameters $K_p$, $K_d$ and $K_I$, where as the position error in actual system sets  the motor current. Hence there units too are different. Therefore direct comparison between simulation PID parameters and actual controllers PID values cannot be done.   }}
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/posLoop}
 	\captionof{figure}{Position control bolck  }

@@ -301,7 +301,7 @@ In a similar manner, the twists $t_6$ and $t_7$  of the other caster wheel and i
 t_6=\begin{pmatrix}
 \Theta_6\\C_6
 \end{pmatrix}\dot{\theta_a}, \quad t_7=\begin{pmatrix}
-\Theta_7\\C7
+\Theta_7\\C_7
 \end{pmatrix}\dot{\theta_a}
 \end{equation}
 Using  $G(i,j)$ defined in  Equation \ref{unac2act2}, $\Theta_6$, $C_6, \Theta_7$ and $C_7$ are given by
@@ -606,7 +606,7 @@ K_{10}=\half m_{10} \dot{x}
 \end{equation} where, $x$ is the displacement of the tie rod and $m_{10}$ is its mass.
 
 
-The Kinetic energy of body \#5, i.e., second wheel and second link \#7 can be derived in a similar fashion as that of body \#4 and \#6 respectively. The kinetic energy of body \#7 is given as
+The kinetic energy of body \#5, i.e., second wheel and second link \#7 can be derived in a similar fashion as that of body \#4 and \#6 respectively. The kinetic energy of body \#7 is given as
 \begin{equation}
 K_7=\frac{1}{2}(m_7((x^b_7)^2+(y^b_7)^2)+I_{7zz})\dot{\phi_7}
 \end{equation}
@@ -661,7 +661,7 @@ F_x=U\left[ m_{10}+\left(mr_o^2+I{zz}+l^2_3m_w \right) \right] \left( f_1^2+f_2^
 +2\dot x^2 \left(mr^2+I{zz}+l_3^2 m_w \right) \left( f_1 \dot f_1 +f_2 \dot f_2\right) 
 +F_1+F_2
 \end{multline}
-replacing $F_x$ in Equation \ref{eqn:SteerDyn} with the one defined in Equation\ref{eqn:SteerCont}, we get
+eliminating  $F_x$ using Equation \ref{eqn:SteerDyn} and Equation\ref{eqn:SteerCont}, we get
 \begin{equation}
 \label{eqn:SteerCont2}
 \ddot x =U
@@ -686,7 +686,7 @@ It is be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=cons
 \end{pmatrix}
 \end{equation}
 With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has all its eigen values, $\lambda$, with negative real part, as given below 
-\[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1.6103 - 1.8348i\}\].
+\[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1..6103 - 1.8348i\}\]. \textbf{\textit{These controller parameters were arrived by trial and error using multiple simulation. The guiding principle behind the selection was to choose one root far from the other two roots so that the system behaves as second order system. The remaining two roots were chosen as complex conjugate with negative real part and near to imaginary axis.  This was to make the steering unit under damped.}}
 
 \subsection{Simulation and results}
 The simulation of the  dynamic Equation \ref{eqn:SteerDyn} and controller given by Equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle responding to $ 20~mm$  rack displacemet $(x)$.  The parameter used for the nominal plant were obtained form solid model of the parts and are listed in table \ref{tb:steerPara}. The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.

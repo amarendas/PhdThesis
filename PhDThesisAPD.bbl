@@ -1,20 +1,4 @@
-\begin{thebibliography}{10}
-
-\bibitem{smith1959controller}
-O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
-  pp.~28--33, 1959.
-
-\bibitem{ollero1995stability}
-A.~Ollero and G.~Heredia, ``Stability analysis of mobile robot path tracking,''
-  in {\em Intelligent Robots and Systems 95.'Human Robot Interaction and
-  Cooperative Robots', Proceedings. 1995 IEEE/RSJ International Conference on},
-  vol.~3, pp.~461--466, IEEE, 1995.
-
-\bibitem{ray2005design}
-L.~Ray, A.~Price, A.~Streeter, D.~Denton, and J.~H. Lever, ``The design of a
-  mobile robot for instrument network deployment in antarctica,'' in {\em
-  Robotics and Automation, 2005. ICRA 2005. Proceedings of the 2005 IEEE
-  International Conference on}, pp.~2111--2116, IEEE, 2005.
+\begin{thebibliography}{100}
 
 \bibitem{ohno2011robotic}
 K.~Ohno, S.~Kawatsuma, T.~Okada, E.~Takeuchi, K.~Higashi, and S.~Tadokoro,
@@ -27,6 +11,77 @@ B.~L. Luk, K.~Liu, A.~A. Collie, D.~S. Cooke, and S.~Chen, ``Tele-operated
   climbing and mobile service robots for remote inspection and maintenance in
   nuclear industry,'' {\em Industrial Robot: An International Journal},
   vol.~33, no.~3, pp.~194--204, 2006.
+
+\bibitem{smith1959controller}
+O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
+  pp.~28--33, 1959.
+
+\bibitem{ollero1995stability}
+A.~Ollero and G.~Heredia, ``Stability analysis of mobile robot path tracking,''
+  in {\em Intelligent Robots and Systems 95.'Human Robot Interaction and
+  Cooperative Robots', Proceedings. 1995 IEEE/RSJ International Conference on},
+  vol.~3, pp.~461--466, IEEE, 1995.
+
+\bibitem{muir1987kinematic}
+P.~F. Muir and C.~P. Neuman, ``Kinematic modeling of wheeled mobile robots,''
+  {\em Journal of robotic systems}, vol.~4, no.~2, pp.~281--340, 1987.
+
+\bibitem{saha1995design}
+S.~K. Saha, J.~Angeles, and J.~Darcovich, ``The design of kinematically
+  isotropic rolling robots with omnidirectional wheels,'' {\em Mechanism and
+  Machine Theory}, vol.~30, no.~8, pp.~1127--1137, 1995.
+
+\bibitem{oetomo2008singularity}
+D.~Oetomo and M.~H. Ang, ``Singularity-free joint actuation in omnidirectional
+  mobile platforms with powered offset caster wheels,'' {\em Journal of
+  Mechanical Design}, vol.~130, no.~5, p.~054501, 2008.
+
+\bibitem{park2002optimal}
+T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
+  design and actuator sizing of redundantly actuated omni-directional mobile
+  robots,'' in {\em Proceedings 2002 IEEE International Conference on Robotics
+  and Automation (Cat. No. 02CH37292)}, vol.~1, pp.~732--737, IEEE, 2002.
+
+\bibitem{carlson2005ugvs}
+J.~Carlson and R.~R. Murphy, ``How ugvs physically fail in the field,'' {\em
+  IEEE Transactions on robotics}, vol.~21, no.~3, pp.~423--437, 2005.
+
+\bibitem{low2005kinematic}
+K.~H. Low and Y.~Leow, ``Kinematic modeling, mobility analysis and design of
+  wheeled mobile robots,'' {\em Advanced Robotics}, vol.~19, no.~1, pp.~73--99,
+  2005.
+
+\bibitem{williams2002dynamic}
+R.~L. Williams, B.~E. Carter, P.~Gallina, and G.~Rosati, ``Dynamic model with
+  slip for wheeled omnidirectional robots,'' {\em IEEE transactions on Robotics
+  and Automation}, vol.~18, no.~3, pp.~285--293, 2002.
+
+\bibitem{balakrishna1995modeling}
+R.~Balakrishna and A.~Ghosal, ``Modeling of slip for wheeled mobile robots,''
+  {\em IEEE Transactions on Robotics and Automation}, vol.~11, no.~1,
+  pp.~126--132, 1995.
+
+\bibitem{tian2009modeling}
+Y.~Tian, N.~Sidek, and N.~Sarkar, ``Modeling and control of a nonholonomic
+  wheeled mobile robot with wheel slip dynamics,'' in {\em 2009 IEEE Symposium
+  on Computational Intelligence in Control and Automation}, pp.~7--14, IEEE,
+  2009.
+
+\bibitem{sidek2008dynamic}
+S.~N. Sidek and N.~Sarkar, {\em Dynamic modeling and control of nonholonomic
+  wheeled mobile robot subjected to wheel slip}.
+\newblock PhD thesis, Vanderbilt University, 2008.
+
+\bibitem{konduri2014effect}
+S.~Konduri, E.~Orlando, C.~Torres, and P.~R. Pagilla, ``Effect of wheel slip in
+  the coordination of wheeled mobile robots,'' {\em IFAC Proceedings Volumes},
+  vol.~47, no.~3, pp.~8097--8102, 2014.
+
+\bibitem{ray2005design}
+L.~Ray, A.~Price, A.~Streeter, D.~Denton, and J.~H. Lever, ``The design of a
+  mobile robot for instrument network deployment in antarctica,'' in {\em
+  Robotics and Automation, 2005. ICRA 2005. Proceedings of the 2005 IEEE
+  International Conference on}, pp.~2111--2116, IEEE, 2005.
 
 \bibitem{briones1994wall}
 L.~Briones, P.~Bustamante, and M.~A. Serna, ``Wall-climbing robot for
@@ -50,10 +105,6 @@ C.-S. Cho, J.-D. Kim, S.-G. Lee, S.~K. Lee, S.-C. Han, and B.-S. Kim, ``A study
 J.~Borenstein, ``Control and kinematic design of multi-degree-of freedom mobile
   robots with compliant linkage,'' {\em IEEE transactions on robotics and
   automation}, vol.~11, no.~1, pp.~21--35, 1995.
-
-\bibitem{muir1987kinematic}
-P.~F. Muir and C.~P. Neuman, ``Kinematic modeling of wheeled mobile robots,''
-  {\em Journal of robotic systems}, vol.~4, no.~2, pp.~281--340, 1987.
 
 \bibitem{alexander1989kinematics}
 J.~C. Alexander and J.~H. Maddocks, ``On the kinematics of wheeled mobile
