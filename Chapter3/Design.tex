@@ -90,45 +90,61 @@ Secondly, using the proposed design, in case of one  actuator failure, either th
    	\captionof{figure}{Mobile manipulator on slope}
    	\label{fig:loadDistribution}
    \end{figure}
-
-  The load distribution was optimized to generate maximum normal reaction, $F_n$,  at the rear wheels without overturning while moving up the ramp of $30^o$. Maximizing rear wheel reaction by increasing  "b" as per Equation \ref{eqn:loadratio} ensures increased traction, $F_T=\mu F_N$ ($\mu$ is the coefficient of friction), but at the same time decreases the stability margin indicated by "X" in Figure \ref{fig:loadDistribution}. The static moment and force balance yield
+\subsection{Stability Of Mobile Manipulator}
+  The load distribution was optimized to generate maximum normal reaction, $F_n$,  at the rear wheels without overturning while moving up the ramp of $30^o$. Maximizing rear wheel reaction by increasing  "b" as per Equation \ref{eqn:loadratio} ensures increased traction, $F_T=\mu F_N$ ($\mu$ is the coefficient of friction), but at the same time decreases the stability margin indicated by "X" in Figure \ref{fig:loadDistribution}. The  moment about the rear wheel contact point yield
 \begin{equation}
 \label{eqn:loadratio}
-F_{N2}=\dfrac{b}{a}F_{N1}, \quad F_{N1}+F_{N2}=mg\cos\theta
+%F_{N2}=\dfrac{b}{a}F_{N1}, \quad F_{N1}+F_{N2}=mg\cos\theta
+(a+b)F_{N1}=b(m_r g\cos\theta)-z_{cg}(m_r g\sin\theta+m_r a)
 \end{equation}
-
-The stability margin $X$ as shown in Figure \ref{fig:roboActual} was fixed as $30mm$ so as to achieve  maximum acceleration of $0.144g$  over the ramp of $30^o$ without overturning. This was done based on the condition of dynamic stability given by
+The critical condition,which  initiates over turning about the rear axle is given by $F_{N1} =0$.  This reduces the above equation \ref{eqn:loadratio} to 
 \begin{equation}
 \label{eqn:overturn}
-mgb\cos\theta=(mg\sin\theta+ma)z_{cg}, \quad \Rightarrow g(\frac{b}{z_{cg}}\cos\theta-\sin\theta)=a
+m_rgb\cos\theta=(m_rg\sin\theta+m_ra)z_{cg}, \quad \Rightarrow g(\frac{b}{z_{cg}}\cos\theta-\sin\theta)=a
 \end{equation}
+
+ 
+
 where 
 \begin{itemize}
 \item[] $F_{N1}$, $F_{N2}$ are normal reaction on the front and rear wheels.
 \item[] $a$ and $b$ are the distance of the vehicle centre of gravity (CG) from the rear and front wheels.
 \item [] $Z_{cg}$ is the height of  CG from the  plane containing the contact point of the wheels.
-\item [] $m$ is mass of the vehicle.
+\item [] $m_r$ is mass of the vehicle.
 \item [] $g$ is acceleration due to gravity.
 \item[] $\theta$ is the inclination of the traction surface from horizontal.
 \end{itemize}
+The mass distribution of the mobile robot was  adjusted such that the stability margin $X$ as shown in Figure \ref{fig:roboActual} was fixed to $30mm$. Which  limits  the acceleration of the mobile robot while climbing up  over a ramp of $30^o$ to $0.144g$. Operation of system below this acceleration limit safeguards it against overturning along the logitudanal direction. 
 
+\textbf{\textit{The stability analysis was carried out with the manipulator in the retracted condition. In case the manipulator is extended  the CG of the system shift towards the rear wheel axle. A condition will be reached when the vector $Mg$ crosses the rear wheel contact point, and the mobile robot will over turn. To insure against this unstable situation the vehicle is never moved the ramp with manipulator extended.}} 
+   
+\textbf{\textit{Another instability is encountered during turning or negotiating the curve. The centrifugal force tends to overturn the vehicle in lateral direction as shown in Figure \ref{fig:LatOverturn}. This limits the linear velocity of the vehicle for a given steer angle. If $v$ is the linear velocity of the vehicle and $r$ the radius of the path, the moment balance is given as}}
+\begin{equation}
+\label{eqn:LatOverturn}
+\frac{m_r v^2}{r}Z_{cg}=m_r g d 
+\end{equation}
+Thus the limiting velocity as a function of $r$ the turning radius
+\begin{equation}
+\label{eqn:Vel_limit}
+v=\sqrt{\frac{rg d}{Z_{cg}}}
+\end{equation}
+This give the limiting velocity as $v=1.9m/sec$ based on the $Z_{cg}=190mm$ and $d=168$ as given Figure \ref{fig:loadDistribution} and \ref{fig:LatOverturn}. The minimum turning radius of the vehicle is $415mm$ as given in Table \ref{tb:specifications} is used for $r$ in the above equation.
 
- 
-%\begin{figure}
-% 	\centering
-% 	\begin{minipage}{.5\textwidth}
-% 		\centering
-% 		\includegraphics[width=.9\linewidth,height=4.5cm,keepaspectratio]{Chapter3/fig/WheelOffset}
-% 		\captionof{figure}{Rear Suspension}
-% 		\label{fig:tractionDrive}
-% 	\end{minipage}%
-% 	\begin{minipage}{.5\textwidth}
-% 		\centering
-% 		\includegraphics[height=4.5cm,keepaspectratio]{Chapter3/fig/loadDist}
-% 		\captionof{figure}{Mobile Manipulator on slope}
-% 		\label{fig:loadDistribution}
-% 	\end{minipage}
-% \end{figure}
+\begin{figure}
+ 	\centering
+ 	\begin{minipage}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[width=.9\linewidth,height=4.5cm,keepaspectratio]{Chapter3/fig/LateralOverturn}
+ 		\captionof{figure}{Centrifugal Forces}
+ 		\label{fig:LatOverturn}
+ 	\end{minipage}%
+ 	\begin{minipage}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[height=4.5cm,keepaspectratio]{Chapter3/fig/xxx}
+ 		\captionof{figure}{Mobile Manipulator on slope}
+ 		\label{fig:xxx}
+ 	\end{minipage}
+ \end{figure}
 
  \subsection {Selection of motor and gearbox}
  The torque requirement for the rear wheels were calculated based on the static moment balance with the assumption that each rear wheel shares equal load and the total suspended weight is 80 Kg. From the freebody diagram (Figure   \ref{fig:loadDistribution}), using moment and force balance  we get the following:

@@ -214,7 +214,7 @@ H(x): \theta_{Sm}= x \frac{360}{\pi D_p}
 Next,  the equation relating current steer angle $\phi_{i}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$ is presented. From the geometry of Figure \ref{fig:KenVec}, one gets
 \begin{align}
 \nonumber \tan\phi_{i} &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
-g:\phi_{i} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{c}}-m + \frac{a}{2}
+g:\phi_{i} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{i}}-m + \frac{a}{2}
 \label{eqn:pFromTheta}
 \end{align}
 %similarly for the inner wheel we get  
@@ -244,7 +244,8 @@ Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for 
 %\begin{itemize}
 %\item calibration of steer data and wheel velocity
 %\end{itemize}
-
+\subsection{Safety Interlocks}
+The control algorithm has safety interlocks built into it. The vehicle does not move if the manipulator is in the extended condition. This is to avoid over turning of the vehicle in case it has to climb a ramp. Acceleration of the vehicle is never exceeded above the limiting value of  $0.144g$ which was arrived at  based on dynamic stability of the mobile robot as calculated in Equation \ref{eqn:overturn}. To avoid overturning of vehicle while following a circular path the linear velocity of the vehicle is limited by Equation \ref{eqn:Vel_limit} which is function of the turning radius.
 \subsection{Wheel odometery }
 The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model. Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
 \begin{enumerate}
@@ -332,7 +333,7 @@ In Figure \ref{fig:cirVel} the robot traces circular path of two different radiu
 	%\caption{Circular motion of  WMR}
 \end{figure}
 
-\subsection{ Remote control station}   
+\section{ Remote control station}   
 The operator controls the vehicle from a local station away from the robot over a wireless network. The control station consists of a desktop computer running Windows XP. A steering wheel and two foot switches are connected to the desktop. The steering wheel sets the steering of the remote mobile robot and the footpadel is used to set the velocity $V$ of the robot. A push button in the steering wheel is used to reverse the direction of motion of the robot.
 
 The screen of the desktop displays  video streaming  from the mobile robot's on board camera. A graphical user  interface (GUI) shown in Figure \ref{fig:Gui} displays the robot's parameters such as current steer angle, velocity of each rear wheels and the position of the z-axis. Buttons on the GUI operates the z-axis, head lamps, etc.
