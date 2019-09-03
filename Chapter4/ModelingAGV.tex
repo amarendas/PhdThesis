@@ -310,8 +310,15 @@ C_6 \equiv r[-G_{11}f_6 \quad -G_{12}f_6]\]
 \[ \Theta_7 \equiv [\bar{G_{21}}k \quad \bar{G_{22}}k],\quad 
 C_7 \equiv d[(1/2)\bar{G_{21}}e_6-\rho G_{11}f_6 \quad (1/2)\bar{G_{22}}e_6-\rho G_{12}f_6]\]
 \[\bar{G_{21}} \equiv G_{21}+\rho \delta, \quad \bar{G_{22}}\equiv G_{22}-\rho\delta\] 
+\subsection{Special cases}
+Based on the 
+\subsubsection{Standard caster ($d_1=0$) }
+The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  Equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second row of Equations \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the un-actuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}.
+\subsubsection{Underactuated case ($d_2=0$)}
+It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
-\subsection{Dynamic equations}
+Am alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car
+\section{Dynamic equations}
 Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE} can be derived 
 \subsubsection{Generalized inertia matrix, $I$}
  The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
@@ -433,15 +440,9 @@ All the components of  Equation  \ref{CE}  are now been evaluated, except the $\
 
 
 
-\section{Special cases}
-\subsection{Standard caster ($d_1=0$) }
-The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  Equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second row of Equations \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the un-actuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}.
-\subsection{Underactuated case ($d_2=0$)}
-It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
-Am alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car.
 
-\section{Simulation }
+\subsection{Simulation }
  
 The mobile manipulator proposed in Chapter 3  was modelled as a differentially driven robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
 
@@ -525,6 +526,9 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 		\hline
 		\end{tabular}
 \end{table}
+\section{Dynamics with Wheel Slip}
+The kinematic equations relations are derived for the vehicle.  The wheel \#1 and 
+\subsection{Simulation}
 
 \section{Dynamical Model of Steering System}
 The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
@@ -686,7 +690,8 @@ It is be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=cons
 \end{pmatrix}
 \end{equation}
 With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has all its eigen values, $\lambda$, with negative real part, as given below 
-\[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1..6103 - 1.8348i\}\]. \textbf{\textit{These controller parameters were arrived by trial and error using multiple simulation. The guiding principle behind the selection was to choose one root far from the other two roots so that the system behaves as second order system. The remaining two roots were chosen as complex conjugate with negative real part and near to imaginary axis.  This was to make the steering unit under damped.}}
+\[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1..6103 - 1.8348i\}\]
+ \textbf{\textit{These controller parameters were arrived by trial and error using multiple simulation. The guiding principle behind the selection of these parameters was to choose one root far away form the imaginary axis so that its dynamics dies very fast with the respect to  the other two roots.  The system then behaves as second order system. The remaining two roots thus governs the dynamics of the system.  they were chosen as complex conjugate with negative real part and near to imaginary axis so as to make the steering unit dynamics  under damped.}}
 
 \subsection{Simulation and results}
 The simulation of the  dynamic Equation \ref{eqn:SteerDyn} and controller given by Equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle responding to $ 20~mm$  rack displacemet $(x)$.  The parameter used for the nominal plant were obtained form solid model of the parts and are listed in table \ref{tb:steerPara}. The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.
