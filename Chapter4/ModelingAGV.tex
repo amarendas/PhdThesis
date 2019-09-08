@@ -13,9 +13,13 @@ In order to develop a model-based control algorithm, it is imperative to have a 
  Different methods have  been adopted to derive the dynamic model of WMRs.
   A general dynamical model was derived for three-wheel mobile robots with nonholonomic constraints  by B. d'Andrea-Novel \cite{d1991modelling} using  Lagrange formulation.
     Alternatively, Thanjavur and Rajagopalan \cite{thanjavur1997ease} have used Kane's method,  and  Saha et al. \cite{saha1991dynamics},\cite{saha1989kinematics} used Natural Orthogonal Compliment (NOC) method for the same.  
+    
+In this chapter we first present the mathamitical model of the mobile robot with two passive wheel at the front. It is then proved using kinematics why a passive wheel with cater offset along the plane of the wheel self orients. This has not been explicitly presented in literature. Using the same set of equations it is proved that zero offset castors must be actuated. 
+
+   
  
-All the papers reviewed use  caster wheel in deriving the dynamic model of a WMR. In this chapter, the modelling is carried out considering the passive wheels in the most general configuration.
- The  castor wheel,  in which the axis of rotation is perpendicular to the line joining the pivot and the axis of rotation, as shown in Figure \ref{fig:std}, is  a special case of the configuration considered here. Whereas in this study they are oriented in  the most general way, as shown in figure Figure \ref{fig:gen}. 
+%All the papers reviewed use  caster wheel in deriving the dynamic model of a WMR. In this chapter, the modelling is carried out considering the passive wheels in the most general configuration.
+% The  castor wheel,  in which the axis of rotation is perpendicular to the line joining the pivot and the axis of rotation, as shown in Figure \ref{fig:std}, is  a special case of the configuration considered here. Whereas in this study they are oriented in  the most general way, as shown in figure Figure \ref{fig:gen}. 
  The concept of the NOC which inherently takes into account the non-holonomic constraint of the wheels has been used.
   Moreover, being a matrix based approach, it is convenient for numerical simulations. 
 \section{Modeling using the Natural Orthogonal Compliment (NOC)}
@@ -124,6 +128,7 @@ C(\theta,\dot{\theta})&\equiv -T^T(M\dot{T}+WMT)\dot{\theta} \quad :\text{genera
 
 
 \section{Dynamic Equation of WMR}
+\label{sec:DynamicNoSlip}
 The dynamic equation of a differentially driven 3 wheeled mobile robot based on the  Natural Orthogonal Compliment (NOC) has been presented by Saha~\cite{saha1991dynamics}. The vehicle consisted of 2 driven wheels and one standard caster wheel. In general, for large vehicles, it is necessary to have at least four wheels from the point of stability of the vehicle. Such a vehicle  is shown in Figure \ref{fig:std}. It may be noted that the caster wheels used in this case are the standard caster, where the angle between line $O_4O_5$ and vector $e_4$ is  $90^o$. Which is a special case of the more general configuration of the passive wheels shown in figure \ref{fig:gen}, where angle between line $O_4O_5$ and vector $e_4$ is not $90^o$
 
  The vehicle considered for analysis in this chapter is shown in Figure \ref{fig:gen}. It consists of two independently driven wheels at the back and two passive wheels at the front. The actuated wheels are labelled as body \#1 and \#2 as indicated in Figure \ref{fig:gen}. The platform is body \#3. The first caster wheel and its bracket is labelled as \#4 and \#5 respectively, with the castor pivoted at $O_5$. Similarly, the second castor is pivoted at $O_7$, and its bracket and wheel are labelled as \#6 an \#7, respectively, all the wheels are assumed to be rolling without slipping.  
@@ -131,7 +136,7 @@ The dynamic equation of a differentially driven 3 wheeled mobile robot based on 
 In order to proceed with the kinematic analysis of the vehicle in Figure \ref{fig:gen}, we define an orthogonal triad of vectors ${i,j,k}$ at point $O_3$, the control point of the platform, as shown in Figure \ref{fig:gen}. If $\dot{\theta_1}$ and $\dot{\theta_2}$ {( positive when pointing along $i$)} denote the rates of rotation of wheels \#1 and \#2 then the linear velocity of points $O_1$ and $O_2$ under pure rolling condition is given by 
 \begin{equation}
 \label{velO1}
-{\dot{o_i}}=r\dot{\theta_i}j, \quad \text{r=radius of wheel}
+{\dot{o_i}}=-r\dot{\theta_i}j, \quad \text{r=radius of wheel}
 \end{equation}
 The angular velocity of the platform $\omega_3$ can be written as 
 \begin{equation}
@@ -140,16 +145,27 @@ The angular velocity of the platform $\omega_3$ can be written as
 \end{equation}
 Further, the velocity of point $O_3$ can be written as
 ${\dot{o_3}=\dot{o_i}+\omega_3 \times (c-o_i)}, \quad i=1,2$, where $o_3 $ and $o_i$  is the position vector of points $O_3$ and $O_i$ respectively, with respect to some  point fixed to the ground. Eliminating $\omega_3$  one gets the following:
+
 \begin{equation}
 \label{velPlat}
- \quad \quad {\dot{o_3}}=[(ar/l)(\dot{\theta_1}-\dot{\theta_2})+(r/2)(\dot{\theta_1}+\dot{\theta_2})]{i}
+ \quad \quad \dot{o_3}={(a r/l)(-\dot{\theta_1}+\dot{\theta_2})}i -(r/2)( \dot{\theta_1}+ \dot{\theta_2})j
 \end{equation}
-
 Now, the angular velocity of the drive wheel \#1 can be expressed as ${\omega_1}=-\dot{\theta_1}i+\omega_3k$. Using Equation \ref{omegaPlat}, the same can be rewritten as 
+
 \begin{equation}
 \label{omegaWheel1}
 {\omega_1}=\begin{pmatrix}
 -i+(r/l)k & -(r/l)k
+\end{pmatrix}
+\begin{pmatrix}
+\dot{\theta_1}\\\dot{\theta_2}
+\end{pmatrix}
+\end{equation}
+Similarly for the second wheel (\#2) we get
+\begin{equation}
+\label{omegaWheel2}
+{\omega_1}=\begin{pmatrix}
+(r/l)k & i-(r/l)k
 \end{pmatrix}
 \begin{pmatrix}
 \dot{\theta_1}\\\dot{\theta_2}
@@ -162,7 +178,7 @@ t_1=\begin{pmatrix}
 \omega_1\\\dot{o_1}
 \end{pmatrix}=
 \begin{pmatrix}
--i+(r/l)k & -(r/l)k\\ rj & 0
+i+(r/l)k & -(r/l)k\\- rj & 0
 \end{pmatrix}
 \begin{pmatrix}
 \dot{\theta_1}\\\dot{\theta_2}
@@ -174,10 +190,11 @@ Similarly, for the other actuated wheel \#2, one gets
 \begin{equation}
 \label{twist2}
 t_2=\begin{pmatrix}
-\omega_1\\\dot{o_1}
+\omega_2\\\dot{o_2}
 \end{pmatrix}=
 		\begin{pmatrix}
-		-i+(r/l)k & -(r/l)k\\  0 &rj
+		(r/l)k & i-(r/l)k\\
+		  0 & -rj
 		\end{pmatrix}
 		\begin{pmatrix}
 		\dot{\theta_1}\\\dot{\theta_2}
@@ -201,20 +218,34 @@ r(\lambda i+(1/2)j) & r(-\lambda i+(1/2)j)
 where
 \[ \delta\equiv d/l, \quad \rho \equiv r/d, \quad \lambda \equiv a/l \]
 From the above three equations, one gets 
-\[T_1=\begin{pmatrix}-i+(r/l)k & -(r/l)k\\ rj & 0\end{pmatrix}, \quad  
-T_2=\begin{pmatrix}	-i+(r/l)k & -(r/l)k\\  0 &rj \end{pmatrix}\],
+\[T_1=\begin{pmatrix}i+(r/l)k & -(r/l)k\\ -rj & 0\end{pmatrix}, \quad  
+T_2=\begin{pmatrix}	(r/l)k & i-(r/l)k\\  0 & -rj \end{pmatrix}\],
 \[T_3=\begin{pmatrix}
 	\rho\delta & -\rho\delta\\
 	r(\lambda i+(1/2))j & r(-\lambda i+(1/2))j
 	\end{pmatrix}\]
 
 
-In order to calculate the twists of the caster bracket and the caster wheel, it is necessary to express the  unactuated joint rates, $\dot{\psi_1}$ and $\dot{\phi_1}$, in terms of the actuated joint rate vector $\dot{\theta_a}$. Note here that $\dot{\psi_1}$ denotes the rate of rotation of the bracket body (\#5) about $O_5$ with respect to the platform, and $\dot{\phi_1}$ is the rate of rotation of caster wheel body (\#4) about its axis $e_4$ with respect to the bracket. The velocity of $O_5$ can be expressed in two independent forms, namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_5$, i.e.,
+In order to calculate the twists of the caster bracket and the caster wheel, it is necessary to express the  un-actuated joint rates, $\dot{\psi_1}$ and $\dot{\phi_1}$, in terms of the actuated joint rate vector $\dot{\theta_a}$. Note here that $\dot{\psi_1}$ denotes the rate of rotation of the bracket body (\#5) about $O_5$ with respect to the platform, and $\dot{\phi_1}$ is the rate of rotation of caster wheel body (\#4) about its axis $e_4$ with respect to the bracket.
+\begin{equation*}
+\omega_5=\dot{\psi_1}k+\omega_3, \quad \quad \omega_4=\dot{\phi_1} e_4 +\omega_5
+\end{equation*}
+ The velocity of $O_5$ can be expressed in two independent forms, namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_4$, i.e.,
 \begin{equation}
-\dot{o_5}=\dot{o_4}+\omega_5\times(d_1e_4-d2f_4), \quad
-\dot{o_5}=\dot{o_4}+\omega_5\times(d_1e_4-d2f_4)
+\dot{o_5}=\dot{o_4}+\omega_5\times(d_2e_4-d_1f_4), \quad
+\dot{o_5}=\dot{o_3}+\omega_3\times(b j - m i)
 \end{equation}
-On equating the above two equations together, and using the rotation matrix between coordinate system $\{i,j,k\}$ and $\{e_4,f_4,k\}$,  the equation in terms $e_4$ and $f_4$, is obtained as
+On equating the above two equations together, and using the rotation matrix (R) between coordinate system $\{i,j,k\}$ and $\{e_4,f_4,k\}$ given Equation \ref{eqn:RotMatrix}, 
+
+\begin{equation}
+\label{eqn:RotMatrix}
+R=\begin{pmatrix}
+\cos(\psi_1) & -\sin(\psi_1) \\
+\sin(\psi_1) & \cos(\psi_1)
+\end{pmatrix}
+\end{equation}
+ the equation in terms $e_4$ and $f_4$, is obtained as
+
 \begin{equation}
 (-\dot{\phi_1}r+\dot{\psi_1}d_1)f_3+d_3\dot{\psi_1}e_3=\dot{o_3}
 +\omega_3(m\cos\psi_1-b\sin\psi_1-d_1)e_4
@@ -311,9 +342,9 @@ C_6 \equiv r[-G_{11}f_6 \quad -G_{12}f_6]\]
 C_7 \equiv d[(1/2)\bar{G_{21}}e_6-\rho G_{11}f_6 \quad (1/2)\bar{G_{22}}e_6-\rho G_{12}f_6]\]
 \[\bar{G_{21}} \equiv G_{21}+\rho \delta, \quad \bar{G_{22}}\equiv G_{22}-\rho\delta\] 
 \subsection{Special cases}
-Based on the 
+Based on the above kinematic equations \ref{unac2act1} and \ref{unac2act2} for the caster wheels two special cases can be recognized one with $d_1=0$ and another ($d_2=0$). The RARS mobile robot designed fall in the second category and hence it requires a steering actuator as discussed below.  
 \subsubsection{Standard caster ($d_1=0$) }
-The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  Equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second row of Equations \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the un-actuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}.
+The  standard caster wheel configuration can be obtained by setting the value of $d_1=0$. In such condition, the left hand side matrix of  Equations \ref{unac2act1} and \ref{unac2act2} become  a diagonal matrix. Therefore, the first and second row of Equations \ref{unac2act1} and \ref{unac2act2} get divided by $d_2$ and $r$, respectively. The resulting  equations relating the un-actuated joint rate to  actuated joint rates are similar to those reported by \cite{saha1991dynamics},\cite{angeles2013fundamentals}. These passive wheel are self orienting. Hence there is no need for steering motors. 
 \subsubsection{Underactuated case ($d_2=0$)}
 It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
@@ -513,21 +544,275 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 		\hline
 		\emph{Part Name}  & \emph{ Property} & \emph{Value} \\
 		\hline
-		Rear Wheels  & mass &300g \\ 
-		 & Moment of Inertia & diag(242, 242, 465)kg $mm^2$\\
-		Base Frame & mass & 70Kg \\
-		 & Moment Of Inertia & $ \begin{pmatrix}
+		Rear Wheels & & \\
+		 $m_1,m_2$	& mass				&300g \\ 
+		  $I_1,I_2$	& Moment of Inertia	& diag(242, 242, 465)kg $mm^2$\\
+		Base Frame& & \\
+		 $m_3$ & mass  & 70Kg \\
+		 $ I_3$& Moment Of Inertia & $ \begin{pmatrix}
 		 1.18& 0.01&-0.05\\ 0.01 & 1.28 & 0.08\\
 		 -0.05 & 0.08 & 0.53
 		 \end{pmatrix} Kg-m^2$ \\
 		   l & length & 400mm\\
-		  r & wheel radius & 50mm\\
+		  r & wheel radius (r) & 50mm\\
 		 a & see Figure \ref{fig:CirTrace} & 220 mm \\ 
 		\hline
 		\end{tabular}
 \end{table}
 \section{Dynamics with Wheel Slip}
-The kinematic equations relations are derived for the vehicle.  The wheel \#1 and 
+\begin{figure}
+	\caption{}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=2.5in]{Chapter3/fig/Slip} 
+		\caption{Longitudinal slip}\label{fig:slip}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.5in]{Chapter3/fig/Skid} 
+		\caption{Longitudinal Slip or Skid}\label{fig:skid}
+	\end{minipage}
+\end{figure}
+The above derivation of the dynamics of the mobile robot was based on the no slip condition between the ground and the wheel, i.e. pure rolling condition. In case of RARA robot the steering wheels  are passive wheel but power steered, hence it is not assured always that passive wheel will correctly orient itself to assure pure rolling condition of these wheels. Therefore ideal rolling condition removed from the dynamic equation, both the longitudinal slip and lateral slip (also called skid) is introduce.
+\subsection{Defining Slip}
+\textbf{Longitudinal slip} occurs when the peripheral velocity of the wheel at the point of contact with the ground, $\dot{\phi} \times r$ is different from the linear velocity $v_l$ of the wheel cg as shown in figure \ref{fig:slip}. Where, $\dot{\phi}$ is the angular velocity of wheel and $r$ is the effective radius of the wheel. Under pure rolling assumption  $\dot{\phi} \times r=v_l$. However, this is not the case for a deformed wheel. The wheel slipping can be characterized by
+slippage (or Slip ratio) \[\rho = \frac{\dot{\phi} \times r - v_l}{\max(\dot{\phi} \times r,v_l)}\] that has a value range of $ \rho \in [-1, 1]$.  $i = 0$
+indicating no wheel slippage whereas $i = 1$ implies a complete slippage, i.e., the wheel is not moving linearly despite its angular rotation. In normal road condition, the wheel's slippage is usually $-1<\rho<1 $. The lateral longitudinal force due to slip is related to the slip ratio $\rho$. One of the well known empirical relation to find $F_s$ is the \textit{ magic formula} \cite{pacejka1992magic} used extensively in automotive industry to modeling Tire forces. 
+
+ \textbf{Lateral slip }also called \textbf{skidding} is experienced when the wheel moves perpendicular to it's plain, this is general encountered during turning. This lateral movement is called skidding. The skidding produces frictional force perpendicular to the wheel plane as shown in figure \ref{fig:skid} by $F_k$. The force $F_k$ is related to the slip angle $\delta$, which is the angle formed between the wheel plane and the velocity vector of the wheel's velocity, when projected on the ground plane.
+ The force $F_k$ can again be found using magic formula \cite{pacejka1992magic}. where insted of the slip ratio we use the slip angle as the parameter.
+ 
+ The magic formula \ref{eqn:magic} is reproduced below for completeness. In case of longitudinal slip $Y(x)$ represents longitudinal force $F_s$ and $x$ is the slip ratio $rho$. For computation the lateral frictional force due to skidding $x$ is replaced by the slip angle $\delta$. The constants $D$ represents the peak frictional force. The angle of  tangent at the origin is equal to $BCD$. $C$ controls the shape of the curve, $C=2.4$ for $F_k$ and  $C=1.65$ for $F_s$. $B$ controls the slope at origin. The remaining constant $E$ influences both the curvature of the curve near peak and also the position of$x_m$, where the peak is located.
+ 
+ \begin{equation}\label{eqn:magic}
+ Y(x)=D\sin[C \arctan{Bx -E(Bx-\arctan(bx))}]
+ \end{equation}
+\begin{figure}
+	\label{fig:magicformula}
+	\includegraphics{Chapter3/fig/magicformula}
+	\caption{Tipical Curve of Magic Formula \cite{pacejka1992magic}}
+\end{figure}
+
+\subsection{Kinematics}
+The Figure shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1,\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simply things the  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are not included in the analysis as there weight is small. The steering axis is assumed to pass through the centre of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:dynslip} we use only $O4$  for wheel \#4 and $O5$ for wheel \#5, to denote both the centre of the wheel and also the steering pivot. DNoc will be used to derive the equations of motion of the RARS with wheel slip taken into account for all the four wheels.
+
+
+The set of independent variables for this model is given by
+\begin{equation}
+\label{eqn:theta_slip}
+\dot{\theta}_{9x1}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x},\dot{\phi_1},\dot{\phi_2},\dot{\theta_4},\dot{\theta_5})^T
+\end{equation}
+It may be noted that $\theta_i,\phi_i$  is same as defined earlier in Section \ref{sec:DynamicNoSlip}. $\dot{y_1},\dot{y_2}$ are the linear velocity of centre of the rear wheels i.e. of points point $O_1$ and $O_2$,, in the direction $j$ of the body coordinate system. The lateral slip of the rear wheels are denoted by $x_1$ and $x_2$ as shown in the Figure \ref{fig:dynslip}. Due to rigidity constrains of the rear wheels
+\[\dot{x_1}=\dot{x_2}=\dot{x}\] 
+The velocity of point $o_1$ and $ o_2$ in the world coordinate ${X,Y,z}$ is given by 
+\begin{equation}
+\label{eqn:slip_do1}
+\dot{o_1}=\dot{x}i +\dot{y_1}j, \quad \quad  \dot{o_2}=\dot{x}i +\dot{y_2}j
+\end{equation}
+Equating the velocity of point $O_3$ expressed in terms of $o_1$ and $o_2$, We get
+\begin{equation}
+\label{eqn:slip_do3_rel}
+\dot{o_3}=\dot{o_1}+\omega_3\times o_1o_3=\dot{o_2}+\omega_3\times o_2o_3
+\end{equation}
+Where, $\omega_3$ is the angular velocity of platform, body \#3.
+\begin{equation}
+	\label{eqn:slip_domega3}
+	\omega_3=\frac{\dot{y_2}-\dot{y_1}}{l} k =\bar{\omega_3}k
+\end{equation}
+using Equations \ref{eqn:slip_do3} and \ref{eqn:slip_domega3} , we get
+\begin{equation}
+\label{eqn:slip_do3}
+\dot{o_3}=(\dot{x}+\frac{a\dot{y_1}}{L}-\frac{a \dot{y_2}}{L})i+(\frac{\dot{y_1}}{2}+\frac{\dot{y_2}}{2})j
+\end{equation}
+We can write twist $t_3$ for body \#3 as
+\begin{equation}
+\label{eqn:slip_t1}
+t_3=
+\begin{pmatrix}
+\omega_3\\
+\dot{o_3}
+\end{pmatrix}=T_3 \dot{\theta}, \quad \text{Where,} \quad 
+T_3=
+\begin{pmatrix}
+0 & 0& -k/l & k/l & 0 &0 & 0 &0 &0\\
+0 & 0& ai/l+ j/2& -ai/l+j/2 & 0 &0 & 0 &0 &0\\ 
+\end{pmatrix}
+\end{equation}
+or in expanded form
+\begin{equation}
+\label{eqn:slip_T3}
+T_3=\left(
+\begin{array}{ccccccccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \frac{a}{L} & -\frac{a}{L} & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+Using the fact \[\frac{d i}{dt}=\bar{\omega_3}k\times i =\bar{\omega_3}j, \quad  \frac{d j}{dt}=\bar{\omega_3}k\times j =-\bar{\omega_3}i, \frac{d k}{dt}=\bar{\omega_3}k\times k =0 \] 
+\begin{equation}
+\label{eqn:slip_dT3}
+\dot{T_3}=\begin{pmatrix}
+0 & 0& 0 & 0 & 0 &0 & 0 &0 &0\\
+0 & 0&-\frac{ \bar{\omega_3}}{2}i +\frac{a \bar{\omega_3}}{l}j& -\frac{ \bar{\omega_3}}{2}i -\frac{a \bar{\omega_3}}{l}j & 0 &0 & 0 &0 &0\\ 
+\end{pmatrix}
+\end{equation}
+
+The angular velocities $\omega_1$ and $\omega_2$ of wheels \#1 and \#2 is given as
+\begin{equation}
+\label{eqn:slip_omega1and2}
+\omega_1=\dot{\theta_1}i+\omega_3, \quad \omega_2=\dot{\theta_2}i+\omega_3
+\end{equation}
+using Equations\ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2} for wheel \#1 we get the twist matrix as 
+\begin{equation}
+\label{eqn:slip_t1}
+t_1=
+\begin{pmatrix}
+\omega_1\\
+\dot{o_1}
+\end{pmatrix}=T_1 \dot{\theta}
+\end{equation} 
+\begin{equation}
+\label{eqn:slip_T1}
+T_1=
+\begin{pmatrix}
+i & 0& -k/l & k/l & 0 &0 & 0 &0 &0\\
+0 & 0& j& 0 & i &0 & 0 &0 &0\\ 
+\end{pmatrix}=
+\left(
+\begin{array}{ccccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+
+and 
+\begin{equation}
+\label{eqn:slip_dT1}
+\dot{T_1}=\begin{pmatrix}
+\bar{\omega_3}j & 0& 0& 0 & 0 &0 & 0 &0 &0\\
+0 & 0& -\bar{\omega_3}i& 0 & \bar{\omega_3}j &0 & 0 &0 &0\\ 
+\end{pmatrix}
+\end{equation}
+
+Using Equations\ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2} for wheel \#2 we get the twist matrix $t_2$  as 
+\begin{equation}
+\label{eqn:slip_t2}
+t_2=
+\begin{pmatrix}
+\omega_2\\
+\dot{o_2}
+\end{pmatrix}=T_2 \dot{\theta}
+\end{equation} 
+\begin{equation}
+\label{eqn:slip_T2}
+T_2=
+\begin{pmatrix}
+0 & i& -k/l & k/l & 0 &0 & 0 &0 &0\\
+0 & 0& 0& j &i &0 & 0 &0 &0\\ 
+\end{pmatrix}=
+\left(
+\begin{array}{ccccccccc}
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+
+and 
+\begin{equation}
+\label{eqn:slip_dT2}
+\dot{T_2}=\begin{pmatrix}
+0 & \bar{\omega_3}j & 0& 0 & 0 &0 & 0 &0 &0\\
+0 & 0& 0& -\bar{\omega_3}i & \bar{\omega_3}j &0 & 0 &0 &0\\ 
+\end{pmatrix}
+\end{equation}
+
+
+Next  the angular velocity of the steered wheel i.e body \#4 relative to the absolute frame is given as 
+\[\omega_4=\dot{\theta_4}e_4+ \dot{\phi_1} k +\omega_3\]
+The transformation matrix between the Frame $\{e_4,f_4\}$ is given by the rotation matrix $R_4$. From Figure $R_4$ can be written as 
+\begin{equation}
+Rr=\begin{pmatrix}
+\cos \psi_1 & - \sin \psi_1\\
+\sin \psi_1 & \cos\psi_1
+\end{pmatrix}
+\end{equation}
+Then, $e_4= \cos\psi_1 i +\sin \psi_1 j$  and $\omega_4$ can be written as 
+\[ \omega_4= \dot{\theta_4}( \cos\psi_1 i +\sin \psi_1 j)+ \dot{\phi_1} k +\omega_3 \]
+Linear velocitu of point $o_4$ is given as 
+\[ \dot{o_4}=\dot{o_3}+\omega_3 \times (-\frac{c}{2}i+bj) \]
+or
+\begin{equation}
+\label{eqn:slip_t4}
+t_4=
+\begin{pmatrix}
+\omega_4\\
+\dot{o_4}
+\end{pmatrix}=T_4 \dot{\theta}
+\end{equation}
+where 
+\begin{equation}
+\label{eqn:slip_T4}
+T_4=\left(
+\begin{array}{ccccccccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Cos}[\text{$\psi $1}] & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Sin}[\text{$\psi $1}] & 0 \\
+0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & \frac{a}{L}+\frac{b}{L} & -\frac{a}{L}-\frac{b}{L} & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{2}+\frac{c}{2 L} & \frac{1}{2}-\frac{c}{2 L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+
+Next, for wheel \#5 
+\[\omega_5 = \dot{\theta_5} (R_5.e) + \dot{\psi_2} k + \omega_3 =
+  \left(
+\begin{array}{c}
+\dot{\theta }_5 \cos \psi_2 \\
+\dot{\theta_5} \sin \psi_2 \\
+\dot{\psi_2}+\frac{-\dot{y_1}+\dot{y_2}}{L}
+\end{array}
+\right) \]
+the linear velocity of point $o_5$ is given as 
+\[ \dot{o_5}=\dot{o_3}+\omega_3 \times o_3o_5\]
+The twist of body 5 , ie wheel 5 is given as 
+\begin{equation}
+\label{eqn:slip_t5}
+t_5=
+\begin{pmatrix}
+\omega_5\\
+\dot{o_5}
+\end{pmatrix}=T_5 \dot{\theta}
+\end{equation}
+Where
+\begin{equation}
+\label{eqn:slip_T5}
+T_5=\left(
+\begin{array}{ccccccccc}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Cos}[\text{$\psi $2}] \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Sin}[\text{$\psi $2}] \\
+0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & \frac{a}{L}+\frac{b}{L} & -\frac{a}{L}-\frac{b}{L} & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & \frac{1}{2}-\frac{c}{2 L} & \frac{1}{2}+\frac{c}{2 L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
 \subsection{Simulation}
 
 \section{Dynamical Model of Steering System}

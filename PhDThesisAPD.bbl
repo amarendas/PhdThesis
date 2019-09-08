@@ -12,6 +12,10 @@ B.~L. Luk, K.~Liu, A.~A. Collie, D.~S. Cooke, and S.~Chen, ``Tele-operated
   nuclear industry,'' {\em Industrial Robot: An International Journal},
   vol.~33, no.~3, pp.~194--204, 2006.
 
+\bibitem{pacejka1992magic}
+H.~B. Pacejka and E.~Bakker, ``The magic formula tyre model,'' {\em Vehicle
+  system dynamics}, vol.~21, no.~S1, pp.~1--18, 1992.
+
 \bibitem{smith1959controller}
 O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
   pp.~28--33, 1959.
@@ -168,6 +172,11 @@ S.~Furuno, M.~Yamamoto, and A.~Mohri, ``Trajectory planning of mobile
 D.~Messuri and C.~Klein, ``Automatic body regulation for maintaining stability
   of a legged vehicle during rough-terrain locomotion,'' {\em IEEE Journal on
   Robotics and Automation}, vol.~1, no.~3, pp.~132--141, 1985.
+
+\bibitem{ghasempoor1995measure}
+A.~Ghasempoor and N.~Sepehri, ``A measure of machine stability for moving base
+  manipulators,'' in {\em Proceedings of 1995 IEEE International Conference on
+  Robotics and Automation}, vol.~3, pp.~2249--2254, IEEE, 1995.
 
 \bibitem{papadopoulos1996new}
 E.~Papadopoulos and D.~A. Rey, ``A new measure of tipover stability margin for
