@@ -92,7 +92,7 @@ T^Tw^c=0
 To eliminate the non-working  moments and  forces, i.e., $w^c$ from the uncoupled equation of motion (\ref{DCE}), we multiply both sides of the equation  by $T^T$,
 \begin{equation}
  T^TM\dot{t}+T^TWMt=T^Tw^W, \quad
- \Rightarrow T^TMT\ddot{\theta}+T^T(M\dot{T}+WMT)\dot{\theta}=T^Tw^T
+ \Rightarrow T^TMT\ddot{\theta}+T^T(M\dot{T}+WMT)\dot{\theta}=T^Tw^w
  \label{eqn:CEM}
 \end{equation}
 Equation \ref{eqn:CEM} represents the dynamic equation of  interconnected $n$-body system.
@@ -100,16 +100,25 @@ Equation \ref{eqn:CEM} represents the dynamic equation of  interconnected $n$-bo
 
 \begin{equation}
 \label{CE}
- \quad I(\theta)\ddot{\theta}=C(\theta,\dot{\theta})\dot{\theta}+\tau
+ \quad I(\theta)\ddot{\theta}+C(\theta,\dot{\theta})\dot{\theta}=\tau
 \end{equation}
 where
 \begin{align*}
 I(\theta) &\equiv T^TMT\quad \quad:\text{generalized inertia matrix}\\
-C(\theta,\dot{\theta})&\equiv -T^T(M\dot{T}+WMT)\dot{\theta} \quad :\text{generalized  convective inertia matrix}\\
-\tau&\equiv T^Tw^T \quad \quad :\text{ generalized vector of driving forces }
+C(\theta,\dot{\theta})&\equiv +T^T(M\dot{T}+WMT) \quad :\text{generalized  convective inertia matrix}\\
+\tau&\equiv T^Tw \quad \quad :\text{ generalized vector of driving forces }
 \end{align*}
 
-
+Where, 
+\begin{equation}
+	I(\theta)=\sum_{i=1..n}(T_i^TM_iT_i)
+\end{equation}
+\begin{equation}
+C(\theta,\dot{\theta})=\sum_{i=1..n}(T_i^T M_i\dot{T_i}+T_i W_i M_i T_i)
+\end{equation}
+\begin{equation}
+\tau=\sum_{i=1..n}T_i^T w^w_i
+\end{equation}
 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
@@ -352,7 +361,8 @@ Am alternative solution is to put an extra actuator to control the bracket motio
 \section{Dynamic equations}
 Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE} can be derived 
 \subsubsection{Generalized inertia matrix, $I$}
- The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
+\label{sec:GIM}
+ The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7^T]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
 \begin{equation}
 I=T^TMT=T_1^TM_1T_1+T_2^TM_2T_2+...T_7^TM_7T_7
 \end{equation}
@@ -595,6 +605,7 @@ indicating no wheel slippage whereas $i = 1$ implies a complete slippage, i.e., 
 \end{figure}
 
 \subsection{Kinematics}
+\label{sec:slipKina}
 The Figure shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1,\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simply things the  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are not included in the analysis as there weight is small. The steering axis is assumed to pass through the centre of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:dynslip} we use only $O4$  for wheel \#4 and $O5$ for wheel \#5, to denote both the centre of the wheel and also the steering pivot. DNoc will be used to derive the equations of motion of the RARS with wheel slip taken into account for all the four wheels.
 
 
@@ -627,7 +638,7 @@ using Equations \ref{eqn:slip_do3} and \ref{eqn:slip_domega3} , we get
 \end{equation}
 We can write twist $t_3$ for body \#3 as
 \begin{equation}
-\label{eqn:slip_t1}
+\label{eqn:slip_t3}
 t_3=
 \begin{pmatrix}
 \omega_3\\
@@ -838,8 +849,45 @@ using the fact $\dot{e5}=(\dot{\psi_2}+\bar{\omega_3})k\times e_5 =(\dot{\psi_2}
 \end{equation}
 where 
 \[ \lambda_5 = (\bar{\omega_3}+\dot{\psi_2}) (\cos\psi_2 j-\sin \psi_2 i) \]
+\subsection{Dynamics }
+The mass inertia matrix $M_i$of the wheel and platform are same as that of the no-slip condition discussed above. The generalized inertia matrix is calculated using $T_i$ derived in Section, as \ref{sec:slipKina}
+\begin{equation}
+I(\theta)=\sum_{i=1..n}(T_i^TM_iT_i)
+\end{equation}
+The convective term $C(\theta,\dot{\theta})$ can also be calculated using the $T_i$,and $\dot{T_i}$ derived in Section \ref{sec:slipKina}
+\begin{equation}
+C(\theta,\dot{\theta})=\sum_{i=1..n}(T_i^T M_i\dot{T_i}+T_i W_i M_i T_i)
+\end{equation}
+The wrench $\tau$ acting on the system is given as 
+\begin{equation}
+\tau=\sum_{i=1..n}T_i^T w^w_i
+\end{equation}
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{Chapter4/fig/ForceWheel1}
+		\caption{External Force on Rear Wheel}\label{fig:ForceRearWheel}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{Chapter4/fig/ForceWheel2}
+		\caption{External Forces on Front Wheel }\label{fig:ForceFrontWheel}
+	\end{minipage}
+	%\caption{Actuator effort}
+\end{figure} 
+The $T_i$ has all ready been calculated in the above section, the $w_i^w$ term is derived next. Where, $w_i^w$ is the working wrench acting on the individual bodies. This consist of all the external forces such as actuator force, friction force and gravitational force.
+The forces acting wheel 1,as shown in Figure \ref{fig:ForceRearWheel},  are the friction force due longitudinal slip $Fs_1$ and frictional force  due to lateral slip or skidding, $Fk_1$ at the ground-wheel interface . The motor torque action on the wheel 1 is $\tau_{m1}$.  Similarly forces acting on wheel 2 are $Fs_2$, $Fk_2$ and $\tau_{m2}$. Therefore, $w_1$ and $w_2$ are written as 
+\[ w_n=\begin{pmatrix}
+\tau_{m,n}i\\
+F_{k,n}i+F_{s,n}j
+\end{pmatrix},  \quad n=\{1,2\}\]
 
-
+The front wheels have steering actuation, let these torques be represented by $\tau_{s,4}$ and  $\tau_{s,4}$. The friction forces as shown in \ref{fig:ForceFrontWheel} act along $\{e_4,f_4\}$ and $\{e_5,f_5\}$ for the two front wheels. No traction force is applied to the front wheels. Therefore, $w_4$ and $w_5$ is given by
+\[ w_n=\begin{pmatrix}
+\tau_{m,n}k\\
+F_{k,n}e_n+F_{s,n}f_n
+\end{pmatrix},  \quad n=\{4,5\}\]
 \subsection{Simulation}
 
 \section{Dynamical Model of Steering System}
