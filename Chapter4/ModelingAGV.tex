@@ -743,7 +743,7 @@ and
 
 
 Next  the angular velocity of the steered wheel i.e body \#4 relative to the absolute frame is given as 
-\[\omega_4=\dot{\theta_4}e_4+ \dot{\phi_1} k +\omega_3\]
+\[\omega_4=\dot{\theta_4}e_4+ \dot{\psi_1} k +\omega_3\]
 The transformation matrix between the Frame $\{e_4,f_4\}$ is given by the rotation matrix $R_4$. From Figure $R_4$ can be written as 
 \begin{equation}
 Rr=\begin{pmatrix}
@@ -772,13 +772,23 @@ T_4=\left(
 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Cos}[\text{$\psi $1}] & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Sin}[\text{$\psi $1}] & 0 \\
 0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 1 & 0 & 0 & 0 \\
-0 & 0 & \frac{a}{L}+\frac{b}{L} & -\frac{a}{L}-\frac{b}{L} & 1 & 0 & 0 & 0 & 0 \\
-0 & 0 & \frac{1}{2}+\frac{c}{2 L} & \frac{1}{2}-\frac{c}{2 L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \lambda_1 & -\lambda_1 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 &\lambda_3 & \lambda_2 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{array}
 \right)
 \end{equation}
+\begin{equation}
+\label{eqn{:slip_dT4}}
+\dot{T_4}=\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \lambda_4 & 0\\
+0 & 0 & \lambda_7 & \lambda_6 & \bar{\omega_3}j & 0 & 0 & 0 & 0
+\end{pmatrix}
+\end{equation}
 
+ \[\lambda_1=\frac{a+b}{l}, \quad \lambda_2=\frac{l-c}{2l}, \quad \lambda_3=\frac{l+c}{2l} \]
+  \[\lambda_4=(\bar{\omega_3}+\dot{\psi_1}) (\cos\psi_1 j-\sin \psi_1 i) \]
+  \[\lambda_6=-\bar{\omega_3}(\lambda_1 j+\lambda_2 i), \quad \lambda_7=\bar{\omega_3}(\lambda_1 j-\lambda_3 i)\]
 Next, for wheel \#5 
 \[\omega_5 = \dot{\theta_5} (R_5.e) + \dot{\psi_2} k + \omega_3 =
   \left(
@@ -790,6 +800,8 @@ Next, for wheel \#5
 \right) \]
 the linear velocity of point $o_5$ is given as 
 \[ \dot{o_5}=\dot{o_3}+\omega_3 \times o_3o_5\]
+Using  \[ o_3o_5=\frac{c}{2}i+bj\] with $\omega_3$ and $\dot{p_3}$ from Equation\ref{eqn:slip_domega3}, \ref{eqn:slip_do3}, we get,
+\[\dot{o_5}= \left( \dot{x}+\dot{y_1}(\lambda_1)-\dot{y_2}\lambda_1 \right)i +\left( \lambda_2\dot{y_1}+\lambda_3\dot{y_2}\right)j  \]
 The twist of body 5 , ie wheel 5 is given as 
 \begin{equation}
 \label{eqn:slip_t5}
@@ -804,15 +816,30 @@ Where
 \label{eqn:slip_T5}
 T_5=\left(
 \begin{array}{ccccccccc}
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Cos}[\text{$\psi $2}] \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{Sin}[\text{$\psi $2}] \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \cos \psi_2\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \sin\psi_2 \\
 0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 1 & 0 & 0 \\
-0 & 0 & \frac{a}{L}+\frac{b}{L} & -\frac{a}{L}-\frac{b}{L} & 1 & 0 & 0 & 0 & 0 \\
-0 & 0 & \frac{1}{2}-\frac{c}{2 L} & \frac{1}{2}+\frac{c}{2 L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \lambda_1 & -\lambda_1 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 &\lambda_2& \lambda_3 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{array}
 \right)
 \end{equation}
+
+using the fact $\dot{e5}=(\dot{\psi_2}+\bar{\omega_3})k\times e_5 =(\dot{\psi_2}+\bar{\omega_3})f_5$ and $f_5=-\sin \psi_2 i+\cos \psi_2 j$. It may be noted that coordinate system $\{e_5,f_5\}$ is rotated by $\psi_2$ with respect to coordinate $ \{i,j\}$. Therefore $\dot{T_5}$ is given as
+
+\begin{equation}
+\label{eqn:slip_dT5}
+\dot{T_5}=
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \lambda_5 & 0\\
+0 & 0 & \lambda_7 & \lambda_6 & \bar{\omega_3}j & 0 & 0 & 0 & 0
+\end{pmatrix}
+\end{equation}
+where 
+\[ \lambda_5 = (\bar{\omega_3}+\dot{\psi_2}) (\cos\psi_2 j-\sin \psi_2 i) \]
+
+
 \subsection{Simulation}
 
 \section{Dynamical Model of Steering System}
