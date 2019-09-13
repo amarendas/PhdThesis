@@ -550,6 +550,32 @@ K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
   Proceedings., 1997 IEEE International Conference on}, vol.~4, pp.~2926--2931,
   IEEE, 1997.
 
+\bibitem{williams2002dynamic}
+R.~L. Williams, B.~E. Carter, P.~Gallina, and G.~Rosati, ``Dynamic model with
+  slip for wheeled omnidirectional robots,'' {\em IEEE transactions on Robotics
+  and Automation}, vol.~18, no.~3, pp.~285--293, 2002.
+
+\bibitem{balakrishna1995modeling}
+R.~Balakrishna and A.~Ghosal, ``Modeling of slip for wheeled mobile robots,''
+  {\em IEEE Transactions on Robotics and Automation}, vol.~11, no.~1,
+  pp.~126--132, 1995.
+
+\bibitem{tian2009modeling}
+Y.~Tian, N.~Sidek, and N.~Sarkar, ``Modeling and control of a nonholonomic
+  wheeled mobile robot with wheel slip dynamics,'' in {\em 2009 IEEE Symposium
+  on Computational Intelligence in Control and Automation}, pp.~7--14, IEEE,
+  2009.
+
+\bibitem{sidek2008dynamic}
+S.~N. Sidek and N.~Sarkar, {\em Dynamic modeling and control of nonholonomic
+  wheeled mobile robot subjected to wheel slip}.
+\newblock PhD thesis, Vanderbilt University, 2008.
+
+\bibitem{konduri2014effect}
+S.~Konduri, E.~Orlando, C.~Torres, and P.~R. Pagilla, ``Effect of wheel slip in
+  the coordination of wheeled mobile robots,'' {\em IFAC Proceedings Volumes},
+  vol.~47, no.~3, pp.~8097--8102, 2014.
+
 \bibitem{saha2010robotics}
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.

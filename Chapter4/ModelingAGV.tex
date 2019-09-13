@@ -20,8 +20,21 @@ In this chapter we first present the mathamitical model of the mobile robot with
  
 %All the papers reviewed use  caster wheel in deriving the dynamic model of a WMR. In this chapter, the modelling is carried out considering the passive wheels in the most general configuration.
 % The  castor wheel,  in which the axis of rotation is perpendicular to the line joining the pivot and the axis of rotation, as shown in Figure \ref{fig:std}, is  a special case of the configuration considered here. Whereas in this study they are oriented in  the most general way, as shown in figure Figure \ref{fig:gen}. 
- The concept of the NOC which inherently takes into account the non-holonomic constraint of the wheels has been used.
-  Moreover, being a matrix based approach, it is convenient for numerical simulations. 
+ The concept of the NOC which inherently takes into account the non-holonomic constraint of the wheels has been used. The general methodology of NOC is presented and dynamic model of differential driver robot is presented. 
+ The RARS robot has unique  drive configuration, which uses both differential drive and Ackerman mechanism for steering. 
+  This system has a redundant configuration and very few literature presents dynamical analysis with slip included in the dynamics. To our knowledge no literature is present, which uses NOC based algorithm for modeling slip in mobile robot dynamics.  This being a matrix based approach, it is convenient for numerical simulations. 
+  
+   Williams\cite{williams2002dynamic}  and Balakrishna  \cite{balakrishna1995modeling} has presented dynamic equation with slip for omnidirectional robots. 
+   While the former has considered both lateral and longitudinal slip assuming the wheel mass to be negligible the later has included the dynamics of  wheels in the dynamics analysis but lateral shift has been considered zero.
+    Dynamic model of differential drive robot with wheel slip has been discussed in \cite{tian2009modeling},\cite{sidek2008dynamic}  and \cite{konduri2014effect}.
+    Where as the first two has not considered the effect of caster in the dynamic model, \cite{konduri2014effect} has include effect of caster wheels on the dynamic of slip. 
+    In this thesis the wheel slip based dynamic model of the redundantly actuated mobile robot has been presented. The effect of steering wheel  miss aliment on the actuator torque has been quantified.
+
+  
+  
+  
+  
+  
 \section{Modeling using the Natural Orthogonal Compliment (NOC)}
 Let us consider a system with $n$ rigid bodies interconnected with different types of joints. 
 Let, $f_i$ be the net force acting at the center of mass (CM) of the $i^{th}$  body and $n_i$ is the net moment.
@@ -757,14 +770,15 @@ Next  the angular velocity of the steered wheel i.e body \#4 relative to the abs
 \[\omega_4=\dot{\theta_4}e_4+ \dot{\psi_1} k +\omega_3\]
 The transformation matrix between the Frame $\{e_4,f_4\}$ is given by the rotation matrix $R_4$. From Figure $R_4$ can be written as 
 \begin{equation}
-Rr=\begin{pmatrix}
+\label{eqn:slipR4}
+R_4=\begin{pmatrix}
 \cos \psi_1 & - \sin \psi_1\\
 \sin \psi_1 & \cos\psi_1
 \end{pmatrix}
 \end{equation}
 Then, $e_4= \cos\psi_1 i +\sin \psi_1 j$  and $\omega_4$ can be written as 
 \[ \omega_4= \dot{\theta_4}( \cos\psi_1 i +\sin \psi_1 j)+ \dot{\phi_1} k +\omega_3 \]
-Linear velocitu of point $o_4$ is given as 
+Linear velocity of point $o_4$ is given as 
 \[ \dot{o_4}=\dot{o_3}+\omega_3 \times (-\frac{c}{2}i+bj) \]
 or
 \begin{equation}
@@ -801,7 +815,7 @@ T_4=\left(
   \[\lambda_4=(\bar{\omega_3}+\dot{\psi_1}) (\cos\psi_1 j-\sin \psi_1 i) \]
   \[\lambda_6=-\bar{\omega_3}(\lambda_1 j+\lambda_2 i), \quad \lambda_7=\bar{\omega_3}(\lambda_1 j-\lambda_3 i)\]
 Next, for wheel \#5 
-\[\omega_5 = \dot{\theta_5} (R_5.e) + \dot{\psi_2} k + \omega_3 =
+\[\omega_5 = \dot{\theta_5} (R_5.e_5) + \dot{\psi_2} k + \omega_3 =
   \left(
 \begin{array}{c}
 \dot{\theta }_5 \cos \psi_2 \\
@@ -811,6 +825,13 @@ Next, for wheel \#5
 \right) \]
 the linear velocity of point $o_5$ is given as 
 \[ \dot{o_5}=\dot{o_3}+\omega_3 \times o_3o_5\]
+where, \begin{equation}
+\label{eqn:slipR5}
+R_5=\begin{pmatrix}
+\cos \psi_2 & - \sin \psi_2\\
+\sin \psi_2 & \cos\psi_2
+\end{pmatrix}
+\end{equation}
 Using  \[ o_3o_5=\frac{c}{2}i+bj\] with $\omega_3$ and $\dot{p_3}$ from Equation\ref{eqn:slip_domega3}, \ref{eqn:slip_do3}, we get,
 \[\dot{o_5}= \left( \dot{x}+\dot{y_1}(\lambda_1)-\dot{y_2}\lambda_1 \right)i +\left( \lambda_2\dot{y_1}+\lambda_3\dot{y_2}\right)j  \]
 The twist of body 5 , ie wheel 5 is given as 
@@ -856,10 +877,10 @@ I(\theta)=\sum_{i=1..n}(T_i^TM_iT_i)
 \end{equation}
 The convective term $C(\theta,\dot{\theta})$ can also be calculated using the $T_i$,and $\dot{T_i}$ derived in Section \ref{sec:slipKina}
 \begin{equation}
-C(\theta,\dot{\theta})=\sum_{i=1..n}(T_i^T M_i\dot{T_i}+T_i W_i M_i T_i)
-\end{equation}
+C(\theta,\dot{\theta})=\sum_{i=1..n}T_i^T M_i\dot{T_i}+ \sum_{i=1..n}T_i^T W_i M_i T_i)\end{equation}
 The wrench $\tau$ acting on the system is given as 
 \begin{equation}
+\label{eqn:slipTauSum}
 \tau=\sum_{i=1..n}T_i^T w^w_i
 \end{equation}
 \begin{figure}
@@ -883,31 +904,53 @@ The forces acting wheel 1,as shown in Figure \ref{fig:ForceRearWheel},  are the 
 F_{k,n}i+F_{s,n}j
 \end{pmatrix},  \quad n=\{1,2\}\]
 
-The front wheels have steering actuation, let these torques be represented by $\tau_{s,4}$ and  $\tau_{s,4}$. The friction forces as shown in \ref{fig:ForceFrontWheel} act along $\{e_4,f_4\}$ and $\{e_5,f_5\}$ for the two front wheels. No traction force is applied to the front wheels. Therefore, $w_4$ and $w_5$ is given by
+The front wheels have steering actuation, let the steering  torques be represented by $\tau_{s,4}$ and  $\tau_{s,4}$. The friction forces on the front steered wheel is shown in \ref{fig:ForceFrontWheel} act along $\{e_4,f_4\}$ and $\{e_5,f_5\}$ for the two front wheels. No traction force is applied to the front wheels. Therefore, $w_4$ and $w_5$ is given by
 \[ w_n=\begin{pmatrix}
-\tau_{m,n}k\\
+\tau_{s,n}k\\
 F_{k,n}e_n+F_{s,n}f_n
 \end{pmatrix},  \quad n=\{4,5\}\]
+Since no external force is acting on the platform, i.e. body \#3. \[w_3=0_{6x1}\]
+
+We can now calculate $T_i^Tw_i$
+
+\begin{subequations}
+	\label{eqn:slip_Tau_is}
+	\begin{align}
+	T_1^T w_1&=\begin{pmatrix}
+	\tau_{m1} & 0 & F_{s1}& 0& F_{k1}&0&0&0&0
+	\end{pmatrix} ^T\\
+	T_2^T w_2&=\begin{pmatrix}
+	0&\tau_{m2}& 0&F_{s2}&  F_{k2}&0&0&0&0
+	\end{pmatrix} ^T\\
+	T_3^T w_3&=0_{9x1} \quad \text{since } w_3=0\\
+	T_4w_4&= \begin{pmatrix}
+	0 & 0& \alpha_1& \alpha_2 & \alpha_3 &\tau_{s4}& 0&0 &0
+	\end{pmatrix}^T\\
+	T_5w_5&=\begin{pmatrix}
+	0 & 0& \beta_1& \beta_2 & \beta_3 &0 &\tau_{s5}& 0&0
+	\end{pmatrix}^T
+	\end{align}
+\end{subequations}
+Where 
+\[\alpha_1=-\frac{\tau_{s4}}{l}+\lambda_1(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})+\lambda_3(F_{k4}S_{\phi_1}+F_{s4}C_{\phi_1})\]
+\[\alpha_2=\frac{\tau_{s4}}{l}-\lambda_1(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})+\lambda_2(F_{k4}S_{\phi_1}+F_{s4}C_{\phi_1})\]
+\[\alpha_3=(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})\]
+\[\beta_1=-\frac{\tau_{s5}}{l}+\lambda_1(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})+\lambda_2(F_{k5}S_{\phi_2}+F_{s5}C_{\phi_2})\]
+\[\beta_2=\frac{\tau_{s5}}{l}-\lambda_1(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})+\lambda_3(F_{k5}S_{\phi_2}+F_{s5}C_{\phi_2})\]
+\[\beta_3=(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})\]
+Therefore the $\tau$ of Equation \ref{eqn:slipTauSum} can be written as
+\begin{equation}
+\tau=\begin{pmatrix}
+\tau_{m1} & \tau_{m2} & (F_{s1}+\alpha_1+\beta_1)&( F_{s2}+\alpha_2+\beta_2)&  (F_{k1}+ F_{k2}+\alpha_3+\beta_3)& \tau_{s4}&\tau_{s5} &0&0
+\end{pmatrix}^T
+\end{equation}
 \subsection{Simulation}
 
 \section{Dynamical Model of Steering System}
 The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
 
 
-\begin{figure}
-	\begin{minipage}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=3in]{Chapter4/fig/SteerModel} 
-		\caption{Steering Assembly}\label{fig:SteerAsm}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=2in]{Chapter4/fig/link} 
-		\caption{Link }\label{fig:SteerLink}
-	\end{minipage}
-	%\caption{Actuator effort}
-\end{figure} 
+ 
 
 
 The kinetic energy of link  \#6 is given by
@@ -928,6 +971,20 @@ x_{4}\\y_{4} \end{pmatrix}_F
 \begin{pmatrix}
 			-l_3\\0
 \end{pmatrix}\]
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=3in]{Chapter4/fig/SteerModel} 
+		\caption{Steering Assembly}\label{fig:SteerAsm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=2in]{Chapter4/fig/link} 
+		\caption{Link }\label{fig:SteerLink}
+	\end{minipage}
+	%\caption{Actuator effort}
+\end{figure}
  	
   The linear velocity $\dot{O}_4$  and its angular velocity $\omega_6$  expressed in the world frame $F:\{i,j,k\}$ is given by
  \begin{eqnarray}

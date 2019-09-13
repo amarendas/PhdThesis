@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: PhDThesisAPD.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PhDThesisAPD.aux
 A level-1 auxiliary file: Misc_front/cover.aux
 A level-1 auxiliary file: Misc_front/certificate.aux
 A level-1 auxiliary file: Misc_front/dedicatedTo.aux
@@ -26,4 +28,45 @@ Warning--empty institution in grange2001overview
 Warning--empty author and editor in catMaxon
 Warning--empty author and editor in maxonrs232
 Warning--empty author and editor in maxonAppNotesPosition
+You've used 126 entries,
+            1876 wiz_defined-function locations,
+            1168 strings with 26807 characters,
+and the built_in function-call counts, 37558 in all, are:
+= -- 3963
+> -- 1132
+< -- 0
++ -- 430
+- -- 304
+* -- 2532
+:= -- 4942
+add.period$ -- 146
+call.type$ -- 126
+change.case$ -- 114
+chr.to.int$ -- 0
+cite$ -- 130
+duplicate$ -- 2000
+empty$ -- 3685
+format.name$ -- 304
+if$ -- 9338
+int.to.chr$ -- 0
+int.to.str$ -- 126
+missing$ -- 124
+newline$ -- 401
+num.names$ -- 119
+pop$ -- 447
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1485
+stack$ -- 0
+substring$ -- 3012
+swap$ -- 873
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 399
+width$ -- 129
+write$ -- 1292
 (There was 1 error message)
