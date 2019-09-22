@@ -1,0 +1,88 @@
+\contentsline {section}{Certificate}{i}{Doc-Start}
+\contentsline {section}{Acknowledgements}{v}{Doc-Start}
+\contentsline {section}{Abstract}{vii}{Doc-Start}
+\contentsline {section}{Table of Contents}{ix}{Doc-Start}
+\contentsline {section}{List of Figures}{xiii}{chapter*.1}
+\contentsline {section}{List of Tables}{xvii}{chapter*.2}
+\contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Literature Survey}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1} Special Purpose Robots}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Mathematical Modeling}{5}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Stability of Mobile Manipulator}{7}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Path Tracking}{7}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Obstacle avoidance and path planing}{9}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.6}Tele-operation}{10}{subsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.6.1}Human interface}{11}{subsubsection.1.1.6.1}
+\contentsline {subsubsection}{\numberline {1.1.6.2}Control}{12}{subsubsection.1.1.6.2}
+\contentsline {subsection}{\numberline {1.1.7}Predictive Display}{12}{subsection.1.1.7}
+\contentsline {section}{\numberline {1.2}Research Contributions}{13}{section.1.2}
+\contentsline {section}{\numberline {1.3}Thesis Organization}{14}{section.1.3}
+\contentsline {chapter}{\numberline {2}Design of a Mobile Robot}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Design Overview}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Design of the Traction System}{20}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Stability Of Mobile Manipulator}{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Selection of motor and gearbox}{23}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Design of Steering System }{24}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Minimum turning radius}{26}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Calculation of steering torque}{27}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Scissor Mechanism for Manipulating Arm}{28}{section.2.4}
+\contentsline {section}{\numberline {2.5}Summary}{29}{section.2.5}
+\contentsline {chapter}{\numberline {3}Dynamics of Wheeled Mobile Robots }{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Modeling using the Natural Orthogonal Compliment (NOC)}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dynamic Equation of WMR}{36}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Kinematic analysis}{37}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Special cases}{41}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Standard caster ($d_1=0$) }{41}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Under-actuated case ($d_2=0$)}{42}{subsubsection.3.2.2.2}
+\contentsline {section}{\numberline {3.3}Dynamic equations}{42}{section.3.3}
+\contentsline {subsubsection}{\numberline {3.3.0.1}Generalized inertia matrix, $I$}{42}{subsubsection.3.3.0.1}
+\contentsline {subsubsection}{\numberline {3.3.0.2}Matrix of convective inertia term $C$}{44}{subsubsection.3.3.0.2}
+\contentsline {subsection}{\numberline {3.3.1}Simulation }{46}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Inverse dynamics}{47}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Dynamics with Wheel Slip}{49}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Defining Slip}{49}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Kinematics}{51}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Dynamics }{58}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Simulation}{62}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{63}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{67}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Simulation and results}{68}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{69}{section.3.6}
+\contentsline {chapter}{\numberline {4}Control of a Mobile Manipulator }{71}{chapter.4}
+\contentsline {section}{\numberline {4.1}Control Architecture and Hardware}{71}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Local onboard controller}{72}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Details of the motor controller}{74}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Control Algorithm }{76}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Safety Interlocks}{81}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Wheel odometery }{81}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3} Remote control station}{84}{section.4.3}
+\contentsline {section}{\numberline {4.4}Summary}{85}{section.4.4}
+\contentsline {chapter}{\numberline {5}Simulation of Tele-operation}{87}{chapter.5}
+\contentsline {section}{\numberline {5.1}Modeling of Mobile Robot}{88}{section.5.1}
+\contentsline {section}{\numberline {5.2}Model of Human Operator}{88}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simulation and Results }{91}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Simulation algorithm}{91}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Summary}{93}{section.5.4}
+\contentsline {chapter}{\numberline {6} Predictive Display}{95}{chapter.6}
+\contentsline {section}{\numberline {6.1}Time Delay Compensation}{95}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Proposed controller}{96}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Simulation algorithm and results}{97}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Delay Compensation using Predictive Display}{100}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}The Kinect sensor }{101}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Onboard data processing and transmission}{102}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}3-D reconstruction }{102}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Extrapolation of remote scene }{103}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}Summary}{105}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions}{107}{chapter.7}
+\contentsline {section}{\numberline {7.1}Thesis Summary}{107}{section.7.1}
+\contentsline {section}{\numberline {7.2}Current Status}{109}{section.7.2}
+\contentsline {section}{\numberline {7.3}Future Scope }{109}{section.7.3}
+\contentsline {chapter}{\bf Bibliography}{113}{section.7.3}
+\contentsline {chapter}{\numberline {A} }{123}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{123}{section.A.1}
+\contentsline {chapter}{\numberline {B} }{125}{appendix.B}
+\contentsline {section}{\numberline {B.1}Stability of Pure Pursuit under Time Delay}{125}{section.B.1}
+\contentsline {chapter}{\numberline {C} }{129}{appendix.C}
+\contentsline {section}{\numberline {C.1}Optimal Design of Steering Linkages}{129}{section.C.1}
+\contentsline {section}{\bf Publications from the Thesis}{131}{equation.C.1.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{133}{Item.17}

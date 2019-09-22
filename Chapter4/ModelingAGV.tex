@@ -624,7 +624,11 @@ indicating no wheel slippage whereas $i = 1$ implies a complete slippage, i.e., 
 \subsection{Kinematics}
 \label{sec:slipKina}
 The Figure shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1,\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simply things the  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are not included in the analysis as there weight is small. The steering axis is assumed to pass through the centre of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:dynslip} we use only $O4$  for wheel \#4 and $O5$ for wheel \#5, to denote both the centre of the wheel and also the steering pivot. DNoc will be used to derive the equations of motion of the RARS with wheel slip taken into account for all the four wheels.
-
+\begin{figure}
+	\label{fig:VehicleWithSlip}
+	\includegraphics[width=\linewidth]{Chapter4/fig/VechileWithSlip}
+	\caption{Free Body Digram of RARS Robot}
+\end{figure}
 
 The set of independent variables for this model is given by
 \begin{equation}
@@ -1001,12 +1005,24 @@ Where
 \[\beta_2=\frac{\tau_{s5}}{l}-\lambda_1(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})+\lambda_3(F_{k5}S_{\phi_2}+F_{s5}C_{\phi_2})\]
 \[\beta_3=(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})\]
 Therefore the $\tau$ of Equation \ref{eqn:slipTauSum} can be written as
-\begin{equation}
-\tau=\begin{pmatrix}
-\tau_{m1} & \tau_{m2} & (F_{s1}+\alpha_1+\beta_1)&( F_{s2}+\alpha_2+\beta_2)&  (F_{k1}+ F_{k2}+\alpha_3+\beta_3)& \tau_{s4}&\tau_{s5} &0&0
-\end{pmatrix}^T
-\end{equation}
+\begin{multline}
+\tau=(
+\tau_{m1} \quad \tau_{m2} \quad (F_{s1}+\alpha_1+\beta_1) \quad( F_{s2}+\alpha_2+\beta_2) \\
+ \quad  (F_{k1}+ F_{k2}+\alpha_3+\beta_3)\quad \tau_{s4}\quad  \tau_{s5} \quad 0 \quad 0 )  ^T
+\end{multline}
+The longitudinal  friction force $F_{si} \quad i=1,2,4,5 $ is given by Equation \ref{eqn:magic}, with $ x $ as the slip ratio $\rho_i$ defined as
+\[
+x->\rho_i = \frac{\dot{\theta_i} r - \dot{o_i}.\hat{f_i}}{\max(\dot{\theta_i} r,\quad \dot{o_i}.\hat{f_i})}
+\]
+The lateral force  $F_{ki} \quad i=1,2,4,5 $ ie the skid forces are given again by Pacejka magic formula \ref{eqn:magic} where $x$ is the slip angle $\delta$ defined in Figure \ref{fig:skid}. 
+\[
+x->\delta_i=\tan^{-1}(\frac{\dot{o_i}.e_i}{\dot{o_i}.f_i})
+\]
+It may be noted that $f_i,e_i$ are unit vectors of the coordinate system defined at each wheel centre and $\dot{o_i}$ are the velocity of wheel centres as show in Figure  \ref{fig:ForceRearWheel} and \ref{fig:ForceRearWheel}.
 \subsection{Simulation}
+In the simulation we use the same physical parameter as those used in the simulation of no slip condition. The model has been further simplified by neglecting the dynamic effect on the steering motion on the front wheels.
+The number of independent variables are  now reduced from  9 to 7 as $\psi_1$ and $\psi_2$ has been removed. These variables are directly set as input at each time step using the relation 
+
 
 \section{Dynamical Model of Steering System}
 The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
