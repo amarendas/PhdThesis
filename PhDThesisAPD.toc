@@ -44,10 +44,11 @@
 \contentsline {subsection}{\numberline {3.4.2}Kinematics}{51}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Dynamics }{58}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Simulation}{62}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{63}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{67}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Simulation and results}{68}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Summary}{69}{section.3.6}
+\contentsline {subsubsection}{\numberline {3.4.4.1}short title}{64}{subsubsection.3.4.4.1}
+\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{64}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{68}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Simulation and results}{69}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{70}{section.3.6}
 \contentsline {chapter}{\numberline {4}Control of a Mobile Manipulator }{71}{chapter.4}
 \contentsline {section}{\numberline {4.1}Control Architecture and Hardware}{71}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Local onboard controller}{72}{subsection.4.1.1}

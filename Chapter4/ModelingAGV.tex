@@ -1020,10 +1020,22 @@ x->\delta_i=\tan^{-1}(\frac{\dot{o_i}.e_i}{\dot{o_i}.f_i})
 \]
 It may be noted that $f_i,e_i$ are unit vectors of the coordinate system defined at each wheel centre and $\dot{o_i}$ are the velocity of wheel centres as show in Figure  \ref{fig:ForceRearWheel} and \ref{fig:ForceRearWheel}.
 \subsection{Simulation}
-In the simulation we use the same physical parameter as those used in the simulation of no slip condition. The model has been further simplified by neglecting the dynamic effect on the steering motion on the front wheels.
-The number of independent variables are  now reduced from  9 to 7 as $\psi_1$ and $\psi_2$ has been removed. These variables are directly set as input at each time step using the relation 
-
-
+In the simulation the same physical parameter used as those used given Table \ref{tb:massproperty}; same that used for  no slip condition. The model has been further simplified by neglecting the dynamic effect on the steering motion on the front wheels.
+The number of independent variables are  now reduced from  9 to 7 as $\psi_1$ and $\psi_2$ has been removed. Therefore, the independent variables are
+\begin{equation}
+\label{eqn:theta_slip_reduced}
+\dot{\theta}_{7x1}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x},\dot{\theta_4},\dot{\theta_5})^T
+\end{equation} The variables  $\psi_1$ and $\psi_2$ are directly set as input at each time step using the relation, under the assumption $c=L/2$
+\[\phi_1=\arctan\left( \frac{(a+b)(\dot{y_2}-\dot{y_1})}{\dot{y_1}L}\right) , \quad
+\phi_2=\arctan\left( \frac{(a+b)(\dot{y_2}-\dot{y_1})}{\dot{y_2}L  }\right) 
+\]
+Relation between friction and the  slip ratio (slip angle)  is given by the relation  \ref{eqn:friction_Slip} adapted from \cite{balakrishna1995modeling}. The longitudinal and lateral friction forces acting on the wheels is given as $Fs=\mu N_i$ Where $N_i$ is the normal force action on the wheel due to ground reaction.
+\begin{figure}
+	\label{eqn:friction_Slip}
+	\includegraphics{Chapter4/fig/frictionVsSlip}
+\end{figure}  
+\subsection{Results}
+The Figure \
 \section{Dynamical Model of Steering System}
 The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
 
