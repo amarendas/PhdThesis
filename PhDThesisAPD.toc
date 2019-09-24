@@ -39,13 +39,13 @@
 \contentsline {subsubsection}{\numberline {3.3.0.2}Matrix of convective inertia term $C$}{44}{subsubsection.3.3.0.2}
 \contentsline {subsection}{\numberline {3.3.1}Simulation }{46}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Inverse dynamics}{47}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Dynamics with Wheel Slip}{49}{section.3.4}
+\contentsline {section}{\numberline {3.4}Dynamics with Wheel Slip}{48}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Defining Slip}{49}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Kinematics}{51}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Dynamics }{58}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.2}Kinematics}{50}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Dynamics }{57}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Simulation}{62}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Results}{63}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{64}{section.3.5}
+\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{63}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{68}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Simulation and results}{70}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6}Summary}{71}{section.3.6}
