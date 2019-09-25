@@ -45,45 +45,46 @@
 \BOOKMARK [2][-]{subsection.3.4.3}{Dynamics }{section.3.4}% 45
 \BOOKMARK [2][-]{subsection.3.4.4}{Simulation}{section.3.4}% 46
 \BOOKMARK [2][-]{subsection.3.4.5}{Results}{section.3.4}% 47
-\BOOKMARK [1][-]{section.3.5}{Dynamical Model of Steering System}{chapter.3}% 48
-\BOOKMARK [2][-]{subsection.3.5.1}{Design of PID controller}{section.3.5}% 49
-\BOOKMARK [2][-]{subsection.3.5.2}{Simulation and results}{section.3.5}% 50
-\BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}% 51
-\BOOKMARK [0][-]{chapter.4}{Control of a Mobile Manipulator }{}% 52
-\BOOKMARK [1][-]{section.4.1}{Control Architecture and Hardware}{chapter.4}% 53
-\BOOKMARK [2][-]{subsection.4.1.1}{Local onboard controller}{section.4.1}% 54
-\BOOKMARK [2][-]{subsection.4.1.2}{Details of the motor controller}{section.4.1}% 55
-\BOOKMARK [1][-]{section.4.2}{Control Algorithm }{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.2.1}{Safety Interlocks}{section.4.2}% 57
-\BOOKMARK [2][-]{subsection.4.2.2}{Wheel odometery }{section.4.2}% 58
-\BOOKMARK [1][-]{section.4.3}{ Remote control station}{chapter.4}% 59
-\BOOKMARK [1][-]{section.4.4}{Summary}{chapter.4}% 60
-\BOOKMARK [0][-]{chapter.5}{Simulation of Tele-operation}{}% 61
-\BOOKMARK [1][-]{section.5.1}{Modeling of Mobile Robot}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.2}{Model of Human Operator}{chapter.5}% 63
-\BOOKMARK [1][-]{section.5.3}{Simulation and Results }{chapter.5}% 64
-\BOOKMARK [2][-]{subsection.5.3.1}{Simulation algorithm}{section.5.3}% 65
-\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 66
-\BOOKMARK [0][-]{chapter.6}{ Predictive Display}{}% 67
-\BOOKMARK [1][-]{section.6.1}{Time Delay Compensation}{chapter.6}% 68
-\BOOKMARK [2][-]{subsection.6.1.1}{Proposed controller}{section.6.1}% 69
-\BOOKMARK [2][-]{subsection.6.1.2}{Simulation algorithm and results}{section.6.1}% 70
-\BOOKMARK [1][-]{section.6.2}{Delay Compensation using Predictive Display}{chapter.6}% 71
-\BOOKMARK [2][-]{subsection.6.2.1}{The Kinect sensor }{section.6.2}% 72
-\BOOKMARK [2][-]{subsection.6.2.2}{Onboard data processing and transmission}{section.6.2}% 73
-\BOOKMARK [2][-]{subsection.6.2.3}{3-D reconstruction }{section.6.2}% 74
-\BOOKMARK [2][-]{subsection.6.2.4}{Extrapolation of remote scene }{section.6.2}% 75
-\BOOKMARK [1][-]{section.6.3}{Summary}{chapter.6}% 76
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 77
-\BOOKMARK [1][-]{section.7.1}{Thesis Summary}{chapter.7}% 78
-\BOOKMARK [1][-]{section.7.2}{Current Status}{chapter.7}% 79
-\BOOKMARK [1][-]{section.7.3}{Future Scope }{chapter.7}% 80
-\BOOKMARK [0][-]{section.7.3}{Bibliography}{}% 81
-\BOOKMARK [0][-]{appendix.A}{ }{}% 82
-\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 83
-\BOOKMARK [0][-]{appendix.B}{ }{}% 84
-\BOOKMARK [1][-]{section.B.1}{Stability of Pure Pursuit under Time Delay}{appendix.B}% 85
-\BOOKMARK [0][-]{appendix.C}{ }{}% 86
-\BOOKMARK [1][-]{section.C.1}{Optimal Design of Steering Linkages}{appendix.C}% 87
-\BOOKMARK [1][-]{equation.C.1.1}{Publications from the Thesis}{appendix.C}% 88
-\BOOKMARK [1][-]{Item.17}{Brief Bio-data of the Author}{appendix.C}% 89
+\BOOKMARK [2][-]{subsection.3.4.6}{Conclusion}{section.3.4}% 48
+\BOOKMARK [1][-]{section.3.5}{Dynamical Model of Steering System}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.5.1}{Design of PID controller}{section.3.5}% 50
+\BOOKMARK [2][-]{subsection.3.5.2}{Simulation and results}{section.3.5}% 51
+\BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}% 52
+\BOOKMARK [0][-]{chapter.4}{Control of a Mobile Manipulator }{}% 53
+\BOOKMARK [1][-]{section.4.1}{Control Architecture and Hardware}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.1.1}{Local onboard controller}{section.4.1}% 55
+\BOOKMARK [2][-]{subsection.4.1.2}{Details of the motor controller}{section.4.1}% 56
+\BOOKMARK [1][-]{section.4.2}{Control Algorithm }{chapter.4}% 57
+\BOOKMARK [2][-]{subsection.4.2.1}{Safety Interlocks}{section.4.2}% 58
+\BOOKMARK [2][-]{subsection.4.2.2}{Wheel odometery }{section.4.2}% 59
+\BOOKMARK [1][-]{section.4.3}{ Remote control station}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.4}{Summary}{chapter.4}% 61
+\BOOKMARK [0][-]{chapter.5}{Simulation of Tele-operation}{}% 62
+\BOOKMARK [1][-]{section.5.1}{Modeling of Mobile Robot}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.2}{Model of Human Operator}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.3}{Simulation and Results }{chapter.5}% 65
+\BOOKMARK [2][-]{subsection.5.3.1}{Simulation algorithm}{section.5.3}% 66
+\BOOKMARK [1][-]{section.5.4}{Summary}{chapter.5}% 67
+\BOOKMARK [0][-]{chapter.6}{ Predictive Display}{}% 68
+\BOOKMARK [1][-]{section.6.1}{Time Delay Compensation}{chapter.6}% 69
+\BOOKMARK [2][-]{subsection.6.1.1}{Proposed controller}{section.6.1}% 70
+\BOOKMARK [2][-]{subsection.6.1.2}{Simulation algorithm and results}{section.6.1}% 71
+\BOOKMARK [1][-]{section.6.2}{Delay Compensation using Predictive Display}{chapter.6}% 72
+\BOOKMARK [2][-]{subsection.6.2.1}{The Kinect sensor }{section.6.2}% 73
+\BOOKMARK [2][-]{subsection.6.2.2}{Onboard data processing and transmission}{section.6.2}% 74
+\BOOKMARK [2][-]{subsection.6.2.3}{3-D reconstruction }{section.6.2}% 75
+\BOOKMARK [2][-]{subsection.6.2.4}{Extrapolation of remote scene }{section.6.2}% 76
+\BOOKMARK [1][-]{section.6.3}{Summary}{chapter.6}% 77
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 78
+\BOOKMARK [1][-]{section.7.1}{Thesis Summary}{chapter.7}% 79
+\BOOKMARK [1][-]{section.7.2}{Current Status}{chapter.7}% 80
+\BOOKMARK [1][-]{section.7.3}{Future Scope }{chapter.7}% 81
+\BOOKMARK [0][-]{section.7.3}{Bibliography}{}% 82
+\BOOKMARK [0][-]{appendix.A}{ }{}% 83
+\BOOKMARK [1][-]{section.A.1}{Measurment of Time Delay in Video Feedback}{appendix.A}% 84
+\BOOKMARK [0][-]{appendix.B}{ }{}% 85
+\BOOKMARK [1][-]{section.B.1}{Stability of Pure Pursuit under Time Delay}{appendix.B}% 86
+\BOOKMARK [0][-]{appendix.C}{ }{}% 87
+\BOOKMARK [1][-]{section.C.1}{Optimal Design of Steering Linkages}{appendix.C}% 88
+\BOOKMARK [1][-]{equation.C.1.1}{Publications from the Thesis}{appendix.C}% 89
+\BOOKMARK [1][-]{Item.17}{Brief Bio-data of the Author}{appendix.C}% 90
