@@ -24,10 +24,7 @@ In this chapter we first present the mathamitical model of the mobile robot with
  The RARS robot has unique  drive configuration, which uses both differential drive and Ackerman mechanism for steering. 
   This system has a redundant configuration and very few literature presents dynamical analysis with slip included in the dynamics. To our knowledge no literature is present, which uses NOC based algorithm for modeling slip in mobile robot dynamics.  This being a matrix based approach, it is convenient for numerical simulations. 
   
-   Williams\cite{williams2002dynamic}  and Balakrishna  \cite{balakrishna1995modeling} has presented dynamic equation with slip for omnidirectional robots. 
-   While the former has considered both lateral and longitudinal slip assuming the wheel mass to be negligible the later has included the dynamics of  wheels in the dynamics analysis but lateral shift has been considered zero.
-    Dynamic model of differential drive robot with wheel slip has been discussed in \cite{tian2009modeling},\cite{sidek2008dynamic}  and \cite{konduri2014effect}.
-    Where as the first two has not considered the effect of caster in the dynamic model, \cite{konduri2014effect} has include effect of caster wheels on the dynamic of slip. 
+ 
     In this thesis the wheel slip based dynamic model of the redundantly actuated mobile robot has been presented. The effect of steering wheel  miss aliment on the actuator torque has been quantified.
 
   
@@ -587,6 +584,7 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 		\end{tabular}
 \end{table}
 \section{Dynamics with Wheel Slip}
+\label{sec:SlipDynamics}
 \begin{figure}
 	\caption{}
 	\begin{minipage}[t]{0.5\textwidth}
@@ -616,18 +614,20 @@ indicating no wheel slippage whereas $i = 1$ implies a complete slippage, i.e., 
  Y(x)=D\sin[C \arctan{Bx -E(Bx-\arctan(bx))}]
  \end{equation}
 \begin{figure}
-	\label{fig:magicformula}
+	\centering
 	\includegraphics{Chapter3/fig/magicformula}
 	\caption{Tipical Curve of Magic Formula \cite{pacejka1992magic}}
+	\label{fig:magicformula}
 \end{figure}
 
 \subsection{Kinematics}
 \label{sec:slipKina}
-The Figure shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1,\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simply things the  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are not included in the analysis as there weight is small. The steering axis is assumed to pass through the centre of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:dynslip} we use only $O4$  for wheel \#4 and $O5$ for wheel \#5, to denote both the centre of the wheel and also the steering pivot. DNoc will be used to derive the equations of motion of the RARS with wheel slip taken into account for all the four wheels.
+The Figure shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1,\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simply things the  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are not included in the analysis as there weight is small. The steering axis is assumed to pass through the centre of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:VehicleWithSlip} we use only $O4$  for wheel \#4 and $O5$ for wheel \#5, to denote both the centre of the wheel and also the steering pivot. DNoc will be used to derive the equations of motion of the RARS with wheel slip taken into account for all the four wheels.
 \begin{figure}
-	\label{fig:VehicleWithSlip}
+	\centering
 	\includegraphics[width=\linewidth]{Chapter4/fig/VechileWithSlip}
 	\caption{Free Body Digram of RARS Robot}
+	\label{fig:VehicleWithSlip}
 \end{figure}
 
 The set of independent variables for this model is given by
@@ -635,7 +635,7 @@ The set of independent variables for this model is given by
 \label{eqn:theta_slip}
 \dot{\theta}_{9x1}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x},\dot{\phi_1},\dot{\phi_2},\dot{\theta_4},\dot{\theta_5})^T
 \end{equation}
-It may be noted that $\theta_i,\phi_i$  is same as defined earlier in Section \ref{sec:DynamicNoSlip}. $\dot{y_1},\dot{y_2}$ are the linear velocity of centre of the rear wheels i.e. of points point $O_1$ and $O_2$,, in the direction $j$ of the body coordinate system. The lateral slip of the rear wheels are denoted by $x_1$ and $x_2$ as shown in the Figure \ref{fig:dynslip}. Due to rigidity constrains of the rear wheels
+It may be noted that $\theta_i,\phi_i$  is same as defined earlier in Section \ref{sec:DynamicNoSlip}. $\dot{y_1},\dot{y_2}$ are the linear velocity of centre of the rear wheels i.e. of points point $O_1$ and $O_2$,, in the direction $j$ of the body coordinate system. The lateral slip of the rear wheels are denoted by $x_1$ and $x_2$ as shown in the Figure \ref{fig:VehicleWithSlip}. Due to rigidity constrains of the rear wheels
 \[\dot{x_1}=\dot{x_2}=\dot{x}\] 
 The velocity of point $o_1$ and $ o_2$ in the world coordinate ${X,Y,z}$ is given by 
 \begin{equation}
@@ -1097,12 +1097,14 @@ The path traced by the RSRS mobile robot  with  $\mu_{peak} =0.3$ is shown in Fi
 
 When the friction coefficient is reduced to  $\mu_{peak} =0.1$, both lateral and longitudinal shift is present it the traced path, as shown in Figure \ref{fig:pathWithMu1}. The  net lateral force acting on the vehicle, the blue curve of Figure \ref{fig:ForcesMu1} is great than zero between 20sec to 40sec. This lateral force is responsible for the deviation of the actual path traced from the given path. The deviation increase from point "A" to point "B" in Figure \ref{fig:pathWithMu1}, this is region of the path where the centrifugal force exceeds the frictional force. After point "B" the curve maintains constant radius as the net lateral force acting on the mobile robot again becomes zero. 
 \subsection{Conclusion}
+Figure \ref{fig:beta1} show the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $\mu=0.1$ at time $t=18.3s$. This corresponds to angular velocity of $ \dot \beta =0.1412 rad/sec$ as can be read from Figure \ref{fig:beta1} at time $t=18.3s$.
 \begin{figure}
-	\label{fig:beta}	
-	\includegraphics[width=\textwidth]{Chapter4/fig/beta}	
+	\centering
+	\includegraphics[width=\linewidth]{Chapter4/fig/beta}
 	\caption{Plot of $\beta$ and $\dot{\beta}$}
+	\label{fig:beta1}
 \end{figure}
-Figure \ref{fig:beta} show the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $mu=0.1$ at time $t=18.3s$. This corresponds to angular velocity of $ \dot \beta =0.1412 rad/sec$ as can be read from Figure \ref{fig:beta} at time $t=18.3s$.
+
 The linear velocity of the robot for initiate lateral slipping is given by $R*\dot{\beta}$, which equals to $0.7m/sec$. Our Robot is restricted to the speed of $0.5m/sec$ indicted in the specification in Table \ref{tb:specifications}. The estimated coefficient of friction between the Polyurethane wheel liner and factory floor is around $0.25$. Therefore skidding of the mobile robot RARS is unlikely during teleoperation. 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}

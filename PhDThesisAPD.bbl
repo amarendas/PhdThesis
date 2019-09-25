@@ -492,9 +492,49 @@ K.~Nagatani, S.~Tachibana, M.~Sofne, and Y.~Tanaka, ``Improvement of odometry
   Intelligent Robots and Systems, 2000.(IROS 2000). Proceedings. 2000 IEEE/RSJ
   International Conference on}, vol.~1, pp.~468--473, IEEE, 2000.
 
-\bibitem{wong2008theory}
-J.~Y. Wong, {\em Theory of ground vehicles}.
-\newblock John Wiley \& Sons, 2008.
+\bibitem{moravec1982cmu}
+H.~P. Moravec, ``The cmu rover.,'' in {\em AAAI}, pp.~377--380, 1982.
+
+\bibitem{moravec1983stanford}
+H.~P. Moravec, ``The stanford cart and the cmu rover,'' {\em Proceedings of the
+  IEEE}, vol.~71, no.~7, pp.~872--884, 1983.
+
+\bibitem{saha1995design}
+S.~K. Saha, J.~Angeles, and J.~Darcovich, ``The design of kinematically
+  isotropic rolling robots with omnidirectional wheels,'' {\em Mechanism and
+  Machine Theory}, vol.~30, no.~8, pp.~1127--1137, 1995.
+
+\bibitem{oetomo2008singularity}
+D.~Oetomo and M.~H. Ang, ``Singularity-free joint actuation in omnidirectional
+  mobile platforms with powered offset caster wheels,'' {\em Journal of
+  Mechanical Design}, vol.~130, no.~5, p.~054501, 2008.
+
+\bibitem{chung2010design}
+W.~Chung, C.-b. Moon, C.~Jung, and J.~Jin, ``Design of the dual offset active
+  caster wheel for holonomic omni-directional mobile robots,'' {\em
+  International Journal of Advanced Robotic Systems}, vol.~7, no.~4, p.~26,
+  2010.
+
+\bibitem{li2006wheel}
+Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
+  modelling and torque distribution for a redundant mobile robot,'' in {\em
+  Proceedings 2006 IEEE International Conference on Robotics and Automation,
+  2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
+
+\bibitem{park2002optimal}
+T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
+  design and actuator sizing of redundantly actuated omni-directional mobile
+  robots,'' in {\em Proceedings 2002 IEEE International Conference on Robotics
+  and Automation (Cat. No. 02CH37292)}, vol.~1, pp.~732--737, IEEE, 2002.
+
+\bibitem{carlson2005ugvs}
+J.~Carlson and R.~R. Murphy, ``How ugvs physically fail in the field,'' {\em
+  IEEE Transactions on robotics}, vol.~21, no.~3, pp.~423--437, 2005.
+
+\bibitem{low2005kinematic}
+K.~H. Low and Y.~Leow, ``Kinematic modeling, mobility analysis and design of
+  wheeled mobile robots,'' {\em Advanced Robotics}, vol.~19, no.~1, pp.~73--99,
+  2005.
 
 \bibitem{TOMBook}
 T.~Bevan, {\em Theory of Machines, Third Edition}.
