@@ -23,14 +23,14 @@
 \contentsline {section}{\numberline {2.3}Design of the Traction System}{23}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Stability Of Mobile Manipulator}{25}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Selection of motor and gearbox}{27}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Design of Steering System }{28}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Minimum turning radius}{29}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Calculation of steering torque}{30}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Scissor Mechanism for Manipulating Arm}{31}{section.2.5}
-\contentsline {section}{\numberline {2.6}Summary}{33}{section.2.6}
+\contentsline {section}{\numberline {2.4}Design of Steering System }{29}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Minimum turning radius}{30}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Calculation of steering torque}{31}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Scissor Mechanism for Manipulating Arm}{32}{section.2.5}
+\contentsline {section}{\numberline {2.6}Summary}{34}{section.2.6}
 \contentsline {chapter}{\numberline {3}Dynamics of Wheeled Mobile Robots }{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Modeling using the Natural Orthogonal Compliment (NOC)}{36}{section.3.1}
-\contentsline {section}{\numberline {3.2}Dynamic Equation of WMR}{40}{section.3.2}
+\contentsline {section}{\numberline {3.2}Dynamic Equation of WMR}{39}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Kinematic analysis}{40}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Special cases}{45}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}Standard caster ($d_1=0$) }{45}{subsubsection.3.2.2.1}
@@ -44,13 +44,13 @@
 \contentsline {subsection}{\numberline {3.4.1}Defining Slip}{52}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Kinematics}{54}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Dynamics }{61}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Simulation}{65}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.4}Simulation}{66}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Results}{67}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Conclusion}{68}{subsection.3.4.6}
-\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{70}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.6}Conclusion}{69}{subsection.3.4.6}
+\contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{69}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{74}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Simulation and results}{75}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Summary}{76}{section.3.6}
+\contentsline {subsection}{\numberline {3.5.2}Simulation and results}{76}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Summary}{77}{section.3.6}
 \contentsline {chapter}{\numberline {4}Control of a Mobile Manipulator }{79}{chapter.4}
 \contentsline {section}{\numberline {4.1}Control Architecture and Hardware}{79}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Local onboard controller}{80}{subsection.4.1.1}

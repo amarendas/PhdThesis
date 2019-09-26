@@ -13,15 +13,15 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Photograph of the actual system\relax }}{22}{figure.caption.20}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Rear suspension\relax }}{24}{figure.caption.22}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Mobile manipulator on slope\relax }}{24}{figure.caption.23}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Centrifugal Forces\relax }}{26}{figure.caption.24}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Mobile Manipulator on slope\relax }}{26}{figure.caption.24}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ackerman steering condition \relax }}{29}{figure.caption.25}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Davis Steering Gear\relax }}{30}{figure.caption.26}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Steer Torque\relax }}{30}{figure.caption.26}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Scissor mechanism\relax }}{32}{figure.caption.27}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Centrifugal Forces\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces RARS Support Polygon\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ackerman steering condition \relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Davis Steering Gear\relax }}{31}{figure.caption.26}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Steer Torque\relax }}{31}{figure.caption.26}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Scissor mechanism\relax }}{33}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces WMR-Std. castor\relax }}{39}{figure.caption.28}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces WMR-general\relax }}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces WMR-Std. castor\relax }}{40}{figure.caption.28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces WMR-general\relax }}{40}{figure.caption.28}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Path traced by robot\relax }}{50}{figure.caption.29}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Inverse dynamics of the mobile robot \relax }}{52}{figure.caption.30}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces \relax }}{53}{figure.caption.32}
@@ -31,11 +31,11 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Free Body Digram of RARS Robot\relax }}{56}{figure.caption.34}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces External Force on Rear Wheel\relax }}{63}{figure.caption.35}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces External Forces on Front Wheel \relax }}{63}{figure.caption.35}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Friction model\relax }}{67}{figure.caption.36}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Input Torque Profile \relax }}{67}{figure.caption.36}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Friction model\relax }}{68}{figure.caption.36}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Input Torque Profile \relax }}{68}{figure.caption.36}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Plot of $\beta $ and $\mathaccentV {dot}05F{\beta }$\relax }}{69}{figure.caption.37}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces RARS path traced when $\mu =0.3$\relax }}{69}{figure.caption.38}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Forces on RARS when $\mu =0.3$ \relax }}{69}{figure.caption.38}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces RARS path traced when $\mu =0.3$\relax }}{70}{figure.caption.38}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Forces on RARS when $\mu =0.3$ \relax }}{70}{figure.caption.38}
 \contentsline {figure}{\numberline {3.17}{\ignorespaces RARS path traced when $\mu =0.1$\relax }}{70}{figure.caption.39}
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Forces on RARS when $\mu =0.1$ \relax }}{70}{figure.caption.39}
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Steering Assembly\relax }}{71}{figure.caption.40}
