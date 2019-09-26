@@ -115,6 +115,58 @@ S.~K. Saha and J.~Angeles, ``Dynamics of nonholonomic mechanical systems using
   a natural orthogonal complement,'' {\em Journal of Applied Mechanics},
   vol.~58, no.~1, pp.~238--243, 1991.
 
+\bibitem{williams2002dynamic}
+R.~L. Williams, B.~E. Carter, P.~Gallina, and G.~Rosati, ``Dynamic model with
+  slip for wheeled omnidirectional robots,'' {\em IEEE transactions on Robotics
+  and Automation}, vol.~18, no.~3, pp.~285--293, 2002.
+
+\bibitem{balakrishna1995modeling}
+R.~Balakrishna and A.~Ghosal, ``Modeling of slip for wheeled mobile robots,''
+  {\em IEEE Transactions on Robotics and Automation}, vol.~11, no.~1,
+  pp.~126--132, 1995.
+
+\bibitem{khan2015longitudinal}
+H.~Khan, J.~Iqbal, K.~Baizid, and T.~Zielinska, ``Longitudinal and lateral slip
+  control of autonomous wheeled mobile robot for trajectory tracking,'' {\em
+  Frontiers of Information Technology \& Electronic Engineering}, vol.~16,
+  no.~2, pp.~166--172, 2015.
+
+\bibitem{dakhlallah2008tire}
+J.~Dakhlallah, S.~Glaser, S.~Mammar, and Y.~Sebsadji, ``Tire-road forces
+  estimation using extended kalman filter and sideslip angle evaluation,'' in
+  {\em 2008 American control conference}, pp.~4597--4602, IEEE, 2008.
+
+\bibitem{liu2010dynamic}
+Y.~Liu, Y.~Jia, and N.~Xi, ``Dynamic model and adaptive tracking controller for
+  4-powered caster vehicle,'' in {\em 2010 IEEE International Conference on
+  Robotics and Automation}, pp.~4940--4945, IEEE, 2010.
+
+\bibitem{tian2009modeling}
+Y.~Tian, N.~Sidek, and N.~Sarkar, ``Modeling and control of a nonholonomic
+  wheeled mobile robot with wheel slip dynamics,'' in {\em 2009 IEEE Symposium
+  on Computational Intelligence in Control and Automation}, pp.~7--14, IEEE,
+  2009.
+
+\bibitem{sidek2008dynamic}
+S.~N. Sidek and N.~Sarkar, {\em Dynamic modeling and control of nonholonomic
+  wheeled mobile robot subjected to wheel slip}.
+\newblock PhD thesis, Vanderbilt University, 2008.
+
+\bibitem{konduri2014effect}
+S.~Konduri, E.~Orlando, C.~Torres, and P.~R. Pagilla, ``Effect of wheel slip in
+  the coordination of wheeled mobile robots,'' {\em IFAC Proceedings Volumes},
+  vol.~47, no.~3, pp.~8097--8102, 2014.
+
+\bibitem{ojeda2006current}
+L.~Ojeda, D.~Cruz, G.~Reina, and J.~Borenstein, ``Current-based slippage
+  detection and odometry correction for mobile robots and planetary rovers,''
+  {\em IEEE Transactions on Robotics}, vol.~22, no.~2, pp.~366--378, 2006.
+
+\bibitem{lee2004real}
+C.~Lee, K.~Hedrick, and K.~Yi, ``Real-time slip-based estimation of maximum
+  tire-road friction coefficient,'' {\em IEEE/ASME Transactions on
+  mechatronics}, vol.~9, no.~2, pp.~454--458, 2004.
+
 \bibitem{buchele1990computer}
 W.~Buchele, L.~Xie, {\em et~al.}, ``Computer analysis of the lateral stability
   of agricultural tractors.,'' {\em Paper-American Society of Agricultural
@@ -294,6 +346,10 @@ H.~L. Martin and D.~P. Kuban, {\em Teleoperated robotics in hostile
 \bibitem{vertut1986teleoperations}
 J.~Vertut and P.~Coiffet, ``Teleoperations and robotics: Evolution and
   development,“robot technology,” vol. 3a,'' 1986.
+
+\bibitem{sheridan}
+S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
+  IEEE Transactions on Robotics and Automation}, vol.~9, no.~5, October 1993.
 
 \bibitem{massie1994phantom}
 T.~H. Massie, J.~K. Salisbury, {\em et~al.}, ``The phantom haptic interface: A
@@ -499,11 +555,6 @@ H.~P. Moravec, ``The cmu rover.,'' in {\em AAAI}, pp.~377--380, 1982.
 H.~P. Moravec, ``The stanford cart and the cmu rover,'' {\em Proceedings of the
   IEEE}, vol.~71, no.~7, pp.~872--884, 1983.
 
-\bibitem{saha1995design}
-S.~K. Saha, J.~Angeles, and J.~Darcovich, ``The design of kinematically
-  isotropic rolling robots with omnidirectional wheels,'' {\em Mechanism and
-  Machine Theory}, vol.~30, no.~8, pp.~1127--1137, 1995.
-
 \bibitem{oetomo2008singularity}
 D.~Oetomo and M.~H. Ang, ``Singularity-free joint actuation in omnidirectional
   mobile platforms with powered offset caster wheels,'' {\em Journal of
@@ -526,6 +577,11 @@ T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
   design and actuator sizing of redundantly actuated omni-directional mobile
   robots,'' in {\em Proceedings 2002 IEEE International Conference on Robotics
   and Automation (Cat. No. 02CH37292)}, vol.~1, pp.~732--737, IEEE, 2002.
+
+\bibitem{saha1995design}
+S.~K. Saha, J.~Angeles, and J.~Darcovich, ``The design of kinematically
+  isotropic rolling robots with omnidirectional wheels,'' {\em Mechanism and
+  Machine Theory}, vol.~30, no.~8, pp.~1127--1137, 1995.
 
 \bibitem{carlson2005ugvs}
 J.~Carlson and R.~R. Murphy, ``How ugvs physically fail in the field,'' {\em
@@ -590,32 +646,6 @@ K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
   Proceedings., 1997 IEEE International Conference on}, vol.~4, pp.~2926--2931,
   IEEE, 1997.
 
-\bibitem{williams2002dynamic}
-R.~L. Williams, B.~E. Carter, P.~Gallina, and G.~Rosati, ``Dynamic model with
-  slip for wheeled omnidirectional robots,'' {\em IEEE transactions on Robotics
-  and Automation}, vol.~18, no.~3, pp.~285--293, 2002.
-
-\bibitem{balakrishna1995modeling}
-R.~Balakrishna and A.~Ghosal, ``Modeling of slip for wheeled mobile robots,''
-  {\em IEEE Transactions on Robotics and Automation}, vol.~11, no.~1,
-  pp.~126--132, 1995.
-
-\bibitem{tian2009modeling}
-Y.~Tian, N.~Sidek, and N.~Sarkar, ``Modeling and control of a nonholonomic
-  wheeled mobile robot with wheel slip dynamics,'' in {\em 2009 IEEE Symposium
-  on Computational Intelligence in Control and Automation}, pp.~7--14, IEEE,
-  2009.
-
-\bibitem{sidek2008dynamic}
-S.~N. Sidek and N.~Sarkar, {\em Dynamic modeling and control of nonholonomic
-  wheeled mobile robot subjected to wheel slip}.
-\newblock PhD thesis, Vanderbilt University, 2008.
-
-\bibitem{konduri2014effect}
-S.~Konduri, E.~Orlando, C.~Torres, and P.~R. Pagilla, ``Effect of wheel slip in
-  the coordination of wheeled mobile robots,'' {\em IFAC Proceedings Volumes},
-  vol.~47, no.~3, pp.~8097--8102, 2014.
-
 \bibitem{saha2010robotics}
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.
@@ -641,10 +671,6 @@ M.~Z. Zeroual, ``maxon auto tuning,'' {\em iNaCoMM2013,IIT Roorkee, India},
 \bibitem{maxonAppNotesPosition}
 {\em EPOS4 Application Note: Positioning Controllers}.
 \newblock Maxon Motors, 2012.
-
-\bibitem{sheridan}
-S.~T. B, ``Space teleoperation through time delay: review and prognosis,'' {\em
-  IEEE Transactions on Robotics and Automation}, vol.~9, no.~5, October 1993.
 
 \bibitem{geng2011structured}
 J.~Geng, ``Structured-light 3d surface imaging: a tutorial,'' {\em Advances in

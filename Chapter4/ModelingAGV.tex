@@ -1068,7 +1068,7 @@ The equation of motion for the reduced system is given by
 \begin{equation}
 I_{red}\ddot{\theta}_{red}+C_{red}\dot{\theta}_{red}=\tau_{red}
 \end{equation}
-Relation between friction and the  slip ratio (slip angle)  is given by the relation  \ref{eqn:friction_Slip} adapted from \cite{balakrishna1995modeling}.  A representative Friction-slip curve with the peak friction co-efficient, $\mu_{peak}=0.1$, is given in  Figure \ref{fig:friction_Slip}. The longitudinal and lateral friction forces acting on the wheels is given as $Fs=\mu N_i$ Where $N_i$ is the normal force action on the wheel due to ground reaction.
+Relation between friction and the  slip ratio (slip angle)  is given by the relation  \ref{eqn:friction_Slip} adapted from \cite{balakrishna1995modeling}.  A representative Friction-slip curve with the peak friction co-efficient, $\mu_{peak}=0.1$, is given in  Figure \ref{fig:friction_Slip}. The longitudinal and lateral friction forces acting on the wheels is given as $Fs=\mu N_i$ Where $N_i$ is the normal force action on the wheel due to ground reaction. These values were arrived at by the static analysis of the mobile robot resting on ground. 
 \begin{equation}
 \label{eqn:friction_Slip}
 \mu =
@@ -1342,7 +1342,11 @@ The simulation of the  dynamic Equation \ref{eqn:SteerDyn} and controller given 
 \end{figure} 
 The simulation results establishes that with $10\%$ error in plant parameters there is practically no deviation in the performance of the controller. The results also predicts a settling time of $0.8~sec$ for the system. It may be noted that the roll velocity of the wheel does not affect the dynamics of the steering system as is indicated by the absence of $\dot\theta_4$ and $\dot\theta_5$  from Equation \ref{eqn:SteerDyn} .
 \section{Summary}
-In this chapter, the dynamic equations were derived for  the most general form of passive wheel configuration. Even though  only two passive wheel configuration was considered the same formulation can be extended to any number of  wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$. It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$. The dynamic equation for the Davis steering mechanism was formulated and using  simulation the settling time for the same was obtained.
+In this chapter, the dynamic equations were derived for  the most general form of passive wheel configuration. Even though  only two passive wheel configuration was considered the same formulation can be extended to any number of  wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$. It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$. 
+
+NOC based approach to model wheel slip in dynamics of a mobile manipulator was presented in this chapter. RARS  being a redundantly actuated system has a inherent tendency to induce slip in the wheels if there velocities and orientations are not synchronised. A simulation study of RARS was carried out to assess the effect of  wheel slip on it's dynamics. 
+
+The steering mechanism was modelled separately. Simulation was used to find the   controller parameters which makes the system marginally damped. This insured that there is no over steering while keeping the settling time small. These controller parameters were later used to tune the actual system.   
     
 
 
