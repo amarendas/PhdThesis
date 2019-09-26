@@ -21,8 +21,8 @@
 \contentsline {section}{\numberline {2.1}Design Overview}{20}{section.2.1}
 \contentsline {section}{\numberline {2.2}Kinematic Topology}{22}{section.2.2}
 \contentsline {section}{\numberline {2.3}Design of the Traction System}{23}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Stability Of Mobile Manipulator}{25}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Selection of motor and gearbox}{27}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.1}Stability Of Mobile Manipulator}{24}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Selection of motor and gearbox}{28}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Design of Steering System }{29}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Minimum turning radius}{30}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Calculation of steering torque}{31}{subsection.2.4.2}
