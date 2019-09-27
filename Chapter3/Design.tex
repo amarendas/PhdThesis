@@ -67,7 +67,7 @@ This chapter   discusses kinematic topology and  the  design methodology of the 
 		Turning radius & 415 mm & - \\
 		Ground clarence & 45 mm & --\\
 		Maximum traction speed & 30 m/min & On flat terrain \\
-		Ramp climb angle & $30^\circ $ & Checkerboard surface\\
+		Ramp climb angle & $30^\circ $ & Platform in retracted position\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -78,14 +78,15 @@ The mobile manipulator has a footprint of 700 mm $\times$  400 mm  based on the 
  
  \section{Kinematic Topology}
  \label{sec:KineTopo}
- One of the major requirements of the proposed mobile manipulator was that it should be tolerant to single actuator failure, as mentioned in this chapter introduction. This increases the reliability of the robotic platform's mobility. The other objective was easy manoeuvrability via teleopration.
+ One of the major requirements of the proposed mobile manipulator was that it should be tolerant to single actuator failure, as mentioned in  Chapter 1 and in introduction of this chapter. The objective was to increases the reliability of the robotic platform's. Second major objective was easy and intuitive manoeuvrability  of the platform under teleopration.
  
- The robot has four wheel arranged in rectangular configuration. This provides a mores stability as the support polygon is large with respect to other configuration such as rombus. The rectangular wheel position layout has another advantage that it is car like, which makes driving intuitive and single motor connected with the steering gear can be used for steering both the front wheels. Thus reducing the number of actuators.
-  The rear wheel are differential driven by two independent motors.  The front wheels are passive wheels which are steered by a singl motor connected through Davis Steering linkage. Thus the total no of actuators used by the mobile platform is three.
+ The robot has four wheel arranged in a rectangular configuration. This provides  more stability as the support polygon is large with respect to other configuration such as rhombus. The rectangular wheel position layout has another advantage that it is car like, which makes driving intuitive. 
+  
+  The proposed mobile manipulator has two rear wheel  driven by two independent motors.  The front wheels are passive wheels, steered by a single motor connected through Davis Steering linkage. Thus the total no of actuators used by the mobile platform is three.
  
- This kinematic topology of the RARS robotic platform makes it tolerant to single actuator failure. In case the steering actuator fails, the RARS can be operated as a differential drive robot. The system still has all the mobility (3-DOF) intact to bring it to any desired location.
+ This kinematic topology of the RARS robotic platform makes it tolerant to single actuator failure. In case the steering actuator fails, the RARS can be operated as a differential drive robot. The system still has all the required mobility (2-DOF) to bring it to any desired location.
  
- In case one of the rear wheel drive motor fails, it becomes kinematically similar to the bicycle model \cite{campion1996structural}. The system is still a 3-DOF system. It can be operated in this mode to bring to any desired location.
+ In case one of the rear wheel drive motor fails, it becomes kinematically similar to the bicycle model \cite{campion1996structural}. The system is still a 2-DOF system. It can be operated in this mode to bring to any desired location.
      
 
 \section{Design of the Traction System}
@@ -268,6 +269,7 @@ R_{min}=\frac{210}{2}+515 \times cot(60^o)=402~mm
 \end{figure} 
 
 \subsection{Calculation of steering torque}
+\label{sec:SteerinTorqueStatic}
 The torque required to steer the front wheel is estimated based on a simplified assumption that the wheel deforms under normal load and the contact area thus generated is  circular in shape with diameter that of the wheel width, $W_w$, as shown in Figure \ref{fig:steerTorq}. 
 In order to estimate the normal reaction on each wheel, we assumed that the total weight of 80kg was equally shared by the four wheels. 
 Therefore, $N_s=80/4=20Kg$. Next, the uniform pressure formula used for  brakes/clutches design was applied to find the resistance  torque $T_s$, between the ground and the wheel i.e, 

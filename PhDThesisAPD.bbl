@@ -12,6 +12,12 @@ B.~L. Luk, K.~Liu, A.~A. Collie, D.~S. Cooke, and S.~Chen, ``Tele-operated
   nuclear industry,'' {\em Industrial Robot: An International Journal},
   vol.~33, no.~3, pp.~194--204, 2006.
 
+\bibitem{li2006wheel}
+Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
+  modelling and torque distribution for a redundant mobile robot,'' in {\em
+  Proceedings 2006 IEEE International Conference on Robotics and Automation,
+  2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
+
 \bibitem{pacejka1992magic}
 H.~B. Pacejka and E.~Bakker, ``The magic formula tyre model,'' {\em Vehicle
   system dynamics}, vol.~21, no.~S1, pp.~1--18, 1992.
@@ -90,11 +96,23 @@ W.~Chung, C.-b. Moon, C.~Jung, and J.~Jin, ``Design of the dual offset active
   International Journal of Advanced Robotic Systems}, vol.~7, no.~4, p.~26,
   2010.
 
-\bibitem{li2006wheel}
-Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
-  modelling and torque distribution for a redundant mobile robot,'' in {\em
-  Proceedings 2006 IEEE International Conference on Robotics and Automation,
-  2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
+\bibitem{witus2000mobility}
+G.~Witus, ``Mobility potential of a robotic six-wheeled omnidirectional drive
+  vehicle (odv) with z-axis and tire inflation control,'' in {\em Unmanned
+  Ground Vehicle Technology II}, vol.~4024, pp.~106--114, International Society
+  for Optics and Photonics, 2000.
+
+\bibitem{moore2000modelling}
+K.~L. Moore, M.~Davidson, V.~Bahl, S.~Rich, and S.~Jirgal, ``Modelling and
+  control of a six-wheeled autonomous robot,'' in {\em Proceedings of the 2000
+  American Control Conference. ACC (IEEE Cat. No. 00CH36334)}, vol.~3,
+  pp.~1483--1490, IEEE, 2000.
+
+\bibitem{park2002optimal}
+T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
+  design and actuator sizing of redundantly actuated omni-directional mobile
+  robots,'' in {\em Proceedings 2002 IEEE International Conference on Robotics
+  and Automation (Cat. No. 02CH37292)}, vol.~1, pp.~732--737, IEEE, 2002.
 
 \bibitem{alexander1989kinematics}
 J.~C. Alexander and J.~H. Maddocks, ``On the kinematics of wheeled mobile
@@ -586,12 +604,6 @@ H.~P. Moravec, ``The cmu rover.,'' in {\em AAAI}, pp.~377--380, 1982.
 \bibitem{moravec1983stanford}
 H.~P. Moravec, ``The stanford cart and the cmu rover,'' {\em Proceedings of the
   IEEE}, vol.~71, no.~7, pp.~872--884, 1983.
-
-\bibitem{park2002optimal}
-T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
-  design and actuator sizing of redundantly actuated omni-directional mobile
-  robots,'' in {\em Proceedings 2002 IEEE International Conference on Robotics
-  and Automation (Cat. No. 02CH37292)}, vol.~1, pp.~732--737, IEEE, 2002.
 
 \bibitem{saha1995design}
 S.~K. Saha, J.~Angeles, and J.~Darcovich, ``The design of kinematically
