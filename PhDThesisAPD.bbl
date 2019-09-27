@@ -59,6 +59,43 @@ J.~Borenstein, ``Control and kinematic design of multi-degree-of freedom mobile
 P.~F. Muir and C.~P. Neuman, ``Kinematic modeling of wheeled mobile robots,''
   {\em Journal of robotic systems}, vol.~4, no.~2, pp.~281--340, 1987.
 
+\bibitem{yi2002kinematics}
+B.-J. Yi and W.~K. Kim, ``The kinematics for redundantly actuated
+  omnidirectional mobile robots,'' {\em Journal of Robotic Systems}, vol.~19,
+  no.~6, pp.~255--267, 2002.
+
+\bibitem{lin2013modeling}
+L.-C. Lin and H.-Y. Shih, ``Modeling and adaptive control of an
+  omni-mecanum-wheeled robot,'' {\em Intelligent Control and Automation},
+  vol.~4, no.~02, p.~166, 2013.
+
+\bibitem{diegel2002improved}
+O.~Diegel, A.~Badve, G.~Bright, J.~Potgieter, and S.~Tlale, ``Improved mecanum
+  wheel design for omni-directional robots,'' in {\em Proc. 2002 Australasian
+  Conference on Robotics and Automation, Auckland}, pp.~117--121, 2002.
+
+\bibitem{taheri2015kinematic}
+H.~Taheri, B.~Qiao, and N.~Ghaeminezhad, ``Kinematic model of a four mecanum
+  wheeled mobile robot,'' {\em International journal of computer applications},
+  vol.~113, no.~3, pp.~6--9, 2015.
+
+\bibitem{oetomo2008singularity}
+D.~Oetomo and M.~H. Ang, ``Singularity-free joint actuation in omnidirectional
+  mobile platforms with powered offset caster wheels,'' {\em Journal of
+  Mechanical Design}, vol.~130, no.~5, p.~054501, 2008.
+
+\bibitem{chung2010design}
+W.~Chung, C.-b. Moon, C.~Jung, and J.~Jin, ``Design of the dual offset active
+  caster wheel for holonomic omni-directional mobile robots,'' {\em
+  International Journal of Advanced Robotic Systems}, vol.~7, no.~4, p.~26,
+  2010.
+
+\bibitem{li2006wheel}
+Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
+  modelling and torque distribution for a redundant mobile robot,'' in {\em
+  Proceedings 2006 IEEE International Conference on Robotics and Automation,
+  2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
+
 \bibitem{alexander1989kinematics}
 J.~C. Alexander and J.~H. Maddocks, ``On the kinematics of wheeled mobile
   robots,'' {\em The International Journal of Robotics Research}, vol.~8,
@@ -69,11 +106,6 @@ G.~Campion, G.~Bastin, and B.~Dandrea-Novel, ``Structural properties and
   classification of kinematic and dynamic models of wheeled mobile robots,''
   {\em IEEE transactions on robotics and automation}, vol.~12, no.~1,
   pp.~47--62, 1996.
-
-\bibitem{yi2002kinematics}
-B.-J. Yi and W.~K. Kim, ``The kinematics for redundantly actuated
-  omnidirectional mobile robots,'' {\em Journal of Robotic Systems}, vol.~19,
-  no.~6, pp.~255--267, 2002.
 
 \bibitem{hootsmans1992motion}
 N.~A.~M. Hootsmans {\em et~al.}, {\em The motion control manipulators on mobile
@@ -554,23 +586,6 @@ H.~P. Moravec, ``The cmu rover.,'' in {\em AAAI}, pp.~377--380, 1982.
 \bibitem{moravec1983stanford}
 H.~P. Moravec, ``The stanford cart and the cmu rover,'' {\em Proceedings of the
   IEEE}, vol.~71, no.~7, pp.~872--884, 1983.
-
-\bibitem{oetomo2008singularity}
-D.~Oetomo and M.~H. Ang, ``Singularity-free joint actuation in omnidirectional
-  mobile platforms with powered offset caster wheels,'' {\em Journal of
-  Mechanical Design}, vol.~130, no.~5, p.~054501, 2008.
-
-\bibitem{chung2010design}
-W.~Chung, C.-b. Moon, C.~Jung, and J.~Jin, ``Design of the dual offset active
-  caster wheel for holonomic omni-directional mobile robots,'' {\em
-  International Journal of Advanced Robotic Systems}, vol.~7, no.~4, p.~26,
-  2010.
-
-\bibitem{li2006wheel}
-Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
-  modelling and torque distribution for a redundant mobile robot,'' in {\em
-  Proceedings 2006 IEEE International Conference on Robotics and Automation,
-  2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
 
 \bibitem{park2002optimal}
 T.~B. Park, J.~H. Lee, B.-J. Yi, W.~K. Kim, B.~J. You, and S.-R. Oh, ``Optimal
