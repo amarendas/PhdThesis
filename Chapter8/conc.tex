@@ -27,25 +27,45 @@ Chapter 6 dealt with the simulation of a tele-operation for the mobile robot und
    In summary, a mobile manipulator was successfully conceived, designed, assembled and controlled remotely  for the purpose for which it was intended, i.e, to map the radiation of a given area.
    
    \section{Current Status} 
-   A prototype of  mobile manipulator and its tele-operation system were   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot was lab tested and the video of the same can be accessed on at the following link\textbf{ https://youtu.be/B5OngfLQjo4 }or using the QR code shown in Figure \ref{fig:QR}. The system will  shortly  be deployed at Variable Energy Cyclotron Centre (VECC) at Kolkata, India for the same purpose. 
-\begin{figure}[h]
+   A prototype of  mobile manipulator and its tele-operation system were   manufactured and assembled at BARC, Mumbai, India based on the analysis and algorithms presented in this thesis. The robot was lab tested and the video of the same can be accessed on at the following link \url{ https://youtu.be/B5OngfLQjo4} using the QR code shown in Figure \ref{fig:QR} or \url{http://web.iitd.ac.in/~saha/amaren.mp4} using the QR code shown in Figure \ref{fig:qrcode2} . The system will  shortly  be deployed at Variable Energy Cyclotron Centre (VECC) at Kolkata, India for the same purpose. 
+   
+    \begin{figure}[ht]
+   	\begin{minipage}{.5\textwidth}
 	\centering
 	\includegraphics[height=4cm]{Chapter8/figure/qrcode}
-	\captionof{figure}{QR code}
+	\captionof{figure}{QR code Youtube}
 	\label{fig:QR}
-\end{figure}
+   	\end{minipage} 
+   	\begin{minipage}{.5\textwidth}
+   		\centering
+   		\includegraphics[height=4cm,,keepaspectratio]{Chapter8/figure/barcodeSaha}
+   		\captionof{figure}{QR Code Alternate}
+   		\label{fig:qrcode2} 
+   	\end{minipage}
+   \end{figure}
+
 
 \section{Future Scope }
 The testing and evaluation of teleoperation system during actual trial opened up  further scope of improvement. Few of these are listed below:  
 \begin{itemize}
-	\item [(i)] Detection of slip and estimation of slip parameters using inertial sensors such as gyroscope and accelerometer  mounted on the mobile robot  in combination with wheel odometer.  \textbf{\textit{ Number of algorithm are available in the literature which uses sensor fusion to arrive at better estimation of robots pose. This estimated pose can then be used to calculate the estimated real time slip based on the actual wheels encoder readings. Based on the estimated slip and using the slip model presented above, actual slip parameters can then be estimated.  }}
+	\item [(i)] Detection of slip and estimation of slip parameters using inertial sensors such as gyroscope and accelerometer  mounted on the mobile robot  in combination with wheel odometer. 
 	
-	\item[(ii)]  Pose estimation using encoder mounted on the front passive wheels for slip detection. \textbf{\textit{The two front wheel are passive wheel, which in general will see less slip than the actuated wheels. On flat terrain and with wheels with low inertia they can give a better estimate of the robots position. Since the contact point of the two wheel keep changing with respect to the robot body an algorithm based on kinematics of of the steering linkage can be worked out to give the position of the robot body based on the odometry of theses wheels. It needs to be seen if this in combination with the  inertial sensors can produce better estimate. }}
+	Several algorithm are available in the literature which uses sensor fusion to arrive at better estimation of robots pose. This estimated pose can then be used to calculate the estimated real time slip based on the actual wheels encoder readings. Based on the estimated slip and using the slip model presented in Section \ref{sec:slipDynamics}, actual slip parameters can then be estimated. 
 	
-	\item[(iii)] Semi-automated navigation using intermediate goal point. \textbf{\textit{ In this mode the operator will give goal point/s on the screen. This 2D pint on the screen would then be mapped to the 3-D point in the actual environment. A planing algorithm will then generate a path between the current position of the robot and goal point. This path must to satisfy the minimum turning radius constrain of the mobile robot. This path will then be feedback to the robots on board controller. A local tracking controller will then be activated to track the path.}} 
+	\item[(ii)]  Pose estimation using encoder mounted on the front passive wheels for slip detection.
 	
-	\item[(iv)] Texture mapping of predicted  visual image instead of 3-D point cloud model currently used. \textbf{\textit{Since the color of the environment is also available along with its distance. An algorithm needs be  developed or existing algorithm implemented   which will use the 3-D point cloud which contains the distance information  and the colour to produce surface with texture.  This will give a more natural feel of the environment to the operator.}}
+	 The two front wheel are passive wheel, which in general will undergo less slip than the actuated wheels. On flat terrain and with wheels with low inertia they can give a better estimate of the robots position. Since the contact point of the two wheel keep changing with respect to the robot body an algorithm based on kinematics of of the steering linkage can be worked out to give the position of the robot body based on the odometry of theses wheels. It needs to be seen if this in combination with the  inertial sensors can produce better estimate.
+	
+	\item[(iii)] Semi-automated navigation using intermediate goal point.
+	
+	  In this mode the operator will give goal point/s on the screen. This 2D point on the screen would then be mapped to the 3-D point in the actual environment. A planing algorithm will then generate a path between the current position of the robot and goal point. This path must to satisfy the minimum turning radius constrain of the mobile robot. This path will then be feedback to the robots on board controller. A local tracking controller will then be activated to track the path. 
+	
+	\item[(iv)] Texture mapping of predicted  visual image instead of 3-D point cloud model currently used. 
+	
+	Since the color of the environment is also available along with its distance an algorithm needs be  developed or existing algorithm implemented   which will use the 3-D point cloud which contains the distance information  and the colour to produce surface with texture.  This will give a more natural feel of the environment to the operator.
 	
 	
-	\item [(v)] Some kind of force feedback to the operator for estimation of obstacle location in the remote environment.  \textbf{\textit{This can be achieved using ultrasonic sensors mounted on the periphery of the robot. Once obstacles comes too close to the robot, the distance of the obstacle from the robot will be transmitted to the control station. The software at the operator side then will give some vibratory input to the steering wheel. The amplitude of vibration should be function of the distance of the robot from the obstacle, the heading direction and the speed of approach. A proper function to give intuitive feel to the operator has to be worked out.}}
+	\item [(v)] Force feedback to the operator for estimation of obstacle location in the remote environment.  
+	
+	This can be achieved using ultrasonic sensors mounted on the periphery of the robot. Once obstacles comes too close to the robot, the distance of the obstacle from the robot will be transmitted to the control station. The software at the operator side then will give some vibratory input to the steering wheel. The amplitude of vibration should be function of the distance of the robot from the obstacle, the heading direction and the speed of approach. A proper function to give intuitive feel to the operator has to be worked out.
 \end{itemize}	

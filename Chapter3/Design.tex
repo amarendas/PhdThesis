@@ -1,19 +1,17 @@
-\chapter{Design of a Mobile Robot}
+\chapter{Design of the RARS Mobile Robot}
 \label{ch_3:Design}
-%The % Comment the below command to supress the random text
-%\lipsum[3-20]
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
 
 Most of the mobile robots presented in literature use differential wheel drive  with passive castor as in \cite{saha1989kinematics}, \cite{yamamoto1992coordinating} and \cite{rajendran2004}. The other  common methods for locomotion of mobile robots are the omnidirectional wheels  \cite{pin1994new} and \cite{salih2006designing}, and tracked wheel system \cite{suthakorn2009design} and \cite{guarnieri2004development}. According  to  Nagatani \cite{nagatani2000improvement},  a  vehicle  with  Mecanum  wheels  is  susceptible  to slippage and same is the case for tracked vehicle, which are inherently skid steered. The slippage of the wheels prevents the most popular dead-reckoning method using rotary shaft  encoders   from  being  performed  well.
 
 The major design objective for the  mobile manipulator at hand  was to make it fault tolerant to single actuator failure. This was important as  the mobile manipulator was to move in an environment where human access is prohibited. With the fault tolerant design it could be assured that the mobile manipulator can be extracted from the restricted zone even in case  one of its the actuator fails. 
 
- The proposed design combines differential drive for the two rear wheels and  motorized Ackerman mechanism for steering the front two passive wheels. This makes the system both Redundant Actuated in traction and Redundantly Steered (RARS).  
+ The proposed design combines differential drive for the two rear wheels and  motorized Davis mechanism for steering the front two passive wheels. This makes the system both Redundant Actuated in traction and Redundantly Steered (RARS). The proposed system has only 3 actuators as compared other redundant wheeled mobile robots which are having minimum 4 actuators.  
  
- In the literature, most common redundantly  actuated system are based on ether powered caster wheels or omnidirectional wheels. One of the first mobile platform the CMU Rover \cite{moravec1982cmu, moravec1983stanford},  was a power caster wheel based system.  Power caster based robots are also presented in \cite{oetomo2008singularity},\cite{chung2010design},\cite{li2006wheel} and \cite{park2002optimal}.   Mobile robots discussed in \cite{muir1987kinematic},\cite{yi2002kinematics} and  \cite{saha1995design} are redundantly actuated systems based on omnidirectional wheels.  The RARS design scores over the omnidirectional wheels based system in terms of less number  of moving parts thus resulting in less chances of failure. Because each omni wheel is made of multiple rollers. Moreover in industrial environment debris can clog the rollers and alter the friction characteristics of the wheels as shown in \cite{carlson2005ugvs}. 
-   The power castor system has issues with singular configuration and wheel locking up of drive system due to improper coordination between steering actuators as discussed in \cite{oetomo2008singularity} and \cite{low2005kinematic}. Moreover, due to changing orientation of all wheels it becomes difficult for the operate to negotiate obstacles when operated in teleoperation mode.
+ In the literature, most common redundantly  actuated system are based on ether powered caster wheels (PCW) or omnidirectional wheels. One of the first mobile platform the CMU Rover \cite{moravec1982cmu, moravec1983stanford},  was a PCW based system.  Other PCW based robots are presented in \cite{oetomo2008singularity}, \cite{chung2010design}, \cite{li2006wheel} and \cite{park2002optimal}.   Mobile robots discussed in \cite{muir1987kinematic}, \cite{yi2002kinematics} and  \cite{saha1995design} are redundantly actuated systems based on omnidirectional wheels.  The RARS design scores over the omnidirectional wheels based system in terms of lesser number  of moving parts thus increasing its reliability. Because each omni wheel is made of multiple rollers. Moreover in industrial environment debris can clog the rollers and alter the friction characteristics of the wheels as shown in \cite{carlson2005ugvs}. 
+   The PCW system has issues with singular configuration and wheel locking up the drive system due to improper coordination between steering actuators as discussed in \cite{oetomo2008singularity} and \cite{low2005kinematic}. Moreover, due to changing orientation of all wheels it becomes difficult for the operate to negotiate obstacles when operated in teleoperation mode.
 
-This chapter   discusses kinematic topology and  the  design methodology of the RARS mobile manipulator. The advantage of  Davis steering mechanism is highlighted over castor wheels  or other steering methods. The actuator sizing and stability analysis of the RARS mobile robot is also presented.    % The Davis steering system modifies the heading of  front wheels in a way that, at low speeds, all the wheels are in pure rolling without lateral sliding \cite{wong2008theory}. The kinematics and control of such systems are discussed in \cite{d1992dynamic} and references therein but no detail design is presented.
+This chapter   discusses kinematic topology and  the  design methodology of the RARS mobile manipulator. The advantage of  Davis steering mechanism is highlighted over castor wheels  or other steering methods. The actuator sizing and stability analysis of the RARS mobile robot is also presented.    
 \section{Design Overview}
  The objective of a  mobile robot under consideration is to navigate inside the cyclotron vault and collect radiation intensity data at all the required points decided by the operator. Data is to be collected not only at different planer locations of the floor but also at varying height from the floor. To cater to this operational requirement, a mobile platform with a vertically extendable manipulating arm was developed. Together, they are   referred henceforth as "mobile manipulator" or simply "mobile platform". The 3-D model of the mobile-manipulator with its major subsystems are shown in Figure \ref{fig:robo3Dmodel}, whereas  and the actual   system  is shown in Figure  \ref{fig:roboActual}. 
 
@@ -78,9 +76,9 @@ The mobile manipulator has a footprint of 700 mm $\times$  400 mm  based on the 
  
  \section{Kinematic Topology}
  \label{sec:KineTopo}
- One of the major requirements of the proposed mobile manipulator was that it should be tolerant to single actuator failure, as mentioned in  Chapter 1 and in introduction of this chapter. The objective was to increases the reliability of the robotic platform's. Second major objective was easy and intuitive manoeuvrability  of the platform under teleopration.
+ One of the major requirements of the proposed mobile manipulator was that it should be tolerant to single actuator failure, as mentioned in  Chapter 1. The objective was to increases the reliability of the robotic platform. The second major objective was easy and intuitive manoeuvrability  of the platform under teleopration.
  
- The robot has four wheel arranged in a rectangular configuration. This provides  more stability as the support polygon is large with respect to other configuration such as rhombus. The rectangular wheel position layout has another advantage that it is car like, which makes driving intuitive. 
+ The robot has four wheels arranged in a rectangular configuration. This provides  more stability as the support polygon is large with respect to other configuration such as rhombus. The rectangular wheel position layout has another advantage that it is car like, which makes driving intuitive. 
   
   The proposed mobile manipulator has two rear wheel  driven by two independent motors.  The front wheels are passive wheels, steered by a single motor connected through Davis Steering linkage. Thus the total no of actuators used by the mobile platform is three.
  
@@ -109,13 +107,13 @@ Secondly, using the proposed design, in case of one  actuator failure, either th
    	\captionof{figure}{Mobile manipulator on slope}
    	\label{fig:loadDistribution}
    \end{figure}
-\subsection{Stability Of Mobile Manipulator}
-One of the method to study stability of dynamic structure is to use \textit{Zero Moment Point} or ZMP introduced by Vukobratovic et al. \cite{vukobratovic1969contribution,vukobratovic2012biped}. It has also be used for stability analysis of mobile robots as discussed in the literature survey section of this thesis.
-The idea of ZMP-stabilization,  is to find a point on the ground where the net  moment due to all forces acting on the mobile manipulators is zero. This point is called the ZMP. If the ZMP is inside the \textit{support polygon} then the system is stable. A support polygon is a concave polygon formed by joining points of contact of the mobile robot with the ground. The support polygon for the RARS robot is given by $\{O_1,O_2,O_4,O_5\}$ as shown in Figure \ref{fig:supportPoly}. To make the analysis simpler and conservative we will use the rectangular polygon formed by $\{A, B,O_4,O_5\}$ shown by black hash in Figure \ref{fig:supportPoly}. 
+\subsection{Stability of mobile manipulator}
+One of the methods to study stability of dynamic structure is to use \textit{Zero Moment Point} or ZMP introduced by Vukobratovic et al. \cite{vukobratovic1969contribution,vukobratovic2012biped}. It was used for stability analysis of mobile robots as discussed in the literature survey section of this thesis.
+The idea of ZMP-stabilization  is to find a point on the ground where the net  moment due to all forces acting on the mobile manipulators is zero. This point is called the ZMP. If the ZMP is inside the \textit{support polygon} then the system is stable. A support polygon is a convex polygon formed by joining points of contact of the mobile robot with the ground. The support polygon for the RARS robot is given by $\{O_1,O_2,O_4,O_5\}$ as shown in Figure \ref{fig:supportPoly}. To make the analysis simpler and conservative we will use the rectangular polygon formed by $\{A, B,O_4,O_5\}$ shown by black hash in Figure \ref{fig:supportPoly}. 
 
 
-  The two major forces action on a dynamic system is the gravitational force and the inertial forces due to acceleration. They all act at center mass of the robot. Therefore the distribution of load becomes very important. From stability point of view the center of mass should be centrally located in the support polygon $\{A, B,O_4,O_5\}$ , where as to generate maximum traction the CG should be close to rear wheel Axel, ie on side AB  to support polygon. 
-  The load distribution was optimized to generate maximum normal reaction, $F_n$,  at the rear wheels without overturning while moving up the ramp of $30^o$ with the manipulator in the collapsed condition as shown in Figure  \ref{fig:loadDistribution}. Maximizing rear wheel reaction by increasing  "b" as per Equation \ref{eqn:loadratio} ensures increased traction, $F_T=\mu F_N$ ($\mu$ is the coefficient of friction), but at the same time decreases the stability margin indicated by "X" in Figure \ref{fig:loadDistribution}.
+  The two major forces action on a dynamic system is the gravitational force and the inertial forces due to acceleration. They all act at centre of mass of the robot. Therefore the distribution of load becomes very important. From stability point of view the center of mass should be centrally located in the support polygon $\{A, B,O_4,O_5\}$ , whereas to generate maximum traction the CG should be close to rear wheel axel, i.e., on side AB  of the support polygon. 
+  The load distribution was optimized to generate maximum normal reaction, $F_n$,  at the rear wheels without overturning while moving up the ramp of $30^o$ with the manipulator in the collapsed condition as shown in Figure  \ref{fig:loadDistribution}. Maximizing rear wheel reaction by increasing $b$, as per Equation \ref{eqn:loadratio} ensures increased traction, $F_T=\mu F_N$ ($\mu$ is the coefficient of friction), but at the same time decreases the stability margin indicated by ``x" in Figure \ref{fig:loadDistribution}.
   \begin{equation}
   \label{eqn:loadratio}
   F_{N2}=\frac{m_rg\cos\theta}{a+\frac{1}{b}}
@@ -123,67 +121,67 @@ The idea of ZMP-stabilization,  is to find a point on the ground where the net  
   Let $p$, be the position ZMP located at a distance $x$ form the rear wheel contact point, then we get
   \begin{equation}
   \label{eqn:zmpRARS}
-  x(F_{N2}-m_r g \cos \theta+F_{N1})=(a+b)F_{N2}+ m_r (\bar a +g \sin \theta )z_{cg} -m_r g b \cos\theta
+  x(F_{N2}-m_r g \cos \theta+F_{N1})=(a+b)F_{N2}+ m_r (a_l +g \sin \theta )z_{cg} -m_r g b \cos\theta
   \end{equation}
-   Assuming that the \textit{ZMP}, is at the rear wheel contact point,ie, $x=0$ the above equation reduces to
+   Assuming that the \textit{ZMP}, is at the rear wheel contact point, i.e., $x=0$ the above equation reduces to
 \begin{equation}
 \label{eqn:zmpRear}
-(a+b)F_{N2}=b(m_r g\cos\theta)-z_{cg}(m_r g\sin\theta+m_r \bar a)
+(a+b)F_{N2}=b(m_r g\cos\theta)-z_{cg}(m_r g\sin\theta+m_r a_l)
 \end{equation}
 The critical condition,which  initiates over turning about the rear axle is given by $F_{N2} =0$.  This reduces the above equation \ref{eqn:zmpRear} to 
 \begin{equation}
 \label{eqn:overturn}
-m_rgb\cos\theta=(m_rg\sin\theta+m_r \bar a)z_{cg}, \quad \Rightarrow g(\frac{b}{z_{cg}}\cos\theta-\sin\theta)=\bar a
+m_rgb\cos\theta=(m_rg\sin\theta+m_r \bar a)z_{cg}, \quad \Rightarrow g(\frac{b}{z_{cg}}\cos\theta-\sin\theta)= a_l
 \end{equation}
 
  
 
 where 
 \begin{itemize}
-\item[] $F_{N1}$, $F_{N2}$ : are normal reaction on the front and rear wheels.
-\item [] $\bar a$ : is the linear acceleration of the mobile robot along the ramp.
-\item[] $a$ and $b$ : are the distance of the vehicle centre of gravity (CG) from the rear and front wheels.
-\item [] $Z_{cg}$ : is the height of  CG from the  plane containing the contact point of the wheels.
-\item [] $m_r$: is mass of the vehicle.
-\item [] $g$:is acceleration due to gravity.
-\item[] $\theta$ : is the inclination of the traction surface from horizontal.
+\item[] $F_{N1}$, $F_{N2}$ :  normal reaction on the front and rear wheels.
+\item [] $ a_l$ : the linear acceleration of the mobile robot along the ramp.
+\item[] $a$ and $b$ :  the distance of the vehicle centre of gravity (CG) from the rear and front wheels.
+\item [] $Z_{cg}$ :  the height of  CG from the  plane containing the contact point of the wheels.
+\item [] $m_r$ : mass of the vehicle.
+\item [] $g$ : acceleration due to gravity.
+\item[] $\theta$ :  the inclination of the traction surface from horizontal.
 \end{itemize}
-The mass distribution of the mobile robot was  adjusted such that the stability margin $X$ as shown in Figure \ref{fig:roboActual} was fixed to $30mm$. Which  limits  the acceleration of the mobile robot while climbing up  over a ramp of $30^o$ to $\bar a=0.144g$. Operation of system below this acceleration limit safeguards it against overturning along the longitudinal direction. 
+The mass distribution of the mobile robot was  adjusted such that the stability margin $x$ as shown in Figure \ref{fig:loadDistribution} was fixed to $30$ mm, which  limits  the acceleration of the mobile robot while climbing up  over a ramp of $30^o$ to $ a_l=0.144g$. Operation of system below this acceleration limit safeguards it against overturning along the longitudinal direction. 
 
-\textbf{\textit{The stability analysis of the RARS robot on a ramp  was carried out with the manipulator in the retracted condition. In case the manipulator is extended  the CG of the system shift towards the rear wheel axle. A condition will be reached when the vector $Mg$ crosses the rear wheel contact point, and the mobile robot will overturn. To insure against this unstable situation the vehicle is never moved the ramp with manipulator extended.}} 
+The stability analysis of the RARS robot on a ramp  was carried out with the manipulator in the retracted condition. In case the manipulator is extended  the CG of the system shift towards the rear wheel axle. A condition will be reached when the vector $Mg$ crosses the rear wheel contact point, and the mobile robot will overturn. To insure against this unstable situation the vehicle is never moved on the ramp with manipulator extended.
    
 Another instability is encountered during turning or negotiating the curve. The centrifugal force tends to overturn the vehicle in lateral direction as shown in Figure \ref{fig:LatOverturn}.
-If $p$ is the ZMP for this configuration, the location of ZMP, ie $x$ is given by Equation \ref{eqn:zmp2}. 
+If $p$ is the ZMP for this configuration, the location of ZMP, i.e., $x$ is given by Equation \ref{eqn:zmp2}. 
 \begin{equation}
 \label{eqn:zmp2}
 2dN_3+ \frac{m_r v^2}{R}-m_r g d=x(N_4+N_3-M_r g)
 \end{equation}
-The over turning will start when ZMP reaches the outer boundary of the support polygon that is on the side $O_4B$ or $O_3A$ and $N_3$ or $N_4$ becomes zero respectively.
-This limits the linear velocity of the vehicle for a given steer angle. If $v$ is the linear velocity of the vehicle and $R$ the radius of the path, the moment balance is given as
+The overturning will start when ZMP reaches the outer boundary of the support polygon that is on the side $O_4B$ or $O_3A$ and $N_3$ or $N_4$ becomes zero respectively.
+This limits the linear velocity of the vehicle for a given steer angle. If $v$ is the linear velocity of the vehicle and $R$ the radius of the path, if the above overturning conditions i.e., $x=0$ and $N_3=0$  are applied to the above equation, we get
 
 \begin{equation}
 \label{eqn:LatOverturn}
 \frac{m_r v^2}{R}Z_{cg}=m_r g d 
 \end{equation}
-Thus the limiting velocity as a function of $R$ the turning radius
+Thus the limiting velocity as a function of $R$  (turning radius)
 \begin{equation}
 \label{eqn:Vel_limit}
 v=\sqrt{\frac{R g d}{Z_{cg}}}
 \end{equation}
-This give the limiting velocity as $v=1.9m/sec$ based on the $Z_{cg}=190mm$ and $d=168$ as given Figure \ref{fig:loadDistribution} and \ref{fig:LatOverturn}. The minimum turning radius of the vehicle is $415mm$ as given in Table \ref{tb:specifications} is used for $R$ in the above equation.
+This sets the limiting velocity as $v=1.9m/sec$ based on the $Z_{cg}=190mm$ and $d=168$ as shown in  Figure \ref{fig:loadDistribution} and \ref{fig:LatOverturn}. Where, R equals the minimum turning radius of the vehicle which is $415mm$ as given in Table \ref{tb:specifications}.
 
 \begin{figure}
  	\centering
  	\begin{minipage}{.5\textwidth}
  		\centering
  		\includegraphics[width=.9\linewidth,height=4.5cm,keepaspectratio]{Chapter3/fig/LateralOverturn}
- 		\captionof{figure}{Centrifugal Forces}
+ 		\captionof{figure}{Centrifugal forces}
  		\label{fig:LatOverturn}
  	\end{minipage}%
  	\begin{minipage}{.5\textwidth}
  		\centering
  		\includegraphics[height=5cm,keepaspectratio]{Chapter3/fig/Supportpolygon.png}
- 		\captionof{figure}{RARS Support Polygon}
+ 		\captionof{figure}{RARS support polygon}
  		\label{fig:supportPoly}
  	\end{minipage}
  \end{figure}
@@ -257,20 +255,21 @@ R_{min}=\frac{210}{2}+515 \times cot(60^o)=402~mm
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{Chapter3/fig/davis}
-		\captionof{figure}{Davis Steering Gear}
+		\captionof{figure}{Davis steering gear}
 		\label{fig:davis}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{Chapter3/fig/steerTorqCal}
-		\captionof{figure}{Steer Torque}
+		\captionof{figure}{Steer torque}
 		\label{fig:steerTorq}
 	\end{minipage}	
 \end{figure} 
 
 \subsection{Calculation of steering torque}
 \label{sec:SteerinTorqueStatic}
-The torque required to steer the front wheel is estimated based on a simplified assumption that the wheel deforms under normal load and the contact area thus generated is  circular in shape with diameter that of the wheel width, $W_w$, as shown in Figure \ref{fig:steerTorq}. 
+In order to choose an appropriate steering motor some torque estimate was needed, which is carried out in this section. 
+The torque required to steer the front wheel is estimated based on static equilibrium because the system moves at very slow speed (0.5 m/sec). A simplified assumption was made that the wheel deforms under normal load and the contact area thus generated is  circular in shape with diameter that of the wheel width, $W_w$, as shown in Figure \ref{fig:steerTorq}. 
 In order to estimate the normal reaction on each wheel, we assumed that the total weight of 80kg was equally shared by the four wheels. 
 Therefore, $N_s=80/4=20Kg$. Next, the uniform pressure formula used for  brakes/clutches design was applied to find the resistance  torque $T_s$, between the ground and the wheel i.e, 
 \begin{equation}
@@ -287,7 +286,7 @@ T_{m_s}=(FS)\frac{2T_s}{h}\frac{D_p}{2}=1.6Nm \quad \text{and}\quad P_{m_s}=T_{m
 
 Based on the above specifications, a 20W, RE25 DC motor of Maxon  make and a gear box  GP32 of ratio 159:1 was chosen for the steering mechanism. 
  
-\section{Scissor Mechanism for Manipulating Arm}
+\section{Scissor Mechanism for Manipulator Arm}
  The manipulating arm  was designed to move  the radiation sensor mounted on the \textit{"top platform"} up to a height of 1.5m from the floor level. This motion was generated using  a scissor mechanism, as shown in Figure \ref{fig:scissor}. The scissor mechanism has two major advantages over other lifting methods such as telescopic pillar, etc.  First, the  ratio of height in extended and collapsed condition is very large. In our case it is $3:1$. Second, the self weight of the mechanism is less as it is made of rectangular links.
 
 The scissor mechanism, Figure \ref{fig:scissor}, has 6 stages, where each "X" denotes one stage. 
@@ -334,8 +333,9 @@ where coefficient of friction, $\mu=0.1$, ACME thread angle, $2\alpha=60^o$, pit
   
 
 \section{Summary}
-Design calculations for the proposed  mobile manipulator are presented in this chapter. Different aspects based on the requirements of radiation inspection around cyclotron was taken into account. Advantage of positively steered wheels over caster wheel was highlighted for the proposed mobile robot. 
+Requirement of an overactuated system was discussed. The advantage of the proposed kinematic design over other redundantly actuated system discussed.
+Design calculations for the proposed  RARS mobile manipulator are presented.
+Different aspects based on the requirements of radiation inspection around cyclotron was taken into account.
+Advantage of positively steered wheels over caster wheel was highlighted for the proposed mobile robot. 
 
-%-------------------------------------------------------------
-%\bibliographystyle{ieeetr} %bibliography style-file
-%\bibliography{sample} % bibliography database file
+

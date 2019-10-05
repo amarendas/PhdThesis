@@ -1,6 +1,6 @@
-\chapter{ Predictive Display}
+\chapter{ Predictive Display for Time Delay Compensation}
 \label{ch_7:PDsply}
-In the last chapter, it was shown using simulation that the time delay between the remote and local stations leads the system towards instability. In this chapter, first a predictive model controller for time delayed teleoperation is presented. Associated issues of time delay on human performance are then highlighted. To alleviate the problem of time delay in visual feedback, predictive display using a RGB-Depth sensor is  implemented.
+In the last chapter, it was shown using simulation that the time delay between the remote and local stations leads the system towards instability. In this chapter, first a predictive model controller for time delayed teleoperation is presented. Associated issues of time delay on human performance are then highlighted. To alleviate the problem of time delay in visual feedback, predictive display using a RGB-Depth sensor is  implemented. Note that te basic framework for implementation may have been known but it was adapted for a specific vehicle like RARS for the first time. 
 
 \section {Time Delay Compensation}
 Simulation of a time delayed system with pure pursuit model for human controller was presented in Chapter \ref{c6_simulation}.  Stability aspects with input delay to the human model was pointed out. In paper by Ollero \cite{ollero1995stability}, stability of pure pursuit with input delay is presented and for completeness it is briefly discussed in Appendix \ref{appendix_b}.   In view of the above theoretical analysis and the simulation results presented in Chapter \ref{c6_simulation}, it is required to design  a stabilizing controller to take care of large delays, e.g.,  0.8 sec. One such design based on model  predictive control is presented next.
@@ -42,12 +42,12 @@ It may be noted that the dynamic model uses torque $\tau$ as its input, whereas 
 This predicted position is given to the pure pursuit algorithm to generate required control outputs for the remote robot. In the simulation, it was assumed that this control inputs reaches the remote robot instantaneously, as $T_1>> T_2$. As discussed in the   Kinematic model of Chapter \ref{c6_simulation}. Equation \ref{eqn:KinematicModelOfRobot} was used to simulate the remote robot.
  \begin{figure}
 	\includegraphics[width=.8\linewidth]{Chapter7/fig/robotPredictPos}
-	\caption{Smith predictor applied to the developed mobile robot}
+	\caption{Smith predictor applied to RARS mobile robot}
 	\label{fig:SmithRobot}
 \end{figure}
  \begin{figure}
 	\includegraphics[width=\linewidth]{Chapter7/fig/Sumilation_BlkDgm}
-	\caption{Simulation block Digram}
+	\caption{Simulation block diagram}
 	\label{fig:SimBlock}
 \end{figure}
 \subsection{Simulation algorithm and  results} 

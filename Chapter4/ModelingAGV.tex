@@ -14,14 +14,12 @@ In order to develop a model-based control algorithm, it is imperative to have a 
   A general dynamical model was derived for three-wheel mobile robots with nonholonomic constraints  by B. d'Andrea-Novel \cite{d1991modelling} using  Lagrange formulation.
     Alternatively, Thanjavur and Rajagopalan \cite{thanjavur1997ease} have used Kane's method,  and  Saha et al. \cite{saha1991dynamics},\cite{saha1989kinematics} used Natural Orthogonal Compliment (NOC) method for the same.  
     
-In this chapter we first present the kinematic model of the mobile robot with two passive wheel at the front. It is then proved using kinematics why a passive wheel with cater offset along the plane of the wheel self orient's it self. while  castors with zero offset  must be actuated.  This has not been explicitly presented in literature.
+In this chapter we first present the kinematic model of the mobile robot with two passive wheel at the front. It is then proved using kinematics why a passive wheel with caster offset along the plane of the wheel self orients itself. while  casters with zero offset  must be actuated.  This has not been explicitly presented in literature.
 
- Next the dynamic equation of a mobile robot using Natural Orthogonal Compliment method is derived for both for ideal rolling condition of wheels and in presence of longitudinal and lateral slip of wheels. Use of NOC for modeling differential drive wheeled vehicle under ideal rolling condition as been presented by Angels and Saha\cite{saha1991dynamics},\cite{saha1989kinematics}. We extend this method to include both the lateral and longitudinal slip of the wheels, and  derive the dynamic equation of motion of a mobile robot with redundant actuators. 
+ Next the dynamic equation of a mobile robot using Natural Orthogonal Compliment method is derived for both for ideal rolling condition of wheels and in presence of longitudinal and lateral slip of wheels. Use of NOC for modeling differential drive wheeled vehicle under ideal rolling condition as been presented by Angels and Saha \cite{saha1991dynamics}, \cite{saha1989kinematics}. We extend this method to include both the lateral and longitudinal slip of the wheels, and  derive the dynamic equations of motion of a mobile robot with redundant actuators. 
  
- The RARS robot has unique  drive configuration, which uses both differential drive and Ackerman mechanism for steering. 
- This system has a redundant configuration and very few literature presents dynamical analysis with slip included in the dynamics. To our knowledge no literature is present, where the concept of  NOC  has been used to model redundantly actuated mobile robot. 
- 
-The two models are compared using simulation to find the deviation in the path traced by RARC robot under different peak value of co-efficient for friction between the wheel and ground plane.
+ The RARS robot has a unique  drive configuration, which uses both differential drive and Davis mechanism for steering. 
+ This system has a redundant configuration and very few literature presents dynamical analysis with slip included in the dynamics. To our knowledge no literature is present, where the concept of  NOC  has been used to model redundantly actuated mobile robot. The two models are compared using simulation to find the deviation in the path traced by RARS robot under different peak value of co-efficient of friction between the wheel and ground plane.
    
 
 
@@ -136,7 +134,7 @@ C(\theta,\dot{\theta})=\sum_{i=1..n}(T_i^T M_i\dot{T_i}+T_i W_i M_i T_i)
 	\begin{minipage}[t]{0.5\textwidth}
 	\centering
 		\includegraphics[width=3in]{Chapter4/fig/fig1.jpg} 
-		\caption{WMR-Std. castor}\label{fig:std}
+		\caption{WMR-Std. caster}\label{fig:std}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
@@ -371,13 +369,13 @@ The  standard caster wheel configuration can be obtained by setting the value of
 \subsubsection{Under-actuated case ($d_2=0$)}
 It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
-Am alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car
-\section{Dynamic under ideal condition}
-The equation of motion is derived under the assumption that all the wheel satisfies pure rolling condition, there is no slipipp or skidding of the wheels.
+An alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman and Davis steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car.
+\section{Dynamics with No Slip in Wheels }
+In this section the equations of motion is derived under the assumption that all the wheel satisfies pure rolling condition, there is no slipping or skidding of the wheels. This is valid for vehicles with caster wheels as mentioned in Section 3.2.2.1 or incase where steered wheels are perfectly aligned according to the Ackerman steering condition. Dynamics of such architecture is simple which will lead to a realistic model of RARS developed in this research. This is effectively the case mentioned in Section 3.2.2.2. 
 
 
 Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE} can be derived 
-\subsection{Generalized inertia matrix, $I$}
+\subsection{Generalized inertia matrix, I}
 \label{sec:GIM}
  The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7^T]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
 \begin{equation}
@@ -426,7 +424,7 @@ I_c=\sum_{i=4,6}T^T_iM_iT_i=(m_cr^2/4)&
 If the mass of the brackets, i.e., body \#5 and \#7, are small compared to the mass of the caster wheels, then the contributions of $T^T_5M_5T_5$ and $T^T_7M_7T_7$ can be neglected.
 
 
-\subsection{Matrix of convective inertia term $C$}
+\subsection{Matrix of convective inertia term C}
 The matrix of convective inertia terms of Equation \ref{CE} can be broken down into two parts, $T^TM\dot{T}$ and $T^TWMT$.  As can be seen from Equations \ref{twist1}, \ref{twist2} and \ref{twist3},  $T_1,T_2,T_3$ associated with rear wheels and the platform is constant. Therefore \[T^TM\dot{T}=0\]. The generalized inertia matrix  is constant for the rear wheels and the platform, therefore the vector $I_i\omega_i$ is parallel to  $\omega_i, i=1..3$ \[\Rightarrow\omega\times I\omega=0\] \[\Rightarrow T^TWMT =0\]. This shows that contribution of the rear wheels and the platform  to the convective inertia term is zero. Moreover, the mass of the brackets are assumed to be zero, so they also do not contribute to the convective inertia term. Hence
 \begin{equation}
 \label{Convective}
@@ -528,9 +526,9 @@ The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  as s
 \label{sec:InvDynamics_NoSlip}
 In order to find the torque required to trace the mobile platform on the circular curve given in Figure \ref{fig:CirTrace}, inverse dynamics was carried out.
 Using the model's inverse kinematic,  the wheel velocity and acceleration were determined using pseudo inverse.  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
-The wheel angle, velocity and acceleration were used in the dynamics equation \ref{dnoc}  to calculate the torque required by each motor. The results are plotted in figure \ref{fig:spiral}. 
+The wheel angle, velocity and acceleration were used in the dynamics equation \ref{dnoc}  to calculate the torque required by each motor. The results are plotted in Figure \ref{fig:spiral}. 
 
-The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $, the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given by equations \ref{twist1},\ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
+The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $, the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given by Equations \ref{twist1}, \ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
 \begin{equation}
 \label{dnoc}
 \begin{aligned}
@@ -541,7 +539,7 @@ T^TMT &=I_1+I_2+I_m+I_3= I_m+I_3\\
 W&=diag(W_1,W_2,W_3),\quad w^G=g\sin\alpha, \quad \alpha=10^o
 \end{aligned}
 \end{equation}
-where $w^G$, $ w^J$ and $\alpha$ represent the gravitational force acting along the inclined plane,  the external torque applied by a motor and the inclination of the plane to horizontal respectively. The generalized inertia matrix $I_m$ and $I_3$ are given in \ref{eqn:I_wheel} and \ref{eqn:I_platform}.
+where $w^G$, $ w^J$ and $\alpha$ represent the gravitational force acting along the inclined plane,  the external torque applied by a motor and the inclination of the plane to horizontal respectively. The generalized inertia matrix $I_m$ and $I_3$ are given in Equation \ref{eqn:I_wheel} and \ref{eqn:I_platform}.
 As stated earlier the convective inertia term is zeros as the inertia matrices are constant. The expression for motor torque  is then given as 
 \begin{equation}
 T1^Tw_1^j=\tau_1, \quad T_2^Tw_2^j=\tau_2
@@ -568,7 +566,7 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 \end{figure} 
 %
 \begin{table}[!htbp]
-	\caption{Dynamic \& kinematic parameters }
+	\caption{Dynamic and kinematic parameters }
 	\label{tb:massproperty}
 	\centering
 	\begin{tabular}{l l l}
@@ -594,87 +592,85 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 
 
 \section{Dynamics with Wheel Slip}
-\label{sec:SlipDlast sectionynamics}
 \begin{figure}
-	\caption{}
-	\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=2.5in]{Chapter3/fig/Slip} 
-		\caption{Longitudinal slip}\label{fig:slip}
+		\caption{Longitudinal slip \cite{wang2008modeling}}\label{fig:slip}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1.5in]{Chapter3/fig/Skid} 
-		\caption{Longitudinal Slip or Skid}\label{fig:skid}
+		\caption{Wheel Skid \cite{wang2008modeling}}\label{fig:skid}
 	\end{minipage}
 \end{figure}
-The above section presented  the equations of motion  of a mobile robot  based on the no slip condition between the ground and the wheel, i.e. pure rolling condition. In most cases this ideal condition is not satisfied. In particular for RARA robot presented in this thesis the steering wheels  are passive wheel but power steered, hence it is not always  assured that passive wheel will correctly orient itself to assure pure rolling condition of these wheels. In order to capture the actual dynamics of RARS robot, ideal rolling assumption  is  removed, and both the longitudinal slip and lateral slip (also called skid) are introduce in deriving the equation of motion for RARS.
+The above section presented  the equations of motion  of a mobile robot  based on the no slip condition between the ground and the wheel, i.e. pure rolling condition. For RARS robot presented in this thesis the front steering wheels  are passive  but actively steered. Hence, the assumption of pure rolling condition of these wheels are no longer valid. Therefore, both the longitudinal slip and lateral slip (also called skid) are introduced in derive the equations of motion for RARS.
 \subsection{Defining Slip}
-\textbf{Longitudinal slip} occurs when the peripheral velocity of the wheel at the point of contact with the ground, $\dot{\phi} \times r$ is different from the linear velocity $v_l$ of the wheel cg as shown in Figure \ref{fig:slip}. Where, $\dot{\phi}$ is the angular velocity of wheel and $r$ is the effective radius of the wheel. Under pure rolling assumption  $\dot{\phi} \times r=v_l$. However, this is not the case for a deformed wheel. The wheel slipping can be characterized by
-slippage (or Slip ratio) \[\rho = \frac{\dot{\phi} \times r - v_l}{\max(\dot{\phi} \times r,v_l)}\] that has a value range of $ \rho \in [-1, 1]$. The $\rho = 0$
-indicating no wheel slippage whereas $\rho = 1$ implies a complete slippage, i.e., the wheel is not moving linearly despite its angular rotation. In normal road condition, the wheel's slippage $(\rho)$is usually in the range, $-1<\rho<1 $. The  longitudinal force ($F_s$) acting on the wheel due to slip is related to the slip ratio $\rho$. One of the well known empirical relation to find $F_s$ is the \textit{ magic formula} presented by Pacejka \cite{pacejka1992magic} which is used extensively in automotive industry to modeling Tire forces. 
-
- \textbf{Lateral slip }also called \textbf{skidding} is experienced when the wheel moves perpendicular to it's plane, this is general encountered during turning. This lateral movement is called skidding. The skidding produces frictional force perpendicular to the wheel plane as shown in figure \ref{fig:skid} by $F_k$. The force $F_k$ is related to the slip angle $\delta$, which is the angle formed between the wheel plane and the velocity vector of the wheel's velocity, when projected on the ground plane.
- The force $F_k$ can again be found using magic formula \cite{pacejka1992magic}. where instead of the slip ratio we use the slip angle as the input parameter.
+\textbf{Longitudinal slip} occurs when the peripheral velocity of the wheel at the point of contact with respect to the ground, $\dot{\phi} r$ is different from the linear velocity $v_l$ of the wheel C.G., as shown in Figure \ref{fig:slip}, where, $\dot{\phi}$ is the angular rate of the wheel and $r$ is the effective radius of the wheel. Under pure rolling assumption  $\dot{\phi}  r=v_l$. However, this is not the case for a deformed wheel. The wheel slipping can be characterized by
+slippage (or Slip ratio) \[\rho = \frac{\dot{\phi}  r - v_l}{\max(\dot{\phi}  r,v_l)}\] that has a  range of $ \rho \in [-1, 1]$. The case $\rho = 0$ indicates no wheel slippage whereas $\rho = 1$ implies a complete slippage, i.e., the wheel is not moving linearly despite its angular rotation. In normal road condition, the wheel's slippage $(\rho)$is usually in the range, $-1<\rho<1 $.
+ The  longitudinal force ($F_s$) acting on the wheel due to slip is related to the slip ratio $\rho$. There are several adhesions models proposed that gives relation between the slip ratio and friction force at wheel-ground interface. One of the well known adhesion relations is the \textit{ magic formula} presented by Pacejka \cite{pacejka1992magic} which is used extensively in automotive industry to modeling tire forces. Other  friction models proposed in  literature  are by Claeys \cite{claeys2001dynamic}, Kulakowski \cite{kulakowski1991mathematical}  and Dugoff \cite{dugoff1970analysis}. 
  
- The magic formula \ref{eqn:magic} is reproduced below for completeness. In case of longitudinal slip $Y(x)$ represents longitudinal force $F_s$ and $x$ is the slip ratio $\rho$. For computation the lateral frictional  force $(F_k)$ due to skidding $x$ is replaced by the slip angle $\delta$. The constants $D$ represents the peak frictional force. The angle of  tangent at the origin is equal to $BCD$. $C$ controls the shape of the curve, $C=2.4$ for $F_k$ and  $C=1.65$ for $F_s$. $B$ controls the slope at origin. The remaining constant $E$ influences both the curvature of the curve near peak and also the position of $x_m$, where the peak is located.
+ \textbf{Lateral slip }also called \textbf{skidding} is experienced when the wheel moves perpendicular to its plane. This is general encountered during cornering. This lateral movement is called skidding. The skidding produces frictional force perpendicular to the wheel plane as shown in Figure \ref{fig:skid} by $F_k$. The force $F_k$ is related to the slip angle $\delta$, which is the angle formed between the wheel plane and the velocity vector of the wheel, when projected on the ground plane.
+ The force $F_k$ can again be found using magic formula \cite{pacejka1992magic} given in Equation \ref{eqn:magic} or any other adhesion model. Where instead of the slip ratio we use the slip angle as the independent parameter.
+ 
+ %The magic formula \ref{eqn:magic} is reproduced below for completeness. In case of longitudinal slip $Y(x)$ represents longitudinal force $F_s$ and $x$ is the slip ratio $\rho$. For computation the lateral frictional  force $(F_k)$ due to skidding $x$ is replaced by the slip angle $\delta$. The constants $D$ represents the peak frictional force. The angle of  tangent at the origin is equal to $BCD$. $C$ controls the shape of the curve, $C=2.4$ for $F_k$ and  $C=1.65$ for $F_s$. $B$ controls the slope at origin. The remaining constant $E$ influences both the curvature of the curve near peak and also the position of $x_m$, where the peak is located.
  
  \begin{equation}\label{eqn:magic}
  Y(x)=D\sin[C \arctan{Bx -E(Bx-\arctan(bx))}]
  \end{equation}
-\begin{figure}
-	\centering
-	\includegraphics{Chapter3/fig/magicformula}
-	\caption{Tipical Curve of Magic Formula \cite{pacejka1992magic}}
-	\label{fig:magicformula}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics{Chapter3/fig/magicformula}
+%	\caption{Tipical Curve of Magic Formula \cite{pacejka1992magic}}
+%	\label{fig:magicformula}
+%\end{figure}
 
-\subsection{Kinematics}
+\subsection{Kinematics with wheel slip}
 \label{sec:slipKina}
-The Figure \ref{fig:VehicleWithSlip}  shows the line digram of the RARS robot. Even though the actual RARS robot uses Ackerman linkage for steering the front wheel, in this we have take the steer angle $\psi_1$, $\psi_2$ of each wheel independent, this makes the mathematical  model more general. In order to simplify the model  link connecting the front wheels to the platform, tie rod etc associated with steering mechanism   are excluded from the analysis, as there weights are small compared to platform and wheels. The steering axis is assumed to pass through the center of the front wheel, i.e the offset is zero.  This means $d_1=d_2=0$  for Figure \ref{fig:gen}, thus $O_4=O_5$ and $O_6=O_7$. Therefore in Figure \ref{fig:VehicleWithSlip} we use only $O_4$  for wheel \#4 and $O_5$ for wheel \#5, to denote both the center of the wheel and also the steering pivot point. NoC approach is used to derive the equations of motion of the RARS robot with wheel slip taken into account for all the four wheels.
+ Figure \ref{fig:VehicleWithSlip}  shows the line digram of the RARS robot. Even though the actual RARS robot uses Davis linkage for steering the front wheels, here let us consider the steer angles $\psi_1$, $\psi_2$ corresponding to  each wheel. This makes the mathematical  modelling  more general. In order to simplify the model  link connecting the front wheels to the platform, tie rod, etc. associated with the steering mechanism   are excluded from the analysis, as their weights are small compared to the platform and wheels. The steering axis is assumed to pass through the center of the front wheel, i.e.,  the offset is zero.  It means $d_1=d_2=0$  ( Figure \ref{fig:gen}). Thus, $O_4=O_5$ and $O_6=O_7$. In Figure \ref{fig:VehicleWithSlip}  $O_4$  for wheel \#4 and $O_5$ for wheel \#5, denotes both the centre of the wheel and also the steering pivot point. The NoC approach was used to derive the equations of motion of the RARS robot with wheel slip taken into account for all the four wheels.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Chapter4/fig/VechileWithSlip}
-	\caption{Free Body Digram of RARS Robot}
+	\caption{Free body diagram of RARS robot}
 	\label{fig:VehicleWithSlip}
 \end{figure}
 
 The set of independent variables for this model is given by
 \begin{equation}
 \label{eqn:theta_slip}
-\dot{\theta}_{9x1}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x},\dot{\phi_1},\dot{\phi_2},\dot{\theta_4},\dot{\theta_5})^T
+\dot{\theta}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x},\dot{\psi_1},\dot{\psi_2},\dot{\theta_4},\dot{\theta_5})^T
 \end{equation}
-It may be noted that $\theta_i,\phi_i$  is same as defined earlier in Section \ref{sec:DynamicNoSlip}. $\dot{y_1},\dot{y_2}$ are the linear velocity of centre of the rear wheels i.e. of points point $O_1$ and $O_2$,, in the direction $j$ of the body coordinate system. The lateral slip of the rear wheels are denoted by $x_1$ and $x_2$ as shown in the Figure \ref{fig:VehicleWithSlip}. Due to rigidity constrains of the rear wheels
+It may be noted that $\theta_i,\psi_i$  is same as defined earlier in Section \ref{sec:DynamicNoSlip}. The variables $\dot{y_1},\dot{y_2}$ are the linear velocity of centre of the rear wheels, i.e., of points point $O_1$ and $O_2$,, in the direction $j$ of the body coordinate system. The lateral slip of the rear wheels are denoted by $x_1$ and $x_2$ as shown in the Figure \ref{fig:VehicleWithSlip}. Due to rigidity constrains of the rear wheels there are related as follows
 \[\dot{x_1}=\dot{x_2}=\dot{x}\] 
-The velocity of point $O_1$ and $ O_2$ w.r.t the world coordinate ${X,Y,Z}$ and expressed in the robot body co-ordinate system ${i,j,k}$ is given by 
+The velocities of points $O_1$ and $ O_2$ w.r.t the world coordinate ${X,Y,Z}$ and expressed in the robot's body co-ordinate system ${i,j,k}$ are given by 
 \begin{equation}
 \label{eqn:slip_do1}
 \dot{o_1}=\dot{x}i +\dot{y_1}j, \quad \quad  \dot{o_2}=\dot{x}i +\dot{y_2}j
 \end{equation}
-Equating the velocity of point $O_3$ expressed in terms of $\dot o_1$ and $\dot o_2$, We get
+Equating the velocity of point $O_3$ expressed in terms of $\dot o_1$ and $\dot o_2$, one gets
 \begin{equation}
 \label{eqn:slip_do3_rel}
 \dot{o_3}=\dot{o_1}+\omega_3\times o_1o_3=\dot{o_2}+\omega_3\times o_2o_3
 \end{equation}
-Let $\omega_3$ is the angular velocity of platform, body \#3. Then 
+Let $\omega_3$ be the angular velocity of platform, i.e., body \#3. Then 
 \begin{equation}
 	\label{eqn:slip_domega3}
-	\omega_3=\bar{\omega_3}k, \quad \bar{\omega_3}=\frac{\dot{y_2}-\dot{y_1}}{l} =
+	\omega_3=\bar{\omega_3}k, \quad \bar{\omega_3}=\frac{\dot{y_2}-\dot{y_1}}{l} 
 \end{equation}
-using Equations \ref{eqn:slip_do3} and \ref{eqn:slip_domega3} , we get
+Using Equations \ref{eqn:slip_do3_rel} and \ref{eqn:slip_domega3} , we get
 \begin{equation}
 \label{eqn:slip_do3}
-\dot{o_3}=(\dot{x}+\frac{a\dot{y_1}}{L}-\frac{a \dot{y_2}}{L})i+(\frac{\dot{y_1}}{2}+\frac{\dot{y_2}}{2})j
+\dot{o_3}=(\dot{x}+\frac{a\dot{y_1}}{l}-\frac{a \dot{y_2}}{l})i+(\frac{\dot{y_1}}{2}+\frac{\dot{y_2}}{2})j
 \end{equation}
-We can then write twist $t_3$ for body \#3 as
+The twist $t_3$ for body \#3 is obtained as
 \begin{equation}
 \label{eqn:slip_t3}
 t_3=
 \begin{pmatrix}
 \omega_3\\
 \dot{o_3}
-\end{pmatrix}=T_3 \dot{\theta}, \quad \text{Where,} \quad 
+\end{pmatrix}=T_3 \dot{\theta}, \quad \text{where,} \quad 
 T_3=
 \begin{pmatrix}
 0 & 0& -k/l & k/l & 0 &0 & 0 &0 &0\\
@@ -688,8 +684,8 @@ T_3=\left(
 \begin{array}{ccccccccc}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & \frac{a}{L} & -\frac{a}{L} & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{l} & \frac{1}{l} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \frac{a}{l} & -\frac{a}{l} & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & \frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{array}
@@ -704,12 +700,12 @@ Using the fact \[\frac{d i}{dt}=\bar{\omega_3}k\times i =\bar{\omega_3}j, \quad 
 \end{pmatrix}
 \end{equation}
 
-The angular velocities $\omega_1$ and $\omega_2$ of wheels \#1 and \#2 is given as
+The angular velocities $\omega_1$ and $\omega_2$ of wheels \#1 and \#2 are given as
 \begin{equation}
 \label{eqn:slip_omega1and2}
 \omega_1=\dot{\theta_1}i+\omega_3, \quad \omega_2=\dot{\theta_2}i+\omega_3
 \end{equation}
-using Equations \ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2}  we get the twist vector for wheel \#1 as 
+Using Equations \ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2}, one gets the twist vector for wheel \#1 as 
 \begin{equation}
 \label{eqn:slip_t1}
 t_1=
@@ -729,7 +725,7 @@ i & 0& -k/l & k/l & 0 &0 & 0 &0 &0\\
 \begin{array}{ccccccccc}
 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{l} & \frac{1}{l} & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
@@ -746,7 +742,7 @@ and
 \end{pmatrix}
 \end{equation}
 
-Using Equations \ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2} for wheel \#2 we get the twist vector $t_2$  as 
+Using Equations \ref{eqn:slip_do1} and \ref{eqn:slip_omega1and2} for wheel \#2 the twist vector $t_2$  is obtained as 
 \begin{equation}
 \label{eqn:slip_t2}
 t_2=
@@ -766,7 +762,7 @@ T_2=
 \begin{array}{ccccccccc}
 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & -\frac{1}{l} & \frac{1}{l} & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
@@ -784,7 +780,7 @@ and
 \end{equation}
 
 
-Next  the angular velocity of the steered wheel i.e body \#4 relative to the absolute frame is given as 
+Next,  the angular velocity of the steered wheel, i.e, body \#4, relative to the absolute frame is given as 
 \[\omega_4=\dot{\theta_4}e_4+ \dot{\psi_1} k +\omega_3\]
 The transformation matrix between the Frame $\{e_4,f_4\}$ attached to the wheel \#4 is given by the rotation matrix $R_4$. 
 \begin{equation}
@@ -796,9 +792,9 @@ R_4=\begin{pmatrix}
 \end{equation}
 Then, $e_4= \cos\psi_1 i +\sin \psi_1 j$  and $\omega_4$ can be written as 
 \[ \omega_4= \dot{\theta_4}( \cos\psi_1 i +\sin \psi_1 j)+ \dot{\phi_1} k +\omega_3 \]
-Linear velocity of point $o_4$ is given as 
+Linear velocity of point $o_4$ is given by
 \[ \dot{o_4}=\dot{o_3}+\omega_3 \times (-\frac{c}{2}i+bj) \]
-or in terms of twist as
+or in terms of the twist as
 \begin{equation}
 \label{eqn:slip_t4}
 t_4=
@@ -812,9 +808,9 @@ where
 \label{eqn:slip_T4}
 T_4=\left(
 \begin{array}{ccccccccc}
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{cos}[\text{$\psi $1}] & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \text{sin}[\text{$\psi $1}] & 0 \\
-0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \cos\psi_1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \sin\psi_1 & 0 \\
+0 & 0 & -\frac{1}{l} & \frac{1}{l} & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & \lambda_1 & -\lambda_1 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 &\lambda_3 & \lambda_2 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
@@ -832,7 +828,7 @@ T_4=\left(
  \[\lambda_1=\frac{a+b}{l}, \quad \lambda_2=\frac{l-c}{2l}, \quad \lambda_3=\frac{l+c}{2l} \]
   \[\lambda_4=(\bar{\omega_3}+\dot{\psi_1}) (\cos\psi_1 j-\sin \psi_1 i) \]
   \[\lambda_6=-\bar{\omega_3}(\lambda_1 j+\lambda_2 i), \quad \lambda_7=\bar{\omega_3}(\lambda_1 j-\lambda_3 i)\]
-Next, for wheel \#5  we get 
+Next, for wheel \#5  one gets 
 \[\omega_5 = \dot{\theta_5} (R_5.e_5) + \dot{\psi_2} k + \omega_3 =
   \left(
 \begin{array}{c}
@@ -841,7 +837,7 @@ Next, for wheel \#5  we get
 \dot{\psi_2}+\frac{-\dot{y_1}+\dot{y_2}}{L}
 \end{array}
 \right) \]
-the linear velocity of point $o_5$ is given as 
+Accordingly, the linear velocity of point $o_5$ is given as 
 \[ \dot{o_5}=\dot{o_3}+\omega_3 \times o_3o_5\]
 where, \begin{equation}
 \label{eqn:slipR5}
@@ -850,9 +846,9 @@ R_5=\begin{pmatrix}
 \sin \psi_2 & \cos\psi_2
 \end{pmatrix}
 \end{equation}
-Using  \[ o_3o_5=\frac{c}{2}i+bj\] along with $\omega_3$ and $\dot{o_3}$ from Equations \ref{eqn:slip_domega3}, \ref{eqn:slip_do3}, we get,
+Using  \[ o_3o_5=\frac{c}{2}i+bj\] along with $\omega_3$ and $\dot{o_3}$ from Equations \ref{eqn:slip_domega3} and  \ref{eqn:slip_do3},the following is obtained.
 \[\dot{o_5}= \left( \dot{x}+\dot{y_1}(\lambda_1)-\dot{y_2}\lambda_1 \right)i +\left( \lambda_2\dot{y_1}+\lambda_3\dot{y_2}\right)j  \]
-The twist of body \#5 , ie wheel \#5 is given as 
+The twist of body \#5 , i.e., wheel \#5 is given as 
 \begin{equation}
 \label{eqn:slip_t5}
 t_5=
@@ -868,7 +864,7 @@ T_5=\left(
 \begin{array}{ccccccccc}
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \cos \psi_2\\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \sin\psi_2 \\
-0 & 0 & -\frac{1}{L} & \frac{1}{L} & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & -\frac{1}{l} & \frac{1}{l} & 0 & 0 & 1 & 0 & 0 \\
 0 & 0 & \lambda_1 & -\lambda_1 & 1 & 0 & 0 & 0 & 0 \\
 0 & 0 &\lambda_2& \lambda_3 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
@@ -876,7 +872,7 @@ T_5=\left(
 \right)
 \end{equation}
 
-Using the fact $\dot{e5}=(\dot{\psi_2}+\bar{\omega_3})k\times e_5 =(\dot{\psi_2}+\bar{\omega_3})f_5$ and $f_5=-\sin \psi_2 i+\cos \psi_2 j$. It may be noted that coordinate system $\{e_5,f_5\}$ is rotated by $\psi_2$ with respect to coordinate $ \{i,j\}$. Therefore $\dot{T_5}$ is given as
+Using the fact $\dot{e_5}=(\dot{\psi_2}+\bar{\omega_3})k\times e_5 =(\dot{\psi_2}+\bar{\omega_3})f_5$,  $f_5=-\sin \psi_2 i+\cos \psi_2 j$ and coordinate system $\{e_5,f_5\}$ is rotated by $\psi_2$ with respect to coordinate $ \{i,j\}$, $\dot{T_5}$ is given as
 
 \begin{equation}
 \label{eqn:slip_dT5}
@@ -888,13 +884,13 @@ Using the fact $\dot{e5}=(\dot{\psi_2}+\bar{\omega_3})k\times e_5 =(\dot{\psi_2}
 \end{equation}
 where 
 \[ \lambda_5 = (\bar{\omega_3}+\dot{\psi_2}) (\cos\psi_2 j-\sin \psi_2 i) \]
-\subsection{Dynamics }
+\subsection{Dynamics  with wheel slip}
 \label{sec:slipDynamics}
 The mass inertia matrix $M_i$ of the wheel and platform are same as that used in Section \ref{sec:GIM}. The generalized inertia matrix is then calculated using $T_i$ derived in Section  \ref{sec:slipKina}, as
 \begin{equation}
 I(\theta)=\sum_{i=1..n}(T_i^TM_iT_i)
 \end{equation}
-Using the inertial matrix $M_i, i=1,2,4,5$ given in Equation \ref{eqn:wheelInertiaMatrix} for all the wheel and platform tensor given by \[ I_p=\begin{pmatrix}
+Where the inertial matrix $M_i$, for $ i=1,2,4,5$ given in Equation \ref{eqn:wheelInertiaMatrix} for each wheel. For platform  \[ I_p=\begin{pmatrix}
  p_{1,1} & p_{1,2} & p_{1,3}\\   
  p_{1,2} & p_{2,2} & p_{2,3}\\   
  p_{1,3} & p_{2,3} & p_{3,3}\\   
@@ -903,7 +899,7 @@ Using the inertial matrix $M_i, i=1,2,4,5$ given in Equation \ref{eqn:wheelInert
  0_{3x3} & m_p 1_{3x3}
 \end{pmatrix}\]
 where $m_p$ is the mass of the platform and $1_{3x3}$ is the identity matrix.
-The generalized inertia matrix $I$ is then given in terms of the wheel and platform physical parameters as 
+The generalized inertia matrix $I$ is then given in terms of the  physical parameters of the wheel and platform as 
 \begin{equation}
     I=
     \left(
@@ -920,7 +916,7 @@ I_w & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \end{array}
 \right)
 \end{equation}
-Where
+where
 \begin{equation*}
     \bar\alpha_1=\frac{p_{3,3}}{l^2}+m_p \left(\frac{a^2}{l^2}+\frac{1}{4}\right)+\frac{4 H}{l^2}+m_w \left(2 \lambda_1^2+\lambda_2^2+\lambda_3 ^2+1\right)
 \end{equation*}
@@ -933,10 +929,11 @@ Where
 \[\bar\alpha_5= I_w \cos^2{\psi_1}+H \sin^2{\psi_1}\]
 \[\bar\alpha_6= I_w \cos^2{\psi_2}+H \sin^2{\psi_2}\]
 
-The convective term $C(\theta,\dot{\theta})$ is calculated using the $T_i$,and $\dot{T_i}$ derived in Section \ref{sec:slipKina}, as
+The convective term $C(\theta,\dot{\theta})$ is calculated using the $T_i$, and $\dot{T_i}$ derived in Section \ref{sec:slipKina}, as
 \begin{equation}
+\label{eqn:RedConv}
 C(\theta,\dot{\theta})=\sum_{i=1..n}T_i^T M_i\dot{T_i}+ \sum_{i=1..n}T_i^T W_i M_i T_i)\end{equation}
-If we define
+Introducing the following notions, the explicit expression of Equation \ref{eqn:RedConv}, is obtained below. 
 \[ \delta_0=m_w\omega_3, \quad \delta_1= \frac{m_p \omega_3}{2}, \quad \delta_2=\frac{2a^2}{l^2}\delta_1+\frac{a \omega_3 p_{3,3}}{l^2}, \quad m_w\omega_3 \lambda_1(\lambda_2+\lambda_3)\]
 \[ \delta_4 = \dot\theta_4 (H-I_w)\cos{\psi_1}\sin{\psi_1},\quad \delta_5=H\lambda_{4j}\sin{\phi_1}+I_w \lambda_{4i}\cos{\psi_1}-\frac{\dot \psi_1+\omega_3}{\dot\theta_4}\delta_4  \]
 \[ \delta_6 = \dot\theta_5 (H-I_w)\cos{\psi_2}\sin{\psi_2},\quad \delta_7=H\lambda_{5j}\sin{\phi_2}+I_w \lambda_{5i}\cos{\psi_2}-\frac{\dot \psi_2+\omega_3}{\dot\theta_5}\delta_6  \]
@@ -964,18 +961,18 @@ The wrench $\tau$ acting on the system is given as
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.8\textwidth]{Chapter4/fig/ForceWheel1}
-		\caption{External Force on Rear Wheel}\label{fig:ForceRearWheel}
+		\caption{External force on rear wheel}\label{fig:ForceRearWheel}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.8\textwidth]{Chapter4/fig/ForceWheel2}
-		\caption{External Forces on Front Wheel }\label{fig:ForceFrontWheel}
+		\caption{External forces on front wheel }\label{fig:ForceFrontWheel}
 	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure} 
-The $T_i$ has all ready been calculated in the above section, the $w_i^w$ term is derived next. Where, $w_i^w$ is the working wrench acting on the individual bodies. This consist of all the external forces such as actuator force, friction force and gravitational force.
-The forces acting wheel 1, as shown in Figure \ref{fig:ForceRearWheel},  are the friction force due longitudinal slip $Fs_1$ and frictional force  due to lateral slip or skidding, $Fk_1$ at the ground-wheel interface . The motor torque action on the wheel 1 is $\tau_{m1}$.  Similarly forces acting on wheel 2 are $Fs_2$, $Fk_2$ and $\tau_{m2}$. Therefore, $w_1$ and $w_2$ are written as 
+The matrix $T_i$ has allready been calculated in the above section, whereas $w_i^w$ is derived next. The vector, $w_i^w$ is the working wrench acting on the individual bodies. This consists of all the external forces such as actuator force, friction force and gravitational force.
+The forces acting on wheel 1, as shown in Figure \ref{fig:ForceRearWheel},  are the friction force due to longitudinal slip $Fs_1$ and frictional force  due to lateral slip or skidding, $Fk_1$ at the ground-wheel interface . The motor torque acting on the wheel 1 is $\tau_{m1}$.  Similarly forces acting on wheel 2 are $Fs_2$, $Fk_2$ and $\tau_{m2}$. Therefore, $w_1$ and $w_2$ are written as 
 \begin{equation}
 \label{eqn:wrenchWheelSlipRear}
  w_n=\begin{pmatrix}
@@ -984,7 +981,7 @@ F_{k,n}i+F_{s,n}j
 \end{pmatrix},  \quad n=\{1,2\}
 \end{equation}
 The superscript $w$ has been removed as it is understood that only working forces need to be considered in the formulation below. 
-The front wheels have steering actuation, let the steering  torques be represented by $\tau_{s,4}$ and  $\tau_{s,4}$. The friction forces on the front steered wheel is shown in \ref{fig:ForceFrontWheel} act along $\{e_4,f_4\}$ and $\{e_5,f_5\}$ for the two front wheels. No motor torque is applied to the front wheels as they are passive. Therefore, $w_4$ and $w_5$ is given by
+The front wheels have steering actuation, let the steering  torques be represented by $\tau_{s,4}$ and  $\tau_{s,5}$ for the wheel \#4, and \#5. The friction forces on the front steered wheel is shown in Figure \ref{fig:ForceFrontWheel} act along $\{e_4,f_4\}$ and $\{e_5,f_5\}$ for the two front wheels. No traction motor torque is applied to the front wheels as they are passive. Therefore, $w_4$ and $w_5$ are given by
 \begin{equation}
 \label{eqn:wrenchWheelSlipFront}
 w_n=\begin{pmatrix}
@@ -992,9 +989,9 @@ w_n=\begin{pmatrix}
 F_{k,n}e_n+F_{s,n}f_n
 \end{pmatrix},  \quad n=\{4,5\}
 \end{equation}
-Since no external force is acting on the platform, i.e. body \#3. \[w_3=0_{6x1}\]
+Since no external force is acting on the platform, i.e., body \#3, \[w_3=0_{6x1}\]
 
-We can now calculate $T_i^Tw_i$, as
+One can then calculate $T_i^Tw_i$, as
 
 \begin{subequations}
 	\label{eqn:slip_Tau_is}
@@ -1014,28 +1011,28 @@ We can now calculate $T_i^Tw_i$, as
 	\end{pmatrix}^T
 	\end{align}
 \end{subequations}
-Where 
+where 
 \[\alpha_1=-\frac{\tau_{s4}}{l}+\lambda_1(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})+\lambda_3(F_{k4}S_{\phi_1}+F_{s4}C_{\phi_1})\]
 \[\alpha_2=\frac{\tau_{s4}}{l}-\lambda_1(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})+\lambda_2(F_{k4}S_{\phi_1}+F_{s4}C_{\phi_1})\]
 \[\alpha_3=(F_{k4}C_{\phi_1}-F_{s4}S_{\phi_1})\]
 \[\beta_1=-\frac{\tau_{s5}}{l}+\lambda_1(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})+\lambda_2(F_{k5}S_{\phi_2}+F_{s5}C_{\phi_2})\]
 \[\beta_2=\frac{\tau_{s5}}{l}-\lambda_1(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})+\lambda_3(F_{k5}S_{\phi_2}+F_{s5}C_{\phi_2})\]
 \[\beta_3=(F_{k5}C_{\phi_2}-F_{s5}S_{\phi_2})\]
-Therefore the $\tau$ in  Equation \ref{eqn:slipTauSum} can be written as
+Therefore, the expression for  $\tau$ in  Equation \ref{eqn:slipTauSum} can be written as
 \begin{multline}
 \tau=(
 \tau_{m1} \quad \tau_{m2} \quad (F_{s1}+\alpha_1+\beta_1) \quad( F_{s2}+\alpha_2+\beta_2) \\
  \quad  (F_{k1}+ F_{k2}+\alpha_3+\beta_3)\quad \tau_{s4}\quad  \tau_{s5} \quad 0 \quad 0 )  ^T
 \end{multline}
-The longitudinal  friction force $F_{si} \quad i=1,2,4,5 $ is given by Equation \ref{eqn:magic}, with $ x $ as the slip ratio $\rho_i$ defined as
+The longitudinal  friction force $F_{si}$ for $i=1,2,4,5 $ is given by Equation \ref{eqn:magic} or any other adhesion model, with $ x $ as the slip ratio $\rho_i$ defined as
 \[
-x->\rho_i = \frac{\dot{\theta_i} r - \dot{o_i}.\hat{f_i}}{\max(\dot{\theta_i} r,\quad \dot{o_i}.\hat{f_i})}
+x = \rho_i = \frac{\dot{\theta_i} r - \dot{o_i}.\hat{f_i}}{\max(\dot{\theta_i} r,\quad \dot{o_i}.\hat{f_i})}
 \]
-The lateral force  $F_{ki} \quad i=1,2,4,5 $ ie the skid forces are given again by Pacejka magic formula \ref{eqn:magic},  where $x$ is the slip angle $\delta$ defined in Figure \ref{fig:skid}. 
+The lateral force  $F_{ki}$ for $i=1,2,4,5 $, i.e., the skid forces are given again by adhesion model such as Equation \ref{eqn:magic},  where $x$ is the slip angle $\delta$ defined in Figure \ref{fig:skid}. 
 \[
-x \rightarrow \delta_i=\tan^{-1}(\frac{\dot{o_i}.e_i}{\dot{o_i}.f_i})
+x = \delta_i=\tan^{-1}(\frac{\dot{o_i}.e_i}{\dot{o_i}.f_i})
 \]
-It may be noted that $f_i,e_i$ are unit vectors of the coordinate system defined at each wheel centre and $\dot{o_i}$ are the velocity of wheel centres as show in Figure  \ref{fig:ForceRearWheel} and \ref{fig:ForceRearWheel}.
+It may be noted that $f_i,e_i$ are unit vectors of the coordinate system defined at each wheel centre and $\dot{o_i}$ are the velocities of wheel centres as shown in Figure  \ref{fig:ForceRearWheel}.
 \subsection{Simulation}
 To study the effect of wheel slip on the mobile robot dynamics, forward dynamics of the mobile robot was carried out. 
 A reduced order  of the dynamic  equation derived in section \ref{sec:DynamicNoSlip} was used.
@@ -1044,15 +1041,15 @@ A reduced order  of the dynamic  equation derived in section \ref{sec:DynamicNoS
  \phi_2=\arctan\left( \frac{(a+b)(\dot{y_2}-\dot{y_1})}{\dot{y_2}L  }\right) 
  \]
   under the assumption $c=L/2$.
-Te total number of independent variables  was  reduced from  9 to 5. The new set of independent variables are now,
+The total number of independent variables  was  reduced from  9 to 5. The new set of independent variables are now
 
 \begin{equation}
 \label{eqn:theta_slip_reduced}
 \dot{\theta}_{red}=(\dot{\theta_1},\dot{\theta_2}, \dot{y_1},\dot{y_2},\dot{x})^T
 \end{equation} 
 
-The physical parameters used for the mobile robot are same as the one used in simulation of forward and inverse dynamics for ideal rolling condition of wheels and  are listed in Table \ref{tb:massproperty}.
-The generalized inertia  matrix $I_{red}$  and the convective term $ C_{red}$ of the reduced system is given as
+The physical parameters used for the mobile robot are same as the one used in simulation of forward and inverse dynamics with ideal rolling condition for the wheels that  are listed in Table \ref{tb:massproperty}.
+The generalized inertia  matrix $I_{red}$  and the convective term $ C_{red}$ of the reduced system are given by
 \begin{equation}
 I_{red}=\left(
 \begin{array}{ccccc}
@@ -1069,24 +1066,24 @@ C_{red}=\left(
 \begin{array}{ccccc}
 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & -\frac{73.3333 (\dot{y_2} - \dot{y_1})}{L} & \frac{35.5 (\dot{y_2} - \dot{y_1})}{L} \\
-0 & 0 & \frac{73.3333 (\dot{y_2} - \dot{y_1})}{L} & 0 & \frac{35.5 (\dot{y_2} - \dot{y_1})}{L} \\
-0 & 0 & -\frac{35.5 (\dot{y_2} - \dot{y_1})}{L} & -\frac{35.5 (\dot{y_2} - \dot{y_1})}{L} & 0
+0 & 0 & 0 & -\frac{73.3333 (\dot{y_2} - \dot{y_1})}{l} & \frac{35.5 (\dot{y_2} - \dot{y_1})}{l} \\
+0 & 0 & \frac{73.3333 (\dot{y_2} - \dot{y_1})}{l} & 0 & \frac{35.5 (\dot{y_2} - \dot{y_1})}{l} \\
+0 & 0 & -\frac{35.5 (\dot{y_2} - \dot{y_1})}{l} & -\frac{35.5 (\dot{y_2} - \dot{y_1})}{l} & 0
 \end{array}
 \right)
 \end{equation}
-The equation of motion for the reduced system is given by 
+The equations of motion of the reduced system are given by 
 \begin{equation}
 I_{red}\ddot{\theta}_{red}+C_{red}\dot{\theta}_{red}=\tau_{red}
 \end{equation}
-The $\tau_{red}$ is calculated as in Equation \ref{eqn:slipTauSum} with $i=1,2,3 $. Where $w_i, i=1,2$ is same as that given in Equation \ref{eqn:wrenchWheelSlipRear}.
-Earlier $w_3=0$ was used as no external wrench was acting on it. In the reduced model case we assume the frictional force acting on the front wheels are directly transmitted to the platform. Therefore the moment acting about the CG of the platform,$O_3$ is given by
+The $\tau_{red}$ is calculated using Equation \ref{eqn:slipTauSum} with $i=1,2,3 $, where $w_i$ for $ i=1,2$ are given in Equation \ref{eqn:wrenchWheelSlipRear}.
+Earlier $w_3=0$ was used as no external wrench was acting on it. In the reduced model case it is assumed that the frictional force acting on the front wheels are directly transmitted to the platform. Therefore, the moment acting about the C.G., of the platform, $O_3$ is given by
 \begin{equation}
  	\label{eqn:redPlatMoment}
  	\tau_{p}=(F_{S4}+F_{K4}) \times (-i c+jb) +(F_{S5}+F_{K5}) \times (i c+jb) +T_s
 \end{equation}
-where $F_{Si},F_{Ki},\quad i=4,5$ is given by as explained in section \ref{sec:slipDynamics}, $T_s$ is calculated as given  in section \ref{sec:SteerinTorqueStatic}.
-Therefore $w_3$ can be written as 
+where $F_{Si},F_{Ki},\quad i=4,5$ are those explained in Section \ref{sec:slipDynamics}, $T_s$ is calculated as given  in Section \ref{sec:SteerinTorqueStatic}.
+Therefore, $w_3$ is written as 
 \begin{equation}
 w_3=\begin{pmatrix}
 \tau_{p}\\
@@ -1094,7 +1091,7 @@ F_{S4}+F_{K4}+F_{S5}+F_{K5}
 \end{pmatrix}
 \end{equation}
 
-To evaluate $F_{s,i} $ and $F_{k,i}$ for $i=1,2,4,5$,   which are function of  slip ratio or slip angle  Equation \ref{eqn:friction_Slip} adapted from \cite{balakrishna1995modeling}is used.  A representative Friction-slip curve with the peak friction co-efficient, $\mu_{peak}=0.1$, is given in  Figure \ref{fig:friction_Slip}. The longitudinal and lateral friction forces acting on the wheels is given as $Fs=\mu N_i$ Where $N_i$ is the normal force action on the wheel due to ground reaction.  
+To evaluate $F_{s,i} $ and $F_{k,i}$ for $i=1,2,4,5$,   which are function of  slip ratio or slip angle,  Equation \ref{eqn:friction_Slip}  \cite{balakrishna1995modeling}, which is based on adhesion model proposed by \cite{dugoff1970analysis} was used.  A representative Friction-slip curve with the peak friction co-efficient, $\mu_{peak}=0.1$, is given in  Figure \ref{fig:friction_Slip}. The longitudinal and lateral friction forces acting on the wheels are given as $Fs=\mu N_i$ where $N_i$ is the normal force action on the wheel due to ground reaction.  
 \begin{equation}
 \label{eqn:friction_Slip}
 \mu =
@@ -1106,7 +1103,7 @@ To evaluate $F_{s,i} $ and $F_{k,i}$ for $i=1,2,4,5$,   which are function of  s
 eqn
 \end{cases}
 \end{equation}
-To calculate $F_{Si},F_{Ki}, i=4,5$ rotational velocity of front wheels $\dot\theta_4,\dot\theta_5$ is required. This is obtained from Equation \ref{eqn:simpDynFront}, which represents the dynamics  of the front wheels, where $r$ is the radius of wheel and $I_w$ is the inertia of wheel about $e_i$.
+To calculate $F_{Si},F_{Ki}$ for $ i=4,5$ spin rate of front wheels $\dot\theta_4,\dot\theta_5$ are required. This is obtained from Equation \ref{eqn:simpDynFront} which represents the dynamics  of the front wheels, where $r$ is the radius of wheel and $I_w$ is the inertia of wheel about $e_i$.
 \begin{equation}
 \label{eqn:simpDynFront}
 I_w\begin{pmatrix}
@@ -1119,7 +1116,7 @@ F_{s4} r\\
 F_{s5} r
 \end{pmatrix}
 \end{equation}
-The Figure \ref{fig:InputTorqueProfile} shows input torque applied to the two rear wheels for the forward dynamic simulation. This torque profile for the pair of rear wheels was generated by inverse dynamics  of the mobile robot presented in Section \ref{sec:InvDynamics_NoSlip} to trace a circular path given in Figure \ref{fig:CirTrace} and represented by Equation \ref{path} on a flat plane under the assumption of pure rolling condition of all wheels. 
+ Figure \ref{fig:InputTorqueProfile} shows input torque applied to the two rear wheels for the forward dynamic simulation. This torque profile for the pair of rear wheels was generated by inverse dynamics  of the mobile robot presented in Section \ref{sec:InvDynamics_NoSlip} to trace a circular path given in Figure \ref{fig:CirTrace} and represented by Equation \ref{path} on a flat surface under the assumption of pure rolling condition of all wheels. 
 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
@@ -1136,20 +1133,19 @@ The Figure \ref{fig:InputTorqueProfile} shows input torque applied to the two re
 	%\caption{Actuator effort}
 \end{figure}
 \ 
-\subsection{Results}
-The path traced by the RSRS mobile robot  with  $\mu_{peak} =0.3$ is shown in Figure \ref{fig:pathWithMu3}. There is no visible difference between the  actual path traced  and the given path in terms of lateral shift, circular path radius is same for both curves. Though the vehicle is not able to complete path. The path ends at ${(4.862,-1.166)}$ denoted as "End Point" in the Figure \ref{fig:pathWithMu3} instead of  ${(5,0)}$. This deviation is assumed to be there due to the longitudinal slip at the wheel- surface interface. The Figure \ref{fig:ForcesMu3} presents the plot of lateral force acting on the vehicle during the period of its motion. As can be seen the centrifugal force, denoted by green line, which tries to shift the vehicle laterally is below the maximum frictional resistance provided by the wheel-surface interface, denoted by the red line. Hence the net lateral force acting on the mobile robot at any point of time during the motion is zero as indicated by the blue line.
+\subsection{Results and inference}
+The path traced by the RARS mobile robot  with  $\mu_{peak} =0.3$ is shown in Figure \ref{fig:pathWithMu3}. There is no visible difference between the  actual path traced  and the given path in terms of lateral shift. Circular path radius is same for both curves, though the vehicle is not able to complete the path. The path ends at ${(4.862,-1.166)}$ denoted as ``End Point" in  Figure \ref{fig:pathWithMu3} instead of  ${(5,0)}$. This deviation is assumed to be there due to the longitudinal slip at the wheel-surface interface.  Figure \ref{fig:ForcesMu3} presents the plot of lateral force acting on the vehicle during the period of its motion. The centrifugal force, denoted by green line,  tries to shift the vehicle laterally is below the maximum frictional resistance provided by the wheel-surface interface, denoted by the red line. Hence, the net lateral force acting on the mobile robot at any point of time during the motion is zero as indicated by the blue line.
 
-When the friction coefficient is reduced to  $\mu_{peak} =0.1$, both lateral and longitudinal shift is present it the traced path, as shown in Figure \ref{fig:pathWithMu1}. The  net lateral force acting on the vehicle, the blue curve of Figure \ref{fig:ForcesMu1} is great than zero between 20sec to 40sec. This lateral force is responsible for the deviation of the actual path traced from the given path. The deviation increase from point "A" to point "B" in Figure \ref{fig:pathWithMu1}, this is region of the path where the centrifugal force exceeds the frictional force. After point "B" the curve maintains constant radius as the net lateral force acting on the mobile robot again becomes zero. 
-\subsection{Conclusion}
-Figure \ref{fig:beta1} show the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $\mu=0.1$ at time $t=18.3s$. This corresponds to angular velocity of $ \dot \beta =0.1412 rad/sec$ as can be read from Figure \ref{fig:beta1} at time $t=18.3s$.
+When the friction coefficient is reduced to  $\mu_{peak} =0.1$, both lateral and longitudinal shift are present, as shown in Figure \ref{fig:pathWithMu1}. The  net lateral force acting on the vehicle, i.e., the blue curve of Figure \ref{fig:ForcesMu1} is greater than zero between 20 sec to 40 sec. This lateral force is responsible for the deviation of the actual path traced from the given path. The deviation increases from point ``A" to point ``B" in Figure \ref{fig:pathWithMu1}. This is region of the path where the centrifugal force exceeds the frictional force. After point ``B" the curve maintains constant radius as the net lateral force acting on the mobile robot again becomes zero. 
+
+Note that Figure \ref{fig:beta1} shows the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $\mu=0.1$ at time $t=18.3s$. This corresponds to angular velocity of $ \dot \beta =0.1412 $ rad/sec as can be read from Figure \ref{fig:beta1} at time $t=18.3s$.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Chapter4/fig/beta}
 	\caption{Plot of $\beta$ and $\dot{\beta}$}
 	\label{fig:beta1}
 \end{figure}
-
-The linear velocity of the robot for initiate lateral slipping is given by $R*\dot{\beta}$, which equals to $0.7m/sec$. Our Robot is restricted to the speed of $0.5m/sec$ as specified in the robot specification in Table \ref{tb:specifications}. The estimated coefficient of friction between the Polyurethane wheel liner and factory floor is around $0.25$. Therefore skidding of the mobile robot RARS is unlikely during teleoperation. 
+The linear velocity of the robot to initiate lateral slipping is given by $R\dot{\beta}$, which is equal to $0.7$  m/sec. The robot at hand is restricted to the speed of $0.5$ m/sec as specified in the robot specification in Table \ref{tb:specifications}. The estimated coefficient of friction between the Polyurethane wheel liner and factory floor is around $0.3$. Therefore skidding of the mobile robot RARS is unlikely during teleoperation. 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
@@ -1179,11 +1175,8 @@ The linear velocity of the robot for initiate lateral slipping is given by $R*\d
 	%\caption{Actuator effort}
 \end{figure}
 \section{Dynamical Model of Steering System}
-The dynamical model of the steering system shown in Figure \ref{fig:SteerAsm} was derived  using Lagrangian method. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and second that the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of all the body except \#8 and \#9 is presented next.
-
-
- 
-
+Typically, the tuning of steering motor is done while the vehicle is stationary. Hence, an independent dynamic model for steering system is essential, which is carried out in this section. 
+The  steering system is shown in Figure \ref{fig:SteerAsm}. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and  the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of each body except \#8 and \#9 is derived below.
 
 The kinetic energy of link  \#6 is given by
 \begin{equation}
@@ -1207,13 +1200,13 @@ x_{4}\\y_{4} \end{pmatrix}_F
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3in]{Chapter4/fig/SteerModel} 
-		\caption{Steering Assembly}\label{fig:SteerAsm}
+		\caption{Steering assembly}\label{fig:SteerAsm}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=2in]{Chapter4/fig/link} 
-		\caption{Link }\label{fig:SteerLink}
+		\caption{Steering linkage }\label{fig:SteerLink}
 	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure}
@@ -1340,7 +1333,7 @@ It is be noted that $\dot e(t)=\dot x$ and $\ddot e(t)=\ddot x$, since $x_d=cons
 \end{equation}
 With $K_d=20,~K_p=60,~K_i=100 $ the system is stable as  the state transition matrix $A$ has all its eigen values, $\lambda$, with negative real part, as given below 
 \[ \lambda= \{-16.7794 + 0.0000i, ~ -1.6103 + 1.8348i, ~ -1..6103 - 1.8348i\}\]
- \textbf{\textit{These controller parameters were arrived by trial and error using multiple simulation. The guiding principle behind the selection of these parameters was to choose one root far away form the imaginary axis so that its dynamics dies very fast with the respect to  the other two roots.  The system then behaves as second order system. The remaining two roots thus governs the dynamics of the system.  they were chosen as complex conjugate with negative real part and near to imaginary axis so as to make the steering unit dynamics  under damped.}}
+ These controller parameters were arrived by trial and error using multiple simulation. The guiding principle behind the selection of these parameters was to choose one root far away form the imaginary axis so that its contribution to the response decays faster with the respect to  the other two roots.  The system then behaves as second order system. The remaining two roots thus governs the dynamics of the system.  They were chosen as complex conjugate with negative real part near the imaginary axis so as to make the steering unit dynamics  under damped.
 
 \subsection{Simulation and results}
 The simulation of the  dynamic Equation \ref{eqn:SteerDyn} and controller given by Equations \ref{eqn:SteerCont} and \ref{eqn:SteerCont3} was carried out with the step change in steering angle responding to $ 20~mm$  rack displacemet $(x)$.  The parameter used for the nominal plant were obtained form solid model of the parts and are listed in table \ref{tb:steerPara}. The results of the wheel orientations and the actuator effort required are given in Figure \ref{fig:SteerPos} and \ref{fig:SteerEfort} respectively.
@@ -1383,9 +1376,9 @@ The simulation results establishes that with $10\%$ error in plant parameters th
 \section{Summary}
 In this chapter, the dynamic equations were derived for  the most general form of passive wheel configuration. Even though  only two passive wheel configuration was considered the same formulation can be extended to any number of  wheels. It is shown that the  dynamics of standard caster wheels is a special case of the  general case with $d_1=0$. It is also proven why a caster needs  non-zero caster offset. There is a  need of extra actuator in case $d_2=0$. 
 
-NOC based approach to model wheel slip in dynamics of a mobile manipulator was presented in this chapter. RARS  being a redundantly actuated system has a inherent tendency to induce slip in the wheels if there velocities and orientations are not synchronised. A simulation study of RARS was carried out to assess the effect of  wheel slip on it's dynamics. 
+NOC based approach to model wheel slip in dynamics of a mobile manipulator was presented in this chapter. RARS  being a redundantly actuated system has a inherent tendency to induce slip in the wheels if their velocities and orientations are not synchronised. A simulation study of RARS was carried out to assess the effect of  wheel slip on its dynamics. 
 
-The steering mechanism was modelled separately. Simulation was used to find the   controller parameters which makes the system marginally damped. This insured that there is no over steering while keeping the settling time small. These controller parameters were later used to tune the actual system.   
+The steering mechanism was modelled separately. Simulation was used to find the   controller parameters which makes the system marginally damped. This ensured that there is no over steering while keeping the settling time small. These controller parameters were later used to tune the actual system.   
     
 
 

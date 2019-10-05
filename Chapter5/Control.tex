@@ -70,7 +70,7 @@ where $\tilde{X_p}$ is the displacement of pedal, $\tilde{\theta_s}$ is the twis
 Three EPOS2 controllers from Maxon Motors were used to control the mobile robot's rear wheel velocity and the steering gears position. Each controller can control one motor. The overall architecture of the controller  as given in \cite{maxonAutoTune}, \cite{maxonAppNotesPosition}  is shown  in  Figure \ref{fig:EPOS4}.
   \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/overallcontorl}
-	\captionof{figure}{Block digram of EPOS4 controller  }
+	\captionof{figure}{Block diagram of EPOS4 controller  }
 	\label{fig:EPOS4} 
 \end{figure}
  The controller can be configured in either current, position or velocity control mode. The inner most current loop controls the torque of the motor.
@@ -134,7 +134,7 @@ P(s)=K_{PP}+K_{IP}s+\frac{K_{DP}s}{1+\frac{K_{DP}}{10 K_{PP}}s}
 \end{equation}
 where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and derivative gains respectively. The velocity feed-forward $F_{\omega P}$ and acceleration feed-forward $F_{\alpha P}$ were used in position control loop to take care of viscous friction and known inertial load. The gains for controller were decided using auto tuning software provided by Maxon Motors. The values are reported in Table \ref{tb:steer}.
 
-\textbf{\textit{ It may be noted that the controller parameters listed in table \ref{tb:steer} is very different from that used in simulation. This difference is due to the fact that the control structures are different. In the actual system motor dynamics is also included, which is not the case  of simulation. In simulation,  position error directly affects the torque to the motor through the control parameters $K_p$, $K_d$ and $K_I$, where as the position error in actual system sets  the motor current. Hence there units too are different. Therefore direct comparison between simulation PID parameters and actual controllers PID values cannot be done.   }}
+ It may be noted that the controller parameters listed in Table \ref{tb:steer} are very different from those used in simulation. This difference is due to the fact that the control structures are different. In the actual system motor dynamics influences, which was not considered during the simulation. In simulation,  position error directly affects the torque of the motor through the control parameters $K_p$, $K_d$ and $K_I$, whereas the position error in actual system sets  the motor current. Hence their units too are different. Direct comparison between simulation PID parameters and actual controllers PID values cannot be done. However, the PID parameters tuned during simulation provided a starting point for the PID tuning for the actual system.  
 \begin{figure}
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/posLoop}
 	\captionof{figure}{Position control bolck  }
@@ -162,7 +162,7 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 This section discusses in detail the algorithm running on the onboard controller.  Command received by the controller was parsed to extract the velocity  and the steer angle  information. They were suitably scaled to get command velocity  $V$ in mm/sec, and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $V$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next the set point for each motor was calculated  and sent to individual drive. The algorithm is listed below and the block digram for the same in Figure \ref{fig:ControlBlock}
 \begin{figure}[h]
 	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal2}
-	\captionof{figure}{Block digram of WMR controler}
+	\captionof{figure}{Block diagram of WMR controler}
 	\label{fig:ControlBlock} 
 \end{figure}
 
@@ -244,8 +244,8 @@ Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for 
 %\begin{itemize}
 %\item calibration of steer data and wheel velocity
 %\end{itemize}
-\subsection{Safety Interlocks}
-\textbf{\textit{The control algorithm has safety interlocks built into it. The vehicle speed has been limited to $0.5m/sec$, this was done based on operator feedback for convenience in driving the vehicle remotely. The vehicle does not move if the manipulator is in the extended condition. This is to avoid over turning of the vehicle in case it has to climb a ramp. Acceleration of the vehicle is never exceeded above the limiting value of  $0.144g$ which was arrived at  based on dynamic stability of the mobile robot as calculated in Equation \ref{eqn:overturn}. To avoid overturning of vehicle while following a circular path the linear velocity of the vehicle is limited by Equation \ref{eqn:Vel_limit} which is function of the turning radius.}}
+\subsection{Safety interlocks}
+The control algorithm has safety interlocks built into it. The vehicle speed has been limited to $0.5$ m/sec, this was done based on operator feedback for convenience in driving the vehicle remotely. The vehicle does not move if the manipulator is in the extended condition. This is to avoid overturning of the vehicle in case it has to climb a ramp. Acceleration of the vehicle is never exceeded beyond the limiting value of  $0.144g$ which was arrived at  based on dynamic stability of the mobile robot as calculated in Equation \ref{eqn:overturn}. To avoid overturning of vehicle while following a circular path, the linear velocity of the vehicle is limited by Equation \ref{eqn:Vel_limit} which is a function of the turning radius.
 \subsection{Wheel odometery }
 The dead reckoning odometery can be performed based on either the differential drive or Bicycle model. In the present case, we use the differential drive model. Where the rear wheel velocities were used to determine the position and orientation of the mobile robot. The position here means the position of the reference point $O_r$. The steps are followes.
 \begin{enumerate}

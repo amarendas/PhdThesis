@@ -18,6 +18,11 @@ Y.~P. Li, T.~Zielinska, M.~Ang, and W.~Lin, ``Wheel-ground interaction
   Proceedings 2006 IEEE International Conference on Robotics and Automation,
   2006. ICRA 2006.}, pp.~3362--3367, IEEE, 2006.
 
+\bibitem{wang2008modeling}
+D.~Wang and C.~B. Low, ``Modeling and analysis of skidding and slipping in
+  wheeled mobile robots: Control design perspective,'' {\em IEEE Transactions
+  on Robotics}, vol.~24, no.~3, pp.~676--687, 2008.
+
 \bibitem{pacejka1992magic}
 H.~B. Pacejka and E.~Bakker, ``The magic formula tyre model,'' {\em Vehicle
   system dynamics}, vol.~21, no.~S1, pp.~1--18, 1992.
@@ -320,6 +325,10 @@ J.~Borenstein and Y.~Koren, ``Real-time obstacle avoidance for fast mobile
   robots,'' {\em IEEE Transactions on systems, Man, and Cybernetics}, vol.~19,
   no.~5, pp.~1179--1187, 1989.
 
+\bibitem{latombe2012robot}
+J.-C. Latombe, {\em Robot motion planning}, vol.~124.
+\newblock Springer Science \& Business Media, 2012.
+
 \bibitem{borenstein1991vector}
 J.~Borenstein and Y.~Koren, ``The vector field histogram-fast obstacle
   avoidance for mobile robots,'' {\em IEEE transactions on robotics and
@@ -363,10 +372,6 @@ S.~Garrido, L.~Moreno, and D.~Blanco, ``Voronoi diagram and fast marching
   applied to path planning,'' in {\em Proceedings 2006 IEEE International
   Conference on Robotics and Automation, 2006. ICRA 2006.}, pp.~3049--3054,
   IEEE, 2006.
-
-\bibitem{latombe2012robot}
-J.-C. Latombe, {\em Robot motion planning}, vol.~124.
-\newblock Springer Science \& Business Media, 2012.
 
 \bibitem{duchovn2014path}
 F.~Ducho{\v{n}}, A.~Babinec, M.~Kajan, P.~Be{\v{n}}o, M.~Florek, T.~Fico, and
@@ -676,6 +681,21 @@ K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
 \bibitem{saha2010robotics}
 S.~Saha, {\em Introduction to robotics}.
 \newblock Tata McGraw-Hill, New Delhi, 2010.
+
+\bibitem{claeys2001dynamic}
+X.~Claeys, J.~Yi, L.~Alvarez, R.~Horowitz, and C.~C. De~Wit, ``A dynamic
+  tire/road friction model for 3d vehicle control and simulation,'' in {\em
+  ITSC 2001. 2001 IEEE Intelligent Transportation Systems. Proceedings (Cat.
+  No. 01TH8585)}, pp.~483--488, IEEE, 2001.
+
+\bibitem{kulakowski1991mathematical}
+B.~T. Kulakowski, ``Mathematical model of skid resistance as a function of
+  speed,'' {\em Transportation Research Record}, no.~1311, 1991.
+
+\bibitem{dugoff1970analysis}
+H.~Dugoff, P.~Fancher, and L.~Segel, ``An analysis of tire traction properties
+  and their influence on vehicle dynamic performance,'' {\em SAE transactions},
+  pp.~1219--1243, 1970.
 
 \bibitem{craig2005introduction}
 J.~J. Craig, {\em Introduction to robotics: mechanics and control}, vol.~3.
