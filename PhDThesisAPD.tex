@@ -22,6 +22,7 @@
 %\usepackage{cite}%for combining citations when referred together
 %\usepackage{natbib}
 %\usepackage[comma,authoryear]{natbib}
+\usepackage{filecontents,notoccite}
 \usepackage{epstopdf} 
 \usepackage{blindtext}
 %\hyphenpenalty=10000
@@ -118,10 +119,10 @@
 \doublespacing
 \pagenumbering{arabic}
 
-
+\cleardoublepage
 \include{Chapter1/intro}
 
-%\cleardoublepage
+
 %\include{Chapter2/lit_sur}
 
 \cleardoublepage
@@ -145,9 +146,7 @@
 \cleardoublepage
 %\noindent 
 \addcontentsline{toc}{chapter}{\bf Bibliography}
-%\cleardoublepage
-%\bibliographystyle{apalike}
-%\bibliographystyle{elsarticle-num}
+
 \bibliographystyle{ieeetr} %bibliography style-file
 \singlespacing
 

@@ -2,10 +2,10 @@
 \section{Optimal Design of Steering Linkages}
 \label{Ch:ApenC}
 
-Objective is to  minimize turning radius within the space available after installation  of the rear wheel assembly, battery compartment and scissor mechanism  on a given over all frame size of the vehicle. The design variables are $x,~ a, ~h, ~w$. These variables are described in Chapter 3 and shown in Figures \ref{fig:steerCond} and \ref{fig:davis}
+Objective is to  minimize turning radius within the space available after installation  of the rear wheel assembly, battery compartment and scissor mechanism  on a given over all frame size of the vehicle. The design variables are $x,~ a, ~h,\text{and} ~w$. These variables are described in Chapter 2 and shown in Figures \ref{fig:steerCond} and \ref{fig:davis}
 
 
-Objective function to be minimized is the turning radius is given by
+Objective function to be minimized is the turning radius, R  given by
 \begin{equation}
 R=\dfrac{a}{2}+\dfrac{w(h^2+b^2-bx)}{hx}
 \end{equation}
@@ -24,8 +24,8 @@ The bonds on the design variables are given by
 \[0<x\]
 The minimization was carried out in Matlab using \textit{fmincon()} function.
  The resulting minimum radius thus obtained was 
- \[R_{min}=228~mm\]
+ \[R_{min}=228 \text{ mm}\]
  The corresponding design variables obtained were 
- \[h=30~mm,~ w=515~mm, ~ a=190~mm, ~x=69.8~mm\] 
+ \[h=30 \text{ mm},~ w=515 \text{ mm}, ~ a=190 \text{ mm}, ~x=69.8 \text{ mm}\] 
  The achieved minimum turning radius was $R_{min}=415`mm$. This was due to introduction of support for the rack and links which were not taken into consideration in the optimization process.
  

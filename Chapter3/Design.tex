@@ -168,7 +168,7 @@ Thus the limiting velocity as a function of $R$  (turning radius)
 \label{eqn:Vel_limit}
 v=\sqrt{\frac{R g d}{Z_{cg}}}
 \end{equation}
-This sets the limiting velocity as $v=1.9m/sec$ based on the $Z_{cg}=190mm$ and $d=168$ as shown in  Figure \ref{fig:loadDistribution} and \ref{fig:LatOverturn}. Where, R equals the minimum turning radius of the vehicle which is $415mm$ as given in Table \ref{tb:specifications}.
+This sets the limiting velocity as $v=1.9$ m/sec based on the $Z_{cg}=190$ mm and $d=168$ mm as shown in  Figure \ref{fig:loadDistribution} and \ref{fig:LatOverturn}. Where, R equals the minimum turning radius of the vehicle which is $415$ mm as given in Table \ref{tb:specifications}.
 
 \begin{figure}
  	\centering
@@ -187,7 +187,7 @@ This sets the limiting velocity as $v=1.9m/sec$ based on the $Z_{cg}=190mm$ and 
  \end{figure}
 
  \subsection {Selection of motor and gearbox}
- The torque requirement for the rear wheels were calculated based on the static moment balance with the assumption that each rear wheel shares equal load and the total suspended weight is 80 Kg. From the freebody diagram (Figure   \ref{fig:loadDistribution}), using moment and force balance  we get the following:
+ The torque requirement for the rear wheels were calculated based on the static moment balance with the assumption that each rear wheel shares equal load and the total suspended weight is 80 kg. From the freebody diagram (Figure   \ref{fig:loadDistribution}), using moment and force balance  we get the following:
 \begin{equation}
 \label{eqn:t1}
 F_{N1}=\frac{a M \cos \theta}{a+b-\mu Z_{cg}} , \quad \quad
@@ -195,24 +195,24 @@ F_T=\mu F_{N1}
 \end{equation}
 In order to estimate the traction motor size, we take worst case scenario of $\theta=30^o$ and $\mu =0.3$. This leads to
 \begin{equation*}
-F_{N1}=66 Kg, \quad\quad F_T=0.3\times 66 \approx 20Kg
+F_{N1}=66 \text{ kg}, \quad\quad F_T=0.3\times 66 \approx 20 \text{ kg}
 \end{equation*}
  Since the traction is provided by the two rear wheels, the torque required per wheel $(T_w)$ is given by
 \begin{eqnarray}
-T_w=(F_T/2)(D_w/2)= (20/2) \times 50=500 Kg-mm \simeq 5 Nm
+T_w=(F_T/2)(D_w/2)= (20/2) \times 50=500 \text{ Kg-mm } \simeq 5 \text{ Nm}
 \end{eqnarray}
 The motor torque $T_M$, required based on the assumption of factor of safety, $FS=1.5$ is
 \begin{equation}
-T_M=(FS)\times T_w=1.5\times 5 =7.5 \simeq 8Nm
+T_M=(FS)\times T_w=1.5\times 5 =7.5 \simeq 8 \text{ Nm}
 \end{equation}
- Assuming the maximum speed, $V_{ramp}=1m/s$, of the mobile manipulator over a ramp, the required power, $P_M$, of the traction motor is calculated as,
+ Assuming the maximum speed, $V_{ramp}=1$ m/s, of the mobile manipulator over a ramp, the required power, $P_M$, of the traction motor is calculated as,
  \begin{equation}
  \begin{aligned}
-\omega_w&=V_{ramp}/(D_w/2) \simeq 200rpm\\
-P_m&=\omega_w T_m=20\times 8=160W
+\omega_w&=V_{ramp}/(D_w/2) \simeq 200 \text{ rpm}\\
+P_m&=\omega_w T_m=20\times 8=160 \text{ W}
  \end{aligned}
  \end{equation}
- The nearest Maxon motor available as per the catalogue \cite{catMaxon} is 200W,  RE50-370354 motor.  The nominal speed, $N_s$ is 5680rpm. Therefore, the  gearing  ratio required is, $N_s/\omega_w=5680/200 \simeq 28.4$. The nearest gear box available  is of ratio $26:1$, which was chosen. 
+ The nearest Maxon motor available as per the catalogue \cite{catMaxon} is 200 W,  RE50-370354 motor.  The nominal speed, $N_s$ is 5680 rpm. Therefore, the  gearing  ratio required is, $N_s/\omega_w=5680/200 \simeq 28.4$. The nearest gear box available  is of ratio $26:1$, which was chosen. 
 
 \section{Design of Steering System }
 The design objective of a steering system should be to ensure rolling motion of all the  wheels during every possible manurers of the mobile robot. This is  to reduce the friction drag due to sliding motion which degrades the energy efficiency of a mobile robot. In case of four wheeled vehicle, with the orientation of the rear wheels fixed and front wheels steered, the condition   shown in Figure \ref{fig:steerCond},  referred in some literature as Ackerman steering condition, must be satisfied to ensure pure rolling of all the wheels.   
@@ -227,16 +227,16 @@ This mobile manipulator uses Davis steering mechanism,  Figure \ref{fig:davis}, 
 \end{figure} 
  
 
-Davis mechanism was chosen over Ackerman steering gear as it satisfies the steering condition given by  Equation \ref{eqn:Acker}, which ensures pure rolling of all  wheels, over the entire steering range. This makes the system, suitable for passive wheel odometry and also energy efficient.  The steering gear being positively driven by position controlled servo motor does not align with the obstacles and thus are able to crossover it. The dimensions of the links used in the steering mechanism is given in Figure \ref{fig:davis}, and are based on the Ackerman steering law given below:
+Davis steering mechanism was chosen over Ackerman steering gear as it satisfies the steering condition given by  Equation \ref{eqn:Acker}, which ensures pure rolling of all  wheels, over the entire steering range. This makes the system, suitable for passive wheel odometry and also energy efficient.  The steering gear being positively driven by position controlled servo motor does not align with the obstacles and thus are able to crossover it. The dimensions of the links used in the steering mechanism is given in Figure \ref{fig:davis}, and are based on the Ackerman steering law given below:
 \begin{equation}
 \label{eqn:Acker}
 \cot\phi-\cot\theta=a/w, \quad  \frac{2b}{h}=\frac{a}{w}
 \end{equation}
-where $a$ and $b$ is limited by the over all size of the vehicle, discussed earlier.
+where $a$ and $b$ is limited by the overall size of the vehicle, discussed earlier.
 
 \subsection{Minimum turning radius}
-The mechanical construction of this steering mechanism limits the steering angle. This in turn limits the minimum radius the vehicle can negotiate. The parameters of the steering linkages were found using  optimization with constraints on over all dimensions and location  of links. The details of the method used is given in Appendix \ref{Ch:ApenC}. The
-Figure \ref{fig:steerCond} shows the extreme values of $\phi$ and $ \theta$, one side of the steering limits. The \textbf{ turning radius } $R$ for a given steer angle $\theta$  is calculated  by the geometry of Figure  \ref{fig:davis} as
+The mechanical construction of this steering mechanism limits the steering angle. This in turn limits the minimum radius the vehicle can negotiate. The parameters of the steering linkages were found using  optimization with constraints on overall dimensions and location  of links. The details of the method used is given in Appendix \ref{Ch:ApenC}. The
+Figure \ref{fig:steerCond} shows the extreme values of $\phi$ and $ \theta$, one side of the steering limits. The \textbf{ turning radius } $R$ for a given steer angle $\theta$  is calculated  from the geometry of Figure  \ref{fig:davis} as
 \begin{equation*}
 \tan\theta =\frac{w}{p+m-\frac{a}{2}} \quad \text{and} \quad R=m+p
 \end{equation*}
@@ -245,22 +245,22 @@ Eliminating $p$  from the above equation and rearranging , we get
 \label{eqn:turningRadius}
 R(\theta)=\frac{a}{2}+w\cot\theta
 \end{equation}
-The extreme value of $\theta=60.$ as shown in Figure \ref{fig:steerCond}, this gives the \textit{minimum turning radius } $R_{min}$ as
+The extreme value of $\theta=60^o$ as shown in Figure \ref{fig:steerCond}, this gives the \textit{minimum turning radius } $R_{min}$ as
 \begin{equation*}
-R_{min}=\frac{210}{2}+515 \times cot(60^o)=402~mm
+R_{min}=\frac{210}{2}+515  \cot(60^o)=402~\text{mm}
 \end{equation*}
 
 \begin{figure}
 	\centering
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{Chapter3/fig/davis}
+		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{Chapter3/fig/davis}
 		\captionof{figure}{Davis steering gear}
 		\label{fig:davis}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{Chapter3/fig/steerTorqCal}
+		\includegraphics[width=\linewidth,height=6.5cm,keepaspectratio]{Chapter3/fig/steerTorqCal}
 		\captionof{figure}{Steer torque}
 		\label{fig:steerTorq}
 	\end{minipage}	
@@ -271,32 +271,32 @@ R_{min}=\frac{210}{2}+515 \times cot(60^o)=402~mm
 In order to choose an appropriate steering motor some torque estimate was needed, which is carried out in this section. 
 The torque required to steer the front wheel is estimated based on static equilibrium because the system moves at very slow speed (0.5 m/sec). A simplified assumption was made that the wheel deforms under normal load and the contact area thus generated is  circular in shape with diameter that of the wheel width, $W_w$, as shown in Figure \ref{fig:steerTorq}. 
 In order to estimate the normal reaction on each wheel, we assumed that the total weight of 80kg was equally shared by the four wheels. 
-Therefore, $N_s=80/4=20Kg$. Next, the uniform pressure formula used for  brakes/clutches design was applied to find the resistance  torque $T_s$, between the ground and the wheel i.e, 
+Therefore, $N_s=80/4=20$ kg. Next, the uniform pressure formula \cite{TOMBook} used for  brakes/clutches design was applied to find the resistance  torque $T_s$, between the ground and the wheel i.e., 
 \begin{equation}
 \label{eqn:brake}
-T_s=\frac{N_s\mu}{3}W_w= 0.4Nm
+T_s=\frac{N_s\mu}{3}W_w= 0.4~\text{Nm}
 \end{equation}  
-The resistance torque, $T_s$, of  both the wheels  are balanced by the force $F_s$ acting on the rack as shown in Figure \ref{fig:steerCond}. The rack is coupled to the steering motor by a pinion of diameter, $D_p=40mm$. The motor  torque, $T_{m_s}$  in Equation  \ref{eqn:SteerTq} is calculated with a  high factor of safety, $FS=3$. This is because $T_S$ is estimated  based on a simplified model of brake design. The power, $P_{m_s}$ of the steering motor based on  torque $T_{m_s}$ and the steering speed $\omega_s$ of 100rpm is 
+The resistance torque, $T_s$, of  both the wheels  are balanced by the force $F_s$ acting on the rack as shown in Figure \ref{fig:steerCond}. The rack is coupled to the steering motor by a pinion of diameter, $D_p=40$ mm. The motor  torque, $T_{m_s}$  in Equation  \ref{eqn:SteerTq} is calculated with a  high factor of safety, $FS=3$. This is because $T_S$ is estimated  based on a simplified model of brake design. The power, $P_{m_s}$ of the steering motor based on  torque $T_{m_s}$ and the steering speed $\omega_s$ of 100  rpm is 
 \begin{equation}
 \begin{aligned}
 \label{eqn:SteerTq}
-T_{m_s}=(FS)\frac{2T_s}{h}\frac{D_p}{2}=1.6Nm \quad \text{and}\quad P_{m_s}=T_{m_s}*\omega_s=17W
+T_{m_s}=(FS)\frac{2T_s}{h}\frac{D_p}{2}=1.6\text{ Nm} \quad \text{and}\quad P_{m_s}=T_{m_s}\omega_s=17\text{ W}
 \end{aligned}
 \end{equation} 
 
 Based on the above specifications, a 20W, RE25 DC motor of Maxon  make and a gear box  GP32 of ratio 159:1 was chosen for the steering mechanism. 
  
 \section{Scissor Mechanism for Manipulator Arm}
- The manipulating arm  was designed to move  the radiation sensor mounted on the \textit{"top platform"} up to a height of 1.5m from the floor level. This motion was generated using  a scissor mechanism, as shown in Figure \ref{fig:scissor}. The scissor mechanism has two major advantages over other lifting methods such as telescopic pillar, etc.  First, the  ratio of height in extended and collapsed condition is very large. In our case it is $3:1$. Second, the self weight of the mechanism is less as it is made of rectangular links.
+ The manipulating arm  was designed to move  the radiation sensor mounted on the \textit{``lifting platform"} up to a height of 1.5 m from the floor level. This motion was generated using  a scissor mechanism,  shown in Figure \ref{fig:scissor}. The scissor mechanism has two major advantages over other lifting methods such as telescopic pillar, screw or belt based linear motion units, etc.  First, the  ratio of height in extended and collapsed condition is very large. In our case it is $3:1$. Second, the self weight of the mechanism is less as it is made of links having rectangular cross-section.
 
-The scissor mechanism, Figure \ref{fig:scissor}, has 6 stages, where each "X" denotes one stage. 
+The scissor mechanism, Figure \ref{fig:scissor}, has 6 stages, where each ``X" denotes one stage. 
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth,keepaspectratio]{Chapter3/fig/scissor}
 	\captionof{figure}{Scissor mechanism}
 	\label{fig:scissor}
 \end{figure}
-The Scissor is connected to the top platform by a pivot joint $O_2$ and a prismatic joint $ A_2$, and coupled to the base frame by pivot joint $O_1$ and a prismatic joint $A_1$. The linear actuation of joint $A_1$ is provided by a lead screw of pitch ($P$) 1.5 mm and mean diameter ($d_m$) 10mm.  This results in vertical motion of the top platform. 
+The Scissor is connected to the top platform by a pivot joint $O_2$ and a prismatic joint $ A_2$, and coupled to the base frame by pivot joint $O_1$ and a prismatic joint $A_1$. The linear actuation of joint $A_1$ is provided by a lead screw of pitch ($P$) 1.5 mm and mean diameter ($d_m$) 10 mm.  This results in vertical motion of the top platform. 
   
  The relation between the vertical motion of the platform and the horizontal displacement of point $A_1$ is given by geometry of the mechanism shown in Figure \ref{fig:scissor} 
 \begin{equation}
@@ -306,7 +306,7 @@ y&=l\sin\theta\;\quad \Rightarrow dy=l\cos\theta d\theta;\\
 h&=Ny~~~\; \quad\Rightarrow dh=Ndy
 \end{aligned}
 \end{equation} 
-where $l$ is the link length, $\theta$ the angle of the link with horizontal plane, $N$ the number of stages, and $h$ the height of platform.
+where, $l$ is the link length, $\theta$ the angle of the link with horizontal plane, $N$ the number of stages, and $h$ the height of platform.
 
 
 The number of stages used in the scissor mechanism is six (N=6). From the principle of virtual work, we get 
@@ -316,16 +316,16 @@ The number of stages used in the scissor mechanism is six (N=6). From the princi
 -F_xdx=Wdh,\;\Rightarrow F_x=\frac{WN}{\tan\theta}
 \end{aligned}
 \end{equation}
-where, $F_x$ is the axial force on the prismatic joint, $A_1$, and W is the payload. From Equation \ref{eqn:ScissorForce}, it is clear that as $\theta\rightarrow 0$, the force  $F_x \rightarrow \infty$. In the present design,  $\theta_{min}=5^o$ and $\theta_{max}=45^o$. Therefore, the extended height  $h_{max}=Nl\sin\theta_{max}=1.3~m$ and the collapsed height $h_{min}=156~mm$. Assuming $W=8~kg$ as payload the maximum force $F_x=342~Kg$ is required at $\theta_{min}=5^o$, . 
+where, $F_x$ is the axial force on the prismatic joint, $A_1$, and W is the payload. From Equation \ref{eqn:ScissorForce}, it is clear that as $\theta\rightarrow 0$, the force  $F_x \rightarrow \infty$. In the present design,  $\theta_{min}=5^o$ and $\theta_{max}=45^o$. Therefore, the extended height  $h_{max}=Nl\sin\theta_{max}=1.3~$m and the collapsed height $h_{min}=156~$mm. Assuming $W=8~$kg as payload the maximum force $F_x=342~$kg is required at $\theta_{min}=5^o$, . 
 
 The motor torque required for the scissor mechanism is calculated using  screw jack formula given in  \cite{TOMBook} and  presented here as Equation \ref{eqn:liftingTorque}. 
 \begin{equation}
 \label{eqn:liftingTorque}
 \begin{aligned}
-T_L&=\frac{F_x d_m}{2}(\frac{p+\pi\mu d_m\sec\alpha}{\pi d_m-\mu p\sec \alpha})=7.5Nm
+T_L&=\frac{F_x d_m}{2}(\frac{p+\pi\mu d_m\sec\alpha}{\pi d_m-\mu p\sec \alpha})=7.5\text{ Nm}
 \end{aligned}
 \end{equation}
-where coefficient of friction, $\mu=0.1$, ACME thread angle, $2\alpha=60^o$, pitch diameter, $d_m=15mm$, and pitch, $p=1.5mm$, is used. Based on the above specification $10~W$, RE20 DC motor with a gear box of 25:1 ratio was chosen from Maxon motor catalogue ~\cite{catMaxon}.
+where coefficient of friction, $\mu=0.1$, ACME thread angle, $2\alpha=60^o$, pitch diameter, $d_m=15$ mm, and pitch, $p=1.5$ mm, is used. Based on the above specification $10~$W, RE20 DC motor with a gear box of 25:1 ratio was chosen from Maxon motor catalogue ~\cite{catMaxon}.
 
 
 
@@ -333,9 +333,9 @@ where coefficient of friction, $\mu=0.1$, ACME thread angle, $2\alpha=60^o$, pit
   
 
 \section{Summary}
-Requirement of an overactuated system was discussed. The advantage of the proposed kinematic design over other redundantly actuated system discussed.
-Design calculations for the proposed  RARS mobile manipulator are presented.
-Different aspects based on the requirements of radiation inspection around cyclotron was taken into account.
-Advantage of positively steered wheels over caster wheel was highlighted for the proposed mobile robot. 
+A customized design of a mobile manipulator taking into consideration the field requirements and floor condition existing inside the cyclotron vault is presented. Requirement of an overactuated system and the advantage  of the proposed kinematic design over other redundantly actuated system is discussed. The advantage of scissor mechanism for vertical motion of the sensor over other mechanism is highlighted.
+Design calculations for motor selection and stability analysis using ZMP to arrive at the maximum permitted acceleration for the proposed  RARS mobile manipulator are presented. 
+
+ 
 
 

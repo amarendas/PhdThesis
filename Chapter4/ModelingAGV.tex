@@ -38,7 +38,7 @@ Let, $f_i$ be the net force acting at the center of mass (CM) of the $i^{th}$  b
  If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body, then equations of motion of the $i^{th}$ rigid body are given by Newton-Euler equations as 
 \begin{equation}
 \label{NE}
-f_i=m_i\ddot{c_i} \quad and \quad n_i=I_{ci} \omega_i+\omega_i \times I_{ci} \omega_i
+f_i=m_i\ddot{c_i} \quad \text{and} \quad n_i=I_{ci} \omega_i+\omega_i \times I_{ci} \omega_i
 \end{equation}
 Let us  define twist ($t$) and wrench($w$) as 
 \begin{equation*}
@@ -370,7 +370,7 @@ The  standard caster wheel configuration can be obtained by setting the value of
 It can be seen from Equation \ref{unac2act1} that when the \textit{caster offset}, $d_2=0$, the LHS matrix becomes singular. So the unactuated joint rates cannot be determined from $\dot{\theta_a}$. It is therefore essential to have proper caster offset in case we need caster like behaviour from a passive wheel. 
 
 An alternative solution is to put an extra actuator to control the bracket motion i.e., $\dot\psi_i$. This is the case in Ackerman and Davis steering mechanism, where the steering wheel controls the orientation of the front passive wheels of a car.
-\section{Dynamics with No Slip in Wheels }
+\section{Dynamics with No Wheel Slip }
 In this section the equations of motion is derived under the assumption that all the wheel satisfies pure rolling condition, there is no slipping or skidding of the wheels. This is valid for vehicles with caster wheels as mentioned in Section 3.2.2.1 or incase where steered wheels are perfectly aligned according to the Ackerman steering condition. Dynamics of such architecture is simple which will lead to a realistic model of RARS developed in this research. This is effectively the case mentioned in Section 3.2.2.2. 
 
 
@@ -503,7 +503,7 @@ All the components of  Equation  \ref{CE}  are now been evaluated, except the $\
 
 
 \subsection{Simulation }
-\label{sec: SimulationIdealCondition) 
+\label{sec: SimulationIdealCondition}
 The mobile manipulator proposed in Chapter 3  was modelled as a differentially driven robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
 
 In  simulation the vehicle reference  point $O_3$ is required to trace a circle of radius 5m. As shown in the Figure \ref{fig:CirTrace}. Let, $ \beta$ be the angle between the line joining  point $O_3$ and $O$ with respect to $X-axis$. The function $\beta(t)$ was defined such that the full circle is completed in 60Sec and the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
@@ -574,7 +574,7 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 		\emph{Part Name}  & \emph{ Property} & \emph{Value} \\
 		\hline
 		Rear Wheels & & \\
-		 $m_1,m_last section2$	& mass				&300g \\ 
+		 $m_1,m_2$	& mass				&300g \\ 
 		  $I_1,I_2$	& Moment of Inertia	& diag(242, 242, 465)kg $mm^2$\\
 		Base Frame& & \\
 		 $m_3$ & mass  & 70Kg \\
@@ -602,7 +602,7 @@ Figure \ref{fig:spiral} presents the torques required at the wheels of the vehic
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1.5in]{Chapter3/fig/Skid} 
-		\caption{Wheel Skid \cite{wang2008modeling}}\label{fig:skid}
+		\caption{Wheel skid \cite{wang2008modeling}}\label{fig:skid}
 	\end{minipage}
 \end{figure}
 The above section presented  the equations of motion  of a mobile robot  based on the no slip condition between the ground and the wheel, i.e. pure rolling condition. For RARS robot presented in this thesis the front steering wheels  are passive  but actively steered. Hence, the assumption of pure rolling condition of these wheels are no longer valid. Therefore, both the longitudinal slip and lateral slip (also called skid) are introduced in derive the equations of motion for RARS.
@@ -1099,8 +1099,7 @@ To evaluate $F_{s,i} $ and $F_{k,i}$ for $i=1,2,4,5$,   which are function of  s
 -(\lambda-0.15)\frac{0.34\mu_{peak}}{0.85}-\mu_{peak}, & -0.15\le\lambda \le -1.00,\\
 (\lambda-0.15)\frac{\mu_{peak}}{0.15}+\mu_{peak}, & -0.15<\lambda<0.15,
 \\
--(\lambda-0.15)\frac{0.34\mu_{peak}}{0.85}+\mu_{peak}, & 0.15\le\lambda \le 1.00,
-eqn
+-(\lambda-0.15)\frac{0.34\mu_{peak}}{0.85}+\mu_{peak}, & 0.15\le\lambda \le 1.00.
 \end{cases}
 \end{equation}
 To calculate $F_{Si},F_{Ki}$ for $ i=4,5$ spin rate of front wheels $\dot\theta_4,\dot\theta_5$ are required. This is obtained from Equation \ref{eqn:simpDynFront} which represents the dynamics  of the front wheels, where $r$ is the radius of wheel and $I_w$ is the inertia of wheel about $e_i$.
@@ -1128,7 +1127,7 @@ F_{s5} r
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Chapter4/fig/InputTorqueProfile}
-		\caption{Input Torque Profile }\label{fig:InputTorqueProfile}
+		\caption{Input torque profile }\label{fig:InputTorqueProfile}
 	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure}
