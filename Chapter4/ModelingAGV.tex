@@ -38,7 +38,7 @@ Let, $f_i$ be the net force acting at the center of mass (CM) of the $i^{th}$  b
  If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body, then equations of motion of the $i^{th}$ rigid body are given by Newton-Euler equations as 
 \begin{equation}
 \label{NE}
-f_i=m_i\ddot{c_i} \quad \text{and} \quad n_i=I_{ci} \omega_i+\omega_i \times I_{ci} \omega_i
+f_i=m_i\ddot{c_i} \quad \text{and} \quad n_i=I_{ci} \dot \omega_i+\omega_i \times I_{ci} \omega_i
 \end{equation}
 Let us  define twist ($t$) and wrench($w$) as 
 \begin{equation*}
@@ -1133,22 +1133,11 @@ F_{s5} r
 \end{figure}
 \ 
 \subsection{Results and inference}
-The path traced by the RARS mobile robot  with  $\mu_{peak} =0.3$ is shown in Figure \ref{fig:pathWithMu3}. There is no visible difference between the  actual path traced  and the given path in terms of lateral shift. Circular path radius is same for both curves, though the vehicle is not able to complete the path. The path ends at ${(4.862,-1.166)}$ denoted as ``End Point" in  Figure \ref{fig:pathWithMu3} instead of  ${(5,0)}$. This deviation is assumed to be there due to the longitudinal slip at the wheel-surface interface.  Figure \ref{fig:ForcesMu3} presents the plot of lateral force acting on the vehicle during the period of its motion. The centrifugal force, denoted by green line,  tries to shift the vehicle laterally is below the maximum frictional resistance provided by the wheel-surface interface, denoted by the red line. Hence, the net lateral force acting on the mobile robot at any point of time during the motion is zero as indicated by the blue line.
-
-When the friction coefficient is reduced to  $\mu_{peak} =0.1$, both lateral and longitudinal shift are present, as shown in Figure \ref{fig:pathWithMu1}. The  net lateral force acting on the vehicle, i.e., the blue curve of Figure \ref{fig:ForcesMu1} is greater than zero between 20 sec to 40 sec. This lateral force is responsible for the deviation of the actual path traced from the given path. The deviation increases from point ``A" to point ``B" in Figure \ref{fig:pathWithMu1}. This is region of the path where the centrifugal force exceeds the frictional force. After point ``B" the curve maintains constant radius as the net lateral force acting on the mobile robot again becomes zero. 
-
-Note that Figure \ref{fig:beta1} shows the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $\mu=0.1$ at time $t=18.3s$. This corresponds to angular velocity of $ \dot \beta =0.1412 $ rad/sec as can be read from Figure \ref{fig:beta1} at time $t=18.3s$.
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{Chapter4/fig/beta}
-	\caption{Plot of $\beta$ and $\dot{\beta}$}
-	\label{fig:beta1}
-\end{figure}
-The linear velocity of the robot to initiate lateral slipping is given by $R\dot{\beta}$, which is equal to $0.7$  m/sec. The robot at hand is restricted to the speed of $0.5$ m/sec as specified in the robot specification in Table \ref{tb:specifications}. The estimated coefficient of friction between the Polyurethane wheel liner and factory floor is around $0.3$. Therefore skidding of the mobile robot RARS is unlikely during teleoperation. 
+The path traced by the RARS mobile robot  with  $\mu_{peak} =0.3$ is shown in Figure \ref{fig:pathWithMu3}. There is no visible difference between the  actual path traced  and the given path in terms of lateral shift. If $R_r(t)$ is the distance of the robot from the path centre $o$ and $R=5$ m is the radius of the path. The radial error, $ R_r(t)-R$, which quantifies the lateral shift is shown in Figure \ref{fig:radialErrorMu3} and it in the range of $10^{-9}$, i.e, effectively zero.  
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[height=3in]{Chapter4/fig/PathWithMu-3slip}
+		\includegraphics[height=2.9in,keepaspectratio]{Chapter4/fig/PathWithMu-3slip}
 		\caption{RARS path traced when $\mu=0.3$}\label{fig:pathWithMu3}
 	\end{minipage}
 	\hfill
@@ -1159,6 +1148,27 @@ The linear velocity of the robot to initiate lateral slipping is given by $R\dot
 	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure}
+
+Though the RARS robot maintains the path radius (R) at all time, it is not able to complete the path. The path ends at ${(4.862,-1.166)}$ denoted by ``End Point" in  Figure \ref{fig:pathWithMu3} instead of  ${(5,0)}$. As per the given trajectory, $\beta(t)$ denotes the position the RARS should have attained at time, t. In actual run, the robot is able to cover only the angle $\beta_r(t)$ at time (t). Therefore there exists a phase error, $\beta(t)-\beta_r(t)$, in terms of the circular motion of the robot as shown in Figure \ref{fig:PhazeErrorMu3}. This error actually indicates that the robot has not travelled the distance as required by the given trajectory at time, $t$. This plot clearly shows that total angular displacement of the robot is less than $350^o$ at the end of 60 sec.
+
+This deviation is assumed to be there due to the longitudinal slip at the wheel-surface interface.  Figure \ref{fig:ForcesMu3} presents the plot of lateral force acting on the vehicle during the period of its motion. The centrifugal force, denoted by green line,  tries to shift the vehicle laterally is below the maximum frictional resistance provided by the wheel-surface interface, denoted by the red line. Hence, the net lateral force acting on the mobile robot at any point of time during the motion is zero as indicated by the blue line.
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.8in,width=\textwidth]{Chapter4/fig/radialError_mu03}
+		\caption{RARS, radial error( $\mu=0.3$)}\label{fig:radialErrorMu3}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.8in,width=\textwidth]{Chapter4/fig/phazeError_mu03}
+		\caption{Phase and phase Error( $\mu=0.3$) }\label{fig:PhazeErrorMu3}
+	\end{minipage}
+	%\caption{Actuator effort}
+\end{figure}
+
+ Figure \ref{fig:pathWithMu1}, shows the trajectory of the RARS robot when the maximum coefficient of friction between the ground and tire is  $\mu_{peak} =0.1$. 
+ In this case both lateral, as shown in Figure \ref{fig:radialError_mu01} and longitudinal shift, as shown in Figure \ref{fig:phazeError_mu01}, are present. The  net lateral force acting on the vehicle, i.e., the blue curve of Figure \ref{fig:ForcesMu1} is greater than zero between 20 sec to 40 sec. This lateral force is responsible for the deviation of the actual path traced from the given path. The deviation increases from point ``A" to point ``B" in Figure \ref{fig:pathWithMu1}. This is region of the path where the centrifugal force exceeds the frictional force. After point ``B" the curve maintains constant radius as the net lateral force acting on the mobile robot again becomes zero. 
 \begin{figure}
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
@@ -1171,8 +1181,35 @@ The linear velocity of the robot to initiate lateral slipping is given by $R\dot
 		\includegraphics[height=3in,width=\textwidth]{Chapter4/fig/ForceMu-1}
 		\caption{Forces on RARS when $\mu=0.1$ }\label{fig:ForcesMu1}
 	\end{minipage}
+	
+\end{figure}
+\begin{figure}
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.6in, width=\linewidth]{Chapter4/fig/radialError_mu01}
+		\caption{RARS radial error ($\mu=0.1$)}\label{fig:radialError_mu01}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2.5in,width=\textwidth]{Chapter4/fig/phazeError_mu01}
+		\caption{Phase and phase error ($\mu=0.1$) }\label{fig:phazeError_mu01}
+	\end{minipage}
 	%\caption{Actuator effort}
 \end{figure}
+
+
+Note that Figure \ref{fig:beta1} shows the variation of $\beta(t)$ defined in Equation \ref{path} and $\dot\beta(t)$ with time.  Figure \ref{fig:ForcesMu1} indicates  that lateral slip initiates for $\mu=0.1$ at time $t\approx25$ s. This corresponds to angular velocity of $ \dot \beta =0.158$ rad/sec as can be read from Figure \ref{fig:beta1} at time $t\approx25$ s.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{Chapter4/fig/beta}
+	\caption{Plot of $\beta$ and $\dot{\beta}$}
+	\label{fig:beta1}
+\end{figure}
+The linear velocity of the robot to initiate lateral slipping is then given by $R\dot{\beta}$, which is equal to $0.79$  m/sec. The robot at hand is restricted to the speed of $0.5$ m/sec as specified in the robot specification in Table \ref{tb:specifications}. The estimated coefficient of friction between the Polyurethane wheel liner and factory floor is around $0.3$. Therefore skidding of the mobile robot RARS is unlikely during teleoperation. 
+
+
+
 \section{Dynamical Model of Steering System}
 Typically, the tuning of steering motor is done while the vehicle is stationary. Hence, an independent dynamic model for steering system is essential, which is carried out in this section. 
 The  steering system is shown in Figure \ref{fig:SteerAsm}. The equations of motion were derived under the assumptions,  that the vehicle body \#3 was at rest and  the mass of links \#8 and \#9 were negligible compared to other links. The kinematic energy of each body except \#8 and \#9 is derived below.
