@@ -84,9 +84,10 @@ W.~Chung, C.-b. Moon, C.~Jung, and J.~Jin, ``Design of the dual offset active
 
 \bibitem{witus2000mobility}
 G.~Witus, ``Mobility potential of a robotic six-wheeled omnidirectional drive
-  vehicle (odv) with z-axis and tire inflation control,'' in {\em Unmanned
-  Ground Vehicle Technology II}, vol.~4024, pp.~106--114, International Society
-  for Optics and Photonics, 2000.
+  vehicle {ODV} with z-axis and tire inflation control,'' in {\em Proceedings
+  {SPIE} , Unmanned Ground Vehicle Technology II} (G.~R. Gerhart, R.~W.
+  Gunderson, and C.~M. Shoemaker, eds.), vol.~4024, pp.~106--114, International
+  Society for Optics and Photonics, 2000.
 
 \bibitem{moore2000modelling}
 K.~L. Moore, M.~Davidson, V.~Bahl, S.~Rich, and S.~Jirgal, ``Modelling and
@@ -141,8 +142,8 @@ J.~Angeles, {\em Fundamentals of Robotic Mechanical Systems: Theory, Methods,
 \newblock Springer Science \& Business Media, 2013.
 
 \bibitem{saha1989kinematics}
-S.~K. Saha and J.~Angeles, ``Kinematics and dynamics of a three-wheeled 2-dof
-  agv,'' in {\em Robotics and Automation, 1989. Proceedings., 1989 IEEE
+S.~K. Saha and J.~Angeles, ``Kinematics and dynamics of a three-wheeled {2-DOF
+  AGV},'' in {\em Robotics and Automation, 1989. Proceedings., 1989 IEEE
   International Conference on}, pp.~1572--1577, IEEE, 1989.
 
 \bibitem{saha1991dynamics}
@@ -189,8 +190,9 @@ S.~N. Sidek, {\em Dynamic Modeling and Control of Nonholonomic Wheeled Mobile
 
 \bibitem{konduri2014effect}
 S.~Konduri, E.~Orlando, C.~Torres, and P.~R. Pagilla, ``Effect of wheel slip in
-  the coordination of wheeled mobile robots,'' {\em IFAC Proceedings Volumes},
-  vol.~47, no.~3, pp.~8097--8102, 2014.
+  the coordination of wheeled mobile robots,'' in {\em Proceedings of the 19th
+  World Congress the International Federation of Automatic Control}, vol.~47,
+  pp.~8097--8102, IFAC, 2014.
 
 \bibitem{ojeda2006current}
 L.~Ojeda, D.~Cruz, G.~Reina, and J.~Borenstein, ``Current-based slippage
@@ -288,8 +290,9 @@ R.~C. Coulter, ``Implementation of the pure pursuit path tracking algorithm,''
 
 \bibitem{barton2001controller}
 M.~J. Barton, ``Controller development and implementation for path planning and
-  following in an autonomous urban vehicle,'' {\em Undergraduate Thesis,
-  University of Sydney}, 2001.
+  following in an autonomous urban vehicle,'' {\em Master's thesis, Australian
+  Centre for Field Robotics,School of Aerospace, Mechanical and Mechatronic
+  Engineering, University of Sydney}, 2001.
 
 \bibitem{wit2004autonomous}
 J.~Wit, C.~D. Crane~III, and D.~Armstrong, ``Autonomous ground vehicle path
@@ -314,8 +317,8 @@ O.~Khatib, ``Real-time obstacle avoidance for manipulators and mobile robots,''
 
 \bibitem{khatib1980commande}
 O.~Khatib, ``Commande dynamique dans l'espace op{\'e}rationnel des robots
-  manipulateurs en pr{\'e}sence d'obstacles,'' {\em PhD dissertation, Ecole
-  Nationale Superieure de l'Aeronautique et de l'Espace}, 1980.
+  manipulateurs en pr{\'e}sence d'obstacles,'' {\em PhD thesis, Ecole Nationale
+  Superieure de l'Aeronautique et de l'Espace}, 1980.
 
 \bibitem{latombe2012robot}
 J.~Latombe, {\em Robot Motion Planning}, vol.~124.
@@ -500,7 +503,8 @@ T.~Sheridan, ``Human supervisory control of robot systems,'' in {\em Robotics
 
 \bibitem{pook1994teleassistance}
 P.~K. Pook and D.~H. Ballard, ``Teleassistance: Contextual guidance for
-  autonomous manipulation,'' in {\em AAAI}, pp.~1291--1296, 1994.
+  autonomous manipulation,'' in {\em AAAI-94. Proceedings.}, pp.~1291--1296,
+  1994.
 
 \bibitem{jagersand1995visual}
 M.~Jagersand and R.~Nelson, ``Visual space task specification, planning and
@@ -668,7 +672,7 @@ B.~d'Andrea Novel, G.~Bastin, and G.~Campion, ``Modelling and control of
 
 \bibitem{thanjavur1997ease}
 K.~Thanjavur and R.~Rajagopalan, ``Ease of dynamic modelling of wheeled mobile
-  robots (wmrs) using kane's approach,'' in {\em Robotics and Automation, 1997.
+  robots {WMRs} using kane's approach,'' in {\em Robotics and Automation, 1997.
   Proceedings., 1997 IEEE International Conference on}, vol.~4, pp.~2926--2931,
   IEEE, 1997.
 
@@ -687,9 +691,9 @@ H.~B. Pacejka and E.~Bakker, ``The magic formula tyre model,'' {\em Vehicle
 
 \bibitem{claeys2001dynamic}
 X.~Claeys, J.~Yi, L.~Alvarez, R.~Horowitz, and C.~C. De~Wit, ``A dynamic
-  tire/road friction model for 3d vehicle control and simulation,'' in {\em
-  ITSC 2001. 2001 IEEE Intelligent Transportation Systems. Proceedings (Cat.
-  No. 01TH8585)}, pp.~483--488, IEEE, 2001.
+  tire/road friction model for {3D} vehicle control and simulation,'' in {\em
+  2001 IEEE Intelligent Transportation Systems. Proceedings (Cat. No.
+  01TH8585)}, pp.~483--488, IEEE, 2001.
 
 \bibitem{kulakowski1991mathematical}
 B.~T. Kulakowski, ``Mathematical model of skid resistance as a function of
@@ -727,8 +731,8 @@ O.~J. Smith, ``A controller to overcome dead time,'' {\em ISA J.}, vol.~6,
   pp.~28--33, 1959.
 
 \bibitem{geng2011structured}
-J.~Geng, ``Structured-light 3d surface imaging: a tutorial,'' {\em Advances in
-  Optics and Photonics}, vol.~3, no.~2, pp.~128--160, 2011.
+J.~Geng, ``Structured-light {3D} surface imaging: a tutorial,'' {\em Advances
+  in Optics and Photonics}, vol.~3, no.~2, pp.~128--160, 2011.
 
 \bibitem{openni}
 ``Openni [online].'' \url{http://www.openni.org/}.
@@ -748,9 +752,9 @@ J.~Geng, ``Structured-light 3d surface imaging: a tutorial,'' {\em Advances in
 \newblock Accessed: 2018-09-30.
 
 \bibitem{labbertab}
-M.~Labb{\'e} and F.~Michaud, ``Rtab-map as an open-source lidar and visual
+M.~Labb{\'e} and F.~Michaud, ``{RTAB-Map as an open-source lidar and visual
   simultaneous localization and mapping library for large-scale and long-term
-  online operation,'' {\em Journal of Field Robotics}, vol.~36, no.~2,
+  online operation},'' {\em Journal of Field Robotics}, vol.~36, no.~2,
   pp.~416--446, 2019.
 
 \bibitem{labbe2013appearance}

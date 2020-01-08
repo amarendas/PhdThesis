@@ -148,7 +148,7 @@ where
 \end{itemize}
 The mass distribution of the mobile robot was  adjusted such that the stability margin $x$ as shown in Figure \ref{fig:loadDistribution} was fixed to $30$ mm, which  limits  the acceleration of the mobile robot while climbing up  over a ramp of $30^o$ to $ a_l=0.144g$. Operation of system below this acceleration limit safeguards it against overturning along the longitudinal direction. 
 
-The stability analysis of the RARS robot on a ramp  was carried out with the manipulator in the retracted condition. In case the manipulator is extended  the CG of the system shift towards the rear wheel axle. A condition will be reached when the vector $Mg$ crosses the rear wheel contact point, and the mobile robot will overturn. To insure against this unstable situation the vehicle is never moved on the ramp with manipulator extended.
+The stability analysis of the RARS robot on a ramp  was carried out with the manipulator in the retracted condition. In case the manipulator is extended  the CG of the system shift towards the rear wheel axle. A condition will be reached when the vector $M_g$ crosses the rear wheel contact point, and the mobile robot will overturn. To insure against this unstable situation the vehicle is never moved on the ramp with manipulator extended.
    
 Another instability is encountered during turning or negotiating the curve. The centrifugal force tends to overturn the vehicle in lateral direction as shown in Figure \ref{fig:LatOverturn}.
 If $p$ is the ZMP for this configuration, the location of ZMP, i.e., $x$ is given by Equation \ref{eqn:zmp2}. 
@@ -193,6 +193,7 @@ This sets the limiting velocity as $v=1.9$ m/sec based on the $Z_{cg}=190$ mm an
 F_{N1}=\frac{a M \cos \theta}{a+b-\mu Z_{cg}} , \quad \quad
 F_T=\mu F_{N1}
 \end{equation}
+where, M is the mass of vehicle.
 In order to estimate the traction motor size, we take worst case scenario of $\theta=30^o$ and $\mu =0.3$. This leads to
 \begin{equation*}
 F_{N1}=66 \text{ kg}, \quad\quad F_T=0.3\times 66 \approx 20 \text{ kg}

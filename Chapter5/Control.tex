@@ -167,23 +167,23 @@ This section discusses in detail the algorithm running on the onboard controller
 \end{figure}
 
 \begin{enumerate}
-	\item Calculate the setpoint for steering motor $\theta_{SM} $ based on $\theta_s$.
-	\item Read the current steering  angle $\phi_{ic}$.
-	\item Calculate the velocity setpoints $\omega_{i}$ and $\omega_{o}$ of  rear wheels based on the $V$ and $\phi_{ic}$.
+	\item Calculate the setpoint for steering motor $\theta_{Sm} $ based on $\theta_s$.
+	\item Read the current steering  angle $\phi_{i}$.
+	\item Calculate the velocity setpoints $\omega_{i}$ and $\omega_{o}$ of  rear wheels based on the $V$ and $\phi_{i}$.
 
 	
-	\item Command  setpoints $\omega_{i}$, $\omega_{o}$ and $\theta_{SM} $ to each motor. 
+	\item Command  setpoints $\omega_{i}$, $\omega_{o}$ and $\theta_{Sm} $ to each motor. 
 \end{enumerate}
 The above loop is repeated every 50 mSec.
 
-It may be noted that the steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This is important as the response time of the  motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $v$ and $\theta_s$. 
+The steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This is important as the response time of the  motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $v$ and $\theta_s$. 
 Each block in Figure \ref{fig:ControlBlock} is discussed next. 
 
  It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in Figure \ref{fig:KenVec}, i.e.
  \begin{equation}
 	 \theta_s =\phi_i
  \end{equation}
- The set point of the steering motor at the output of  gear box $\theta_{SM}$ is given by equations \ref{eqn:sterineq1} and \ref{eqn:sterineq2}  based on the geometry of Davis steering gear \cite{TOMBook}.
+ The set point of the steering motor at the output of  gear box $\theta_{Sm}$ is given by equations \ref{eqn:sterineq1} and \ref{eqn:sterineq2}  based on the geometry of Davis steering gear \cite{TOMBook}.
 \begin{equation*}
  \tan\phi_i=\frac{xh}{h^2+b^2-bx}
 \end{equation*}

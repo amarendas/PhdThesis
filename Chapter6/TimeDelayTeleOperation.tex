@@ -128,7 +128,7 @@ The operator station  sends $v$ and $\dot{\theta}$ as the command over the  comm
 
 \section{Simulation and Results }
 
-The teleoperation loop consists of the operator model described in Section 6.2 at one end of the communication link and the mobile robot model described in Section 6.1 on the other end . As shown in Figure \ref{fig:teleloop}, there will a delay in both directions of communication. In real system, the video image is streamed  by the robot. Due to large quantity of data and limited bandwidth the delay $T_1>>T_2$. The amount of delay $h_1$ was experimentally measured  and it was found around 0.5 sec, as described in Appendix A. The command sent by the operator is  $v$ and $\dot{\theta}$ which is few bites only.  Therefore in simulation  $h_2=0$ is assumed.
+The teleoperation loop consists of the operator model described in Section 6.2 at one end of the communication link and the mobile robot model described in Section 6.1 on the other end . As shown in Figure \ref{fig:teleloop}, there will a delay in both directions of communication. In real system, the video image is streamed  by the robot. Due to large quantity of data and limited bandwidth the delay $T_1>>T_2$. The amount of delay $h_1$ was experimentally measured  and it was found around 0.5 sec, as described in Appendix A. The command sent by the operator is  $v$ and $\dot{\theta}$ which is few bytes only.  Therefore in simulation  $h_2=0$ is assumed.
 
 
 \begin{figure}
