@@ -1,6 +1,6 @@
 \chapter{Control of a Mobile Manipulator }
 \label{c5_Control}
-In this chapter, the control architecture of the tele-operated  mobile manipulator or platform  is presented. The user interface for teleoperation is discussed. The control algorithm  running on the mobile manipulator and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
+In this chapter, the control architecture of the tele-operated RARS  mobile manipulator  is presented. The user interface for teleoperation is discussed. The control algorithm  running on the RARS and the hardware used for the control of traction and steering is discussed. The protocol used  for communication between the robot and the user interface is also described in detail.
 \section{Control Architecture and Hardware}
 
 
@@ -9,7 +9,7 @@ In this chapter, the control architecture of the tele-operated  mobile manipulat
 	\captionof{figure}{Control architecture }
 	\label{fig:ControlBlockDiag} 
 \end{figure} 
-The mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local onboard controller of the mobile robot. They  communicate over a dedicated wireless network. The remote station sends data packet in every  50 milliseconds (20Hz) to the mobile robot. The commanded velocity, steer angle,  z position of the platform, and  state of the detector and headlamps constitute the data packet sent by the remote station, as shown in Figure \ref{fig:sentBytes}. The onboard controller of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheel, the z position of the top platform,  battery voltage  and current of each motor. They are indicated in Figure \ref{fig:recvBytes}.
+The RARS mobile manipulator explained in chapter \ref{ch_3:Design} was planned to be teleoperated over a wireless network. The control block diagram and architecture are shown in Figure \ref{fig:ControlBlockDiag}. It has a remote control station which is the interface for the operator and a local onboard controller of the mobile robot. They  communicate over a dedicated wireless network. The remote station sends data packet in every  50 milliseconds (20Hz) to the mobile robot. The commanded velocity, steer angle,  z position of the platform, and  state of the detector and headlamps constitute the data packet sent by the remote station, as shown in Figure \ref{fig:sentBytes}. The onboard controller of the mobile robot replies with a data packet consisting of the $X$, $Y$ position and orientation $\theta$ of the robot, the current steer angle, angular velocities of each wheel, the z position of the top platform,  battery voltage  and current of each motor. They are indicated in Figure \ref{fig:recvBytes}.
 \begin{figure}
 	
 	\begin{minipage}[t]{0.5\textwidth}
@@ -100,7 +100,7 @@ Three EPOS2 controllers from Maxon Motors were used to control the mobile robot'
   V(s)=K_{p\omega}+\frac{K_{I\omega}}{s}
   \end{eqnarray}  where $K_{p\omega}$ and  $K_{I\omega}$ are  proportional and integral gains for velocity, respectively.   The sampling rate of the  velocity loop is 2.5 KHz. The feedforward acceleration and  velocity was used to compensate for the known inertial load and  viscous frictional load  \cite{maxonAppNotesPosition} respectively.   Velocity is estimated from differentiation of  the position data, the low-pass filter  in Figure \ref{fig:EPOS4}  eliminates noise due to differentiation. The transfer function $H(s)$ for the  low-pass filter is given by
   \begin{equation}
-  H(s)=\frac{1}{1+\frac{K_{p\omega}}{48K_{I\omega}}}
+  H(s)=\frac{1}{1+\frac{K_{p\omega}s}{48K_{I\omega}}}
   \end{equation} 
   
   The gain values used for each rear motor in  the velocity control mode is listed in Table \ref{tb:motorPara}. No acceleration or velocity feedforward  was used. The gain parameters were determined by auto tuning software provided by Maxon Motors.  
@@ -161,41 +161,38 @@ where $K_{PP}$, $K_{IP}$ and $K_{DP}$ are position proportional, integral and de
 \section{Control Algorithm }
 This section discusses in detail the algorithm running on the onboard controller.  Command received by the controller was parsed to extract the velocity  and the steer angle  information. They were suitably scaled to get command velocity  $V$ in mm/sec, and steering  angle $\theta_s$ in radians.  It may be noted that the velocity $V$ corresponds to the velocity of point $O_r$ the reference point of the mobile robot.  Next the set point for each motor was calculated  and sent to individual drive. The algorithm is listed below and the block digram for the same in Figure \ref{fig:ControlBlock}
 \begin{figure}[h]
-	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal2}
+	\includegraphics[width=\linewidth,keepaspectratio]{Chapter5/fig/BlkDigLocal3}
 	\captionof{figure}{Block diagram of WMR controler}
 	\label{fig:ControlBlock} 
 \end{figure}
 
 \begin{enumerate}
-	\item Calculate the setpoint for steering motor $\theta_{Sm} $ based on $\theta_s$.
-	\item Read the current steering  angle $\phi_{i}$.
-	\item Calculate the velocity setpoints $\omega_{i}$ and $\omega_{o}$ of  rear wheels based on the $V$ and $\phi_{i}$.
-
-	
-	\item Command  setpoints $\omega_{i}$, $\omega_{o}$ and $\theta_{Sm} $ to each motor. 
+	\item Calculate the setpoint for steering motor $\phi_{Sm} $ based on $\theta_s$.
+	\item Read the current steering  angle $\theta_{c}$ base on the current steer motor angle $\phi_{Cm}$. 
+	\item Calculate the velocity setpoints $\omega_{i}$ and $\omega_{o}$ of  rear wheels based on the $V$ and  $\theta_{c}$.
+	\item Command  setpoints $\omega_{i}$, $\omega_{o}$ and $\phi_{Sm} $ to each motor. 
 \end{enumerate}
 The above loop is repeated every 50 mSec.
 
-The steer angle command received from the control station is not directly sent to the steer motor as set point after suitable scaling. The steer set point is based on the current rear wheel velocities. This is important as the response time of the  motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $v$ and $\theta_s$. 
+
+The steer angle command $\theta_s$, received from the control station is  directly sent to the steer motor as set point after suitable scaling. The set point velocity for  two rear wheels are calculated based on the current steer angle $\theta_c$ and the commanded velocity $V$. This is important as the response time of the steering  motor and the traction motors are different. The above methodology helps  minimize the deviation  from the Ackerman  steering condition even during transit condition, particularly, in case of large change in commanded $V$ and $\theta_s$. 
 Each block in Figure \ref{fig:ControlBlock} is discussed next. 
 
- It may be noted that the $\theta_s$ always refers to the steer angle of the inner front wheel $\phi_i$  and $V$ refers to $O_r$ as shown in Figure \ref{fig:KenVec}, i.e.
- \begin{equation}
-	 \theta_s =\phi_i
- \end{equation}
- The set point of the steering motor at the output of  gear box $\theta_{Sm}$ is given by equations \ref{eqn:sterineq1} and \ref{eqn:sterineq2}  based on the geometry of Davis steering gear \cite{TOMBook}.
-\begin{equation*}
- \tan\phi_i=\frac{xh}{h^2+b^2-bx}
-\end{equation*}
+ It may be noted that the $\theta_s$  refers to the commanded steer angle  and $\theta_c$ the current steer angle of the inner front wheel. $V$ refers to the linear velocity of point  $O_r$ as shown in Figure \ref{fig:KenVec}, i.e.
+
+The function $f:\theta \rightarrow x$, \ref{eqn:sterineq1}  gives relation between the steering angle $\theta$ and the rack displacement $x$    based on the geometry  of Davis steering gear \cite{TOMBook}.
+\begin{equation}
+ \tan\theta=\frac{xh}{h^2+b^2-bx}
+\end{equation}
 or
 \begin{eqnarray}
-f(\phi_i): x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
+x=f(\theta),\quad \quad f(\theta)=\frac{\tan\theta (h^2+b^2)}{h+b \tan\theta }
 \label{eqn:sterineq1}
 \end{eqnarray}
 \begin{figure}
 	\begin{minipage}[t]{0.6\textwidth}
 		\centering
-		\includegraphics[width=5in]{Chapter5/fig/kinvec} 
+		\includegraphics[width=5in]{Chapter5/fig/kinvec3} 
 		\caption{Ackerman steering condition}\label{fig:KenVec}
 	\end{minipage}
 	%\hfill
@@ -205,40 +202,46 @@ f(\phi_i): x=\frac{\tan\phi_i (h^2+b^2)}{h+b \tan\phi_i }
 		\caption{Davis steering gear}\label{fig:steering_gear_train}
 	\end{minipage}
 \end{figure}
-where $x$ is the displacement of the rack and $h$ and $b$ are link lengths. The rack is connected to the steering motor by pinion of PCD $D_p$ (30mm) as shown in  Figure \ref{fig:steering_gear_train}. Therefore, the steering motor angle,  $ \theta_{Sm}$, is given below as
+where $x$ is the displacement of the rack and $h$ and $b$ are link lengths as shown in Figure \ref{fig:steering_gear_train}. The rack is connected to the steering motor by pinion of PCD $D_p$ (30mm) as shown in  Figure \ref{fig:steering_gear_train}.
+
+The function $H:x\rightarrow \phi$ gives the relation between the rack displacement $x$ and angular displacement of the steering motor output shaft $\phi$.
+
+ Therefore, the steering motor angle,  $ \phi$, is given below as
 \begin{eqnarray}
-H(x): \theta_{Sm}= x \frac{360}{\pi D_p}
+\phi=H(x), \quad \quad H(x)= x \frac{360}{\pi D_p}
 \label{eqn:sterineq2}
 \end{eqnarray}
  
-Next,  the equation relating current steer angle $\phi_{i}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$ is presented. From the geometry of Figure \ref{fig:KenVec}, one gets
+Next,  the equation relating current steer angle $\phi_{i}$   and rear wheel  set point velocities $\omega_{RS}$ and $\omega_{LS}$ is presented. From the geometry of Figure \ref{fig:KenVec}, one gets the function $g(\theta)$ as
 \begin{align}
-\nonumber \tan\phi_{i} &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
-g:\phi_{i} \rightarrow p,\quad \quad p &= \frac{w}{\tan\phi_{i}}-m + \frac{a}{2}
+\nonumber \tan\theta &=\frac{\bar{BD}}{\bar{OB}}=\frac{w}{p+m-a/2}\\ 
+p=g(\theta),\quad & \quad g(\theta) = \frac{w}{\tan\theta}-m + \frac{a}{2}
 \label{eqn:pFromTheta}
 \end{align}
 %similarly for the inner wheel we get  
 %\begin{equation}
 %p = \frac{w}{\tan\theta_i}-m - \frac{a}{2}
 %\end{equation}
-Now using Equations \ref{velO1} and \ref{omegaPlat}  in equations relating the right and left wheel velocities to the WMR platform angular velocity $\omega_3$ and velocity, $V$, of the reference point $O_r$, presented below
-\begin{align*}
-\dot{O_r}&=\dot{O_i}+\omega_3 \times (O_r-O_i)\\
-\dot{O_r}&=\dot{O_o}+\omega_3 \times (O_r-O_o)
-\end{align*}
- We get the  velocity of each rear wheel as  
-\begin{align}
-\nonumber \omega_i&=\frac{Vp}{r(p+m)}\\
-\nonumber \omega_o &=\frac{V(p+2m)}{r(p+m)}
-\end{align}
-Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for the rear wheels are as follows 
+Using Equations \ref{velO1} and \ref{omegaPlat}  for the RARS given in Figure \ref{fig:KenVec} relation between linear velocities  the right and left wheel  in terms of the RARS platform's angular velocity $\omega_3$ and linear velocity, $V$, of  point $O_r$ is given as,
+\begin{equation*}
+\dot{O_r}=\dot{O_i}+\omega_3 \times (O_r-O_i), \quad \quad
+\dot{O_r}=\dot{O_o}+\omega_3 \times (O_r-O_o)
+\end{equation*}
+If $r_w$ is the radius of the wheel, we get the angular velocity of each rear wheel about its axel as  
+\begin{equation*}
+\nonumber \omega_i=\frac{Vp}{r_w(p+m)}, \quad \quad
+\nonumber \omega_o =\frac{V(p+2m)}{r_w(p+m)}
+\end{equation*}
+Using the above equations and Equation \ref{eqn:pFromTheta},  the setpoints for the angular velocities of rear wheels are as follows 
 \begin{equation}
-\omega_i =\frac{V}{r}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\label{eqn:velSetpt1}
+\omega_i =\frac{V}{r_w}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
 \end{equation}
 \begin{equation}
-\omega_o =\frac{V}{r}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})+2m}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
+\label{eqn:velSetpt2}
+\omega_o =\frac{V}{r_w}\frac{( \frac{w}{\tan\theta_o}-m + \frac{a}{2})+2m}{ \frac{w}{\tan\theta_o}-m + \frac{a}{2}+m}
 \end{equation}
- 
+where $\omega_i$ indicates the angular velocity of inner wheel and  $\omega_o$ is the angular velocity if the outer wheel of the RARS robot.
 
  
 %\begin{itemize}
@@ -289,6 +292,7 @@ where $i$ is at time step $t_i$. Next,  the actual odometric results for the veh
 		\includegraphics[width=3.2in]{Chapter5/fig/linTorq} 
 		\caption{Motor torque}\label{fig:linTorq}
 	\end{minipage}
+\vfill \vfill \vfill \vfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=3.1in]{Chapter5/fig/linVel} 
@@ -303,7 +307,7 @@ where $i$ is at time step $t_i$. Next,  the actual odometric results for the veh
 	%\caption{Linear motion of  WMR}
 \end{figure*}
 
-As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the robots path calculated using odometry.  There is a linear shift too, which can observed due to longer path calculated by odometry. The lateral shift of 200 mm and a linear shift of 300 mm for 15000 mm long path was calculated. This clearly indicates slip in the wheels. The torque curves also shows that one wheel is more loaded that the other this is expected as the battery weight was on one side of the robot.
+As seen in the graph of Figure \ref{fig:line} there is a lateral shift in the robots path calculated using odometry. The run was taken with acceleration of $24~ mm/sec^2$ and max velocity of 240 $mm/sec$.   There is a linear shift too, which can observed due to longer path calculated by odometry. The lateral shift of 50 mm and a linear shift of 300 mm for 2000 mm long path was calculated.  This clearly indicates slip in the wheels. The torque curves also shows that one wheel is more loaded that the other this is expected as the battery weight was on one side of the robot.
 
 In Figure \ref{fig:cirVel} the robot traces circular path of two different radius. It can be seen that there is no lateral (side) slip during the motion. The step change in the angular velocity at time $ t\approx125~sec$, shown in Figure \ref{fig:cirOmega}, indicate transition to a larger radius path. The linear velocity of the robot is maintained constant at $ 300~mm/sec$.
 \begin{figure}
@@ -352,5 +356,5 @@ The screen of the desktop displays  video streaming  from the mobile robot's on 
 
 
 \section{Summary}
-In this chapter, the control architecture of the mobile manipulator has been presented. The  algorithm used  to move the robot was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
+In this chapter, the control architecture of the mobile manipulator has been presented. The   algorithm implemented on the onboard controller of the  the RARS robot    was discussed in detail. The odometry used for pose estimation of the robot was also presented with the experimental results. 
 

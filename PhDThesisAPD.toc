@@ -45,10 +45,10 @@
 \contentsline {subsection}{\numberline {3.4.1}Defining Slip}{57}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Kinematics with wheel slip}{59}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Dynamics with wheel slip}{66}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Simulation}{70}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.4}Simulation}{71}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Results and inference}{73}{subsection.3.4.5}
 \contentsline {section}{\numberline {3.5}Dynamical Model of Steering System}{76}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{80}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}Design of PID controller}{81}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Simulation and results}{82}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6}Summary}{83}{section.3.6}
 \contentsline {chapter}{\numberline {4}Control of a Mobile Manipulator }{85}{chapter.4}
@@ -58,34 +58,34 @@
 \contentsline {section}{\numberline {4.2}Control Algorithm }{90}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Safety interlocks}{95}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Wheel odometery }{95}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3} Remote control station}{98}{section.4.3}
-\contentsline {section}{\numberline {4.4}Summary}{99}{section.4.4}
+\contentsline {section}{\numberline {4.3} Remote control station}{99}{section.4.3}
+\contentsline {section}{\numberline {4.4}Summary}{100}{section.4.4}
 \contentsline {chapter}{\numberline {5}Simulation of Tele-operation}{101}{chapter.5}
 \contentsline {section}{\numberline {5.1}Modeling of Mobile Robot}{102}{section.5.1}
-\contentsline {section}{\numberline {5.2}Model of Human Operator}{102}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simulation and Results }{105}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Simulation algorithm}{105}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Summary}{107}{section.5.4}
-\contentsline {chapter}{\numberline {6} Predictive Display for Time Delay Compensation}{109}{chapter.6}
-\contentsline {section}{\numberline {6.1}Time Delay Compensation}{109}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Proposed controller}{111}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Simulation algorithm and results}{113}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Delay Compensation using Predictive Display}{114}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}The Kinect sensor }{115}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Onboard data processing and transmission}{116}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}3-D reconstruction }{117}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Extrapolation of remote scene }{118}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}Summary}{119}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusions}{121}{chapter.7}
-\contentsline {section}{\numberline {7.1}Thesis Summary}{121}{section.7.1}
-\contentsline {section}{\numberline {7.2}Current Status}{123}{section.7.2}
-\contentsline {section}{\numberline {7.3}Future Scope }{123}{section.7.3}
-\contentsline {chapter}{\bf Bibliography}{127}{section.7.3}
-\contentsline {chapter}{\numberline {A} }{139}{appendix.A}
-\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{139}{section.A.1}
-\contentsline {chapter}{\numberline {B} }{141}{appendix.B}
-\contentsline {section}{\numberline {B.1}Stability of Pure Pursuit under Time Delay}{141}{section.B.1}
-\contentsline {chapter}{\numberline {C} }{145}{appendix.C}
-\contentsline {section}{\numberline {C.1}Optimal Design of Steering Linkages}{145}{section.C.1}
-\contentsline {section}{\bf Publications from the Thesis}{147}{equation.C.1.1}
-\contentsline {section}{\bf Brief Bio-data of the Author}{149}{Item.18}
+\contentsline {section}{\numberline {5.2}Model of Human Operator}{103}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simulation and Results }{106}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Simulation algorithm}{106}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Summary}{108}{section.5.4}
+\contentsline {chapter}{\numberline {6} Predictive Display for Time Delay Compensation}{111}{chapter.6}
+\contentsline {section}{\numberline {6.1}Time Delay Compensation}{111}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Proposed controller}{113}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Simulation algorithm and results}{115}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Delay Compensation using Predictive Display}{116}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}The Kinect sensor }{117}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Onboard data processing and transmission}{118}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}3-D reconstruction }{119}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Extrapolation of remote scene }{120}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}Summary}{121}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusions}{123}{chapter.7}
+\contentsline {section}{\numberline {7.1}Thesis Summary}{123}{section.7.1}
+\contentsline {section}{\numberline {7.2}Current Status}{125}{section.7.2}
+\contentsline {section}{\numberline {7.3}Future Scope }{125}{section.7.3}
+\contentsline {chapter}{\bf Bibliography}{129}{section.7.3}
+\contentsline {chapter}{\numberline {A} }{141}{appendix.A}
+\contentsline {section}{\numberline {A.1}Measurment of Time Delay in Video Feedback}{141}{section.A.1}
+\contentsline {chapter}{\numberline {B} }{143}{appendix.B}
+\contentsline {section}{\numberline {B.1}Stability of Pure Pursuit under Time Delay}{143}{section.B.1}
+\contentsline {chapter}{\numberline {C} }{147}{appendix.C}
+\contentsline {section}{\numberline {C.1}Optimal Design of Steering Linkages}{147}{section.C.1}
+\contentsline {section}{\bf Publications from the Thesis}{149}{equation.C.1.1}
+\contentsline {section}{\bf Brief Bio-data of the Author}{151}{Item.18}

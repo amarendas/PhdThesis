@@ -31,21 +31,21 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Free body diagram of RARS robot\relax }}{60}{figure.caption.34}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces External force on rear wheel\relax }}{68}{figure.caption.35}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces External forces on front wheel \relax }}{68}{figure.caption.35}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Friction model\relax }}{73}{figure.caption.36}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Input torque profile \relax }}{73}{figure.caption.36}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Friction model\relax }}{74}{figure.caption.36}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Input torque profile \relax }}{74}{figure.caption.36}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces RARS path traced when $\mu =0.3$\relax }}{74}{figure.caption.37}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Forces on RARS when $\mu =0.3$ \relax }}{74}{figure.caption.37}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces RARS, radial deviation ($\mu =0.3$)\relax }}{75}{figure.caption.38}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Phase and phase error ($\mu =0.3$) \relax }}{75}{figure.caption.38}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces RARS path traced when $\mu =0.1$\relax }}{75}{figure.caption.39}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Forces on RARS when $\mu =0.1$ \relax }}{75}{figure.caption.39}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces RARS radial deviation ($\mu =0.1$)\relax }}{76}{figure.caption.40}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Phase and phase error ($\mu =0.1$) \relax }}{76}{figure.caption.40}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Plot of $\beta $ and $\mathaccentV {dot}05F{\beta }$\relax }}{76}{figure.caption.41}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Steering assembly\relax }}{77}{figure.caption.42}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Steering linkage \relax }}{77}{figure.caption.42}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Change in steer angle\relax }}{82}{figure.caption.44}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Control effort\relax }}{82}{figure.caption.44}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces RARS path traced when $\mu =0.1$\relax }}{76}{figure.caption.39}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Forces on RARS when $\mu =0.1$ \relax }}{76}{figure.caption.39}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces RARS radial deviation ($\mu =0.1$)\relax }}{77}{figure.caption.40}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Phase and phase error ($\mu =0.1$) \relax }}{77}{figure.caption.40}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Plot of $\beta $ and $\mathaccentV {dot}05F{\beta }$\relax }}{77}{figure.caption.41}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Steering assembly\relax }}{78}{figure.caption.42}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Steering linkage \relax }}{78}{figure.caption.42}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Change in steer angle\relax }}{83}{figure.caption.44}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Control effort\relax }}{83}{figure.caption.44}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Control architecture \relax }}{85}{figure.caption.45}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Data from PC to the robot \relax }}{86}{figure.caption.46}
@@ -56,45 +56,46 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Velocity control bolck \relax }}{89}{figure.caption.51}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Position control bolck \relax }}{91}{figure.caption.53}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Block diagram of WMR controler\relax }}{92}{figure.caption.55}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Ackerman steering condition\relax }}{93}{figure.caption.56}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Davis steering gear\relax }}{93}{figure.caption.56}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Tracing a line\relax }}{96}{figure.caption.57}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Motor torque\relax }}{96}{figure.caption.57}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Linear velocity\relax }}{96}{figure.caption.57}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Angular velocity\relax }}{96}{figure.caption.57}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Tracing a circle\relax }}{97}{figure.caption.58}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Motor torque\relax }}{97}{figure.caption.58}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Linear velocity\relax }}{97}{figure.caption.58}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Angular velocity\relax }}{97}{figure.caption.58}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces User interface for teleoperation \relax }}{98}{figure.caption.59}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Ackerman steering condition\relax }}{94}{figure.caption.56}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Davis steering gear\relax }}{94}{figure.caption.56}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Tracing a line\relax }}{97}{figure.caption.57}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Motor torque\relax }}{97}{figure.caption.57}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Linear velocity\relax }}{97}{figure.caption.57}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Angular velocity\relax }}{97}{figure.caption.57}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Tracing a circle\relax }}{98}{figure.caption.58}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Motor torque\relax }}{98}{figure.caption.58}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Linear velocity\relax }}{98}{figure.caption.58}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Angular velocity\relax }}{98}{figure.caption.58}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces User interface for teleoperation \relax }}{99}{figure.caption.59}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Teleoperation architecture \relax }}{101}{figure.caption.60}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Assumed driving strategy \relax }}{103}{figure.caption.61}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Geometry of Pure pursuit \relax }}{104}{figure.caption.62}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Simulation scheme \relax }}{105}{figure.caption.63}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Block diagram for teleoperation\relax }}{106}{figure.caption.64}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Simulation with no time delay in either direction \relax }}{107}{figure.caption.65}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Simulation with time delay $h_1=.5$ sec and $h_2=0$ sec \relax }}{108}{figure.caption.66}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Simulation with time delay $h_1=.8$ sec and $h_2=0$ sec \relax }}{108}{figure.caption.67}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Kinematics of differential drive robot\relax }}{103}{figure.caption.61}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Assumed driving strategy \relax }}{104}{figure.caption.62}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Geometry of Pure pursuit \relax }}{105}{figure.caption.63}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Simulation scheme \relax }}{106}{figure.caption.64}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Block diagram for teleoperation\relax }}{107}{figure.caption.65}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Simulation with no time delay in either direction \relax }}{108}{figure.caption.66}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Simulation with time delay $h_1=.5$ sec and $h_2=0$ sec \relax }}{109}{figure.caption.67}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Simulation with time delay $h_1=.8$ sec and $h_2=0$ sec \relax }}{109}{figure.caption.68}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Smith predictor \cite {smith1959controller}\relax }}{110}{figure.caption.68}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Block digram of time delayed system\relax }}{111}{figure.caption.69}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Delay measurment\relax }}{111}{figure.caption.69}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Smith predictor applied to RARS mobile robot\relax }}{112}{figure.caption.70}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation block diagram\relax }}{112}{figure.caption.71}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Time delay $T_1=.5$ sec and $T_2=0$ sec\relax }}{114}{figure.caption.72}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Time delay $T_1=.8$ sec and $T_2=0$ sec \relax }}{114}{figure.caption.72}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Kinect sensor from Microsoft\relax }}{115}{figure.caption.73}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Predictive display architecture\relax }}{117}{figure.caption.74}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces PCD at time T \relax }}{119}{figure.caption.75}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Predicted scene\relax }}{119}{figure.caption.75}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Smith predictor \cite {smith1959controller}\relax }}{112}{figure.caption.69}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Block digram of time delayed system\relax }}{113}{figure.caption.70}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Delay measurment\relax }}{113}{figure.caption.70}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Smith predictor applied to RARS mobile robot\relax }}{114}{figure.caption.71}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Simulation block diagram\relax }}{114}{figure.caption.72}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Time delay $h_1=.5$ sec and $h_2=0$ sec\relax }}{116}{figure.caption.73}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Time delay $h_1=.8$ sec and $h_2=0$ sec \relax }}{116}{figure.caption.73}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Kinect sensor from Microsoft\relax }}{117}{figure.caption.74}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Predictive display architecture\relax }}{119}{figure.caption.75}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces PCD at time T \relax }}{121}{figure.caption.76}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Predicted scene\relax }}{121}{figure.caption.76}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces QR code Youtube\relax }}{123}{figure.caption.76}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces QR Code alternate\relax }}{123}{figure.caption.76}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces QR code Youtube\relax }}{125}{figure.caption.77}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces QR Code alternate\relax }}{125}{figure.caption.77}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces User interface for teleoperation \relax }}{140}{figure.caption.78}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Experimental setup: Schematic\relax }}{140}{figure.caption.79}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Screen shot of operator PC\relax }}{140}{figure.caption.79}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces User interface for teleoperation \relax }}{142}{figure.caption.79}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Experimental setup: Schematic\relax }}{142}{figure.caption.80}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Screen shot of operator PC\relax }}{142}{figure.caption.80}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Results obtained by Ollero \cite {ollero1995stability} \relax }}{143}{figure.caption.80}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Results obtained by Ollero \cite {ollero1995stability} \relax }}{145}{figure.caption.81}
 \addvspace {10\p@ }

@@ -289,7 +289,7 @@ d_2&0\\-d_1 &r
 &=&[F_{ij}]\dot{\theta_a}
 \end{eqnarray}
 where, 
-\[ \delta_1=(r/l)(mC_{\psi_1}-bS_{\psi_1}-d2, \quad  \delta_2=(r/l)(mS_{\psi_1}+bC_{\psi_1}+d_1) \]
+\[ \delta_1=(r/l)(mC_{\psi_1}-bS_{\psi_1}-d2), \quad  \delta_2=(r/l)(mS_{\psi_1}+bC_{\psi_1}+d_1) \]
 
 Similarly, for the other caster wheel one gets,
 \begin{align}
@@ -309,7 +309,7 @@ d_2&0\\-d_1 &r
 &=[G_{ij}]\dot{\theta_a}
 \end{align}
 where, 
-\[ \delta_3=(r/l)(mC_{\psi_2}+bS_{\psi_2}+d2, \quad  \delta_4=(r/l)(mS_{\psi_2}+bC_{\psi_2}+d1 \]
+\[ \delta_3=(r/l)(mC_{\psi_2}+bS_{\psi_2}+d2), \quad  \delta_4=(r/l)(mS_{\psi_2}+bC_{\psi_2}+d1 )\]
 
 
 
@@ -334,8 +334,8 @@ C_4=r[-F_{11}f_4 \quad -F_{12}f_4]\]
 
 The angular and the linear velocity of the CM of the caster bracket \#5  expressed in the co-ordinate frame fixed to the bracket is given as
 \begin{equation}
-\omega_4=\dot{\phi_1}e_3+\dot{\psi_1}k, \quad
-\dot{o_4}=\dot{o_4}+\omega_5\times [-df_3]
+\omega_5=\omega_3+\dot{\psi_1}k, \quad
+\dot{o_5}=\dot{o_4}+\omega_5\times(d_2e_4-d_1f_4)
 \end{equation}
 Using Equations   \ref{omegaPlat} and \ref{unac2act2}, the twist $t_5$ can next  be expressed as
 \begin{equation}
@@ -829,7 +829,8 @@ T_4=\left(
   \[\lambda_4=(\bar{\omega_3}+\dot{\psi_1}) (\cos\psi_1 j-\sin \psi_1 i) \]
   \[\lambda_6=-\bar{\omega_3}(\lambda_1 j+\lambda_2 i), \quad \lambda_7=\bar{\omega_3}(\lambda_1 j-\lambda_3 i)\]
 Next, for wheel \#5  one gets 
-\[\omega_5 = \dot{\theta_5} (R_5.e_5) + \dot{\psi_2} k + \omega_3 =
+\[\omega_5 = \dot{\theta_5} e_5 + \dot{\psi_2} k + \omega_3 \] Using the rotation matrix $R_5$ to express $e_5$ in terms of ${i,j}$ the above equation is written as 
+\[\omega_5=
   \left(
 \begin{array}{c}
 \dot{\theta }_5 \cos \psi_2 \\
@@ -972,7 +973,7 @@ The wrench $\tau$ acting on the system is given as
 	%\caption{Actuator effort}
 \end{figure} 
 The matrix $T_i$ has allready been calculated in the above section, whereas $w_i^w$ is derived next. The vector, $w_i^w$ is the working wrench acting on the individual bodies. This consists of all the external forces such as actuator force, friction force and gravitational force.
-The forces acting on wheel 1, as shown in Figure \ref{fig:ForceRearWheel},  are the friction force due to longitudinal slip $Fs_1$ and frictional force  due to lateral slip or skidding, $Fk_1$ at the ground-wheel interface . The motor torque acting on the wheel 1 is $\tau_{m1}$.  Similarly forces acting on wheel 2 are $Fs_2$, $Fk_2$ and $\tau_{m2}$. Therefore, $w_1$ and $w_2$ are written as 
+The forces acting on wheel 1, as shown in Figure \ref{fig:ForceRearWheel},  are the friction force due to longitudinal slip $F_{s1}$ and frictional force  due to lateral slip or skidding, $F_{k1}$ at the ground-wheel interface . The motor torque acting on the wheel 1 is $\tau_{m1}$.  Similarly forces acting on wheel 2 are $F_{s2}$, $F_{k2}$ and $\tau_{m2}$. Therefore, $w_1$ and $w_2$ are written as 
 \begin{equation}
 \label{eqn:wrenchWheelSlipRear}
  w_n=\begin{pmatrix}
