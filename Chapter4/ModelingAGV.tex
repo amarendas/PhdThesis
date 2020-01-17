@@ -14,9 +14,9 @@ In order to develop a model-based control algorithm, it is imperative to have a 
   A general dynamical model was derived for three-wheel mobile robots with nonholonomic constraints  by B. d'Andrea-Novel \cite{d1991modelling} using  Lagrange formulation.
     Alternatively, Thanjavur and Rajagopalan \cite{thanjavur1997ease} have used Kane's method,  and  Saha et al. \cite{saha1991dynamics},\cite{saha1989kinematics} used Natural Orthogonal Compliment (NOC) method for the same.  
     
-In this chapter we first present the kinematic model of the mobile robot with two passive wheel at the front. It is then proved using kinematics why a passive wheel with caster offset along the plane of the wheel self orients itself. while  casters with zero offset  must be actuated.  This has not been explicitly presented in literature.
+In this chapter we first present the kinematic model of the mobile robot with two passive wheel at the front. It is then proved using kinematics why a passive wheel with caster offset along the plane of the wheel self orients itself. While  casters with zero offset  must be actuated.  This has not been explicitly presented in literature.
 
- Next the dynamic equation of a mobile robot using Natural Orthogonal Compliment method is derived for both for ideal rolling condition of wheels and in presence of longitudinal and lateral slip of wheels. Use of NOC for modeling differential drive wheeled vehicle under ideal rolling condition as been presented by Angels and Saha \cite{saha1991dynamics}, \cite{saha1989kinematics}. We extend this method to include both the lateral and longitudinal slip of the wheels, and  derive the dynamic equations of motion of a mobile robot with redundant actuators. 
+ Next the dynamic equation of a mobile robot using Natural Orthogonal Compliment method is derived for both for ideal rolling condition of wheels and in presence of longitudinal and lateral slip of wheels. Use of NOC for modeling differential drive wheeled vehicle under ideal rolling condition has been presented by Angels and Saha \cite{saha1991dynamics}, \cite{saha1989kinematics}. We extend this method to include both the lateral and longitudinal slip of the wheels, and  derive the dynamic equations of motion of a mobile robot with redundant actuators. 
  
  The RARS robot has a unique  drive configuration, which uses both differential drive and Davis mechanism for steering. 
  This system has a redundant configuration and very few literature presents dynamical analysis with slip included in the dynamics. To our knowledge no literature is present, where the concept of  NOC  has been used to model redundantly actuated mobile robot. The two models are compared using simulation to find the deviation in the path traced by RARS robot under different peak value of co-efficient of friction between the wheel and ground plane.
@@ -35,7 +35,7 @@ In this chapter we first present the kinematic model of the mobile robot with tw
 \section{Modeling using the Natural Orthogonal Compliment (NOC)}
 Let us consider a system with $n$ rigid bodies interconnected with different types of joints. 
 Let, $f_i$ be the net force acting at the center of mass (CM) of the $i^{th}$  body and $n_i$ is the net moment.
- If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body, then equations of motion of the $i^{th}$ rigid body are given by Newton-Euler equations as 
+ If $m_i$ is the mass, $I_{ci}$ is the  moment of inertia with respect to the CM, $c_i$ is the position vector of the CM and $\omega_i$ is the angular velocity of the same body with respect to an inertial coordinate system, then equations of motion of the $i^{th}$ rigid body are given by Newton-Euler equations as 
 \begin{equation}
 \label{NE}
 f_i=m_i\ddot{c_i} \quad \text{and} \quad n_i=I_{ci} \dot \omega_i+\omega_i \times I_{ci} \omega_i
@@ -88,26 +88,28 @@ A_it_i+A_jt_j=0
 \end{equation}
 where $A_i,A_j$ depend on the kinematic parameters.
 
-The constraint equations corresponding to all the joints in the system can be written in terms of the \textit{generalized twist vector} $t$. Furthermore, if $ \dot{\theta} \equiv[\dot{\theta_1},\dot{\theta_2},...\dot\theta_n]^T$ denote the \textit{independent generalized joint rates}. One can then write $t$ in terms of $\dot{\theta}$ as $t=T\dot{\theta}$. 
+The constraint equations corresponding to all the joints in the system can be written in terms of the \textit{generalized twist vector} $t$.
+\[At=0\]
+ Furthermore, if $ \dot{\theta} \equiv[\dot{\theta_1},\dot{\theta_2},...\dot\theta_n]^T$ denote the \textit{independent generalized joint rates}. One can then write $t$ in terms of $\dot{\theta}$ as $t=T\dot{\theta}$. 
 Using the fact, that $\dot{\theta}$ can take any arbitrary value, we get
 \begin{equation}
 \label{AT}
-At=0 , \quad \Rightarrow  AT\dot{\theta}=0\quad \Rightarrow AT=0
+ AT\dot{\theta}=0\quad \Rightarrow AT=0
 \end{equation}
 The Equation \ref{AT} indicates that $T$ is the orthogonal complement of $A$.
  Since this relation arises naturally, hence the name \textit{Natural Orthogonal Complement}.  It can be shown \cite{angeles2013fundamentals} that the non-working wrench $w^c$ lies in the range space of $A^T$.   In view of Equation \ref{AT}, it can be proved that $w^c$ lies in the null space of $T^T$. Therefore,
 \begin{equation}
 T^Tw^c=0
 \end{equation}
-To eliminate the non-working  moments and  forces, i.e., $w^c$ from the uncoupled equation of motion (\ref{DCE}), we multiply both sides of the equation  by $T^T$,
+To eliminate the non-working  moments and  forces, i.e., $w^c$ from the uncoupled equation of motion (\ref{DCE}), we multiply both sides of the equation  by $T^T$. The result is dynamic equations of motion for interconnected n-body system.
+\[T^TM\dot{t}+T^TWMt=T^Tw^W\]
+ Substituting,  $t=T\dot{\theta}$ and $\dot{t}=\dot{T}\dot{\theta}+T\ddot{\theta}$  in  the above equation we get
 \begin{equation}
- T^TM\dot{t}+T^TWMt=T^Tw^W, \quad
- \Rightarrow T^TMT\ddot{\theta}+T^T(M\dot{T}+WMT)\dot{\theta}=T^Tw^w
+ T^TMT\ddot{\theta}+T^T(M\dot{T}+WMT)\dot{\theta}=T^Tw^w
  \label{eqn:CEM}
 \end{equation}
-Equation \ref{eqn:CEM} represents the dynamic equation of  interconnected $n$-body system.
- This equation is expressed in terms of the independent generalized joint rates $\dot{\theta}$ and cosponsoring  acceleration $\ddot{\theta}$. Further, using the relations $t=T\dot{\theta}$ and $\dot{t}=\dot{T}\dot{\theta}+T\ddot{\theta}$  in Equation \ref{eqn:CEM}  the final equations of motion can be written as
-
+% This equation is expressed in terms of the independent generalized joint rates $\dot{\theta}$ and  $\ddot{\theta}$.
+ or,
 \begin{equation}
 \label{CE}
  \quad I(\theta)\ddot{\theta}+C(\theta,\dot{\theta})\dot{\theta}=\tau
@@ -115,11 +117,11 @@ Equation \ref{eqn:CEM} represents the dynamic equation of  interconnected $n$-bo
 where
 \begin{align*}
 I(\theta) &\equiv T^TMT\quad \quad:\text{generalized inertia matrix}\\
-C(\theta,\dot{\theta})&\equiv +T^T(M\dot{T}+WMT) \quad :\text{generalized  convective inertia matrix}\\
-\tau&\equiv T^Tw \quad \quad :\text{ generalized vector of driving forces }
+C(\theta,\dot{\theta})&\equiv T^T(M\dot{T}+WMT) \quad :\text{generalized  convective inertia matrix}\\
+\tau&\equiv T^Tw^w \quad \quad :\text{ generalized vector of driving forces }
 \end{align*}
 
-Where, 
+Using the fact that $M$ and $W$ are diagonal matrices,  $I(\theta)$, $C(\theta,\dot{\theta}) $ and $\tau$ in Equation \ref{CE} can be written in terms individual bodies $M_i$, $W_i$ and $w_i^c$ as
 \begin{equation}
 	I(\theta)=\sum_{i=1..n}(T_i^TM_iT_i)
 \end{equation}
@@ -152,14 +154,14 @@ The dynamic equation of a differentially driven 3 wheeled mobile robot based on 
 
  The vehicle considered for analysis in this chapter is shown in Figure \ref{fig:gen}. It consists of two independently driven wheels at the back and two passive wheels at the front. The actuated wheels are labelled as body \#1 and \#2 as indicated in Figure \ref{fig:gen}. The platform is body \#3. The first caster wheel and its bracket is labelled as \#4 and \#5 respectively, with the castor pivoted at $O_5$. Similarly, the second castor is pivoted at $O_7$, and its bracket and wheel are labelled as \#6 an \#7, respectively, all the wheels are assumed to be rolling without slipping.  
  
- The RARS robot wheel configuration can be arrived from the generalized configuration of caster wheels presented above when $d_1=0$. Under this condition the and assuming that the steering mechanism always provides the correct steer angle, which is true in case of small curvature paths, the dynamic behaviour of the proposed robot will be similar to that  shown Figure  \ref{fig:gen}.
+ The RARS robot wheel configuration can be arrived from the generalized configuration of caster wheels presented above when $d_1=0$. Under this condition  and assuming that the steering mechanism always provides the correct steer angle, which is true in case of small curvature paths, the dynamic behaviour of the proposed robot will be similar to that  shown Figure  \ref{fig:gen}.
 \subsection{Kinematic analysis}
 In order to proceed with the kinematic analysis of the vehicle in Figure \ref{fig:gen}, we define an orthogonal triad of vectors ${i,j,k}$ at point $O_3$, the control point of the platform, as shown in Figure \ref{fig:gen}. If $\dot{\theta_1}$ and $\dot{\theta_2}$ {( positive when pointing along $i$)} denote the rates of rotation of wheels \#1 and \#2 then the linear velocity of points $O_1$ and $O_2$ under pure rolling condition is given by 
 \begin{equation}
 \label{velO1}
 {\dot{o_i}}=-r\dot{\theta_i}j, \quad \text{r=radius of wheel}
 \end{equation}
-The angular velocity of the platform $\omega_3$ can be written as 
+The angular velocity, $\omega_3$ of the platform  can be written in terms of the linear velocity of its two points $O_1$ and $O_2$  as 
 \begin{equation}
 \label{omegaPlat}
 {\omega_3}=(r/l)(\dot{\theta_1}-\dot{\theta_2}){k}
@@ -251,7 +253,9 @@ In order to calculate the twists of the caster bracket and the caster wheel, it 
 \begin{equation*}
 \omega_5=\dot{\psi_1}k+\omega_3, \quad \quad \omega_4=\dot{\phi_1} e_4 +\omega_5
 \end{equation*}
- The velocity of $O_5$ can be expressed in two independent forms, namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_4$, i.e.,
+Assuming that there is pure rolling constraint between the wheel and the ground, the velocity of the point $O_4$ can be written in terms of $\phi_1$ as \[\dot{\phi_1} r = \dot{o_4} \]
+
+ The velocity of $O_5$ can now be expressed in two independent forms, namely, one in terms of the velocity of $O_3$ and the other one in terms of the velocity of $O_4$, i.e.,
 \begin{equation}
 \dot{o_5}=\dot{o_4}+\omega_5\times(d_2e_4-d_1f_4), \quad
 \dot{o_5}=\dot{o_3}+\omega_3\times(b j - m i)
@@ -374,14 +378,14 @@ An alternative solution is to put an extra actuator to control the bracket motio
 In this section the equations of motion is derived under the assumption that all the wheel satisfies pure rolling condition, there is no slipping or skidding of the wheels. This is valid for vehicles with caster wheels as mentioned in Section 3.2.2.1 or incase where steered wheels are perfectly aligned according to the Ackerman steering condition. Dynamics of such architecture is simple which will lead to a realistic model of RARS developed in this research. This is effectively the case mentioned in Section 3.2.2.2. 
 
 
-Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion \ref{CE} can be derived 
+Based on the twists calculated in terms of the independent joint rate vector vector $\dot{\theta_a}$,  the generalized inertia matrix and the matrix of convective inertia term for the coupled equation of motion given by Equation \ref{CE} can be derived. 
 \subsection{Generalized inertia matrix, I}
 \label{sec:GIM}
  The equations gives in Section 4.2.1 of the twist of individual body, i.e $t_i=T_i\dot{\theta_a}$ are used to obtain   $t=[t_1^T, t_2^T....t_7^T]^T$ and $t=T\dot\theta$ where  $T=[T_1^T, T_2^T,... T_7^T]^T$. Since the matrix $M$ is block diagonal, the inertia matrix of the full system  denoted by $I$ is given by
 \begin{equation}
 I=T^TMT=T_1^TM_1T_1+T_2^TM_2T_2+...T_7^TM_7T_7
 \end{equation}
-Next, the contribution of the rear wheels  to the inertia matrix, i.e., $I_m$ is given by  \[ I_m=\sum_{i=1,2}T_i^TM_iT_i\] or
+The contribution of the rear wheels  to the inertia matrix, i.e., $I_m$ is given by  \[ I_m=\sum_{i=1,2}T_i^TM_iT_i\] or
 \begin{equation}
 \label{eqn:I_wheel}
 I_m=\begin{pmatrix}
@@ -425,7 +429,9 @@ If the mass of the brackets, i.e., body \#5 and \#7, are small compared to the m
 
 
 \subsection{Matrix of convective inertia term C}
-The matrix of convective inertia terms of Equation \ref{CE} can be broken down into two parts, $T^TM\dot{T}$ and $T^TWMT$.  As can be seen from Equations \ref{twist1}, \ref{twist2} and \ref{twist3},  $T_1,T_2,T_3$ associated with rear wheels and the platform is constant. Therefore \[T^TM\dot{T}=0\]. The generalized inertia matrix  is constant for the rear wheels and the platform, therefore the vector $I_i\omega_i$ is parallel to  $\omega_i, i=1..3$ \[\Rightarrow\omega\times I\omega=0\] \[\Rightarrow T^TWMT =0\]. This shows that contribution of the rear wheels and the platform  to the convective inertia term is zero. Moreover, the mass of the brackets are assumed to be zero, so they also do not contribute to the convective inertia term. Hence
+The matrix of convective inertia terms of Equation \ref{CE} can be broken down into two parts, $T^TM\dot{T}$ and $T^TWMT$.  As can be seen from Equations \ref{twist1}, \ref{twist2} and \ref{twist3},  $T_1,T_2,T_3$ associated with rear wheels and the platform is constant. Therefore \[T^TM\dot{T}=0\]
+ The generalized inertia matrix  is constant for the rear wheels and the platform, therefore the vector $I_i\omega_i$ is parallel to  $\omega_i, i=1..3$ \[\Rightarrow\omega\times I\omega=0\] \[\Rightarrow T^TWMT =0\]
+  This shows that contribution of the rear wheels and the platform  to the convective inertia term is zero. Moreover, the mass of the brackets are assumed to be zero, so they also do not contribute to the convective inertia term. Hence
 \begin{equation}
 \label{Convective}
 C=T^TM\dot{T}+T^TWMT=\sum_{i=4,6}T^T_iM_i\dot{T_i}+\sum_{i=4,6}T_i^TW_iM_iT_i
@@ -506,7 +512,7 @@ All the components of  Equation  \ref{CE}  are now been evaluated, except the $\
 \label{sec: SimulationIdealCondition}
 The mobile manipulator proposed in Chapter 3  was modelled as a differentially driven robot. The front wheels and steering mechanism were not included in the dynamic model as their masses are too small compared to the  platform. The weight of each wheel is 0.3Kg, the steering mechanism 0.24Kg, whereas the weight of the  platform is 70Kg.
 
-In  simulation the vehicle reference  point $O_3$ is required to trace a circle of radius 5m. As shown in the Figure \ref{fig:CirTrace}. Let, $ \beta$ be the angle between the line joining  point $O_3$ and $O$ with respect to $X-axis$. The function $\beta(t)$ was defined such that the full circle is completed in 60Sec and the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
+In  simulation the vehicle reference  point $O_3$ is required to trace a circle of radius 5m with centre at $O$. As shown in the Figure \ref{fig:CirTrace}. Let, $ \beta$ be the angle between the line joining  point $O_3$ and $O$ with respect to $X-axis$. The function $\beta(t)$ was defined such that the full circle is completed in 60Sec and the velocity and acceleration of the robot is zero at the beginning (t=0) and end of travel (t=60).
 \begin{equation}
 \label{path}
 \beta(t)=\frac{20\pi}{60^3}t^3-\frac{30\pi}{60^4}t^4+\frac{12\pi}{60^5}t^5
@@ -515,7 +521,7 @@ The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  as s
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[height=250pt,keepaspectratio]{Chapter4/fig/pathCircle}
+		\includegraphics[width=\linewidth,keepaspectratio]{Chapter4/fig/pathCircle2}
 		\caption{Path traced by robot}
 	\label{fig:CirTrace}
 \end{figure}
@@ -524,11 +530,12 @@ The initial pose of the vehicle is parallel to the $Y-axis$ i.e. $\beta=0$  as s
 
 \subsection{Inverse dynamics}
 \label{sec:InvDynamics_NoSlip}
-In order to find the torque required to trace the mobile platform on the circular curve given in Figure \ref{fig:CirTrace}, inverse dynamics was carried out.
+Inverse dynamics was carried out to find the torque required on each rear wheel, when the point $O_2$ of the mobile robot traces a circular 
+curve given in Figure \ref{fig:CirTrace}.
 Using the model's inverse kinematic,  the wheel velocity and acceleration were determined using pseudo inverse.  % from the equation given below. Where $r$ is radius of the wheel and $\theta_i$ is the wheel roll angle of wheel \#1 and \#2. The platform angular velocity is $\omega$ and the Cartesian velocity of point o3 is given by $\dot{x},\dot{y}$ in body coordinate system %   
 The wheel angle, velocity and acceleration were used in the dynamics equation \ref{dnoc}  to calculate the torque required by each motor. The results are plotted in Figure \ref{fig:spiral}. 
 
-The equation of  dynamic model  is given in equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $, the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given by Equations \ref{twist1}, \ref{twist2} and \ref{twist3}. The dynamic equation is of the vehicle on slope is given as 
+The equation of  dynamic model  is given in Equation \ref{dnoc}, where the actuated joints are  $\theta_a(t)=(\theta_l, \theta_r) $, the rear left and right wheel rotation angles. The dynamic  and kinematic  parameters used in the simulation is listed in table \ref{tb:massproperty}. The rear wheels $(i=1,2)$ and the platform $i=3$, twist $t_i^T=T_i\theta_a$, is given by Equations \ref{twist1}, \ref{twist2} and \ref{twist3}. The dynamic equation  of the mobile robot platform  on slope is given as 
 \begin{equation}
 \label{dnoc}
 \begin{aligned}
